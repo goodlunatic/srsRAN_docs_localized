@@ -1,0 +1,997 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="readthedocs-addons-api-version" content="1"><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T9SLDCMMRZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-T9SLDCMMRZ');
+    </script>
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>COTS UE &mdash; srsRAN 4G 23.11 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css%3Fv=03e43079.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css%3Fv=e59714d7.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css%3Fv=76b2166b.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster.custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster.bundle.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster-sideTip-shadow.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster-sideTip-punk.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster-sideTip-noir.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster-sideTip-light.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster-sideTip-borderless.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/micromodal.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/sphinx_rtd_theme.css%3Fv=3234e928.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom.css%3Fv=beea7d0f.css" />
+
+  
+    <link rel="shortcut icon" href="../../../../_static/favicon.png"/>
+      <script src="../../../../_static/jquery.js%3Fv=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js%3Fv=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js%3Fv=f5aee49a"></script>
+      <script src="../../../../_static/doctools.js%3Fv=9bcbadda"></script>
+      <script src="../../../../_static/sphinx_highlight.js%3Fv=dc90522c"></script>
+      <script src="../../../../_static/clipboard.min.js%3Fv=a7894cd8"></script>
+      <script src="../../../../_static/copybutton.js%3Fv=f281be69"></script>
+      <script src="../../../../_static/js/hoverxref.js"></script>
+      <script src="../../../../_static/js/tooltipster.bundle.min.js"></script>
+      <script src="../../../../_static/js/micromodal.min.js"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <script src="../../../../_static/js/versions.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Intra-eNB &amp; S1 Handover" href="../../handover/source/index.html" />
+    <link rel="prev" title="srsRAN 4G with ZMQ Virtual Radios" href="../../zeromq/source/index.html" /> 
+<script async type="text/javascript" src="../../../../../../../../_/static/javascript/readthedocs-addons.js"></script><meta name="readthedocs-project-slug" content="srslte-docs" /><meta name="readthedocs-version-slug" content="latest" /><meta name="readthedocs-resolver-filename" content="/app_notes/source/cots_ue/source/index.html" /><meta name="readthedocs-http-status" content="200" /></head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            srsRAN 4G
+              <img src="../../../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="switch-menus">
+                <div class="version-switch"></div>
+                <div class="language-switch"></div>
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+    
+              <p class="caption" role="heading"><span class="caption-text">General</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../feature_list.html">srsRAN 4G Features</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../feature_list.html#srsue">srsUE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../feature_list.html#srsenb">srsENB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../feature_list.html#srsepc">srsEPC</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../reporting_issues.html">Reporting Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../dev_status.html">Development Status</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">First Steps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../general/source/1_installation.html">Installation Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/1_installation.html#which-installation-should-i-use">Which Installation Should I Use?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/1_installation.html#package-installation">Package Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/1_installation.html#installation-from-source">Installation from Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/1_installation.html#getting-support">Getting Support</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../general/source/2_release_notes.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../general/source/3_contributions.html">Contributions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/3_contributions.html#faq">FAQ</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../general/source/3_contributions.html#what-is-a-copyright-license-agreement-cla-and-why-do-i-need-one">1. What is a Copyright License Agreement (CLA) and why do I need one?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../general/source/3_contributions.html#how-do-i-complete-and-submit-the-cla">2. How do I complete and submit the CLA?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../general/source/3_contributions.html#how-will-my-contributions-to-srsran-4g-be-used">3. How will my contributions to srsRAN 4G be used?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../general/source/4_troubleshooting.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/4_troubleshooting.html#building-with-debug-symbols">Building with Debug Symbols</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/4_troubleshooting.html#examining-pcaps-with-wireshark">Examining PCAPs with Wireshark</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Manuals</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../usermanuals/source/1_setup.html">LTE Setup Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../usermanuals/source/1_setup.html#baseline-hardware-requirements">Baseline Hardware Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../usermanuals/source/1_setup.html#running-a-4g-end-to-end-system">Running a 4G End-to-end System</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/1_setup.html#srsepc">srsEPC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/1_setup.html#srsenb">srsENB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/1_setup.html#srsue">srsUE</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../usermanuals/source/1_setup.html#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/index.html">UE User Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/1_ue_intro.html">Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/1_ue_intro.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/1_ue_intro.html#features">Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/1_ue_intro.html#ue-architecture">UE architecture</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/2_ue_getstarted.html">Getting Started</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/2_ue_getstarted.html#running-the-software">Running the software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/2_ue_getstarted.html#configuration">Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/2_ue_getstarted.html#hardware-setup">Hardware Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/2_ue_getstarted.html#operating-system-setup">Operating System Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/2_ue_getstarted.html#observing-results">Observing results</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/3_ue_trouble.html">Troubleshooting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/3_ue_trouble.html#rf-configuration">RF Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/3_ue_trouble.html#network-attach">Network Attach</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/3_ue_trouble.html#misconfigured-network">Misconfigured Network</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/3_ue_trouble.html#rf-issues">RF Issues</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/3_ue_trouble.html#peak-throughput">Peak Throughput</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/3_ue_trouble.html#computational-power">Computational Power</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/3_ue_trouble.html#rf-hardware">RF Hardware</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/4_ue_advanced.html">Advanced Usage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/4_ue_advanced.html#external-usim">External USIM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/4_ue_advanced.html#channel-emulator">Channel Emulator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/4_ue_advanced.html#mimo">MIMO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/4_ue_advanced.html#g-nr">5G NR</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/5_ue_configref.html">Configuration Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/6_ue_commandref.html">Command Line Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/index.html">eNodeB User Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/1_enb_intro.html">Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/1_enb_intro.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/1_enb_intro.html#features">Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/1_enb_intro.html#enodeb-architecture">eNodeB architecture</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/2_enb_getstarted.html">Getting Started</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/2_enb_getstarted.html#running-the-software">Running the software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/2_enb_getstarted.html#configuration">Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/2_enb_getstarted.html#hardware-setup">Hardware Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/2_enb_getstarted.html#operating-system-setup">Operating System Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/2_enb_getstarted.html#observing-results">Observing results</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/3_enb_trouble.html">Troubleshooting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/3_enb_trouble.html#cots-ue-issues">COTS UE Issues</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/3_enb_trouble.html#ue-can-t-see-the-network">UE Can’t See The Network</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/3_enb_trouble.html#ue-won-t-attach">UE Won’t Attach</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/3_enb_trouble.html#can-t-access-internet">Can’t Access Internet</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/3_enb_trouble.html#peak-throughput">Peak Throughput</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/3_enb_trouble.html#computational-power">Computational Power</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/3_enb_trouble.html#rf-hardware">RF Hardware</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/4_enb_advanced.html">Advanced Usage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/4_enb_advanced.html#mimo">MIMO</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/5_enb_configref.html">Configuration Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/6_enb_commandref.html">Command Line Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../usermanuals/source/srsepc/source/index.html">EPC User Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../usermanuals/source/srsepc/source/1_epc_intro.html">Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsepc/source/1_epc_intro.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsepc/source/1_epc_intro.html#features">Features</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../usermanuals/source/srsepc/source/1_epc_intro.html#mme-features">MME Features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../usermanuals/source/srsepc/source/1_epc_intro.html#hss-features">HSS Features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../usermanuals/source/srsepc/source/1_epc_intro.html#spgw-features">SPGW Features</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../usermanuals/source/srsepc/source/2_epc_getstarted.html">Getting Started</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsepc/source/2_epc_getstarted.html#running-the-software">Running the software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsepc/source/2_epc_getstarted.html#configuration">Configuration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../usermanuals/source/srsepc/source/2_epc_getstarted.html#adding-an-ue-to-hss-database">Adding an UE to HSS database</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../usermanuals/source/srsepc/source/2_epc_getstarted.html#enbs-and-srsepc-on-separate-machines">eNBs and srsEPC on separate machines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../usermanuals/source/srsepc/source/2_epc_getstarted.html#connecting-ues-to-the-internet">Connecting UEs to the Internet</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsepc/source/2_epc_getstarted.html#observing-results">Observing results</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../usermanuals/source/srsepc/source/3_epc_trouble.html">Troubleshooting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsepc/source/3_epc_trouble.html#ue-did-not-attach">UE did not attach</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../usermanuals/source/srsepc/source/3_epc_trouble.html#authentication-failure">Authentication failure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../usermanuals/source/srsepc/source/3_epc_trouble.html#mismatched-apn">Mismatched APN</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsepc/source/3_epc_trouble.html#i-cannot-access-the-internet">I cannot access the Internet</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../usermanuals/source/srsepc/source/4_epc_configref.html">Configuration Reference</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Application Notes</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../zeromq/source/index.html">srsRAN 4G with ZMQ Virtual Radios</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../zeromq/source/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../zeromq/source/index.html#zeromq-installation">ZeroMQ Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../zeromq/source/index.html#running-a-full-end-to-end-lte-network-on-a-single-computer">Running a full end-to-end LTE network on a single computer</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../zeromq/source/index.html#network-namespace-creation">Network Namespace Creation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../zeromq/source/index.html#running-the-epc">Running the EPC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../zeromq/source/index.html#running-the-enodeb">Running the eNodeB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../zeromq/source/index.html#running-the-ue">Running the UE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../zeromq/source/index.html#traffic-generation">Traffic Generation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../zeromq/source/index.html#namespace-deletion">Namespace Deletion</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../zeromq/source/index.html#gnu-radio-companion-integration">GNU-Radio Companion Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../zeromq/source/index.html#known-issues">Known issues</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="index.html#">COTS UE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#introduction">Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="index.html#hardware-required">Hardware Required</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#driver-conf-file-set-up">Driver &amp; Conf. File Set-Up</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="index.html#drivers">Drivers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#conf-files">Conf. Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#adding-an-apn">Adding an APN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#run-masquerading-script">Run Masquerading Script</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#connecting-a-cots-ue-to-srsran-4g">Connecting a COTS UE to srsRAN 4G</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="index.html#running-srsepc-srsenb">Running srsEPC &amp; srsENB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#connecting-the-ue">Connecting the UE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#confirming-connection">Confirming Connection</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../handover/source/index.html">Intra-eNB &amp; S1 Handover</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../handover/source/index.html#introduction">Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../handover/source/index.html#hardware-software-required">Hardware &amp; Software Required</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../handover/source/index.html#intra-enb-handover">Intra-eNB Handover</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../handover/source/index.html#srsran-4g-set-up">srsRAN 4G Set-Up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../handover/source/index.html#gnu-radio-companion">GNU-Radio Companion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../handover/source/index.html#running-the-network">Running the Network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../handover/source/index.html#confirming-connection">Confirming Connection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../handover/source/index.html#forcing-handover">Forcing Handover</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../handover/source/index.html#s1-handover">S1 Handover</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../handover/source/index.html#open5gs-epc">Open5GS EPC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../handover/source/index.html#epc-set-up">EPC Set-Up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../handover/source/index.html#id1">srsRAN 4G Set-Up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../handover/source/index.html#using-scripts">Using Scripts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../handover/source/index.html#gnu-radio">GNU-Radio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../handover/source/index.html#id2">Running the Network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../handover/source/index.html#id3">Confirming Connection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../handover/source/index.html#id4">Forcing Handover</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../handover/source/index.html#troubleshooting">Troubleshooting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../handover/source/index.html#id5">Intra-eNB Handover</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../handover/source/index.html#id6">S1 Handover</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../2ca/source/index.html">Carrier Aggregation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../2ca/source/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../2ca/source/index.html#carrier-aggregation-using-sdr-hardware">Carrier Aggregation using SDR Hardware</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../2ca/source/index.html#enodeb-configuration">eNodeB Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../2ca/source/index.html#ue-configuration">UE Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../2ca/source/index.html#carrier-aggregation-using-zeromq-rf-emulation">Carrier Aggregation using ZeroMQ RF emulation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../2ca/source/index.html#id2">eNodeB Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../2ca/source/index.html#id3">UE Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../2ca/source/index.html#known-issues">Known issues</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../cv2x/source/index.html">C-V2X Signalling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../cv2x/source/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cv2x/source/index.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cv2x/source/index.html#anatomy-of-a-c-v2x-signal">Anatomy of a C-V2X Signal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cv2x/source/index.html#decoding-c-v2x-signals">Decoding C-V2X Signals</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../cv2x/source/index.html#capture-and-decode-in-real-time">Capture and Decode in Real-time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../cv2x/source/index.html#capture-signal-to-file-and-post-process">Capture Signal to File and Post-Process</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../embms/source/index.html">eMBMS End-to-End</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../embms/source/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../embms/source/index.html#setup">Setup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../embms/source/index.html#srsenb-configuration">srsENB configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../embms/source/index.html#srsmbms-configuration">srsMBMS configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../embms/source/index.html#srsue-configuration">srsUE configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../embms/source/index.html#usage">Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../nbiot/source/index.html">NB-IoT Signalling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../nbiot/source/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../nbiot/source/index.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../nbiot/source/index.html#spotting-local-nb-iot-deployments">Spotting local NB-IoT deployments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../nbiot/source/index.html#decoding-the-nb-iot-transmission">Decoding the NB-IoT transmission</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../nbiot/source/index.html#transmit-and-receive-downlink-signal">Transmit and Receive Downlink Signal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../nbiot/source/index.html#known-issues">Known issues</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../pi4/source/index.html">srsRAN 4G on Raspberry Pi 4</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../pi4/source/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pi4/source/index.html#pi4-enodeb-hardware-requirements">Pi4 eNodeB Hardware Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pi4/source/index.html#software-setup">Software Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pi4/source/index.html#pi4-enodeb-config">Pi4 eNodeB Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pi4/source/index.html#running-the-pi4-enodeb">Running the Pi4 eNodeB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pi4/source/index.html#known-issues">Known issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pi4/source/index.html#running-on-ubuntu-22-04-lts">Running on Ubuntu 22.04 LTS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../hw_packs/source/index.html">Hardware Options</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../hw_packs/source/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../hw_packs/source/index.html#choosing-hardware">Choosing Hardware</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../hw_packs/source/index.html#compute-criteria">Compute Criteria</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../hw_packs/source/index.html#sdr-criteria">SDR Criteria</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../hw_packs/source/index.html#packages">Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../hw_packs/source/index.html#package-1">Package 1</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../hw_packs/source/index.html#advantages">Advantages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../hw_packs/source/index.html#limitations">Limitations</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../hw_packs/source/index.html#package-2">Package 2</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../hw_packs/source/index.html#id1">Advantages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../hw_packs/source/index.html#id2">Limitations</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../hw_packs/source/index.html#package-3">Package 3</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../hw_packs/source/index.html#id3">Advantages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../hw_packs/source/index.html#id4">Limitations</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../hw_packs/source/index.html#zmq">ZMQ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../hw_packs/source/index.html#choosing-a-usrp-and-rf-daughter-card">Choosing a USRP and RF Daughter Card</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">5G Prototyping</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../5g_sa_amari/source/index.html">5G SA srsUE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../5g_sa_amari/source/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5g_sa_amari/source/index.html#hardware-requirements">Hardware Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5g_sa_amari/source/index.html#hardware-setup">Hardware Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5g_sa_amari/source/index.html#limitations">Limitations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5g_sa_amari/source/index.html#configuration">Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../5g_sa_amari/source/index.html#srsue">srsUE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../5g_sa_amari/source/index.html#callbox">Callbox</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../5g_sa_amari/source/index.html#enable-nr-support">Enable NR Support</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../5g_sa_amari/source/index.html#nr-cell">NR Cell</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../5g_sa_amari/source/index.html#prach">PRACH</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../5g_sa_amari/source/index.html#pucch">PUCCH</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../5g_sa_amari/source/index.html#running-the-network">Running the Network</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../5g_sa_amari/source/index.html#gc">5GC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../5g_sa_amari/source/index.html#gnb">gNB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../5g_sa_amari/source/index.html#ue">UE</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../5g_sa_amari/source/index.html#console-trace">Console Trace</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../5g_sa_amari/source/index.html#id1">srsUE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../5g_sa_amari/source/index.html#amarisoft-gnb">Amarisoft gNB</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../5g_nsa_amari/source/index.html">5G NSA srsUE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../5g_nsa_amari/source/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5g_nsa_amari/source/index.html#g-nsa-what-you-need-to-know">5G NSA: What you need to know</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5g_nsa_amari/source/index.html#limitations">Limitations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5g_nsa_amari/source/index.html#hardware-requirements">Hardware Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5g_nsa_amari/source/index.html#hardware-setup">Hardware Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5g_nsa_amari/source/index.html#configuration">Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../5g_nsa_amari/source/index.html#srsue">srsUE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../5g_nsa_amari/source/index.html#callbox">Callbox</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../5g_nsa_amari/source/index.html#usage">Usage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../5g_nsa_amari/source/index.html#mme">MME</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../5g_nsa_amari/source/index.html#enb-gnb">eNB/ gNB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../5g_nsa_amari/source/index.html#ue">UE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../5g_nsa_amari/source/index.html#srsgui-support">srsGUI Support</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../5g_nsa_amari/source/index.html#understanding-the-console-trace">Understanding the console Trace</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../5g_nsa_amari/source/index.html#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+</ul>
+
+
+    
+        <p class="caption">
+            <span class="caption-text">
+            
+                Links
+            
+            </span>
+        </p>
+        <ul>
+            
+                
+                    <li class="toctree-l1"><a href="https://www.srsran.com"><i class="web-icon"></i> Website</a></li>
+                
+            
+                
+                    <li class="toctree-l1"><a href="https://github.com/srsran/srsRAN_4G"><i class="fa fa-github fa-fw"></i> Source code</a></li>
+                
+            
+                
+                    <li class="toctree-l1"><a href="https://lists.srsran.com/mailman/listinfo/srsran-users"><i class="fa fa-envelope fa-fw"></i> Mailing list</a></li>
+                
+            
+                
+                    <li class="toctree-l1"><a href="https://twitter.com/srsRANProject"><i class="fa fa-twitter fa-fw"></i> Twitter</a></li>
+                
+            
+        </ul>
+    
+
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">srsRAN 4G</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">COTS UE</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/app_notes/source/cots_ue/source/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="cots-ue">
+<span id="cots-ue-appnote"></span><h1>COTS UE<a class="headerlink" href="index.html#cots-ue" title="Link to this heading"></a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Please note, operating a private LTE network on cellular frequency bands may be tightly regulated in your jurisdiction. Seek the approval of your telecommunications regulator before doing so.</p>
+</div>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="index.html#introduction" title="Link to this heading"></a></h2>
+<p>This application note aims to demonstrate how to set up your own LTE network using srsENB, srsEPC and a COTS UE. There are two options for network set-up when connecting a COTS UE: The network can be left as is,
+and the UE can communicate locally within the network, or the EPC can be connected to the internet through the P-GW, allowing the UE to access the internet for
+web-browsing, email etc.</p>
+<section id="hardware-required">
+<h3>Hardware Required<a class="headerlink" href="index.html#hardware-required" title="Link to this heading"></a></h3>
+<p>Creating a network and connecting a COTS UE requires the following:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>PC with a Linux based OS, with srsRAN 4G installed and built</p></li>
+<li><p>An RF-frontend capable of both Tx &amp; Rx</p></li>
+<li><p>A COTS UE</p></li>
+<li><p>USIM/ SIM card (This must be a test card or a programmable card, with known keys)</p></li>
+</ul>
+</div></blockquote>
+<p>The following diagram outlines the set-up:</p>
+<blockquote>
+<div><img alt="../../../../_images/cots_ue.png" src="../../../../_images/cots_ue.png" />
+</div></blockquote>
+<p>For this implementation the following equipment was used:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Razer Blade Stealth running Ubuntu 18.04</p></li>
+<li><p>B200 mini USRP</p></li>
+<li><p>Sony Xperia XA with a Sysmocom USIM</p></li>
+</ul>
+</div></blockquote>
+<p>The following photo shows the real world implementation of the equipment for this use case:</p>
+<blockquote>
+<div><img alt="../../../../_images/real_imp.jpg" src="../../../../_images/real_imp.jpg" />
+</div></blockquote>
+<p>Note, this is for illustrative purposes, this orientation of USRP and UE may not give the best stability &amp; throughput.</p>
+</section>
+</section>
+<section id="driver-conf-file-set-up">
+<h2>Driver &amp; Conf. File Set-Up<a class="headerlink" href="index.html#driver-conf-file-set-up" title="Link to this heading"></a></h2>
+<p>Before instantiating the network and connecting the UE you need to first ensure you have the correct drivers installed and that the configuration files are edited appropriately.</p>
+<section id="drivers">
+<h3>Drivers<a class="headerlink" href="index.html#drivers" title="Link to this heading"></a></h3>
+<p>Firstly, check that you have the appropriate drivers for your SDR installed. If not they must be downloaded from the relevant source. If the drivers are already installed ensure
+they are up to date and are from a stable release. This step can be skipped if you have the correct drivers and know them to be working.</p>
+<ul class="simple">
+<li><p>RF front-end drivers:</p>
+<ul>
+<li><p>UHD:                 <a class="reference external" href="https://github.com/EttusResearch/uhd">https://github.com/EttusResearch/uhd</a></p></li>
+<li><p>SoapySDR:            <a class="reference external" href="https://github.com/pothosware/SoapySDR">https://github.com/pothosware/SoapySDR</a></p></li>
+<li><p>BladeRF:             <a class="reference external" href="https://github.com/Nuand/bladeRF">https://github.com/Nuand/bladeRF</a></p></li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This app note was tested using a b200-mini and UHD v4.0, but we recommend using UHD v3.15 where possible.</p>
+</div>
+<p>When the drivers have been installed/ updated you should connect your hardware and check that everything is working correctly. To do this for a USRP using the UHD drivers run the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">uhd_usrp_probe</span>
+</pre></div>
+</div>
+<p>This should be done anytime you are using a USRP before carrying out any testing or implementation to check a stable connection to the radio. Note, you should be using a USB 3.0 interface
+when using an SDR for this use case.</p>
+<p>If you have had to install or update your drivers and everything is working as intended, then you will need to rebuild srsRAN 4G to ensure it picks up on the new/ updated drivers.</p>
+<p>To make a clean build execute the following commands in your terminal:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">./</span><span class="n">srsRAN_4G</span><span class="o">/</span><span class="n">build</span>
+<span class="n">rm</span> <span class="n">CMakeCache</span><span class="o">.</span><span class="n">txt</span>
+<span class="n">make</span> <span class="n">clean</span>
+<span class="n">cmake</span> <span class="o">..</span>
+<span class="n">make</span>
+</pre></div>
+</div>
+<p>Your hardware and drivers should now be working correctly and be ready to use for connecting a COTS UE to srsRAN 4G.</p>
+</section>
+<section id="conf-files">
+<h3>Conf. Files<a class="headerlink" href="index.html#conf-files" title="Link to this heading"></a></h3>
+<p>The base configuration files for srsRAN 4G can be installed by running the following command in the build folder:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">srsran_4g_install_configs</span><span class="o">.</span><span class="n">sh</span> <span class="o">&lt;</span><span class="n">user</span><span class="o">/</span><span class="n">service</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>You have the option to install the configurations files to the user directory or for all users. For this example the configuration files have been installed for all users by
+running the following command <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">srsran_4g_install_configs.sh</span> <span class="pre">service</span></code>. The config files can then be found in the following folder: <code class="docutils literal notranslate"><span class="pre">~./etc/srsran_4g</span></code></p>
+<p>You will need to edit the following files before you can run a COTS UE over the network:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>epc.conf</p></li>
+<li><p>enb.conf</p></li>
+<li><p>user_db.csv</p></li>
+</ul>
+</div></blockquote>
+<p>The eNB &amp; EPC config files will need to be edited such that the MCC &amp; MNC values are the same across both files. The user DB file needs to be updated so that
+it contains the credentials associated with the USIM card being used in the UE.</p>
+<p><strong>EPC:</strong></p>
+<p>The following snippet shows where to change the MCC &amp; MNC values in the EPC config file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">22</span> <span class="o">|</span> <span class="c1">#####################################################################</span>
+<span class="mi">23</span> <span class="o">|</span> <span class="p">[</span><span class="n">mme</span><span class="p">]</span>
+<span class="mi">24</span> <span class="o">|</span> <span class="n">mme_code</span> <span class="o">=</span> <span class="mh">0x1a</span>
+<span class="mi">25</span> <span class="o">|</span> <span class="n">mme_group</span> <span class="o">=</span> <span class="mh">0x0001</span>
+<span class="mi">26</span> <span class="o">|</span> <span class="n">tac</span> <span class="o">=</span> <span class="mh">0x0007</span>
+<span class="mi">27</span> <span class="o">|</span> <span class="n">mcc</span> <span class="o">=</span> <span class="mi">901</span>
+<span class="mi">28</span> <span class="o">|</span> <span class="n">mnc</span> <span class="o">=</span> <span class="mi">70</span>
+<span class="mi">29</span> <span class="o">|</span> <span class="n">mme_bind_addr</span> <span class="o">=</span> <span class="mf">127.0.1.100</span>
+<span class="mi">30</span> <span class="o">|</span> <span class="n">apn</span> <span class="o">=</span> <span class="n">srsapn</span>
+<span class="mi">31</span> <span class="o">|</span> <span class="n">dns_addr</span> <span class="o">=</span> <span class="mf">8.8.8.8</span>
+<span class="mi">32</span> <span class="o">|</span> <span class="n">encryption_algo</span> <span class="o">=</span> <span class="n">EEA0</span>
+<span class="mi">33</span> <span class="o">|</span> <span class="n">integrity_algo</span> <span class="o">=</span> <span class="n">EIA1</span>
+<span class="mi">34</span> <span class="o">|</span> <span class="n">paging_timer</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="mi">35</span> <span class="o">|</span>
+<span class="mi">36</span> <span class="o">|</span> <span class="c1">#####################################################################</span>
+</pre></div>
+</div>
+<p>Line 27 and 28 must be changed, for Sysmocom USIMS these values are 901 &amp; 70. These values will be dependent on the USIM being used.</p>
+<p><strong>eNB:</strong></p>
+<p>The above changes must be mirrored in the eNB config. file. The following snippet shows this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">18</span> <span class="o">|</span> <span class="c1">#####################################################################</span>
+<span class="mi">19</span> <span class="o">|</span> <span class="p">[</span><span class="n">enb</span><span class="p">]</span>
+<span class="mi">20</span> <span class="o">|</span> <span class="n">enb_id</span> <span class="o">=</span> <span class="mh">0x19B</span>
+<span class="mi">21</span> <span class="o">|</span> <span class="n">mcc</span> <span class="o">=</span> <span class="mi">901</span>
+<span class="mi">22</span> <span class="o">|</span> <span class="n">mnc</span> <span class="o">=</span> <span class="mi">70</span>
+<span class="mi">23</span> <span class="o">|</span> <span class="n">mme_addr</span> <span class="o">=</span> <span class="mf">127.0.1.100</span>
+<span class="mi">24</span> <span class="o">|</span> <span class="n">gtp_bind_addr</span> <span class="o">=</span> <span class="mf">127.0.1.1</span>
+<span class="mi">25</span> <span class="o">|</span> <span class="n">s1c_bind_addr</span> <span class="o">=</span> <span class="mf">127.0.1.1</span>
+<span class="mi">26</span> <span class="o">|</span> <span class="n">n_prb</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="mi">27</span> <span class="o">|</span> <span class="c1">#tm = 4</span>
+<span class="mi">28</span> <span class="o">|</span> <span class="c1">#nof_ports = 2</span>
+<span class="mi">29</span> <span class="o">|</span>
+<span class="mi">30</span> <span class="o">|</span> <span class="c1">#####################################################################</span>
+</pre></div>
+</div>
+<p>Here, the MCC and MNC values at lines 21 &amp; 22 are changed to the values used in the EPC.</p>
+<p>For both of the config files the rest of the values can be left at the default values. They may be changed as needed, but further customization
+is not necessary to enable the successful connection of a COTS UE.</p>
+<p><strong>User DB:</strong></p>
+<p>The following list describes the fields contained in the <code class="docutils literal notranslate"><span class="pre">user_db.csv</span></code> file, found in the same folder as the .conf files. As standard, this file
+will come with two dummy UEs entered into the CSV, these help to provide an example of how the file should be filled in.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Name: Any human readable value</p></li>
+<li><p>Auth: Authentication algorithm (xor/ mil)</p></li>
+<li><p>IMSI: UE’s IMSI value</p></li>
+<li><p>Key: UE’s key, hex value</p></li>
+<li><p>OP Type: Operator’s code type (OP/ OPc)</p></li>
+<li><p>OP: OP/ OPc code, hex value</p></li>
+<li><p>AMF: Authentication management field, hex value must be above 8000</p></li>
+<li><p>SQN: UE’s Sequence number for freshness of the authentication</p></li>
+<li><p>QCI: QoS Class Identifier for the UE’s default bearer</p></li>
+<li><p>IP Alloc: IP allocation strategy for the SPGW</p></li>
+</ul>
+</div></blockquote>
+<p>The AMF, SQN, QCI and IP Alloc fields can be populated with the following values:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>9000, 000000000000, 9, dynamic</p></li>
+</ul>
+</div></blockquote>
+<p>This will result in a user_db.csv file that should look something like the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="o">|</span> <span class="c1">#</span>
+<span class="mi">2</span> <span class="o">|</span> <span class="c1"># .csv to store UE&#39;s information in HSS</span>
+<span class="mi">3</span> <span class="o">|</span> <span class="c1"># Kept in the following format: &quot;Name,Auth,IMSI,Key,OP_Type,OP,AMF,SQN,QCI,IP_alloc&quot;</span>
+<span class="mi">4</span> <span class="o">|</span> <span class="c1">#</span>
+<span class="mi">5</span> <span class="o">|</span> <span class="c1"># Name:     Human readable name to help distinguish UE&#39;s. Ignored by the HSS</span>
+<span class="mi">6</span> <span class="o">|</span> <span class="c1"># IMSI:     UE&#39;s IMSI value</span>
+<span class="mi">7</span> <span class="o">|</span> <span class="c1"># Auth:     Authentication algorithm used by the UE. Valid algorithms are XOR</span>
+<span class="mi">8</span> <span class="o">|</span> <span class="c1">#           (xor) and MILENAGE (mil)</span>
+<span class="mi">9</span> <span class="o">|</span> <span class="c1"># Key:      UE&#39;s key, where other keys are derived from. Stored in hexadecimal</span>
+<span class="mi">10</span><span class="o">|</span> <span class="c1"># OP_Type:  Operator&#39;s code type, either OP or OPc</span>
+<span class="mi">11</span><span class="o">|</span> <span class="c1"># OP/OPc:   Operator Code/Cyphered Operator Code, stored in hexadecimal</span>
+<span class="mi">12</span><span class="o">|</span> <span class="c1"># AMF:      Authentication management field, stored in hexadecimal</span>
+<span class="mi">13</span><span class="o">|</span> <span class="c1"># SQN:      UE&#39;s Sequence number for freshness of the authentication</span>
+<span class="mi">14</span><span class="o">|</span> <span class="c1"># QCI:      QoS Class Identifier for the UE&#39;s default bearer.</span>
+<span class="mi">15</span><span class="o">|</span> <span class="c1"># IP_alloc: IP allocation stratagy for the SPGW.</span>
+<span class="mi">16</span><span class="o">|</span> <span class="c1">#           With &#39;dynamic&#39; the SPGW will automatically allocate IPs</span>
+<span class="mi">17</span><span class="o">|</span> <span class="c1">#           With a valid IPv4 (e.g. &#39;172.16.0.2&#39;) the UE will have a statically assigned IP.</span>
+<span class="mi">18</span><span class="o">|</span> <span class="c1">#</span>
+<span class="mi">19</span><span class="o">|</span> <span class="c1"># Note: Lines starting by &#39;#&#39; are ignored and will be overwritten</span>
+<span class="mi">20</span><span class="o">|</span> <span class="n">ue3</span><span class="p">,</span><span class="n">mil</span><span class="p">,</span><span class="mi">901700000020936</span><span class="p">,</span><span class="mi">4933</span><span class="n">f9c5a83e5718c52e54066dc78dcf</span><span class="p">,</span><span class="n">opc</span><span class="p">,</span><span class="n">fc632f97bd249ce0d16ba79e6505d300</span><span class="p">,</span><span class="mi">9000</span><span class="p">,</span><span class="mi">0000000060</span><span class="n">f8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="n">dynamic</span>
+</pre></div>
+</div>
+<p>Line 20 shows the entry for the USIM being used in the COTS UE. The values assigned to the AMF, SQN, QCI &amp; IP Alloc are default values above,
+as outlined <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../../usermanuals/source/srsepc/source/2_epc_getstarted.html#config-csv"><span class="std std-ref">here</span></a> in the EPC documentation. Ensure there is no white space between the values in each entry, as this will cause
+the file to be read incorrectly.</p>
+</section>
+<section id="adding-an-apn">
+<h3>Adding an APN<a class="headerlink" href="index.html#adding-an-apn" title="Link to this heading"></a></h3>
+<p>An APN is needed to allow the UE to access the internet. This is created from the UE and then a change is made to the EPC config file to reflect this.</p>
+<p>From the UE navigate to the Network settings for the SIM being used. From here an APN can be added, usually under <em>“Access point names”</em>. Create a new APN with the name and APN “test123”, as shown in the following figure.</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../../../../_images/apn_ue1.jpg"><img alt="../../../../_images/apn_ue1.jpg" class="align-center" src="../../../../_images/apn_ue1.jpg" style="height: 360px;" />
+</a>
+</div></blockquote>
+<p>The addition of this APN must be reflected in the EPC config file, to do this add the APN to the config. This is shown in the following snippet:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">22</span> <span class="o">|</span> <span class="c1">#####################################################################</span>
+<span class="mi">23</span> <span class="o">|</span> <span class="p">[</span><span class="n">mme</span><span class="p">]</span>
+<span class="mi">24</span> <span class="o">|</span> <span class="n">mme_code</span> <span class="o">=</span> <span class="mh">0x1a</span>
+<span class="mi">25</span> <span class="o">|</span> <span class="n">mme_group</span> <span class="o">=</span> <span class="mh">0x0001</span>
+<span class="mi">26</span> <span class="o">|</span> <span class="n">tac</span> <span class="o">=</span> <span class="mh">0x0007</span>
+<span class="mi">27</span> <span class="o">|</span> <span class="n">mcc</span> <span class="o">=</span> <span class="mi">901</span>
+<span class="mi">28</span> <span class="o">|</span> <span class="n">mnc</span> <span class="o">=</span> <span class="mi">70</span>
+<span class="mi">29</span> <span class="o">|</span> <span class="n">mme_bind_addr</span> <span class="o">=</span> <span class="mf">127.0.1.100</span>
+<span class="mi">30</span> <span class="o">|</span> <span class="n">apn</span> <span class="o">=</span> <span class="n">test123</span>
+<span class="mi">31</span> <span class="o">|</span> <span class="n">dns_addr</span> <span class="o">=</span> <span class="mf">8.8.8.8</span>
+<span class="mi">32</span> <span class="o">|</span> <span class="n">encryption_algo</span> <span class="o">=</span> <span class="n">EEA0</span>
+<span class="mi">33</span> <span class="o">|</span> <span class="n">integrity_algo</span> <span class="o">=</span> <span class="n">EIA1</span>
+<span class="mi">34</span> <span class="o">|</span> <span class="n">paging_timer</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="mi">35</span> <span class="o">|</span>
+<span class="mi">36</span> <span class="o">|</span> <span class="c1">#####################################################################</span>
+</pre></div>
+</div>
+<p>The APN has been added at line 30 above. This must match the APN on the UE to enable a successful connection.</p>
+</section>
+<section id="run-masquerading-script">
+<h3>Run Masquerading Script<a class="headerlink" href="index.html#run-masquerading-script" title="Link to this heading"></a></h3>
+<p>To allow UE to connect to the internet via the EPC, the pre-configured masquerading script must be run. This can be found in <code class="docutils literal notranslate"><span class="pre">srsRAN_4G//srsepc</span></code>. The
+masquerading script enables IP forwarding and sets up Network Address Translation to pass traffic between the srsRAN 4G network and the external network.
+The script must be run each time the machine is re-booted, and can be done before or while the network is running. The UE will not be able to communicate
+with the interet until this script has been run.</p>
+<p>Before running the script it is important to identify the interface being used to connect your PC to the internet. As the script requires this to be passed
+in as an argument. This can be done by running the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">route</span>
+</pre></div>
+</div>
+<p>You will see an output similar to the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Kernel</span> <span class="n">IP</span> <span class="n">routing</span> <span class="n">table</span>
+<span class="n">Destination</span>     <span class="n">Gateway</span>       <span class="n">Genmask</span>        <span class="n">Flags</span>      <span class="n">Metric</span>  <span class="n">Ref</span>    <span class="n">Use</span>      <span class="n">Iface</span>
+<span class="n">default</span>         <span class="mf">192.168.1.1</span>   <span class="mf">0.0.0.0</span>        <span class="n">UG</span>         <span class="mi">600</span>     <span class="mi">0</span>        <span class="mi">0</span>      <span class="n">wlp2s0</span>
+<span class="n">link</span><span class="o">-</span><span class="n">local</span>      <span class="mf">0.0.0.0</span>       <span class="mf">255.255.0.0</span>    <span class="n">U</span>          <span class="mi">1000</span>    <span class="mi">0</span>        <span class="mi">0</span>      <span class="n">wlp2s0</span>
+<span class="mf">192.168.1.0</span>     <span class="mf">0.0.0.0</span>       <span class="mf">255.255.255.0</span>  <span class="n">U</span>          <span class="mi">600</span>     <span class="mi">0</span>        <span class="mi">0</span>      <span class="n">wlp2s0</span>
+</pre></div>
+</div>
+<p>The interface (Iface) associated with the <em>default</em> destination is one which must be passed into the masq. script. In the above output that is the wlp2s0 interface.</p>
+<p>The masq. script can now be run from the follow folder: <code class="docutils literal notranslate"><span class="pre">srsRAN_4G/srsEPC</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">./</span><span class="n">srsepc_if_masq</span><span class="o">.</span><span class="n">sh</span> <span class="o">&lt;</span><span class="n">interface</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>If it has executed successfully you will see the following message:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Masquerading</span> <span class="n">Interface</span> <span class="o">&lt;</span><span class="n">interface</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>The configuration files, user DB and UE should now be set up appropriately to allow the COTS UE to connect to the eNB and Core.</p>
+</section>
+</section>
+<section id="connecting-a-cots-ue-to-srsran-4g">
+<h2>Connecting a COTS UE to srsRAN 4G<a class="headerlink" href="index.html#connecting-a-cots-ue-to-srsran-4g" title="Link to this heading"></a></h2>
+<p>The final step in connecting a COTS UE to srsRAN 4G is to first spin up the network and then connect to that network from the UE. The following sections
+will outline how this is achieved.</p>
+<section id="running-srsepc-srsenb">
+<h3>Running srsEPC &amp; srsENB<a class="headerlink" href="index.html#running-srsepc-srsenb" title="Link to this heading"></a></h3>
+<p>First navigate to the srsRAN 4G folder. Then initialise the EPC by running:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">srsepc</span>
+</pre></div>
+</div>
+<p>The following output should be displayed on the console:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Built</span> <span class="ow">in</span> <span class="n">Release</span> <span class="n">mode</span> <span class="n">using</span> <span class="n">commit</span> <span class="n">c892ae56b</span> <span class="n">on</span> <span class="n">branch</span> <span class="n">master</span><span class="o">.</span>
+
+<span class="o">---</span>  <span class="n">Software</span> <span class="n">Radio</span> <span class="n">Systems</span> <span class="n">EPC</span>  <span class="o">---</span>
+
+<span class="n">Reading</span> <span class="n">configuration</span> <span class="n">file</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">srsran_4g</span><span class="o">/</span><span class="n">epc</span><span class="o">.</span><span class="n">conf</span><span class="o">...</span>
+<span class="n">HSS</span> <span class="n">Initialized</span><span class="o">.</span>
+<span class="n">MME</span> <span class="n">S11</span> <span class="n">Initialized</span>
+<span class="n">MME</span> <span class="n">GTP</span><span class="o">-</span><span class="n">C</span> <span class="n">Initialized</span>
+<span class="n">MME</span> <span class="n">Initialized</span><span class="o">.</span> <span class="n">MCC</span><span class="p">:</span> <span class="mh">0xf901</span><span class="p">,</span> <span class="n">MNC</span><span class="p">:</span> <span class="mh">0xff70</span>
+<span class="n">SPGW</span> <span class="n">GTP</span><span class="o">-</span><span class="n">U</span> <span class="n">Initialized</span><span class="o">.</span>
+<span class="n">SPGW</span> <span class="n">S11</span> <span class="n">Initialized</span><span class="o">.</span>
+<span class="n">SP</span><span class="o">-</span><span class="n">GW</span> <span class="n">Initialized</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>The eNB can then be brought online in a separate console by running:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">srsenb</span>
+</pre></div>
+</div>
+<p>The console should display the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">---</span>  <span class="n">Software</span> <span class="n">Radio</span> <span class="n">Systems</span> <span class="n">LTE</span> <span class="n">eNodeB</span>  <span class="o">---</span>
+
+<span class="n">Reading</span> <span class="n">configuration</span> <span class="n">file</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">srsran_4g</span><span class="o">/</span><span class="n">enb</span><span class="o">.</span><span class="n">conf</span><span class="o">...</span>
+
+<span class="n">Built</span> <span class="ow">in</span> <span class="n">Release</span> <span class="n">mode</span> <span class="n">using</span> <span class="n">commit</span> <span class="n">c892ae56b</span> <span class="n">on</span> <span class="n">branch</span> <span class="n">master</span><span class="o">.</span>
+
+<span class="n">Opening</span> <span class="mi">1</span> <span class="n">channels</span> <span class="ow">in</span> <span class="n">RF</span> <span class="n">device</span><span class="o">=</span><span class="n">UHD</span> <span class="k">with</span> <span class="n">args</span><span class="o">=</span><span class="n">default</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span> <span class="p">[</span><span class="n">UHD</span><span class="p">]</span> <span class="n">linux</span><span class="p">;</span> <span class="n">GNU</span> <span class="n">C</span><span class="o">++</span> <span class="n">version</span> <span class="mf">9.3.0</span><span class="p">;</span> <span class="n">Boost_107100</span><span class="p">;</span> <span class="n">UHD_4</span><span class="mf">.0.0.0</span><span class="o">-</span><span class="mi">666</span><span class="o">-</span><span class="n">g676c3a37</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span> <span class="p">[</span><span class="n">LOGGING</span><span class="p">]</span> <span class="n">Fastpath</span> <span class="n">logging</span> <span class="n">disabled</span> <span class="n">at</span> <span class="n">runtime</span><span class="o">.</span>
+<span class="n">Opening</span> <span class="n">USRP</span> <span class="n">channels</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">args</span><span class="p">:</span> <span class="nb">type</span><span class="o">=</span><span class="n">b200</span><span class="p">,</span><span class="n">master_clock_rate</span><span class="o">=</span><span class="mf">23.04e6</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span> <span class="p">[</span><span class="n">B200</span><span class="p">]</span> <span class="n">Detected</span> <span class="n">Device</span><span class="p">:</span> <span class="n">B200mini</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span> <span class="p">[</span><span class="n">B200</span><span class="p">]</span> <span class="n">Operating</span> <span class="n">over</span> <span class="n">USB</span> <span class="mf">3.</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span> <span class="p">[</span><span class="n">B200</span><span class="p">]</span> <span class="n">Initialize</span> <span class="n">CODEC</span> <span class="n">control</span><span class="o">...</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span> <span class="p">[</span><span class="n">B200</span><span class="p">]</span> <span class="n">Initialize</span> <span class="n">Radio</span> <span class="n">control</span><span class="o">...</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span> <span class="p">[</span><span class="n">B200</span><span class="p">]</span> <span class="n">Performing</span> <span class="n">register</span> <span class="n">loopback</span> <span class="n">test</span><span class="o">...</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span> <span class="p">[</span><span class="n">B200</span><span class="p">]</span> <span class="n">Register</span> <span class="n">loopback</span> <span class="n">test</span> <span class="n">passed</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span> <span class="p">[</span><span class="n">B200</span><span class="p">]</span> <span class="n">Asking</span> <span class="k">for</span> <span class="n">clock</span> <span class="n">rate</span> <span class="mf">23.040000</span> <span class="n">MHz</span><span class="o">...</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span> <span class="p">[</span><span class="n">B200</span><span class="p">]</span> <span class="n">Actually</span> <span class="n">got</span> <span class="n">clock</span> <span class="n">rate</span> <span class="mf">23.040000</span> <span class="n">MHz</span><span class="o">.</span>
+<span class="n">Setting</span> <span class="n">frequency</span><span class="p">:</span> <span class="n">DL</span><span class="o">=</span><span class="mf">2685.0</span> <span class="n">Mhz</span><span class="p">,</span> <span class="n">UL</span><span class="o">=</span><span class="mf">2565.0</span> <span class="n">MHz</span> <span class="k">for</span> <span class="n">cc_idx</span><span class="o">=</span><span class="mi">0</span>
+
+<span class="o">====</span> <span class="n">eNodeB</span> <span class="n">started</span> <span class="o">===</span>
+<span class="n">Type</span> <span class="o">&lt;</span><span class="n">t</span><span class="o">&gt;</span> <span class="n">to</span> <span class="n">view</span> <span class="n">trace</span>
+</pre></div>
+</div>
+<p>The EPC console should now print an update if the eNB has successfully connected to the core:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Received</span> <span class="n">S1</span> <span class="n">Setup</span> <span class="n">Request</span><span class="o">.</span>
+<span class="n">S1</span> <span class="n">Setup</span> <span class="n">Request</span> <span class="o">-</span> <span class="n">eNB</span> <span class="n">Name</span><span class="p">:</span> <span class="n">srsenb01</span><span class="p">,</span> <span class="n">eNB</span> <span class="nb">id</span><span class="p">:</span> <span class="mh">0x19b</span>
+<span class="n">S1</span> <span class="n">Setup</span> <span class="n">Request</span> <span class="o">-</span> <span class="n">MCC</span><span class="p">:</span><span class="mi">901</span><span class="p">,</span> <span class="n">MNC</span><span class="p">:</span><span class="mi">70</span><span class="p">,</span> <span class="n">PLMN</span><span class="p">:</span> <span class="mi">651527</span>
+<span class="n">S1</span> <span class="n">Setup</span> <span class="n">Request</span> <span class="o">-</span> <span class="n">TAC</span> <span class="mi">0</span><span class="p">,</span> <span class="n">B</span><span class="o">-</span><span class="n">PLMN</span> <span class="mi">0</span>
+<span class="n">S1</span> <span class="n">Setup</span> <span class="n">Request</span> <span class="o">-</span> <span class="n">Paging</span> <span class="n">DRX</span> <span class="n">v128</span>
+<span class="n">Sending</span> <span class="n">S1</span> <span class="n">Setup</span> <span class="n">Response</span>
+</pre></div>
+</div>
+<p>The network is now ready for the COTS UE to connect.</p>
+</section>
+<section id="connecting-the-ue">
+<h3>Connecting the UE<a class="headerlink" href="index.html#connecting-the-ue" title="Link to this heading"></a></h3>
+<p>Connecting the UE to the network is a quick and easy process if the above steps have been completed successfully.</p>
+<p>You can now connect the UE to the network by taking the following steps:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Open the Settings menu and navigate to the Sim &amp; Network options</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../../../_images/ue_settings1.jpg"><img alt="../../../../_images/ue_settings1.jpg" class="align-center" src="../../../../_images/ue_settings1.jpg" style="height: 360px;" />
+</a>
+<ul class="simple">
+<li><p>Open this menu and proceed to the sub-menu associated with the USIM being used. It should look something like the following:</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../../../_images/sim_settings1.jpg"><img alt="../../../../_images/sim_settings1.jpg" class="align-center" src="../../../../_images/sim_settings1.jpg" style="height: 360px;" />
+</a>
+<ul class="simple">
+<li><p>Under the Network Operators find the network which you have just instantiated using srsRAN 4G</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../../../_images/networks.jpg"><img alt="../../../../_images/networks.jpg" class="align-center" src="../../../../_images/networks.jpg" style="height: 360px;" />
+</a>
+<ul class="simple">
+<li><p>Select the network that is a combination of your MMC &amp; MNC values. For this example it is the network labelled 90170 4G. The UE should then automatically connect to the network.</p></li>
+</ul>
+</div></blockquote>
+<p>The UE should now be connected to the network. To check for a successful connection use the logs output to the console.</p>
+</section>
+<section id="confirming-connection">
+<h3>Confirming Connection<a class="headerlink" href="index.html#confirming-connection" title="Link to this heading"></a></h3>
+<p>Once the UE has connected to the network, the console outputs of the srsENB and srsEPC can be used to confirm a successful connection.</p>
+<p><strong>EPC Console:</strong></p>
+<p>The following output is shown for the EPC after a successful attach. First a confirmation message in the form of <em>UL NAS: Received Attach Complete</em> will be displayed, secondly
+the EPS bearers will be given out and the ID confirmed on the output, and lastly the <em>Sending EMM Information Message</em> output will be shown. If all of these are displayed in the
+logs, then an attach is successful. These messages are seen in the last five lines of the console output in the following console output:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Built</span> <span class="ow">in</span> <span class="n">Release</span> <span class="n">mode</span> <span class="n">using</span> <span class="n">commit</span> <span class="n">c892ae56b</span> <span class="n">on</span> <span class="n">branch</span> <span class="n">master</span><span class="o">.</span>
+
+
+<span class="o">---</span>  <span class="n">Software</span> <span class="n">Radio</span> <span class="n">Systems</span> <span class="n">EPC</span>  <span class="o">---</span>
+
+<span class="n">Reading</span> <span class="n">configuration</span> <span class="n">file</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">srsran_4g</span><span class="o">/</span><span class="n">epc</span><span class="o">.</span><span class="n">conf</span><span class="o">...</span>
+<span class="n">HSS</span> <span class="n">Initialized</span><span class="o">.</span>
+<span class="n">MME</span> <span class="n">S11</span> <span class="n">Initialized</span>
+<span class="n">MME</span> <span class="n">GTP</span><span class="o">-</span><span class="n">C</span> <span class="n">Initialized</span>
+<span class="n">MME</span> <span class="n">Initialized</span><span class="o">.</span> <span class="n">MCC</span><span class="p">:</span> <span class="mh">0xf901</span><span class="p">,</span> <span class="n">MNC</span><span class="p">:</span> <span class="mh">0xff70</span>
+<span class="n">SPGW</span> <span class="n">GTP</span><span class="o">-</span><span class="n">U</span> <span class="n">Initialized</span><span class="o">.</span>
+<span class="n">SPGW</span> <span class="n">S11</span> <span class="n">Initialized</span><span class="o">.</span>
+<span class="n">SP</span><span class="o">-</span><span class="n">GW</span> <span class="n">Initialized</span><span class="o">.</span>
+<span class="n">Received</span> <span class="n">S1</span> <span class="n">Setup</span> <span class="n">Request</span><span class="o">.</span>
+<span class="n">S1</span> <span class="n">Setup</span> <span class="n">Request</span> <span class="o">-</span> <span class="n">eNB</span> <span class="n">Name</span><span class="p">:</span> <span class="n">srsenb01</span><span class="p">,</span> <span class="n">eNB</span> <span class="nb">id</span><span class="p">:</span> <span class="mh">0x19b</span>
+<span class="n">S1</span> <span class="n">Setup</span> <span class="n">Request</span> <span class="o">-</span> <span class="n">MCC</span><span class="p">:</span><span class="mi">901</span><span class="p">,</span> <span class="n">MNC</span><span class="p">:</span><span class="mi">70</span><span class="p">,</span> <span class="n">PLMN</span><span class="p">:</span> <span class="mi">651527</span>
+<span class="n">S1</span> <span class="n">Setup</span> <span class="n">Request</span> <span class="o">-</span> <span class="n">TAC</span> <span class="mi">0</span><span class="p">,</span> <span class="n">B</span><span class="o">-</span><span class="n">PLMN</span> <span class="mi">0</span>
+<span class="n">S1</span> <span class="n">Setup</span> <span class="n">Request</span> <span class="o">-</span> <span class="n">Paging</span> <span class="n">DRX</span> <span class="n">v128</span>
+<span class="n">Sending</span> <span class="n">S1</span> <span class="n">Setup</span> <span class="n">Response</span>
+<span class="n">Initial</span> <span class="n">UE</span> <span class="n">message</span><span class="p">:</span> <span class="n">LIBLTE_MME_MSG_TYPE_ATTACH_REQUEST</span>
+<span class="n">Received</span> <span class="n">Initial</span> <span class="n">UE</span> <span class="n">message</span> <span class="o">--</span> <span class="n">Attach</span> <span class="n">Request</span>
+<span class="n">Attach</span> <span class="n">request</span> <span class="o">--</span> <span class="n">IMSI</span><span class="p">:</span> <span class="mi">901700000020936</span>
+<span class="n">Attach</span> <span class="n">request</span> <span class="o">--</span> <span class="n">eNB</span><span class="o">-</span><span class="n">UE</span> <span class="n">S1AP</span> <span class="n">Id</span><span class="p">:</span> <span class="mi">1</span>
+<span class="n">Attach</span> <span class="n">request</span> <span class="o">--</span> <span class="n">Attach</span> <span class="nb">type</span><span class="p">:</span> <span class="mi">2</span>
+<span class="n">Attach</span> <span class="n">Request</span> <span class="o">--</span> <span class="n">UE</span> <span class="n">Network</span> <span class="n">Capabilities</span> <span class="n">EEA</span><span class="p">:</span> <span class="mi">11110000</span>
+<span class="n">Attach</span> <span class="n">Request</span> <span class="o">--</span> <span class="n">UE</span> <span class="n">Network</span> <span class="n">Capabilities</span> <span class="n">EIA</span><span class="p">:</span> <span class="mi">11110000</span>
+<span class="n">Attach</span> <span class="n">Request</span> <span class="o">--</span> <span class="n">MS</span> <span class="n">Network</span> <span class="n">Capabilities</span> <span class="n">Present</span><span class="p">:</span> <span class="n">true</span>
+<span class="n">PDN</span> <span class="n">Connectivity</span> <span class="n">Request</span> <span class="o">--</span> <span class="n">EPS</span> <span class="n">Bearer</span> <span class="n">Identity</span> <span class="n">requested</span><span class="p">:</span> <span class="mi">0</span>
+<span class="n">PDN</span> <span class="n">Connectivity</span> <span class="n">Request</span> <span class="o">--</span> <span class="n">Procedure</span> <span class="n">Transaction</span> <span class="n">Id</span><span class="p">:</span> <span class="mi">2</span>
+<span class="n">PDN</span> <span class="n">Connectivity</span> <span class="n">Request</span> <span class="o">--</span> <span class="n">ESM</span> <span class="n">Information</span> <span class="n">Transfer</span> <span class="n">requested</span><span class="p">:</span> <span class="n">true</span>
+<span class="n">Downlink</span> <span class="n">NAS</span><span class="p">:</span> <span class="n">Sending</span> <span class="n">Authentication</span> <span class="n">Request</span>
+<span class="n">UL</span> <span class="n">NAS</span><span class="p">:</span> <span class="n">Authentication</span> <span class="n">Failure</span>
+<span class="n">Authentication</span> <span class="n">Failure</span> <span class="o">--</span> <span class="n">Synchronization</span> <span class="n">Failure</span>
+<span class="n">Downlink</span> <span class="n">NAS</span><span class="p">:</span> <span class="n">Sent</span> <span class="n">Authentication</span> <span class="n">Request</span>
+<span class="n">UL</span> <span class="n">NAS</span><span class="p">:</span> <span class="n">Received</span> <span class="n">Authentication</span> <span class="n">Response</span>
+<span class="n">Authentication</span> <span class="n">Response</span> <span class="o">--</span> <span class="n">IMSI</span> <span class="mi">901700000020936</span>
+<span class="n">UE</span> <span class="n">Authentication</span> <span class="n">Accepted</span><span class="o">.</span>
+<span class="n">Generating</span> <span class="n">KeNB</span> <span class="k">with</span> <span class="n">UL</span> <span class="n">NAS</span> <span class="n">COUNT</span><span class="p">:</span> <span class="mi">0</span>
+<span class="n">Downlink</span> <span class="n">NAS</span><span class="p">:</span> <span class="n">Sending</span> <span class="n">NAS</span> <span class="n">Security</span> <span class="n">Mode</span> <span class="n">Command</span><span class="o">.</span>
+<span class="n">UL</span> <span class="n">NAS</span><span class="p">:</span> <span class="n">Received</span> <span class="n">Security</span> <span class="n">Mode</span> <span class="n">Complete</span>
+<span class="n">Security</span> <span class="n">Mode</span> <span class="n">Command</span> <span class="n">Complete</span> <span class="o">--</span> <span class="n">IMSI</span><span class="p">:</span> <span class="mi">901700000020936</span>
+<span class="n">Sending</span> <span class="n">ESM</span> <span class="n">information</span> <span class="n">request</span>
+<span class="n">UL</span> <span class="n">NAS</span><span class="p">:</span> <span class="n">Received</span> <span class="n">ESM</span> <span class="n">Information</span> <span class="n">Response</span>
+<span class="n">ESM</span> <span class="n">Info</span><span class="p">:</span> <span class="n">APN</span> <span class="n">srsapn</span>
+<span class="n">ESM</span> <span class="n">Info</span><span class="p">:</span> <span class="mi">6</span> <span class="n">Protocol</span> <span class="n">Configuration</span> <span class="n">Options</span>
+<span class="n">Getting</span> <span class="n">subscription</span> <span class="n">information</span> <span class="o">--</span> <span class="n">QCI</span> <span class="mi">9</span>
+<span class="n">Sending</span> <span class="n">Create</span> <span class="n">Session</span> <span class="n">Request</span><span class="o">.</span>
+<span class="n">Creating</span> <span class="n">Session</span> <span class="n">Response</span> <span class="o">--</span> <span class="n">IMSI</span><span class="p">:</span> <span class="mi">901700000020936</span>
+<span class="n">Creating</span> <span class="n">Session</span> <span class="n">Response</span> <span class="o">--</span> <span class="n">MME</span> <span class="n">control</span> <span class="n">TEID</span><span class="p">:</span> <span class="mi">1</span>
+<span class="n">Received</span> <span class="n">GTP</span><span class="o">-</span><span class="n">C</span> <span class="n">PDU</span><span class="o">.</span> <span class="n">Message</span> <span class="nb">type</span><span class="p">:</span> <span class="n">GTPC_MSG_TYPE_CREATE_SESSION_REQUEST</span>
+<span class="n">SPGW</span><span class="p">:</span> <span class="n">Allocated</span> <span class="n">Ctrl</span> <span class="n">TEID</span> <span class="mi">1</span>
+<span class="n">SPGW</span><span class="p">:</span> <span class="n">Allocated</span> <span class="n">User</span> <span class="n">TEID</span> <span class="mi">1</span>
+<span class="n">SPGW</span><span class="p">:</span> <span class="n">Allocate</span> <span class="n">UE</span> <span class="n">IP</span> <span class="mf">192.168.0.2</span>
+<span class="n">Received</span> <span class="n">Create</span> <span class="n">Session</span> <span class="n">Response</span>
+<span class="n">Create</span> <span class="n">Session</span> <span class="n">Response</span> <span class="o">--</span> <span class="n">SPGW</span> <span class="n">control</span> <span class="n">TEID</span> <span class="mi">1</span>
+<span class="n">Create</span> <span class="n">Session</span> <span class="n">Response</span> <span class="o">--</span> <span class="n">SPGW</span> <span class="n">S1</span><span class="o">-</span><span class="n">U</span> <span class="n">Address</span><span class="p">:</span> <span class="mf">127.0.1.100</span>
+<span class="n">SPGW</span> <span class="n">Allocated</span> <span class="n">IP</span> <span class="mf">192.168.0.2</span> <span class="n">to</span> <span class="n">IMSI</span> <span class="mi">901700000020936</span>
+<span class="n">Adding</span> <span class="n">attach</span> <span class="n">accept</span> <span class="n">to</span> <span class="n">Initial</span> <span class="n">Context</span> <span class="n">Setup</span> <span class="n">Request</span>
+<span class="n">Sent</span> <span class="n">Initial</span> <span class="n">Context</span> <span class="n">Setup</span> <span class="n">Request</span><span class="o">.</span> <span class="n">E</span><span class="o">-</span><span class="n">RAB</span> <span class="nb">id</span> <span class="mi">5</span>
+<span class="n">Received</span> <span class="n">Initial</span> <span class="n">Context</span> <span class="n">Setup</span> <span class="n">Response</span>
+<span class="n">E</span><span class="o">-</span><span class="n">RAB</span> <span class="n">Context</span> <span class="n">Setup</span><span class="o">.</span> <span class="n">E</span><span class="o">-</span><span class="n">RAB</span> <span class="nb">id</span> <span class="mi">5</span>
+<span class="n">E</span><span class="o">-</span><span class="n">RAB</span> <span class="n">Context</span> <span class="o">--</span> <span class="n">eNB</span> <span class="n">TEID</span> <span class="mh">0x460003</span><span class="p">;</span> <span class="n">eNB</span> <span class="n">GTP</span><span class="o">-</span><span class="n">U</span> <span class="n">Address</span> <span class="mf">127.0.1.1</span>
+<span class="n">UL</span> <span class="n">NAS</span><span class="p">:</span> <span class="n">Received</span> <span class="n">Attach</span> <span class="n">Complete</span>
+<span class="n">Unpacked</span> <span class="n">Attached</span> <span class="n">Complete</span> <span class="n">Message</span><span class="o">.</span> <span class="n">IMSI</span> <span class="mi">901700000020936</span>
+<span class="n">Unpacked</span> <span class="n">Activate</span> <span class="n">Default</span> <span class="n">EPS</span> <span class="n">Bearer</span> <span class="n">message</span><span class="o">.</span> <span class="n">EPS</span> <span class="n">Bearer</span> <span class="nb">id</span> <span class="mi">5</span>
+<span class="n">Received</span> <span class="n">GTP</span><span class="o">-</span><span class="n">C</span> <span class="n">PDU</span><span class="o">.</span> <span class="n">Message</span> <span class="nb">type</span><span class="p">:</span> <span class="n">GTPC_MSG_TYPE_MODIFY_BEARER_REQUEST</span>
+<span class="n">Sending</span> <span class="n">EMM</span> <span class="n">Information</span>
+</pre></div>
+</div>
+<p><strong>eNB Console:</strong></p>
+<p>The eNB console also display messages to confirm an attach. A <em>RACH</em> message should be seen followed by a <em>USER 0xX connected</em> message. Where “<em>0xX</em>” is a hex ID representing the UE.</p>
+<p>NOTE, you may see some other RACHs and <em>Disconnecting rtni=0xX</em> messages. This may be from other devices trying to connect to the network, if you have seen a clear connection between the UE and network
+these can be ignored.</p>
+<p>The following shows an output from the eNB that indicates a successful attach:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">---</span>  <span class="n">Software</span> <span class="n">Radio</span> <span class="n">Systems</span> <span class="n">LTE</span> <span class="n">eNodeB</span>  <span class="o">---</span>
+
+<span class="n">Reading</span> <span class="n">configuration</span> <span class="n">file</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">srsran_4g</span><span class="o">/</span><span class="n">enb</span><span class="o">.</span><span class="n">conf</span><span class="o">...</span>
+
+<span class="n">Built</span> <span class="ow">in</span> <span class="n">Release</span> <span class="n">mode</span> <span class="n">using</span> <span class="n">commit</span> <span class="n">c892ae56b</span> <span class="n">on</span> <span class="n">branch</span> <span class="n">master</span><span class="o">.</span>
+
+<span class="n">Opening</span> <span class="mi">1</span> <span class="n">channels</span> <span class="ow">in</span> <span class="n">RF</span> <span class="n">device</span><span class="o">=</span><span class="n">UHD</span> <span class="k">with</span> <span class="n">args</span><span class="o">=</span><span class="n">default</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span> <span class="p">[</span><span class="n">UHD</span><span class="p">]</span> <span class="n">linux</span><span class="p">;</span> <span class="n">GNU</span> <span class="n">C</span><span class="o">++</span> <span class="n">version</span> <span class="mf">9.3.0</span><span class="p">;</span> <span class="n">Boost_107100</span><span class="p">;</span> <span class="n">UHD_4</span><span class="mf">.0.0.0</span><span class="o">-</span><span class="mi">666</span><span class="o">-</span><span class="n">g676c3a37</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span> <span class="p">[</span><span class="n">LOGGING</span><span class="p">]</span> <span class="n">Fastpath</span> <span class="n">logging</span> <span class="n">disabled</span> <span class="n">at</span> <span class="n">runtime</span><span class="o">.</span>
+<span class="n">Opening</span> <span class="n">USRP</span> <span class="n">channels</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">args</span><span class="p">:</span> <span class="nb">type</span><span class="o">=</span><span class="n">b200</span><span class="p">,</span><span class="n">master_clock_rate</span><span class="o">=</span><span class="mf">23.04e6</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span> <span class="p">[</span><span class="n">B200</span><span class="p">]</span> <span class="n">Detected</span> <span class="n">Device</span><span class="p">:</span> <span class="n">B200mini</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span> <span class="p">[</span><span class="n">B200</span><span class="p">]</span> <span class="n">Operating</span> <span class="n">over</span> <span class="n">USB</span> <span class="mf">3.</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span> <span class="p">[</span><span class="n">B200</span><span class="p">]</span> <span class="n">Initialize</span> <span class="n">CODEC</span> <span class="n">control</span><span class="o">...</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span> <span class="p">[</span><span class="n">B200</span><span class="p">]</span> <span class="n">Initialize</span> <span class="n">Radio</span> <span class="n">control</span><span class="o">...</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span> <span class="p">[</span><span class="n">B200</span><span class="p">]</span> <span class="n">Performing</span> <span class="n">register</span> <span class="n">loopback</span> <span class="n">test</span><span class="o">...</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span> <span class="p">[</span><span class="n">B200</span><span class="p">]</span> <span class="n">Register</span> <span class="n">loopback</span> <span class="n">test</span> <span class="n">passed</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span> <span class="p">[</span><span class="n">B200</span><span class="p">]</span> <span class="n">Asking</span> <span class="k">for</span> <span class="n">clock</span> <span class="n">rate</span> <span class="mf">23.040000</span> <span class="n">MHz</span><span class="o">...</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span> <span class="p">[</span><span class="n">B200</span><span class="p">]</span> <span class="n">Actually</span> <span class="n">got</span> <span class="n">clock</span> <span class="n">rate</span> <span class="mf">23.040000</span> <span class="n">MHz</span><span class="o">.</span>
+<span class="n">Setting</span> <span class="n">frequency</span><span class="p">:</span> <span class="n">DL</span><span class="o">=</span><span class="mf">2685.0</span> <span class="n">Mhz</span><span class="p">,</span> <span class="n">UL</span><span class="o">=</span><span class="mf">2565.0</span> <span class="n">MHz</span> <span class="k">for</span> <span class="n">cc_idx</span><span class="o">=</span><span class="mi">0</span>
+
+<span class="o">====</span> <span class="n">eNodeB</span> <span class="n">started</span> <span class="o">===</span>
+<span class="n">Type</span> <span class="o">&lt;</span><span class="n">t</span><span class="o">&gt;</span> <span class="n">to</span> <span class="n">view</span> <span class="n">trace</span>
+<span class="n">RACH</span><span class="p">:</span>  <span class="n">tti</span><span class="o">=</span><span class="mi">521</span><span class="p">,</span> <span class="n">preamble</span><span class="o">=</span><span class="mi">44</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">temp_crnti</span><span class="o">=</span><span class="mh">0x46</span>
+<span class="n">User</span> <span class="mh">0x46</span> <span class="n">connected</span>
+</pre></div>
+</div>
+<p>The UE is now connected to the network. and should now automatically connect to this network each time it is powered on. You should keep the UE in airplane mode until you want to connect it to the network. The UE should now also have access to the internet - as if connected to a commercial 4G network.</p>
+</section>
+</section>
+<section id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="index.html#troubleshooting" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>If the phone has troubles finding the network or can’t stay connected it might be due to frequency shifts and drifting of the eNB signal, caused by inaccurate clocks.
+We therefore always recommend to use an external 10 MHz reference clock or a GPSDO-disciplined clock for the eNB.</p></li>
+<li><p>Some users may experience trouble connecting to the internet, even after running the masquerading script. Ensure that IP forwarding is enabled, and check your network configuration as this may be stopping the UE from connecting successfully.</p></li>
+<li><p>Users may also have trouble connecting to the network. Firstly check all information in the configuration and user DB files are correct. You may also need to adjust the gain parameters in the eNB config. file - without high enough power (pmax threshold), the UE won’t PRACH.</p></li>
+<li><p>Note that some USIM cards may not be compatible in UEs that are “locked” to certain network operators.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../../zeromq/source/index.html" class="btn btn-neutral float-left" title="srsRAN 4G with ZMQ Virtual Radios" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../handover/source/index.html" class="btn btn-neutral float-right" title="Intra-eNB &amp; S1 Handover" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2019-2025, Software Radio Systems..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

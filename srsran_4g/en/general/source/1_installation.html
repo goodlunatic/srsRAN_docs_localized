@@ -1,0 +1,667 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="readthedocs-addons-api-version" content="1"><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T9SLDCMMRZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-T9SLDCMMRZ');
+    </script>
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Installation Guide &mdash; srsRAN 4G 23.11 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css%3Fv=03e43079.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css%3Fv=e59714d7.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css%3Fv=76b2166b.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.bundle.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-shadow.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-punk.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-noir.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-light.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-borderless.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/micromodal.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/sphinx_rtd_theme.css%3Fv=3234e928.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css%3Fv=beea7d0f.css" />
+
+  
+    <link rel="shortcut icon" href="../../_static/favicon.png"/>
+      <script src="../../_static/jquery.js%3Fv=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js%3Fv=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js%3Fv=f5aee49a"></script>
+      <script src="../../_static/doctools.js%3Fv=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js%3Fv=dc90522c"></script>
+      <script src="../../_static/clipboard.min.js%3Fv=a7894cd8"></script>
+      <script src="../../_static/copybutton.js%3Fv=f281be69"></script>
+      <script src="../../_static/js/hoverxref.js"></script>
+      <script src="../../_static/js/tooltipster.bundle.min.js"></script>
+      <script src="../../_static/js/micromodal.min.js"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <script src="../../_static/js/versions.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Release Notes" href="2_release_notes.html" />
+    <link rel="prev" title="Development Status" href="../../dev_status.html" /> 
+<script async type="text/javascript" src="../../../../../../_/static/javascript/readthedocs-addons.js"></script><meta name="readthedocs-project-slug" content="srslte-docs" /><meta name="readthedocs-version-slug" content="latest" /><meta name="readthedocs-resolver-filename" content="/general/source/1_installation.html" /><meta name="readthedocs-http-status" content="200" /></head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            srsRAN 4G
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="switch-menus">
+                <div class="version-switch"></div>
+                <div class="language-switch"></div>
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+    
+              <p class="caption" role="heading"><span class="caption-text">General</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../feature_list.html">srsRAN 4G Features</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../feature_list.html#srsue">srsUE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../feature_list.html#srsenb">srsENB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../feature_list.html#srsepc">srsEPC</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../reporting_issues.html">Reporting Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dev_status.html">Development Status</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">First Steps</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="1_installation.html#">Installation Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="1_installation.html#which-installation-should-i-use">Which Installation Should I Use?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1_installation.html#package-installation">Package Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1_installation.html#installation-from-source">Installation from Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1_installation.html#getting-support">Getting Support</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="2_release_notes.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_contributions.html">Contributions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="3_contributions.html#faq">FAQ</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="3_contributions.html#what-is-a-copyright-license-agreement-cla-and-why-do-i-need-one">1. What is a Copyright License Agreement (CLA) and why do I need one?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_contributions.html#how-do-i-complete-and-submit-the-cla">2. How do I complete and submit the CLA?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_contributions.html#how-will-my-contributions-to-srsran-4g-be-used">3. How will my contributions to srsRAN 4G be used?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="4_troubleshooting.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="4_troubleshooting.html#building-with-debug-symbols">Building with Debug Symbols</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_troubleshooting.html#examining-pcaps-with-wireshark">Examining PCAPs with Wireshark</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Manuals</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../usermanuals/source/1_setup.html">LTE Setup Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../usermanuals/source/1_setup.html#baseline-hardware-requirements">Baseline Hardware Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usermanuals/source/1_setup.html#running-a-4g-end-to-end-system">Running a 4G End-to-end System</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/1_setup.html#srsepc">srsEPC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/1_setup.html#srsenb">srsENB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/1_setup.html#srsue">srsUE</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../usermanuals/source/1_setup.html#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../usermanuals/source/srsue/source/index.html">UE User Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../usermanuals/source/srsue/source/1_ue_intro.html">Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/srsue/source/1_ue_intro.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/srsue/source/1_ue_intro.html#features">Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/srsue/source/1_ue_intro.html#ue-architecture">UE architecture</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../usermanuals/source/srsue/source/2_ue_getstarted.html">Getting Started</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/srsue/source/2_ue_getstarted.html#running-the-software">Running the software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/srsue/source/2_ue_getstarted.html#configuration">Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/srsue/source/2_ue_getstarted.html#hardware-setup">Hardware Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/srsue/source/2_ue_getstarted.html#operating-system-setup">Operating System Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/srsue/source/2_ue_getstarted.html#observing-results">Observing results</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../usermanuals/source/srsue/source/3_ue_trouble.html">Troubleshooting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/srsue/source/3_ue_trouble.html#rf-configuration">RF Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/srsue/source/3_ue_trouble.html#network-attach">Network Attach</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../usermanuals/source/srsue/source/3_ue_trouble.html#misconfigured-network">Misconfigured Network</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../usermanuals/source/srsue/source/3_ue_trouble.html#rf-issues">RF Issues</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/srsue/source/3_ue_trouble.html#peak-throughput">Peak Throughput</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../usermanuals/source/srsue/source/3_ue_trouble.html#computational-power">Computational Power</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../usermanuals/source/srsue/source/3_ue_trouble.html#rf-hardware">RF Hardware</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../usermanuals/source/srsue/source/4_ue_advanced.html">Advanced Usage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/srsue/source/4_ue_advanced.html#external-usim">External USIM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/srsue/source/4_ue_advanced.html#channel-emulator">Channel Emulator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/srsue/source/4_ue_advanced.html#mimo">MIMO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/srsue/source/4_ue_advanced.html#g-nr">5G NR</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../usermanuals/source/srsue/source/5_ue_configref.html">Configuration Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usermanuals/source/srsue/source/6_ue_commandref.html">Command Line Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../usermanuals/source/srsenb/source/index.html">eNodeB User Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../usermanuals/source/srsenb/source/1_enb_intro.html">Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/srsenb/source/1_enb_intro.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/srsenb/source/1_enb_intro.html#features">Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/srsenb/source/1_enb_intro.html#enodeb-architecture">eNodeB architecture</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../usermanuals/source/srsenb/source/2_enb_getstarted.html">Getting Started</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/srsenb/source/2_enb_getstarted.html#running-the-software">Running the software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/srsenb/source/2_enb_getstarted.html#configuration">Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/srsenb/source/2_enb_getstarted.html#hardware-setup">Hardware Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/srsenb/source/2_enb_getstarted.html#operating-system-setup">Operating System Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/srsenb/source/2_enb_getstarted.html#observing-results">Observing results</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../usermanuals/source/srsenb/source/3_enb_trouble.html">Troubleshooting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/srsenb/source/3_enb_trouble.html#cots-ue-issues">COTS UE Issues</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../usermanuals/source/srsenb/source/3_enb_trouble.html#ue-can-t-see-the-network">UE Can’t See The Network</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../usermanuals/source/srsenb/source/3_enb_trouble.html#ue-won-t-attach">UE Won’t Attach</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../usermanuals/source/srsenb/source/3_enb_trouble.html#can-t-access-internet">Can’t Access Internet</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/srsenb/source/3_enb_trouble.html#peak-throughput">Peak Throughput</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../usermanuals/source/srsenb/source/3_enb_trouble.html#computational-power">Computational Power</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../usermanuals/source/srsenb/source/3_enb_trouble.html#rf-hardware">RF Hardware</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../usermanuals/source/srsenb/source/4_enb_advanced.html">Advanced Usage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/srsenb/source/4_enb_advanced.html#mimo">MIMO</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../usermanuals/source/srsenb/source/5_enb_configref.html">Configuration Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usermanuals/source/srsenb/source/6_enb_commandref.html">Command Line Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../usermanuals/source/srsepc/source/index.html">EPC User Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../usermanuals/source/srsepc/source/1_epc_intro.html">Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/srsepc/source/1_epc_intro.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/srsepc/source/1_epc_intro.html#features">Features</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../usermanuals/source/srsepc/source/1_epc_intro.html#mme-features">MME Features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../usermanuals/source/srsepc/source/1_epc_intro.html#hss-features">HSS Features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../usermanuals/source/srsepc/source/1_epc_intro.html#spgw-features">SPGW Features</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../usermanuals/source/srsepc/source/2_epc_getstarted.html">Getting Started</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/srsepc/source/2_epc_getstarted.html#running-the-software">Running the software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/srsepc/source/2_epc_getstarted.html#configuration">Configuration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../usermanuals/source/srsepc/source/2_epc_getstarted.html#adding-an-ue-to-hss-database">Adding an UE to HSS database</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../usermanuals/source/srsepc/source/2_epc_getstarted.html#enbs-and-srsepc-on-separate-machines">eNBs and srsEPC on separate machines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../usermanuals/source/srsepc/source/2_epc_getstarted.html#connecting-ues-to-the-internet">Connecting UEs to the Internet</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/srsepc/source/2_epc_getstarted.html#observing-results">Observing results</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../usermanuals/source/srsepc/source/3_epc_trouble.html">Troubleshooting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/srsepc/source/3_epc_trouble.html#ue-did-not-attach">UE did not attach</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../usermanuals/source/srsepc/source/3_epc_trouble.html#authentication-failure">Authentication failure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../usermanuals/source/srsepc/source/3_epc_trouble.html#mismatched-apn">Mismatched APN</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/srsepc/source/3_epc_trouble.html#i-cannot-access-the-internet">I cannot access the Internet</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../usermanuals/source/srsepc/source/4_epc_configref.html">Configuration Reference</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Application Notes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../app_notes/source/zeromq/source/index.html">srsRAN 4G with ZMQ Virtual Radios</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/zeromq/source/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/zeromq/source/index.html#zeromq-installation">ZeroMQ Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/zeromq/source/index.html#running-a-full-end-to-end-lte-network-on-a-single-computer">Running a full end-to-end LTE network on a single computer</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/zeromq/source/index.html#network-namespace-creation">Network Namespace Creation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/zeromq/source/index.html#running-the-epc">Running the EPC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/zeromq/source/index.html#running-the-enodeb">Running the eNodeB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/zeromq/source/index.html#running-the-ue">Running the UE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/zeromq/source/index.html#traffic-generation">Traffic Generation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/zeromq/source/index.html#namespace-deletion">Namespace Deletion</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/zeromq/source/index.html#gnu-radio-companion-integration">GNU-Radio Companion Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/zeromq/source/index.html#known-issues">Known issues</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../app_notes/source/cots_ue/source/index.html">COTS UE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/cots_ue/source/index.html#introduction">Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/cots_ue/source/index.html#hardware-required">Hardware Required</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/cots_ue/source/index.html#driver-conf-file-set-up">Driver &amp; Conf. File Set-Up</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/cots_ue/source/index.html#drivers">Drivers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/cots_ue/source/index.html#conf-files">Conf. Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/cots_ue/source/index.html#adding-an-apn">Adding an APN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/cots_ue/source/index.html#run-masquerading-script">Run Masquerading Script</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/cots_ue/source/index.html#connecting-a-cots-ue-to-srsran-4g">Connecting a COTS UE to srsRAN 4G</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/cots_ue/source/index.html#running-srsepc-srsenb">Running srsEPC &amp; srsENB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/cots_ue/source/index.html#connecting-the-ue">Connecting the UE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/cots_ue/source/index.html#confirming-connection">Confirming Connection</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/cots_ue/source/index.html#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../app_notes/source/handover/source/index.html">Intra-eNB &amp; S1 Handover</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/handover/source/index.html#introduction">Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/handover/source/index.html#hardware-software-required">Hardware &amp; Software Required</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/handover/source/index.html#intra-enb-handover">Intra-eNB Handover</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/handover/source/index.html#srsran-4g-set-up">srsRAN 4G Set-Up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/handover/source/index.html#gnu-radio-companion">GNU-Radio Companion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/handover/source/index.html#running-the-network">Running the Network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/handover/source/index.html#confirming-connection">Confirming Connection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/handover/source/index.html#forcing-handover">Forcing Handover</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/handover/source/index.html#s1-handover">S1 Handover</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/handover/source/index.html#open5gs-epc">Open5GS EPC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/handover/source/index.html#epc-set-up">EPC Set-Up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/handover/source/index.html#id1">srsRAN 4G Set-Up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/handover/source/index.html#using-scripts">Using Scripts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/handover/source/index.html#gnu-radio">GNU-Radio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/handover/source/index.html#id2">Running the Network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/handover/source/index.html#id3">Confirming Connection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/handover/source/index.html#id4">Forcing Handover</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/handover/source/index.html#troubleshooting">Troubleshooting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/handover/source/index.html#id5">Intra-eNB Handover</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/handover/source/index.html#id6">S1 Handover</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../app_notes/source/2ca/source/index.html">Carrier Aggregation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/2ca/source/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/2ca/source/index.html#carrier-aggregation-using-sdr-hardware">Carrier Aggregation using SDR Hardware</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/2ca/source/index.html#enodeb-configuration">eNodeB Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/2ca/source/index.html#ue-configuration">UE Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/2ca/source/index.html#carrier-aggregation-using-zeromq-rf-emulation">Carrier Aggregation using ZeroMQ RF emulation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/2ca/source/index.html#id2">eNodeB Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/2ca/source/index.html#id3">UE Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/2ca/source/index.html#known-issues">Known issues</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../app_notes/source/cv2x/source/index.html">C-V2X Signalling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/cv2x/source/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/cv2x/source/index.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/cv2x/source/index.html#anatomy-of-a-c-v2x-signal">Anatomy of a C-V2X Signal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/cv2x/source/index.html#decoding-c-v2x-signals">Decoding C-V2X Signals</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/cv2x/source/index.html#capture-and-decode-in-real-time">Capture and Decode in Real-time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/cv2x/source/index.html#capture-signal-to-file-and-post-process">Capture Signal to File and Post-Process</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../app_notes/source/embms/source/index.html">eMBMS End-to-End</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/embms/source/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/embms/source/index.html#setup">Setup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/embms/source/index.html#srsenb-configuration">srsENB configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/embms/source/index.html#srsmbms-configuration">srsMBMS configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/embms/source/index.html#srsue-configuration">srsUE configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/embms/source/index.html#usage">Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../app_notes/source/nbiot/source/index.html">NB-IoT Signalling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/nbiot/source/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/nbiot/source/index.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/nbiot/source/index.html#spotting-local-nb-iot-deployments">Spotting local NB-IoT deployments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/nbiot/source/index.html#decoding-the-nb-iot-transmission">Decoding the NB-IoT transmission</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/nbiot/source/index.html#transmit-and-receive-downlink-signal">Transmit and Receive Downlink Signal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/nbiot/source/index.html#known-issues">Known issues</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../app_notes/source/pi4/source/index.html">srsRAN 4G on Raspberry Pi 4</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/pi4/source/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/pi4/source/index.html#pi4-enodeb-hardware-requirements">Pi4 eNodeB Hardware Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/pi4/source/index.html#software-setup">Software Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/pi4/source/index.html#pi4-enodeb-config">Pi4 eNodeB Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/pi4/source/index.html#running-the-pi4-enodeb">Running the Pi4 eNodeB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/pi4/source/index.html#known-issues">Known issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/pi4/source/index.html#running-on-ubuntu-22-04-lts">Running on Ubuntu 22.04 LTS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../app_notes/source/hw_packs/source/index.html">Hardware Options</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/hw_packs/source/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/hw_packs/source/index.html#choosing-hardware">Choosing Hardware</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/hw_packs/source/index.html#compute-criteria">Compute Criteria</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/hw_packs/source/index.html#sdr-criteria">SDR Criteria</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/hw_packs/source/index.html#packages">Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/hw_packs/source/index.html#package-1">Package 1</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../app_notes/source/hw_packs/source/index.html#advantages">Advantages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../app_notes/source/hw_packs/source/index.html#limitations">Limitations</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/hw_packs/source/index.html#package-2">Package 2</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../app_notes/source/hw_packs/source/index.html#id1">Advantages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../app_notes/source/hw_packs/source/index.html#id2">Limitations</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/hw_packs/source/index.html#package-3">Package 3</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../app_notes/source/hw_packs/source/index.html#id3">Advantages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../app_notes/source/hw_packs/source/index.html#id4">Limitations</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/hw_packs/source/index.html#zmq">ZMQ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/hw_packs/source/index.html#choosing-a-usrp-and-rf-daughter-card">Choosing a USRP and RF Daughter Card</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">5G Prototyping</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../app_notes/source/5g_sa_amari/source/index.html">5G SA srsUE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/5g_sa_amari/source/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/5g_sa_amari/source/index.html#hardware-requirements">Hardware Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/5g_sa_amari/source/index.html#hardware-setup">Hardware Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/5g_sa_amari/source/index.html#limitations">Limitations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/5g_sa_amari/source/index.html#configuration">Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/5g_sa_amari/source/index.html#srsue">srsUE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/5g_sa_amari/source/index.html#callbox">Callbox</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../app_notes/source/5g_sa_amari/source/index.html#enable-nr-support">Enable NR Support</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../app_notes/source/5g_sa_amari/source/index.html#nr-cell">NR Cell</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../app_notes/source/5g_sa_amari/source/index.html#prach">PRACH</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../app_notes/source/5g_sa_amari/source/index.html#pucch">PUCCH</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/5g_sa_amari/source/index.html#running-the-network">Running the Network</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/5g_sa_amari/source/index.html#gc">5GC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/5g_sa_amari/source/index.html#gnb">gNB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/5g_sa_amari/source/index.html#ue">UE</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/5g_sa_amari/source/index.html#console-trace">Console Trace</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/5g_sa_amari/source/index.html#id1">srsUE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/5g_sa_amari/source/index.html#amarisoft-gnb">Amarisoft gNB</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../app_notes/source/5g_nsa_amari/source/index.html">5G NSA srsUE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/5g_nsa_amari/source/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/5g_nsa_amari/source/index.html#g-nsa-what-you-need-to-know">5G NSA: What you need to know</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/5g_nsa_amari/source/index.html#limitations">Limitations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/5g_nsa_amari/source/index.html#hardware-requirements">Hardware Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/5g_nsa_amari/source/index.html#hardware-setup">Hardware Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/5g_nsa_amari/source/index.html#configuration">Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/5g_nsa_amari/source/index.html#srsue">srsUE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/5g_nsa_amari/source/index.html#callbox">Callbox</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/5g_nsa_amari/source/index.html#usage">Usage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/5g_nsa_amari/source/index.html#mme">MME</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/5g_nsa_amari/source/index.html#enb-gnb">eNB/ gNB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/5g_nsa_amari/source/index.html#ue">UE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/5g_nsa_amari/source/index.html#srsgui-support">srsGUI Support</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/5g_nsa_amari/source/index.html#understanding-the-console-trace">Understanding the console Trace</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/5g_nsa_amari/source/index.html#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+</ul>
+
+
+    
+        <p class="caption">
+            <span class="caption-text">
+            
+                Links
+            
+            </span>
+        </p>
+        <ul>
+            
+                
+                    <li class="toctree-l1"><a href="https://www.srsran.com"><i class="web-icon"></i> Website</a></li>
+                
+            
+                
+                    <li class="toctree-l1"><a href="https://github.com/srsran/srsRAN_4G"><i class="fa fa-github fa-fw"></i> Source code</a></li>
+                
+            
+                
+                    <li class="toctree-l1"><a href="https://lists.srsran.com/mailman/listinfo/srsran-users"><i class="fa fa-envelope fa-fw"></i> Mailing list</a></li>
+                
+            
+                
+                    <li class="toctree-l1"><a href="https://twitter.com/srsRANProject"><i class="fa fa-twitter fa-fw"></i> Twitter</a></li>
+                
+            
+        </ul>
+    
+
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">srsRAN 4G</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Installation Guide</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/general/source/1_installation.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="installation-guide">
+<span id="gen-installation"></span><h1>Installation Guide<a class="headerlink" href="1_installation.html#installation-guide" title="Link to this heading"></a></h1>
+<section id="which-installation-should-i-use">
+<h2>Which Installation Should I Use?<a class="headerlink" href="1_installation.html#which-installation-should-i-use" title="Link to this heading"></a></h2>
+<p>srsRAN 4G can be installed from packages or from source. The following decision tree should help users decide which is best for them:</p>
+<figure class="align-center">
+<img alt="../../_images/download_decision.png" src="../../_images/download_decision.png" />
+</figure>
+<p>In short, users looking for a simple installation who only expect to run basic srsRAN 4G applications with USRP front-ends should use the package installation.
+Users who wish to modify srsRAN 4G and/or use alternative RF front-ends such as limeSDR and BladeRF should install from source.</p>
+</section>
+<section id="package-installation">
+<h2>Package Installation<a class="headerlink" href="1_installation.html#package-installation" title="Link to this heading"></a></h2>
+<p>The srsRAN 4G software suite can be installed using packages on Ubuntu:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">add</span><span class="o">-</span><span class="n">apt</span><span class="o">-</span><span class="n">repository</span> <span class="n">ppa</span><span class="p">:</span><span class="n">softwareradiosystems</span><span class="o">/</span><span class="n">srsran</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">srsran</span> <span class="o">-</span><span class="n">y</span>
+</pre></div>
+</div>
+<p>Package installs are also available for other distributions.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://software.opensuse.org/package/srsRAN?search_term=srsran">openSUSE</a></p></li>
+<li><p><a class="reference external" href="https://www.archlinux.org/packages/?q=srsRAN">Arch Linux</a></p></li>
+<li><p><a class="reference external" href="https://packages.debian.org/search?suite=default&amp;section=all&amp;arch=any&amp;searchon=names&amp;keywords=srsRAN">Debian (Pop OS, Mint, etc)</a></p></li>
+</ul>
+</div></blockquote>
+<p>Note, only the Launchpad packages for Ubuntu are maintained by SRS. Different distributions will maintain their own packages for srsRAN 4G, which may or may not be up to date. Check the available version before installing
+to ensure you are using the desired version of srsRAN 4G.</p>
+<p>Fedora does not yet have support for a package installation of srsRAN 4G.</p>
+</section>
+<section id="installation-from-source">
+<h2>Installation from Source<a class="headerlink" href="1_installation.html#installation-from-source" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Mandatory requirements:</p>
+<ul>
+<li><p>Common:</p>
+<ul>
+<li><p><a class="reference external" href="https://cmake.org/">cmake</a></p></li>
+<li><p><a class="reference external" href="http://www.fftw.org/">libfftw</a></p></li>
+<li><p><a class="reference external" href="https://tls.mbed.org">mbedTLS</a></p></li>
+</ul>
+</li>
+<li><p>srsUE:</p>
+<ul>
+<li><p><a class="reference external" href="http://www.boost.org">Boost</a></p></li>
+</ul>
+</li>
+<li><p>srsENB:</p>
+<ul>
+<li><p><a class="reference external" href="http://www.boost.org">Boost</a></p></li>
+<li><p><a class="reference external" href="http://lksctp.sourceforge.net/">lksctp</a></p></li>
+<li><p><a class="reference external" href="http://www.hyperrealm.com/libconfig/">config</a></p></li>
+</ul>
+</li>
+<li><p>srsEPC:</p>
+<ul>
+<li><p><a class="reference external" href="http://www.boost.org">Boost</a></p></li>
+<li><p><a class="reference external" href="http://lksctp.sourceforge.net/">lksctp</a></p></li>
+<li><p><a class="reference external" href="http://www.hyperrealm.com/libconfig/">config</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>For example, on Ubuntu, one can install the required libraries with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">build</span><span class="o">-</span><span class="n">essential</span> <span class="n">cmake</span> <span class="n">libfftw3</span><span class="o">-</span><span class="n">dev</span> <span class="n">libmbedtls</span><span class="o">-</span><span class="n">dev</span> <span class="n">libboost</span><span class="o">-</span><span class="n">program</span><span class="o">-</span><span class="n">options</span><span class="o">-</span><span class="n">dev</span> <span class="n">libconfig</span><span class="o">++-</span><span class="n">dev</span> <span class="n">libsctp</span><span class="o">-</span><span class="n">dev</span>
+</pre></div>
+</div>
+<p>or on Fedora:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dnf</span> <span class="n">install</span> <span class="n">cmake</span> <span class="n">fftw3</span><span class="o">-</span><span class="n">devel</span> <span class="n">mbedtls</span><span class="o">-</span><span class="n">devel</span> <span class="n">lksctp</span><span class="o">-</span><span class="n">tools</span><span class="o">-</span><span class="n">devel</span> <span class="n">libconfig</span><span class="o">-</span><span class="n">devel</span> <span class="n">boost</span><span class="o">-</span><span class="n">devel</span>
+</pre></div>
+</div>
+<p>For CentOS, use the Fedora packages but replace <cite>libconfig-devel</cite> with just <cite>libconfig</cite>.</p>
+<p>Note that depending on your flavor and version of Linux, the actual package names may be different.</p>
+<ul class="simple">
+<li><p>Optional requirements:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/srsran/srsgui">srsGUI</a> - for real-time plotting.</p></li>
+<li><p><a class="reference external" href="https://pcsclite.apdu.fr/">libpcsclite-dev</a> - for accessing smart card readers</p></li>
+<li><p>libdw-dev libdw - for truly informative backtraces using backward-cpp</p></li>
+</ul>
+</li>
+</ul>
+<ul class="simple" id="drivers">
+<li><p>RF front-end driver:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/EttusResearch/uhd">UHD</a></p></li>
+<li><p><a class="reference external" href="https://github.com/pothosware/SoapySDR">SoapySDR</a></p></li>
+<li><p><a class="reference external" href="https://github.com/Nuand/bladeRF">BladeRF</a></p></li>
+<li><p><a class="reference external" href="https://github.com/zeromq">ZeroMQ</a></p></li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If using UHD we recommended the LTS version of UHD, i.e. either 3.9.7 or 3.15.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>All mandatory requirements, optional requirements, and RF front-end drivers must be installed <strong>prior</strong> to building srsRAN 4G. Failing to do this will result in
+errors at run-time or prevent srsRAN 4G from building correctly.</p>
+</div>
+<p>Download and build srsRAN 4G:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">srsRAN</span><span class="o">/</span><span class="n">srsRAN_4G</span><span class="o">.</span><span class="n">git</span>
+<span class="n">cd</span> <span class="n">srsRAN_4G</span>
+<span class="n">mkdir</span> <span class="n">build</span>
+<span class="n">cd</span> <span class="n">build</span>
+<span class="n">cmake</span> <span class="o">../</span>
+<span class="n">make</span>
+<span class="n">make</span> <span class="n">test</span>
+</pre></div>
+</div>
+<p>Install srsRAN 4G:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">make</span> <span class="n">install</span>
+<span class="n">srsran_install_configs</span><span class="o">.</span><span class="n">sh</span> <span class="n">user</span>
+</pre></div>
+</div>
+<p>This installs srsRAN 4G and also copies the default srsRAN 4G config files to <em>~/.config/srsran</em>.</p>
+</section>
+<section id="getting-support">
+<h2>Getting Support<a class="headerlink" href="1_installation.html#getting-support" title="Link to this heading"></a></h2>
+<p>Join the community on the <a class="reference external" href="https://lists.srsran.com/mailman/listinfo/srsran-users">srsRAN 4G users</a> mailing list.
+The mailing list is a great place to ask questions, get support from the community and learn more about the various projects
+users are working on.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../../dev_status.html" class="btn btn-neutral float-left" title="Development Status" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="2_release_notes.html" class="btn btn-neutral float-right" title="Release Notes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2019-2025, Software Radio Systems..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

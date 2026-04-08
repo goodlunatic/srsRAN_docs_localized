@@ -1,0 +1,16 @@
+services:
+  site-en:
+    image: nginx:alpine
+    container_name: srsran-4g-offline-en
+    ports:
+      - "8083:80"
+    volumes:
+      - ./en:/usr/share/nginx/html:ro
+
+  site-zh:
+    image: nginx:alpine
+    container_name: srsran-4g-offline-zh
+    ports:
+      - "8084:80"
+    volumes:
+      - ./zh:/usr/share/nginx/html:ro
