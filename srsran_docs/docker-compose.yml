@@ -1,0 +1,20 @@
+services:
+  docs-en:
+    build:
+      context: .
+    container_name: srsran-docs-en
+    command: >
+      sh -lc "make -C docs html &&
+      python -m http.server 8000 --directory docs/build/html"
+    ports:
+      - "8081:8000"
+
+  docs-zh:
+    build:
+      context: .
+    container_name: srsran-docs-zh
+    command: >
+      sh -lc "make -C docs html-zh &&
+      python -m http.server 8000 --directory docs/build/html-zh"
+    ports:
+      - "8082:8000"
