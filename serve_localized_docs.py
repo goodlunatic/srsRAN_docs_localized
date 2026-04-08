@@ -5,6 +5,7 @@ import argparse
 import html
 import mimetypes
 import posixpath
+import re
 import socketserver
 import threading
 import urllib.parse
@@ -57,6 +58,18 @@ DOC_ROOTS = {
         "4g": ROOT / "srsran_4g" / "zh",
     },
 }
+
+HTML_SUFFIXES = {".html", ".htm"}
+GTAG_LABEL_RE = re.compile(r"(?m)^(?P<indent>\s*)Google 标签 \(gtag\.js\)\s*$")
+GTAG_CONFIG_RE = re.compile(r"gtag\('config',\s*'(?P<gtag_id>[^']+)'\);")
+GTAG_INLINE_RE = re.compile(
+    r"(?P<indent>^[ \t]*)<script>\s*"
+    r"window\.dataLayer = window\.dataLayer \|\| \[\];.*?"
+    r"gtag\('config',\s*'(?P<gtag_id>[^']+)'\);.*?"
+    r"</script>",
+    re.MULTILINE | re.DOTALL,
+)
+HOME_HASH_RE = re.compile(r'href="(?P<prefix>(?:\.\./)*)index\.html#"')
 
 
 def build_homepage(lang: str) -> bytes:
@@ -219,6 +232,26 @@ def build_homepage(lang: str) -> bytes:
     return body.encode("utf-8")
 
 
+def normalize_static_html(text: str) -> str:
+    text = GTAG_LABEL_RE.sub(r"\g<indent><!-- Google tag (gtag.js) -->", text)
+
+    if "googletagmanager.com/gtag/js?id=" not in text:
+        match = GTAG_INLINE_RE.search(text)
+        if match:
+            indent = match.group("indent")
+            gtag_id = match.group("gtag_id")
+            external_script = f'{indent}<script async src="https://www.googletagmanager.com/gtag/js?id={gtag_id}"></script>\n'
+            text = text[: match.start()] + external_script + text[match.start() :]
+
+    def replace_home_hash(match: re.Match[str]) -> str:
+        prefix = match.group("prefix")
+        if prefix:
+            return f'href="{prefix}index.html"'
+        return 'href="#"'
+
+    return HOME_HASH_RE.sub(replace_home_hash, text)
+
+
 class DocsRequestHandler(BaseHTTPRequestHandler):
     server_version = "LocalizedDocsHTTP/1.0"
 
@@ -267,7 +300,7 @@ class DocsRequestHandler(BaseHTTPRequestHandler):
                 return
             if path.startswith(f"{route_prefix}/"):
                 rel_path = path[len(route_prefix) + 1 :]
-                self._serve_from_root(doc_root, rel_path, send_body=send_body)
+                self._serve_from_root(doc_root, rel_path, query=parsed.query, send_body=send_body)
                 return
 
         self.send_error(HTTPStatus.NOT_FOUND, "File not found")
@@ -280,14 +313,11 @@ class DocsRequestHandler(BaseHTTPRequestHandler):
         self.send_header("Location", location)
         self.end_headers()
 
-    def _serve_from_root(self, root: Path, rel_path: str, *, send_body: bool) -> None:
+    def _serve_from_root(self, root: Path, rel_path: str, query: str, *, send_body: bool) -> None:
         relative = Path(rel_path.lstrip("/"))
-        target = (root / relative).resolve()
-        try:
-            target.relative_to(root.resolve())
-        except ValueError:
-            self.send_error(HTTPStatus.FORBIDDEN, "Forbidden")
-            return
+        root_resolved = root.resolve()
+        requested_target = root_resolved / relative
+        target = requested_target.resolve()
 
         if target.is_dir():
             index_path = target / "index.html"
@@ -297,11 +327,39 @@ class DocsRequestHandler(BaseHTTPRequestHandler):
                 self.send_error(HTTPStatus.NOT_FOUND, "File not found")
                 return
 
+        if not target.is_file() and query and "?" not in target.name:
+            candidates = [target.with_name(f"{target.name}?{query}")]
+            if target.suffix:
+                candidates.append(target.with_name(f"{target.name}?{query}{target.suffix}"))
+            for candidate in candidates:
+                try:
+                    candidate.relative_to(root_resolved)
+                except ValueError:
+                    continue
+                if candidate.is_file():
+                    target = candidate
+                    break
+
+        try:
+            target.relative_to(root_resolved)
+        except ValueError:
+            self.send_error(HTTPStatus.FORBIDDEN, "Forbidden")
+            return
+
         if not target.is_file():
             self.send_error(HTTPStatus.NOT_FOUND, "File not found")
             return
 
-        content_type = mimetypes.guess_type(str(target))[0] or "application/octet-stream"
+        if target.suffix in HTML_SUFFIXES:
+            data = normalize_static_html(target.read_text(encoding="utf-8", errors="ignore")).encode("utf-8")
+            self._send_bytes(data, "text/html; charset=utf-8", send_body=send_body)
+            return
+
+        content_type = (
+            mimetypes.guess_type(str(target))[0]
+            or mimetypes.guess_type(str(requested_target))[0]
+            or "application/octet-stream"
+        )
         self.send_response(HTTPStatus.OK)
         self.send_header("Content-Type", content_type)
         self.send_header("Content-Length", str(target.stat().st_size))
