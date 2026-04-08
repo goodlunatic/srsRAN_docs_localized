@@ -43,7 +43,7 @@
 <link href="../../genindex.html" rel="index" title="索引"/>
 <link href="../../search.html" rel="search" title="搜索"/>
 <link href="2_release_notes.html" rel="next" title="发行说明"/>
-<link href="../../dev_status.html" rel="prev" title="发展现状"/>
+<link href="../../dev_status.html" rel="prev" title="开发状态"/>
 <meta content="srslte-docs" name="readthedocs-project-slug"/><meta content="latest" name="readthedocs-version-slug"/><meta content="/general/source/1_installation.html" name="readthedocs-resolver-filename"/><meta content="200" name="readthedocs-http-status"/></head>
 <body class="wy-body-for-nav">
 <div class="wy-grid-for-nav">
@@ -71,12 +71,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../../getting_started.html">开始使用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../feature_list.html">srsRAN 4G特点</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../feature_list.html#srsue">srsUE</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../feature_list.html#srsenb">血清ENB</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../feature_list.html#srsepc">超级EPC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../feature_list.html#srsenb">srsENB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../feature_list.html#srsepc">srsEPC</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../reporting_issues.html">报告问题</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../dev_status.html">发展现状</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reporting_issues.html">问题反馈</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dev_status.html">开发状态</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">第一步</span></p>
 <ul class="current">
@@ -84,7 +84,7 @@
 <li class="toctree-l2"><a class="reference internal" href="1_installation.html#which-installation-should-i-use">我应该使用哪种安装？</a></li>
 <li class="toctree-l2"><a class="reference internal" href="1_installation.html#package-installation">包安装</a></li>
 <li class="toctree-l2"><a class="reference internal" href="1_installation.html#installation-from-source">从源安装</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1_installation.html#getting-support">获得支持</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1_installation.html#getting-support">获取支持</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="2_release_notes.html">发行说明</a></li>
@@ -108,8 +108,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../../usermanuals/source/1_setup.html">LTE 设置指南</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../usermanuals/source/1_setup.html#baseline-hardware-requirements">基准硬件要求</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../usermanuals/source/1_setup.html#running-a-4g-end-to-end-system">运行 4G 端到端系统</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/1_setup.html#srsepc">超级EPC</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/1_setup.html#srsenb">血清ENB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/1_setup.html#srsepc">srsEPC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/1_setup.html#srsenb">srsENB</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/1_setup.html#srsue">srsUE</a></li>
 </ul>
 </li>
@@ -125,14 +125,14 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../usermanuals/source/srsue/source/2_ue_getstarted.html">开始使用</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/srsue/source/2_ue_getstarted.html#running-the-software">运行软件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/srsue/source/2_ue_getstarted.html#configuration">配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/srsue/source/2_ue_getstarted.html#configuration">libconfig</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/srsue/source/2_ue_getstarted.html#hardware-setup">硬件设置</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/srsue/source/2_ue_getstarted.html#operating-system-setup">操作系统设置</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/srsue/source/2_ue_getstarted.html#observing-results">观察结果</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../usermanuals/source/srsue/source/3_ue_trouble.html">故障排除</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/srsue/source/3_ue_trouble.html#rf-configuration">RF 配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/srsue/source/3_ue_trouble.html#rf-configuration">RF libconfig</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/srsue/source/3_ue_trouble.html#network-attach">网络连接</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../usermanuals/source/srsue/source/3_ue_trouble.html#misconfigured-network">网络配置错误</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../usermanuals/source/srsue/source/3_ue_trouble.html#rf-issues">RF 问题</a></li>
@@ -165,7 +165,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../usermanuals/source/srsenb/source/2_enb_getstarted.html">开始使用</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/srsenb/source/2_enb_getstarted.html#running-the-software">运行软件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/srsenb/source/2_enb_getstarted.html#configuration">配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/srsenb/source/2_enb_getstarted.html#configuration">libconfig</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/srsenb/source/2_enb_getstarted.html#hardware-setup">硬件设置</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/srsenb/source/2_enb_getstarted.html#operating-system-setup">操作系统设置</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/srsenb/source/2_enb_getstarted.html#observing-results">观察结果</a></li>
@@ -206,7 +206,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../usermanuals/source/srsepc/source/2_epc_getstarted.html">开始使用</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/srsepc/source/2_epc_getstarted.html#running-the-software">运行软件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/srsepc/source/2_epc_getstarted.html#configuration">配置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../usermanuals/source/srsepc/source/2_epc_getstarted.html#configuration">libconfig</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../usermanuals/source/srsepc/source/2_epc_getstarted.html#adding-an-ue-to-hss-database">将 UE 添加到 HSS 数据库</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../usermanuals/source/srsepc/source/2_epc_getstarted.html#enbs-and-srsepc-on-separate-machines">eNB 和 srsEPC 位于不同的机器上</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../usermanuals/source/srsepc/source/2_epc_getstarted.html#connecting-ues-to-the-internet">将UE连接到互联网</a></li>
@@ -301,13 +301,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../../app_notes/source/2ca/source/index.html">载波聚合</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/2ca/source/index.html#introduction">简介</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/2ca/source/index.html#carrier-aggregation-using-sdr-hardware">使用 SDR 硬件进行载波聚合</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/2ca/source/index.html#enodeb-configuration">eNodeB 配置</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/2ca/source/index.html#ue-configuration">UE 配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/2ca/source/index.html#enodeb-configuration">eNodeB libconfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/2ca/source/index.html#ue-configuration">UE libconfig</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/2ca/source/index.html#carrier-aggregation-using-zeromq-rf-emulation">使用 ZeroMQ RF 仿真进行载波聚合</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/2ca/source/index.html#id2">eNodeB 配置</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/2ca/source/index.html#id3">UE 配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/2ca/source/index.html#id2">eNodeB libconfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/2ca/source/index.html#id3">UE libconfig</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/2ca/source/index.html#known-issues">已知问题</a></li>
@@ -327,9 +327,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../app_notes/source/embms/source/index.html">eMBMS 端到端</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/embms/source/index.html#introduction">简介</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/embms/source/index.html#setup">设置</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/embms/source/index.html#srsenb-configuration">srsENB配置</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/embms/source/index.html#srsmbms-configuration">srsMBMS配置</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/embms/source/index.html#srsue-configuration">srsUE配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/embms/source/index.html#srsenb-configuration">srsENBlibconfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/embms/source/index.html#srsmbms-configuration">srsMBMSlibconfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/embms/source/index.html#srsue-configuration">srsUElibconfig</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/embms/source/index.html#usage">用途</a></li>
@@ -348,7 +348,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/pi4/source/index.html#introduction">简介</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/pi4/source/index.html#pi4-enodeb-hardware-requirements">Pi4 eNodeB 硬件要求</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/pi4/source/index.html#software-setup">软件设置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/pi4/source/index.html#pi4-enodeb-config">Pi4 eNodeB 配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/pi4/source/index.html#pi4-enodeb-config">Pi4 eNodeB libconfig</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/pi4/source/index.html#running-the-pi4-enodeb">运行 Pi4 eNodeB</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/pi4/source/index.html#known-issues">已知问题</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/pi4/source/index.html#running-on-ubuntu-22-04-lts">在 Ubuntu 22.04 LTS 上运行</a></li>
@@ -361,18 +361,18 @@
 <li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/hw_packs/source/index.html#sdr-criteria">特别提款权标准</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/hw_packs/source/index.html#packages">套餐</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/hw_packs/source/index.html#package-1">套餐1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/hw_packs/source/index.html#packages">软件包</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/hw_packs/source/index.html#package-1">软件包 1</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../app_notes/source/hw_packs/source/index.html#advantages">优点</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../app_notes/source/hw_packs/source/index.html#limitations">局限性</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/hw_packs/source/index.html#package-2">套餐2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/hw_packs/source/index.html#package-2">软件包 2</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../app_notes/source/hw_packs/source/index.html#id1">优点</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../app_notes/source/hw_packs/source/index.html#id2">局限性</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/hw_packs/source/index.html#package-3">套餐3</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/hw_packs/source/index.html#package-3">软件包 3</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../app_notes/source/hw_packs/source/index.html#id3">优点</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../app_notes/source/hw_packs/source/index.html#id4">局限性</a></li>
 </ul>
@@ -391,7 +391,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/5g_sa_amari/source/index.html#hardware-requirements">硬件要求</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/5g_sa_amari/source/index.html#hardware-setup">硬件设置</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/5g_sa_amari/source/index.html#limitations">局限性</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/5g_sa_amari/source/index.html#configuration">配置</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/5g_sa_amari/source/index.html#configuration">libconfig</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/5g_sa_amari/source/index.html#srsue">srsUE</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/5g_sa_amari/source/index.html#callbox">电话亭</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../app_notes/source/5g_sa_amari/source/index.html#enable-nr-support">启用 NR 支持</a></li>
@@ -421,7 +421,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/5g_nsa_amari/source/index.html#limitations">局限性</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/5g_nsa_amari/source/index.html#hardware-requirements">硬件要求</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/5g_nsa_amari/source/index.html#hardware-setup">硬件设置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/5g_nsa_amari/source/index.html#configuration">配置</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../app_notes/source/5g_nsa_amari/source/index.html#configuration">libconfig</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/5g_nsa_amari/source/index.html#srsue">srsUE</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../app_notes/source/5g_nsa_amari/source/index.html#callbox">电话亭</a></li>
 </ul>
@@ -486,16 +486,16 @@
 <section id="package-installation">
 <h2>包安装<a class="headerlink" href="1_installation.html#package-installation" title="链接到此标题"></a></h2>
 <p>srsRAN 4G 软件套件可以在 Ubuntu 上使用软件包安装：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">须藤</span> <span class="n">添加</span><span class="o">-</span><span class="n">适合</span><span class="o">-</span><span class="n">存储库</span> <span class="n">聚苯胺</span><span class="p">:</span><span class="n">软件无线电系统公司</span><span class="o">/</span><span class="n">斯鲁斯兰</span>
-<span class="n">须藤</span> <span class="n">适合</span><span class="o">-</span><span class="n">得到</span> <span class="n">更新</span>
-<span class="n">须藤</span> <span class="n">适合</span><span class="o">-</span><span class="n">得到</span> <span class="n">安装</span> <span class="n">斯鲁斯兰</span> <span class="o">-</span><span class="n">y</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">add</span><span class="o">-</span><span class="n">apt</span><span class="o">-</span><span class="n">repository</span> <span class="n">ppa</span><span class="p">:</span><span class="n">softwareradiosystems</span><span class="o">/</span><span class="n">srsran</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">srsran</span> <span class="o">-</span><span class="n">y</span>
 </pre></div>
 </div>
 <p>软件包安装也可用于其他发行版。</p>
 <blockquote>
 <div><ul class="simple">
 <li><p><a class="reference external" href="https://software.opensuse.org/package/srsRAN?search_term=srsran">开放SUSE</a></p></li>
-<li><p><a class="reference external" href="https://www.archlinux.org/packages/?q=srsRAN">拱门 Linux</a></p></li>
+<li><p><a class="reference external" href="https://www.archlinux.org/packages/?q=srsRAN">Arch Linux</a></p></li>
 <li><p><a class="reference external" href="https://packages.debian.org/search?suite=default&amp;section=all&amp;arch=any&amp;searchon=names&amp;keywords=srsRAN">Debian（Pop 操作系统、Mint 等）</a></p></li>
 </ul>
 </div></blockquote>
@@ -517,100 +517,98 @@
 </li>
 <li><p>srsUE：</p>
 <ul>
-<li><p><a class="reference external" href="http://www.boost.org">升压</a></p></li>
+<li><p><a class="reference external" href="http://www.boost.org">Boost</a></p></li>
 </ul>
 </li>
 <li><p>srsENB：</p>
 <ul>
-<li><p><a class="reference external" href="http://www.boost.org">升压</a></p></li>
-<li><p><a class="reference external" href="http://lksctp.sourceforge.net/">陆金所</a></p></li>
-<li><p><a class="reference external" href="http://www.hyperrealm.com/libconfig/">配置</a></p></li>
+<li><p><a class="reference external" href="http://www.boost.org">Boost</a></p></li>
+<li><p><a class="reference external" href="http://lksctp.sourceforge.net/">lksctp</a></p></li>
+<li><p><a class="reference external" href="http://www.hyperrealm.com/libconfig/">libconfig</a></p></li>
 </ul>
 </li>
-<li><p>超级EPC：</p>
+<li><p>srsEPC：</p>
 <ul>
-<li><p><a class="reference external" href="http://www.boost.org">升压</a></p></li>
-<li><p><a class="reference external" href="http://lksctp.sourceforge.net/">陆金所</a></p></li>
-<li><p><a class="reference external" href="http://www.hyperrealm.com/libconfig/">配置</a></p></li>
+<li><p><a class="reference external" href="http://www.boost.org">Boost</a></p></li>
+<li><p><a class="reference external" href="http://lksctp.sourceforge.net/">lksctp</a></p></li>
+<li><p><a class="reference external" href="http://www.hyperrealm.com/libconfig/">libconfig</a></p></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 <p>例如，在 Ubuntu 上，可以使用以下命令安装所需的库：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">须藤</span> <span class="n">适合</span><span class="o">-</span><span class="n">得到</span> <span class="n">安装</span> <span class="n">建造</span><span class="o">-</span><span class="n">必不可少的</span> <span class="n">cmake</span> <span class="n">libfftw3</span><span class="o">-</span><span class="n">开发者</span> <span class="n">libmbedtls</span><span class="o">-</span><span class="n">开发者</span> <span class="n">libboost</span><span class="o">-</span><span class="n">节目</span><span class="o">-</span><span class="n">选项</span><span class="o">-</span><span class="n">开发者</span> <span class="n">库配置</span><span class="o">++-</span><span class="n">开发者</span> <span class="n">库文件</span><span class="o">-</span><span class="n">开发者</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">build</span><span class="o">-</span><span class="n">essential</span> <span class="n">cmake</span> <span class="n">libfftw3</span><span class="o">-</span><span class="n">dev</span> <span class="n">libmbedtls</span><span class="o">-</span><span class="n">dev</span> <span class="n">libboost</span><span class="o">-</span><span class="n">program</span><span class="o">-</span><span class="n">options</span><span class="o">-</span><span class="n">dev</span> <span class="n">libconfig</span><span class="o">++-</span><span class="n">dev</span> <span class="n">libsctp</span><span class="o">-</span><span class="n">dev</span>
 </pre></div>
 </div>
 <p>或者在 Fedora 上：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dnf</span> <span class="n">安装</span> <span class="n">cmake</span> <span class="n">fftw3</span><span class="o">-</span><span class="n">开发</span> <span class="n">姆贝德尔斯</span><span class="o">-</span><span class="n">开发</span> <span class="n">陆金所</span><span class="o">-</span><span class="n">工具</span><span class="o">-</span><span class="n">开发</span> <span class="n">库配置</span><span class="o">-</span><span class="n">开发</span> <span class="n">提升</span><span class="o">-</span><span class="n">开发</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dnf</span> <span class="n">install</span> <span class="n">cmake</span> <span class="n">fftw3</span><span class="o">-</span><span class="n">devel</span> <span class="n">mbedtls</span><span class="o">-</span><span class="n">devel</span> <span class="n">lksctp</span><span class="o">-</span><span class="n">tools</span><span class="o">-</span><span class="n">devel</span> <span class="n">libconfig</span><span class="o">-</span><span class="n">devel</span> <span class="n">boost</span><span class="o">-</span><span class="n">devel</span>
 </pre></div>
 </div>
-<p>对于 CentOS，使用 Fedora 软件包但替换 <cite>libconfig-开发</cite> 只用 <cite>库配置</cite>.</p>
-<p>请注意，根据您的 Linux 的风格和版本，实际的包名称可能会有所不同。</p>
+<p>对于 CentOS，使用 Fedora 软件包但替换 <cite>libconfig-devel</cite> 只用 <cite>libconfig</cite>.</p>
+<p>请注意，实际的软件包名称可能会因 Linux 发行版和版本不同而有所差异。</p>
 <ul class="simple">
 <li><p>可选要求：</p>
 <ul>
-<li><p><a class="reference external" href="https://github.com/srsran/srsgui">图形用户界面</a> - 用于实时绘图。</p></li>
+<li><p><a class="reference external" href="https://github.com/srsran/srsgui">GUI</a> - 用于实时绘图。</p></li>
 <li><p><a class="reference external" href="https://pcsclite.apdu.fr/">libpcsclite-dev</a> - 用于访问智能卡读卡器</p></li>
-<li><p>libdw-dev libdw - 使用向后cpp 进行真正信息丰富的回溯</p></li>
+<li><p>libdw-dev libdw - 配合 backward-cpp 提供更详细的回溯信息</p></li>
 </ul>
 </li>
 </ul>
 <ul class="simple" id="drivers">
-<li><p>RF前端驱动：</p>
+<li><p>RF 前端驱动：</p>
 <ul>
-<li><p><a class="reference external" href="https://github.com/EttusResearch/uhd">超高清</a></p></li>
-<li><p><a class="reference external" href="https://github.com/pothosware/SoapySDR">肥皂SDR</a></p></li>
-<li><p><a class="reference external" href="https://github.com/Nuand/bladeRF">刀片射频</a></p></li>
-<li><p><a class="reference external" href="https://github.com/zeromq">零MQ</a></p></li>
+<li><p><a class="reference external" href="https://github.com/EttusResearch/uhd">UHD</a></p></li>
+<li><p><a class="reference external" href="https://github.com/pothosware/SoapySDR">SoapySDR</a></p></li>
+<li><p><a class="reference external" href="https://github.com/Nuand/bladeRF">bladeRF</a></p></li>
+<li><p><a class="reference external" href="https://github.com/zeromq">ZeroMQ</a></p></li>
 </ul>
 </li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">注意事项</p>
-<p>如果使用 UHD，我们推荐 UHD 的 LTS 版本，即 3.9.7 或 3.15。</p>
+<p>如果使用 UHD，我们建议使用 UHD 的 LTS 版本，即 3.9.7 或 3.15。</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
-<p>必须安装所有强制要求、可选要求和 RF 前端驱动程序 <strong>先前的</strong> 到建筑 srsRAN 4G。如果不这样做将导致
-运行时错误或阻止 srsRAN 4G 正确构建。</p>
+<p>必须在<strong>构建之前</strong>安装所有必需依赖、可选依赖和 RF 前端驱动。如果不这样做将导致
+运行时错误，或导致 srsRAN 4G 无法正确构建。</p>
 </div>
 <p>下载并构建 srsRAN 4G：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">克隆</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">srsRAN</span><span class="o">/</span><span class="n">srsRAN_4G</span><span class="o">.</span><span class="n">git</span>
-<span class="n">光盘</span> <span class="n">srsRAN_4G</span>
-<span class="n">目录</span> <span class="n">建造</span>
-<span class="n">光盘</span> <span class="n">建造</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">srsRAN</span><span class="o">/</span><span class="n">srsRAN_4G</span><span class="o">.</span><span class="n">git</span>
+<span class="n">cd</span> <span class="n">srsRAN_4G</span>
+<span class="n">mkdir</span> <span class="n">build</span>
+<span class="n">cd</span> <span class="n">build</span>
 <span class="n">cmake</span> <span class="o">../</span>
-<span class="n">使</span>
-<span class="n">使</span> <span class="n">测试</span>
+<span class="n">make</span>
+<span class="n">make</span> <span class="n">test</span>
 </pre></div>
 </div>
-<p>安装srsRAN 4G：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">须藤</span> <span class="n">使</span> <span class="n">安装</span>
-<span class="n">srsran_安装配置</span><span class="o">.</span><span class="n">嘘</span> <span class="n">用户</span>
+<p>安装 srsRAN 4G：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">make</span> <span class="n">install</span>
+<span class="n">srsran_install_configs</span><span class="o">.</span><span class="n">sh</span> <span class="n">user</span>
 </pre></div>
 </div>
-<p>这将安装 srsRAN 4G 并将默认的 srsRAN 4G 配置文件复制到 <em>〜/.config/srsran</em>.</p>
+<p>这将安装 srsRAN 4G，并将默认配置文件复制到 <em>~/.config/srsran</em>。</p>
 </section>
 <section id="getting-support">
-<h2>获得支持<a class="headerlink" href="1_installation.html#getting-support" title="链接到此标题"></a></h2>
-<p>加入社区 <a class="reference external" href="https://lists.srsran.com/mailman/listinfo/srsran-users">srsRAN 4G 用户</a>邮件列表。
-邮件列表是提出问题、获得社区支持以及了解有关各个项目的更多信息的好地方
-用户正在努力。</p>
+<h2>获取支持<a class="headerlink" href="1_installation.html#getting-support" title="链接到此标题"></a></h2>
+<p>加入社区的 <a class="reference external" href="https://lists.srsran.com/mailman/listinfo/srsran-users">srsRAN 4G users</a> 邮件列表。这里适合提问、获取社区支持，以及了解其他用户正在进行的项目。</p>
 </section>
 </section>
 </div>
 </div>
 <footer><div aria-label="页脚" class="rst-footer-buttons" role="navigation">
-<a accesskey="p" class="btn btn-neutral float-left" href="../../dev_status.html" rel="prev" title="发展现状"><span aria-hidden="true" class="fa fa-arrow-circle-left"></span> 上一页</a>
+<a accesskey="p" class="btn btn-neutral float-left" href="../../dev_status.html" rel="prev" title="开发状态"><span aria-hidden="true" class="fa fa-arrow-circle-left"></span> 上一页</a>
 <a accesskey="n" class="btn btn-neutral float-right" href="2_release_notes.html" rel="next" title="发行说明">下一步 <span aria-hidden="true" class="fa fa-arrow-circle-right"></span></a>
 </div>
 <hr/>
 <div role="contentinfo">
 <p>© 版权所有 2019-2025，软件无线电系统..</p>
-</div>内置 <a href="https://www.sphinx-doc.org/">狮身人面像</a> 使用
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
-    由提供 <a href="https://readthedocs.org">阅读文档</a>.
+</div>基于 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    主题，由 <a href="https://readthedocs.org">Read the Docs</a> 提供。
    
 
 </footer>

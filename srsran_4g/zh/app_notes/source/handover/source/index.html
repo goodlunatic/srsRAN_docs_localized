@@ -71,12 +71,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../getting_started.html">开始使用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../feature_list.html">srsRAN 4G特点</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../feature_list.html#srsue">srsUE</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../feature_list.html#srsenb">血清ENB</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../feature_list.html#srsepc">超级EPC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../feature_list.html#srsenb">srsENB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../feature_list.html#srsepc">srsEPC</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../reporting_issues.html">报告问题</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../dev_status.html">发展现状</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../reporting_issues.html">问题反馈</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../dev_status.html">开发状态</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">第一步</span></p>
 <ul>
@@ -84,7 +84,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../../general/source/1_installation.html#which-installation-should-i-use">我应该使用哪种安装？</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../general/source/1_installation.html#package-installation">包安装</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../general/source/1_installation.html#installation-from-source">从源安装</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/1_installation.html#getting-support">获得支持</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/1_installation.html#getting-support">获取支持</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../general/source/2_release_notes.html">发行说明</a></li>
@@ -108,8 +108,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../usermanuals/source/1_setup.html">LTE 设置指南</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../usermanuals/source/1_setup.html#baseline-hardware-requirements">基准硬件要求</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../usermanuals/source/1_setup.html#running-a-4g-end-to-end-system">运行 4G 端到端系统</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/1_setup.html#srsepc">超级EPC</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/1_setup.html#srsenb">血清ENB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/1_setup.html#srsepc">srsEPC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/1_setup.html#srsenb">srsENB</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/1_setup.html#srsue">srsUE</a></li>
 </ul>
 </li>
@@ -125,14 +125,14 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/2_ue_getstarted.html">开始使用</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/2_ue_getstarted.html#running-the-software">运行软件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/2_ue_getstarted.html#configuration">配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/2_ue_getstarted.html#configuration">libconfig</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/2_ue_getstarted.html#hardware-setup">硬件设置</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/2_ue_getstarted.html#operating-system-setup">操作系统设置</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/2_ue_getstarted.html#observing-results">观察结果</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/3_ue_trouble.html">故障排除</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/3_ue_trouble.html#rf-configuration">RF 配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/3_ue_trouble.html#rf-configuration">RF libconfig</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/3_ue_trouble.html#network-attach">网络连接</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/3_ue_trouble.html#misconfigured-network">网络配置错误</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/3_ue_trouble.html#rf-issues">RF 问题</a></li>
@@ -165,7 +165,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/2_enb_getstarted.html">开始使用</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/2_enb_getstarted.html#running-the-software">运行软件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/2_enb_getstarted.html#configuration">配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/2_enb_getstarted.html#configuration">libconfig</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/2_enb_getstarted.html#hardware-setup">硬件设置</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/2_enb_getstarted.html#operating-system-setup">操作系统设置</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/2_enb_getstarted.html#observing-results">观察结果</a></li>
@@ -206,7 +206,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../usermanuals/source/srsepc/source/2_epc_getstarted.html">开始使用</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsepc/source/2_epc_getstarted.html#running-the-software">运行软件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsepc/source/2_epc_getstarted.html#configuration">配置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsepc/source/2_epc_getstarted.html#configuration">libconfig</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../../../usermanuals/source/srsepc/source/2_epc_getstarted.html#adding-an-ue-to-hss-database">将 UE 添加到 HSS 数据库</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../../usermanuals/source/srsepc/source/2_epc_getstarted.html#enbs-and-srsepc-on-separate-machines">eNB 和 srsEPC 位于不同的机器上</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../../usermanuals/source/srsepc/source/2_epc_getstarted.html#connecting-ues-to-the-internet">将UE连接到互联网</a></li>
@@ -301,13 +301,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../../2ca/source/index.html">载波聚合</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../2ca/source/index.html#introduction">简介</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../2ca/source/index.html#carrier-aggregation-using-sdr-hardware">使用 SDR 硬件进行载波聚合</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../2ca/source/index.html#enodeb-configuration">eNodeB 配置</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../2ca/source/index.html#ue-configuration">UE 配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../2ca/source/index.html#enodeb-configuration">eNodeB libconfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../2ca/source/index.html#ue-configuration">UE libconfig</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../2ca/source/index.html#carrier-aggregation-using-zeromq-rf-emulation">使用 ZeroMQ RF 仿真进行载波聚合</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../2ca/source/index.html#id2">eNodeB 配置</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../2ca/source/index.html#id3">UE 配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../2ca/source/index.html#id2">eNodeB libconfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../2ca/source/index.html#id3">UE libconfig</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../2ca/source/index.html#known-issues">已知问题</a></li>
@@ -327,9 +327,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../embms/source/index.html">eMBMS 端到端</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../embms/source/index.html#introduction">简介</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../embms/source/index.html#setup">设置</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../embms/source/index.html#srsenb-configuration">srsENB配置</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../embms/source/index.html#srsmbms-configuration">srsMBMS配置</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../embms/source/index.html#srsue-configuration">srsUE配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../embms/source/index.html#srsenb-configuration">srsENBlibconfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../embms/source/index.html#srsmbms-configuration">srsMBMSlibconfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../embms/source/index.html#srsue-configuration">srsUElibconfig</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../embms/source/index.html#usage">用途</a></li>
@@ -348,7 +348,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../pi4/source/index.html#introduction">简介</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../pi4/source/index.html#pi4-enodeb-hardware-requirements">Pi4 eNodeB 硬件要求</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../pi4/source/index.html#software-setup">软件设置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../pi4/source/index.html#pi4-enodeb-config">Pi4 eNodeB 配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pi4/source/index.html#pi4-enodeb-config">Pi4 eNodeB libconfig</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../pi4/source/index.html#running-the-pi4-enodeb">运行 Pi4 eNodeB</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../pi4/source/index.html#known-issues">已知问题</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../pi4/source/index.html#running-on-ubuntu-22-04-lts">在 Ubuntu 22.04 LTS 上运行</a></li>
@@ -361,18 +361,18 @@
 <li class="toctree-l3"><a class="reference internal" href="../../hw_packs/source/index.html#sdr-criteria">特别提款权标准</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../hw_packs/source/index.html#packages">套餐</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../hw_packs/source/index.html#package-1">套餐1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../hw_packs/source/index.html#packages">软件包</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../hw_packs/source/index.html#package-1">软件包 1</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../hw_packs/source/index.html#advantages">优点</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../hw_packs/source/index.html#limitations">局限性</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../hw_packs/source/index.html#package-2">套餐2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../hw_packs/source/index.html#package-2">软件包 2</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../hw_packs/source/index.html#id1">优点</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../hw_packs/source/index.html#id2">局限性</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../hw_packs/source/index.html#package-3">套餐3</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../hw_packs/source/index.html#package-3">软件包 3</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../hw_packs/source/index.html#id3">优点</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../hw_packs/source/index.html#id4">局限性</a></li>
 </ul>
@@ -391,7 +391,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../5g_sa_amari/source/index.html#hardware-requirements">硬件要求</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../5g_sa_amari/source/index.html#hardware-setup">硬件设置</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../5g_sa_amari/source/index.html#limitations">局限性</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../5g_sa_amari/source/index.html#configuration">配置</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../5g_sa_amari/source/index.html#configuration">libconfig</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../5g_sa_amari/source/index.html#srsue">srsUE</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../5g_sa_amari/source/index.html#callbox">电话亭</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../5g_sa_amari/source/index.html#enable-nr-support">启用 NR 支持</a></li>
@@ -421,7 +421,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../5g_nsa_amari/source/index.html#limitations">局限性</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../5g_nsa_amari/source/index.html#hardware-requirements">硬件要求</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../5g_nsa_amari/source/index.html#hardware-setup">硬件设置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../5g_nsa_amari/source/index.html#configuration">配置</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../5g_nsa_amari/source/index.html#configuration">libconfig</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../5g_nsa_amari/source/index.html#srsue">srsUE</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../5g_nsa_amari/source/index.html#callbox">电话亭</a></li>
 </ul>
@@ -490,17 +490,17 @@
 </ul>
 </div></blockquote>
 <p>以下命令将确保安装正确的依赖项（仅限 Ubuntu）：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">须藤</span> <span class="n">适合</span><span class="o">-</span><span class="n">得到</span> <span class="n">安装</span> <span class="n">cmake</span> <span class="n">libfftw3</span><span class="o">-</span><span class="n">开发者</span> <span class="n">libmbedtls</span><span class="o">-</span><span class="n">开发者</span> <span class="n">libboost</span><span class="o">-</span><span class="n">节目</span><span class="o">-</span><span class="n">选项</span><span class="o">-</span><span class="n">开发者</span> <span class="n">库配置</span><span class="o">++-</span><span class="n">开发者</span> <span class="n">库文件</span><span class="o">-</span><span class="n">开发者</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">cmake</span> <span class="n">libfftw3</span><span class="o">-</span><span class="n">dev</span> <span class="n">libmbedtls</span><span class="o">-</span><span class="n">dev</span> <span class="n">libboost</span><span class="o">-</span><span class="n">program</span><span class="o">-</span><span class="n">options</span><span class="o">-</span><span class="n">dev</span> <span class="n">libconfig</span><span class="o">++-</span><span class="n">dev</span> <span class="n">libsctp</span><span class="o">-</span><span class="n">dev</span>
 </pre></div>
 </div>
 <p>有关安装 srsRAN 4G 的完整指南，请参阅 <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../../general/source/1_installation.html#gen-installation"><span class="std std-ref">安装指南</span></a>。的 <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../zeromq/source/index.html#zeromq-appnote"><span class="std std-ref">ZMQ应用笔记</span></a> 展示如何正确安装和运行 ZMQ。</p>
 <p>如果您必须在没有重新构建 srsRAN 4G 的情况下安装或更新驱动程序和/或依赖项，那么您需要这样做以确保 srsRAN 4G 采用新的/更新的驱动程序。</p>
 <p>要进行干净的构建，请在终端中执行以下命令：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">光盘</span> <span class="o">./</span><span class="n">srsRAN_4G</span><span class="o">/</span><span class="n">建造</span>
-<span class="n">rm</span> <span class="n">CMake缓存</span><span class="o">.</span><span class="n">文本文件</span>
-<span class="n">使</span> <span class="n">干净</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">./</span><span class="n">srsRAN_4G</span><span class="o">/</span><span class="n">build</span>
+<span class="n">rm</span> <span class="n">CMakeCache</span><span class="o">.</span><span class="n">txt</span>
+<span class="n">make</span> <span class="n">clean</span>
 <span class="n">cmake</span> <span class="o">..</span>
-<span class="n">使</span>
+<span class="n">make</span>
 </pre></div>
 </div>
 <p>您的硬件和驱动程序现在应该可以正常工作，并准备好与 srsRAN 4G 正确使用。</p>
@@ -524,14 +524,14 @@
 <p>在 eNB 中，应设置 RF 设备和参数，以便使用 ZMQ，并为每个小区的 UL 和 DL 创建两个 Tx/Rx TCP 端口配对。</p>
 <p>以下示例显示了这是如何完成的：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#####################################################################</span>
-<span class="p">[</span><span class="n">射频</span><span class="p">]</span>
+<span class="p">[</span><span class="n">rf</span><span class="p">]</span>
 <span class="c1">#dl_earfcn = 3350</span>
-<span class="n">发送增益</span> <span class="o">=</span> <span class="mi">80</span>
-<span class="n">接收增益</span> <span class="o">=</span> <span class="mi">40</span>
+<span class="n">tx_gain</span> <span class="o">=</span> <span class="mi">80</span>
+<span class="n">rx_gain</span> <span class="o">=</span> <span class="mi">40</span>
 
-<span class="c1"># I/Q 样本的基于 ZMQ 的 TCP 传输操作示例</span>
-<span class="n">设备名称</span> <span class="o">=</span> <span class="n">兹米克</span>
-<span class="n">设备参数</span> <span class="o">=</span> <span class="n">断开连接失败</span><span class="o">=</span><span class="n">真实</span><span class="p">,</span><span class="nb">编号</span><span class="o">=</span><span class="n">恩布</span><span class="p">,</span><span class="n">tx_端口0</span><span class="o">=</span><span class="n">TCP协议</span><span class="p">:</span><span class="o">//*</span><span class="p">:</span><span class="mi">2101</span><span class="p">,</span><span class="n">发送端口1</span><span class="o">=</span><span class="n">TCP协议</span><span class="p">:</span><span class="o">//*</span><span class="p">:</span><span class="mi">2201</span><span class="p">,</span><span class="n">接收端口0</span><span class="o">=</span><span class="n">TCP协议</span><span class="p">:</span><span class="o">//</span><span class="n">本地主机</span><span class="p">:</span><span class="mi">2100</span><span class="p">,</span><span class="n">接收端口1</span><span class="o">=</span><span class="n">TCP协议</span><span class="p">:</span><span class="o">//</span><span class="n">本地主机</span><span class="p">:</span><span class="mi">2200</span><span class="p">,</span><span class="nb">编号</span><span class="o">=</span><span class="n">恩布</span><span class="p">,</span><span class="n">基本速率</span><span class="o">=</span><span class="mf">23.04e6</span>
+<span class="c1"># Example for ZMQ-based operation with TCP transport for I/Q samples</span>
+<span class="n">device_name</span> <span class="o">=</span> <span class="n">zmq</span>
+<span class="n">device_args</span> <span class="o">=</span> <span class="n">fail_on_disconnect</span><span class="o">=</span><span class="n">true</span><span class="p">,</span><span class="nb">id</span><span class="o">=</span><span class="n">enb</span><span class="p">,</span><span class="n">tx_port0</span><span class="o">=</span><span class="n">tcp</span><span class="p">:</span><span class="o">//*</span><span class="p">:</span><span class="mi">2101</span><span class="p">,</span><span class="n">tx_port1</span><span class="o">=</span><span class="n">tcp</span><span class="p">:</span><span class="o">//*</span><span class="p">:</span><span class="mi">2201</span><span class="p">,</span><span class="n">rx_port0</span><span class="o">=</span><span class="n">tcp</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">2100</span><span class="p">,</span><span class="n">rx_port1</span><span class="o">=</span><span class="n">tcp</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">2200</span><span class="p">,</span><span class="nb">id</span><span class="o">=</span><span class="n">enb</span><span class="p">,</span><span class="n">base_srate</span><span class="o">=</span><span class="mf">23.04e6</span>
 <span class="c1">#####################################################################</span>
 </pre></div>
 </div>
@@ -560,71 +560,71 @@
 </tr>
 </tbody>
 </table>
-<p>对端口使用清晰的标签系统可以更轻松地实施 GRC 代理。通过让每个 Rx 端口的最低有效单元为 0，Tx 端口为 1，流程图
+<p>对端口使用清晰的标签系统可以更轻松地实现 GRC 代理。通过让每个 Rx 端口的最低有效单元为 0，Tx 端口为 1，流程图
 变得更容易调试。第二个最重要的单元用于指示端口属于哪个单元。</p>
 <p><strong>无线电资源 (RR)：</strong></p>
 <p>rr.conf 是将小区（扇区）添加到 eNB 的位置，也是启用切换标志的位置。下面显示了添加到现有 rr.conf 的单元的示例：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-      <span class="n">射频端口</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-      <span class="n">小区编号</span> <span class="o">=</span> <span class="mh">0x02</span><span class="p">;</span>
-      <span class="n">塔克</span> <span class="o">=</span> <span class="mh">0x0007</span><span class="p">;</span>
-      <span class="n">PCI</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
-      <span class="n">根序列idx</span> <span class="o">=</span> <span class="mi">268</span><span class="p">;</span>
+      <span class="n">rf_port</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+      <span class="n">cell_id</span> <span class="o">=</span> <span class="mh">0x02</span><span class="p">;</span>
+      <span class="n">tac</span> <span class="o">=</span> <span class="mh">0x0007</span><span class="p">;</span>
+      <span class="n">pci</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+      <span class="n">root_seq_idx</span> <span class="o">=</span> <span class="mi">268</span><span class="p">;</span>
       <span class="n">dl_earfcn</span> <span class="o">=</span> <span class="mi">3350</span><span class="p">;</span>
-      <span class="n">活跃状态</span> <span class="o">=</span> <span class="n">真实</span><span class="p">;</span>
+      <span class="n">ho_active</span> <span class="o">=</span> <span class="n">true</span><span class="p">;</span>
 
-      <span class="o">//</span> <span class="n">细胞</span> <span class="n">可用</span> <span class="k">为了</span> <span class="n">交接</span> <span class="p">(</span><span class="ow">在</span> <span class="n">其他</span> <span class="n">基站</span> <span class="o">--</span> <span class="n">S1</span> <span class="n">交接</span><span class="p">)</span>
-      <span class="n">测量单元列表</span> <span class="o">=</span>
+      <span class="o">//</span> <span class="n">Cells</span> <span class="n">available</span> <span class="k">for</span> <span class="n">handover</span> <span class="p">(</span><span class="ow">in</span> <span class="n">other</span> <span class="n">eNB</span> <span class="o">--</span> <span class="n">S1</span> <span class="n">handover</span><span class="p">)</span>
+      <span class="n">meas_cell_list</span> <span class="o">=</span>
       <span class="p">(</span>
       <span class="p">);</span>
 
-      <span class="o">//</span> <span class="n">选择</span> <span class="n">测量</span> <span class="n">报告</span> <span class="n">配置</span> <span class="p">(</span><span class="nb">全部</span> <span class="n">报告</span> <span class="n">是</span> <span class="n">合并的</span> <span class="k">与</span> <span class="nb">全部</span> <span class="n">测量</span> <span class="n">物体</span><span class="p">)</span>
-      <span class="n">测量报告描述</span> <span class="o">=</span>
+      <span class="o">//</span> <span class="n">Select</span> <span class="n">measurement</span> <span class="n">report</span> <span class="n">configuration</span> <span class="p">(</span><span class="nb">all</span> <span class="n">reports</span> <span class="n">are</span> <span class="n">combined</span> <span class="k">with</span> <span class="nb">all</span> <span class="n">measurement</span> <span class="n">objects</span><span class="p">)</span>
+      <span class="n">meas_report_desc</span> <span class="o">=</span>
       <span class="p">(</span>
         <span class="p">{</span>
-          <span class="n">事件A</span> <span class="o">=</span> <span class="mi">3</span>
-          <span class="n">a3_偏移量</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
-          <span class="n">滞后现象</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-          <span class="n">触发时间</span> <span class="o">=</span> <span class="mi">480</span><span class="p">;</span>
-          <span class="n">触发量</span> <span class="o">=</span> <span class="s2">“RSRP”</span><span class="p">;</span>
-          <span class="n">最大报告单元数</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-          <span class="n">报告间隔</span> <span class="o">=</span> <span class="mi">120</span><span class="p">;</span>
-          <span class="n">报告金额</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+          <span class="n">eventA</span> <span class="o">=</span> <span class="mi">3</span>
+          <span class="n">a3_offset</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+          <span class="n">hysteresis</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+          <span class="n">time_to_trigger</span> <span class="o">=</span> <span class="mi">480</span><span class="p">;</span>
+          <span class="n">trigger_quant</span> <span class="o">=</span> <span class="s2">&quot;RSRP&quot;</span><span class="p">;</span>
+          <span class="n">max_report_cells</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+          <span class="n">report_interv</span> <span class="o">=</span> <span class="mi">120</span><span class="p">;</span>
+          <span class="n">report_amount</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
         <span class="p">}</span>
       <span class="p">);</span>
-      <span class="n">测量定量描述</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="o">//</span> <span class="n">平均</span> <span class="nb">过滤器</span> <span class="n">系数</span>
+      <span class="n">meas_quant_desc</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="o">//</span> <span class="n">averaging</span> <span class="nb">filter</span> <span class="n">coefficient</span>
         <span class="n">rsrq_config</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
         <span class="n">rsrp_config</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
       <span class="p">};</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>请注意，小区的 TAC 必须与 MME 的 TAC 匹配，并且两个小区和 UE 之间的 EARFCN 必须相同。具有相同 EARFCN 的每个小区的 PCI 必须不同，这样 <em>PCI%3</em> 因为细胞不相等。同样重要的是要记住 <code class="docutils literal notranslate"><span class="pre">活跃状态</span></code> 默认单元格以及已添加的单元格中的 flag 必须设置为 true。</p>
+<p>请注意，小区的 TAC 必须与 MME 的 TAC 匹配，并且两个小区和 UE 之间的 EARFCN 必须相同。具有相同 EARFCN 的每个小区的 PCI 必须不同，这样 <em>PCI%3</em> 因为细胞不相等。同样重要的是要记住 <code class="docutils literal notranslate"><span class="pre">ho_active</span></code> 默认单元格以及已添加的单元格中的 flag 必须设置为 true。</p>
 <p><strong>UE：</strong></p>
-<p>对于 UE 配置，必须将 ZMQ 设置为默认设备，并为 Tx 和 Rx 以及网络命名空间设置适当的 TCP 端口（<code class="docutils literal notranslate"><span class="pre">网络</span></code>) 设置。除此之外，还必须检查 EARFCN 值以确保它与 rr.conf 中的单元格设置的值相同。以下
+<p>对于 UE 配置，必须将 ZMQ 设置为默认设备，并为 Tx 和 Rx 以及网络命名空间设置适当的 TCP 端口（<code class="docutils literal notranslate"><span class="pre">netns</span></code>) 设置。除此之外，还必须检查 EARFCN 值以确保它与 rr.conf 中的单元格设置的值相同。以下
 示例显示了必须如何修改 ue.conf 文件：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#####################################################################</span>
-<span class="p">[</span><span class="n">射频</span><span class="p">]</span>
-<span class="n">频率偏移</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">发送增益</span> <span class="o">=</span> <span class="mi">80</span>
-<span class="c1">#rx_增益= 40</span>
-<span class="c1">#速率= 11.52e6</span>
+<span class="p">[</span><span class="n">rf</span><span class="p">]</span>
+<span class="n">freq_offset</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">tx_gain</span> <span class="o">=</span> <span class="mi">80</span>
+<span class="c1">#rx_gain = 40</span>
+<span class="c1">#srate = 11.52e6</span>
 
-<span class="c1"># I/Q 样本的基于 ZMQ 的 TCP 传输操作示例</span>
-<span class="n">设备名称</span> <span class="o">=</span> <span class="n">兹米克</span>
-<span class="n">设备参数</span> <span class="o">=</span> <span class="n">发送端口</span><span class="o">=</span><span class="n">TCP协议</span><span class="p">:</span><span class="o">//*</span><span class="p">:</span><span class="mi">2001</span><span class="p">,</span><span class="n">接收端口</span><span class="o">=</span><span class="n">TCP协议</span><span class="p">:</span><span class="o">//</span><span class="n">本地主机</span><span class="p">:</span><span class="mi">2000</span><span class="p">,</span><span class="nb">编号</span><span class="o">=</span><span class="n">厄</span><span class="p">,</span><span class="n">基本速率</span><span class="o">=</span><span class="mf">23.04e6</span>
+<span class="c1"># Example for ZMQ-based operation with TCP transport for I/Q samples</span>
+<span class="n">device_name</span> <span class="o">=</span> <span class="n">zmq</span>
+<span class="n">device_args</span> <span class="o">=</span> <span class="n">tx_port</span><span class="o">=</span><span class="n">tcp</span><span class="p">:</span><span class="o">//*</span><span class="p">:</span><span class="mi">2001</span><span class="p">,</span><span class="n">rx_port</span><span class="o">=</span><span class="n">tcp</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">2000</span><span class="p">,</span><span class="nb">id</span><span class="o">=</span><span class="n">ue</span><span class="p">,</span><span class="n">base_srate</span><span class="o">=</span><span class="mf">23.04e6</span>
 
 <span class="c1">#####################################################################</span>
 
-<span class="p">[</span><span class="n">老鼠</span><span class="o">.</span><span class="n">尤特拉</span><span class="p">]</span>
+<span class="p">[</span><span class="n">rat</span><span class="o">.</span><span class="n">eutra</span><span class="p">]</span>
 <span class="n">dl_earfcn</span> <span class="o">=</span> <span class="mi">3350</span>
 <span class="c1">#nof_carriers = 1</span>
 
 <span class="c1">#####################################################################</span>
 
-<span class="p">[</span><span class="n">GW</span><span class="p">]</span>
-<span class="n">网络</span> <span class="o">=</span> <span class="n">UE1</span>
+<span class="p">[</span><span class="n">gw</span><span class="p">]</span>
+<span class="n">netns</span> <span class="o">=</span> <span class="n">ue1</span>
 </pre></div>
 </div>
 <p>可以使用默认的 USIM 配置，因为它已存在于 EPC 用于验证 UE 的 user_db.csv 文件中。如果您想使用自定义 USIM 设置，则需要将其添加到 ue.conf 文件中的相关部分
@@ -655,15 +655,15 @@ eNB 和 UE 的默认设备。</p>
 <p>完整的配置文件可以在这里下载：</p>
 <blockquote>
 <div><ul class="simple">
-<li><p><a class="reference download internal" download="" href="../../../../_downloads/a9ed1fcf5da7267269bcc1b8c641596a/enb.conf"><code class="xref download docutils literal notranslate"><span class="pre">enb配置文件</span></code></a></p></li>
-<li><p><a class="reference download internal" download="" href="../../../../_downloads/f19714f4227ac2bd21061e1d4a3acf6e/rr.conf"><code class="xref download docutils literal notranslate"><span class="pre">日志配置文件</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../../_downloads/a9ed1fcf5da7267269bcc1b8c641596a/enb.conf"><code class="xref download docutils literal notranslate"><span class="pre">enb.conf</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../../_downloads/f19714f4227ac2bd21061e1d4a3acf6e/rr.conf"><code class="xref download docutils literal notranslate"><span class="pre">rr.conf</span></code></a></p></li>
 <li><p><a class="reference download internal" download="" href="../../../../_downloads/16cda90b4bf676ce0852e94ea4b4bb1c/ue.conf"><code class="xref download docutils literal notranslate"><span class="pre">ue.conf</span></code></a></p></li>
 </ul>
 </div></blockquote>
 </section>
 <section id="gnu-radio-companion">
 <h3>GNU 无线电伴侣<a class="headerlink" href="index.html#gnu-radio-companion" title="链接到此标题"></a></h3>
-<p>GRC文件可以下载 <a class="reference download internal" download="" href="../../../../_downloads/41742cf2f30ae7b90c8822332605c811/handover_broker.grc"><code class="xref download docutils literal notranslate"><span class="pre">这里</span></code></a>。下载和/或将文件另存为 <em>.grc</em> 文件。需要时与 GNU-Radio Companion 一起运行。</p>
+<p>GRC文件可以下载 <a class="reference download internal" download="" href="../../../../_downloads/41742cf2f30ae7b90c8822332605c811/handover_broker.grc"><code class="xref download docutils literal notranslate"><span class="pre">here</span></code></a>。下载和/或将文件另存为 <em>.grc</em> 文件。需要时与 GNU-Radio Companion 一起运行。</p>
 <p>GRC Broker 将用于强制小区之间的切换。这将通过使用变量和滑块手动控制每个单元的增益来完成。 ZMQ REQ Source 和 REP Sink 块将用于将流程图链接到 ZMQ 实例
 srsENB 和 srsUE。下图说明了这是如何完成的：</p>
 <figure class="align-center">
@@ -706,67 +706,67 @@ srsENB 和 srsUE。下图说明了这是如何完成的：</p>
 您应该已经为 UE 设置了网络命名空间，如 <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../zeromq/source/index.html#zeromq-appnote"><span class="std std-ref">ZMQ应用说明</span></a>.</p>
 <p><strong>EPC：</strong></p>
 <p>要启动 EPC，只需运行以下命令：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">须藤</span> <span class="n">SRSEPC</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">srsepc</span>
 </pre></div>
 </div>
 <p>EPC 应显示以下内容：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">建成</span> <span class="ow">在</span> <span class="n">发布</span> <span class="n">模式</span> <span class="n">使用</span> <span class="n">提交</span> <span class="mf">7e60</span><span class="n">d8aae</span> <span class="n">上</span> <span class="n">分行</span> <span class="nb">下一个</span><span class="o">.</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Built</span> <span class="ow">in</span> <span class="n">Release</span> <span class="n">mode</span> <span class="n">using</span> <span class="n">commit</span> <span class="mf">7e60</span><span class="n">d8aae</span> <span class="n">on</span> <span class="n">branch</span> <span class="nb">next</span><span class="o">.</span>
 
 
-<span class="o">---</span>  <span class="n">软件</span> <span class="n">收音机</span> <span class="n">系统</span> <span class="n">EPC</span>  <span class="o">---</span>
+<span class="o">---</span>  <span class="n">Software</span> <span class="n">Radio</span> <span class="n">Systems</span> <span class="n">EPC</span>  <span class="o">---</span>
 
-<span class="n">阅读</span> <span class="n">配置</span> <span class="n">文件</span> <span class="o">/</span><span class="n">等</span><span class="o">/</span><span class="n">srsran_4g</span><span class="o">/</span><span class="n">EPC</span><span class="o">.</span><span class="n">会议</span><span class="o">...</span>
-<span class="n">高速钢</span> <span class="n">已初始化</span><span class="o">.</span>
-<span class="n">微机电系统</span> <span class="n">S11</span> <span class="n">已初始化</span>
-<span class="n">微机电系统</span> <span class="n">GTP</span><span class="o">-</span><span class="n">C</span> <span class="n">已初始化</span>
-<span class="n">微机电系统</span> <span class="n">已初始化</span><span class="o">.</span> <span class="n">中冶集团</span><span class="p">:</span> <span class="mh">0xf901</span><span class="p">,</span> <span class="n">跨国公司</span><span class="p">:</span> <span class="mh">0xff70</span>
-<span class="n">SPGW</span> <span class="n">GTP</span><span class="o">-</span><span class="n">U</span> <span class="n">已初始化</span><span class="o">.</span>
-<span class="n">SPGW</span> <span class="n">S11</span> <span class="n">已初始化</span><span class="o">.</span>
-<span class="n">SP</span><span class="o">-</span><span class="n">GW</span> <span class="n">已初始化</span><span class="o">.</span>
+<span class="n">Reading</span> <span class="n">configuration</span> <span class="n">file</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">srsran_4g</span><span class="o">/</span><span class="n">epc</span><span class="o">.</span><span class="n">conf</span><span class="o">...</span>
+<span class="n">HSS</span> <span class="n">Initialized</span><span class="o">.</span>
+<span class="n">MME</span> <span class="n">S11</span> <span class="n">Initialized</span>
+<span class="n">MME</span> <span class="n">GTP</span><span class="o">-</span><span class="n">C</span> <span class="n">Initialized</span>
+<span class="n">MME</span> <span class="n">Initialized</span><span class="o">.</span> <span class="n">MCC</span><span class="p">:</span> <span class="mh">0xf901</span><span class="p">,</span> <span class="n">MNC</span><span class="p">:</span> <span class="mh">0xff70</span>
+<span class="n">SPGW</span> <span class="n">GTP</span><span class="o">-</span><span class="n">U</span> <span class="n">Initialized</span><span class="o">.</span>
+<span class="n">SPGW</span> <span class="n">S11</span> <span class="n">Initialized</span><span class="o">.</span>
+<span class="n">SP</span><span class="o">-</span><span class="n">GW</span> <span class="n">Initialized</span><span class="o">.</span>
 </pre></div>
 </div>
 <p><strong>基站：</strong></p>
 <p>EPC 运行后，eNB 可以使用以下命令运行：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">须藤</span> <span class="n">斯尔森布</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">srsenb</span>
 </pre></div>
 </div>
 <p>然后您应该在控制台中看到以下内容：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">---</span>  <span class="n">软件</span> <span class="n">收音机</span> <span class="n">系统</span> <span class="n">LTE</span> <span class="n">eNodeB</span>  <span class="o">---</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">---</span>  <span class="n">Software</span> <span class="n">Radio</span> <span class="n">Systems</span> <span class="n">LTE</span> <span class="n">eNodeB</span>  <span class="o">---</span>
 
-<span class="n">阅读</span> <span class="n">配置</span> <span class="n">文件</span> <span class="o">/</span><span class="n">等</span><span class="o">/</span><span class="n">srsran_4g</span><span class="o">/</span><span class="n">恩布</span><span class="o">.</span><span class="n">会议</span><span class="o">...</span>
+<span class="n">Reading</span> <span class="n">configuration</span> <span class="n">file</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">srsran_4g</span><span class="o">/</span><span class="n">enb</span><span class="o">.</span><span class="n">conf</span><span class="o">...</span>
 
-<span class="n">建成</span> <span class="ow">在</span> <span class="n">发布</span> <span class="n">模式</span> <span class="n">使用</span> <span class="n">提交</span> <span class="mf">7e60</span><span class="n">d8aae</span> <span class="n">上</span> <span class="n">分行</span> <span class="nb">下一个</span><span class="o">.</span>
+<span class="n">Built</span> <span class="ow">in</span> <span class="n">Release</span> <span class="n">mode</span> <span class="n">using</span> <span class="n">commit</span> <span class="mf">7e60</span><span class="n">d8aae</span> <span class="n">on</span> <span class="n">branch</span> <span class="nb">next</span><span class="o">.</span>
 
-<span class="n">开幕</span> <span class="mi">2</span> <span class="n">渠道</span> <span class="ow">在</span> <span class="n">RF</span> <span class="n">装置</span><span class="o">=</span><span class="n">兹米克</span> <span class="k">与</span> <span class="n">参数</span><span class="o">=</span><span class="n">断开连接失败</span><span class="o">=</span><span class="n">真实</span><span class="p">,</span><span class="nb">编号</span><span class="o">=</span><span class="n">恩布</span><span class="p">,</span><span class="n">tx_端口0</span><span class="o">=</span><span class="n">TCP协议</span><span class="p">:</span><span class="o">//*</span><span class="p">:</span><span class="mi">2101</span><span class="p">,</span><span class="n">发送端口1</span><span class="o">=</span><span class="n">TCP协议</span><span class="p">:</span><span class="o">//*</span><span class="p">:</span><span class="mi">2201</span><span class="p">,</span><span class="n">接收端口0</span><span class="o">=</span><span class="n">TCP协议</span><span class="p">:</span><span class="o">//</span><span class="n">本地主机</span><span class="p">:</span><span class="mi">2100</span><span class="p">,</span><span class="n">接收端口1</span><span class="o">=</span><span class="n">TCP协议</span><span class="p">:</span><span class="o">//</span><span class="n">本地主机</span><span class="p">:</span><span class="mi">2200</span><span class="p">,</span><span class="nb">编号</span><span class="o">=</span><span class="n">恩布</span><span class="p">,</span><span class="n">基本速率</span><span class="o">=</span><span class="mf">23.04e6</span>
-<span class="n">CHx</span> <span class="n">基本速率</span><span class="o">=</span><span class="mf">23.04e6</span>
-<span class="n">CHx</span> <span class="nb">编号</span><span class="o">=</span><span class="n">恩布</span>
-<span class="n">当前</span> <span class="n">样品</span> <span class="n">率</span> <span class="ow">是</span> <span class="mf">1.92</span> <span class="n">兆赫兹</span> <span class="k">与</span> <span class="n">一个</span> <span class="n">基地</span> <span class="n">率</span> <span class="n">的</span> <span class="mf">23.04</span> <span class="n">兆赫兹</span> <span class="p">(</span><span class="n">x12</span> <span class="n">抽取</span><span class="p">)</span>
-<span class="n">CH0</span> <span class="n">接收端口</span><span class="o">=</span><span class="n">TCP协议</span><span class="p">:</span><span class="o">//</span><span class="n">本地主机</span><span class="p">:</span><span class="mi">2100</span>
-<span class="n">CH0</span> <span class="n">发送端口</span><span class="o">=</span><span class="n">TCP协议</span><span class="p">:</span><span class="o">//*</span><span class="p">:</span><span class="mi">2101</span>
-<span class="n">CH0</span> <span class="n">断开连接失败</span><span class="o">=</span><span class="n">真实</span>
-<span class="n">频道1</span> <span class="n">接收端口</span><span class="o">=</span><span class="n">TCP协议</span><span class="p">:</span><span class="o">//</span><span class="n">本地主机</span><span class="p">:</span><span class="mi">2200</span>
-<span class="n">频道1</span> <span class="n">发送端口</span><span class="o">=</span><span class="n">TCP协议</span><span class="p">:</span><span class="o">//*</span><span class="p">:</span><span class="mi">2201</span>
-<span class="n">当前</span> <span class="n">样品</span> <span class="n">率</span> <span class="ow">是</span> <span class="mf">11.52</span> <span class="n">兆赫兹</span> <span class="k">与</span> <span class="n">一个</span> <span class="n">基地</span> <span class="n">率</span> <span class="n">的</span> <span class="mf">23.04</span> <span class="n">兆赫兹</span> <span class="p">(</span><span class="n">x2</span> <span class="n">抽取</span><span class="p">)</span>
-<span class="n">当前</span> <span class="n">样品</span> <span class="n">率</span> <span class="ow">是</span> <span class="mf">11.52</span> <span class="n">兆赫兹</span> <span class="k">与</span> <span class="n">一个</span> <span class="n">基地</span> <span class="n">率</span> <span class="n">的</span> <span class="mf">23.04</span> <span class="n">兆赫兹</span> <span class="p">(</span><span class="n">x2</span> <span class="n">抽取</span><span class="p">)</span>
-<span class="n">设置</span> <span class="n">频率</span><span class="p">:</span> <span class="n">DL</span><span class="o">=</span><span class="mf">2630.0</span> <span class="n">兆赫兹</span><span class="p">,</span> <span class="n">UL</span><span class="o">=</span><span class="mf">2510.0</span> <span class="n">兆赫兹</span> <span class="k">为了</span> <span class="n">cc_idx</span><span class="o">=</span><span class="mi">0</span>
-<span class="n">设置</span> <span class="n">频率</span><span class="p">:</span> <span class="n">DL</span><span class="o">=</span><span class="mf">2630.0</span> <span class="n">兆赫兹</span><span class="p">,</span> <span class="n">UL</span><span class="o">=</span><span class="mf">2510.0</span> <span class="n">兆赫兹</span> <span class="k">为了</span> <span class="n">cc_idx</span><span class="o">=</span><span class="mi">1</span>
+<span class="n">Opening</span> <span class="mi">2</span> <span class="n">channels</span> <span class="ow">in</span> <span class="n">RF</span> <span class="n">device</span><span class="o">=</span><span class="n">zmq</span> <span class="k">with</span> <span class="n">args</span><span class="o">=</span><span class="n">fail_on_disconnect</span><span class="o">=</span><span class="n">true</span><span class="p">,</span><span class="nb">id</span><span class="o">=</span><span class="n">enb</span><span class="p">,</span><span class="n">tx_port0</span><span class="o">=</span><span class="n">tcp</span><span class="p">:</span><span class="o">//*</span><span class="p">:</span><span class="mi">2101</span><span class="p">,</span><span class="n">tx_port1</span><span class="o">=</span><span class="n">tcp</span><span class="p">:</span><span class="o">//*</span><span class="p">:</span><span class="mi">2201</span><span class="p">,</span><span class="n">rx_port0</span><span class="o">=</span><span class="n">tcp</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">2100</span><span class="p">,</span><span class="n">rx_port1</span><span class="o">=</span><span class="n">tcp</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">2200</span><span class="p">,</span><span class="nb">id</span><span class="o">=</span><span class="n">enb</span><span class="p">,</span><span class="n">base_srate</span><span class="o">=</span><span class="mf">23.04e6</span>
+<span class="n">CHx</span> <span class="n">base_srate</span><span class="o">=</span><span class="mf">23.04e6</span>
+<span class="n">CHx</span> <span class="nb">id</span><span class="o">=</span><span class="n">enb</span>
+<span class="n">Current</span> <span class="n">sample</span> <span class="n">rate</span> <span class="ow">is</span> <span class="mf">1.92</span> <span class="n">MHz</span> <span class="k">with</span> <span class="n">a</span> <span class="n">base</span> <span class="n">rate</span> <span class="n">of</span> <span class="mf">23.04</span> <span class="n">MHz</span> <span class="p">(</span><span class="n">x12</span> <span class="n">decimation</span><span class="p">)</span>
+<span class="n">CH0</span> <span class="n">rx_port</span><span class="o">=</span><span class="n">tcp</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">2100</span>
+<span class="n">CH0</span> <span class="n">tx_port</span><span class="o">=</span><span class="n">tcp</span><span class="p">:</span><span class="o">//*</span><span class="p">:</span><span class="mi">2101</span>
+<span class="n">CH0</span> <span class="n">fail_on_disconnect</span><span class="o">=</span><span class="n">true</span>
+<span class="n">CH1</span> <span class="n">rx_port</span><span class="o">=</span><span class="n">tcp</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">2200</span>
+<span class="n">CH1</span> <span class="n">tx_port</span><span class="o">=</span><span class="n">tcp</span><span class="p">:</span><span class="o">//*</span><span class="p">:</span><span class="mi">2201</span>
+<span class="n">Current</span> <span class="n">sample</span> <span class="n">rate</span> <span class="ow">is</span> <span class="mf">11.52</span> <span class="n">MHz</span> <span class="k">with</span> <span class="n">a</span> <span class="n">base</span> <span class="n">rate</span> <span class="n">of</span> <span class="mf">23.04</span> <span class="n">MHz</span> <span class="p">(</span><span class="n">x2</span> <span class="n">decimation</span><span class="p">)</span>
+<span class="n">Current</span> <span class="n">sample</span> <span class="n">rate</span> <span class="ow">is</span> <span class="mf">11.52</span> <span class="n">MHz</span> <span class="k">with</span> <span class="n">a</span> <span class="n">base</span> <span class="n">rate</span> <span class="n">of</span> <span class="mf">23.04</span> <span class="n">MHz</span> <span class="p">(</span><span class="n">x2</span> <span class="n">decimation</span><span class="p">)</span>
+<span class="n">Setting</span> <span class="n">frequency</span><span class="p">:</span> <span class="n">DL</span><span class="o">=</span><span class="mf">2630.0</span> <span class="n">Mhz</span><span class="p">,</span> <span class="n">UL</span><span class="o">=</span><span class="mf">2510.0</span> <span class="n">MHz</span> <span class="k">for</span> <span class="n">cc_idx</span><span class="o">=</span><span class="mi">0</span>
+<span class="n">Setting</span> <span class="n">frequency</span><span class="p">:</span> <span class="n">DL</span><span class="o">=</span><span class="mf">2630.0</span> <span class="n">Mhz</span><span class="p">,</span> <span class="n">UL</span><span class="o">=</span><span class="mf">2510.0</span> <span class="n">MHz</span> <span class="k">for</span> <span class="n">cc_idx</span><span class="o">=</span><span class="mi">1</span>
 
-<span class="o">====</span> <span class="n">eNodeB</span> <span class="n">开始了</span> <span class="o">===</span>
-<span class="n">类型</span> <span class="o">&lt;</span><span class="n">t</span><span class="o">&gt;</span> <span class="n">到</span> <span class="n">查看</span> <span class="n">痕迹</span>
+<span class="o">====</span> <span class="n">eNodeB</span> <span class="n">started</span> <span class="o">===</span>
+<span class="n">Type</span> <span class="o">&lt;</span><span class="n">t</span><span class="o">&gt;</span> <span class="n">to</span> <span class="n">view</span> <span class="n">trace</span>
 </pre></div>
 </div>
 <p>然后，EPC 控制台应显示 eNB cas 已连接的确认信息：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">已收到</span> <span class="n">S1</span> <span class="n">设置</span> <span class="n">请求</span><span class="o">.</span>
-<span class="n">S1</span> <span class="n">设置</span> <span class="n">请求</span> <span class="o">-</span> <span class="n">基站</span> <span class="n">名称</span><span class="p">:</span> <span class="n">srsenb01</span><span class="p">,</span> <span class="n">基站</span> <span class="nb">编号</span><span class="p">:</span> <span class="mh">0x19b</span>
-<span class="n">S1</span> <span class="n">设置</span> <span class="n">请求</span> <span class="o">-</span> <span class="n">中冶集团</span><span class="p">:</span><span class="mi">901</span><span class="p">,</span> <span class="n">跨国公司</span><span class="p">:</span><span class="mi">70</span>
-<span class="n">S1</span> <span class="n">设置</span> <span class="n">请求</span> <span class="o">-</span> <span class="n">TAC</span> <span class="mi">7</span><span class="p">,</span> <span class="n">乙</span><span class="o">-</span><span class="n">PLMN</span> <span class="mh">0x9f107</span>
-<span class="n">S1</span> <span class="n">设置</span> <span class="n">请求</span> <span class="o">-</span> <span class="n">寻呼</span> <span class="n">不连续接收</span> <span class="n">v128</span>
-<span class="n">发送</span> <span class="n">S1</span> <span class="n">设置</span> <span class="n">回应</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Received</span> <span class="n">S1</span> <span class="n">Setup</span> <span class="n">Request</span><span class="o">.</span>
+<span class="n">S1</span> <span class="n">Setup</span> <span class="n">Request</span> <span class="o">-</span> <span class="n">eNB</span> <span class="n">Name</span><span class="p">:</span> <span class="n">srsenb01</span><span class="p">,</span> <span class="n">eNB</span> <span class="nb">id</span><span class="p">:</span> <span class="mh">0x19b</span>
+<span class="n">S1</span> <span class="n">Setup</span> <span class="n">Request</span> <span class="o">-</span> <span class="n">MCC</span><span class="p">:</span><span class="mi">901</span><span class="p">,</span> <span class="n">MNC</span><span class="p">:</span><span class="mi">70</span>
+<span class="n">S1</span> <span class="n">Setup</span> <span class="n">Request</span> <span class="o">-</span> <span class="n">TAC</span> <span class="mi">7</span><span class="p">,</span> <span class="n">B</span><span class="o">-</span><span class="n">PLMN</span> <span class="mh">0x9f107</span>
+<span class="n">S1</span> <span class="n">Setup</span> <span class="n">Request</span> <span class="o">-</span> <span class="n">Paging</span> <span class="n">DRX</span> <span class="n">v128</span>
+<span class="n">Sending</span> <span class="n">S1</span> <span class="n">Setup</span> <span class="n">Response</span>
 </pre></div>
 </div>
 <p><strong>UE：</strong></p>
 <p>现在需要运行 UE，可以使用以下命令来完成：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">须藤</span> <span class="n">斯苏埃</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">srsue</span>
 </pre></div>
 </div>
 <p>UE 控制台应显示以下内容：</p>
@@ -798,73 +798,73 @@ Current sample rate is 1.92 MHz with a base rate of 23.04 MHz (x12 decimation)
 <p>代理运行后，应成功连接，并且网络应正常启动并运行。要确认这一点，请检查控制台中是否显示相应的消息。</p>
 <p><strong>EPC 附：</strong></p>
 <p>如果连接成功，EPC 应给出以下读数：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">初始</span> <span class="n">UE</span> <span class="n">留言</span><span class="p">:</span> <span class="n">LIBLTE_MME_MSG_TYPE_ATTACH_REQUEST</span>
-<span class="n">已收到</span> <span class="n">初始</span> <span class="n">UE</span> <span class="n">留言</span> <span class="o">--</span> <span class="n">附加</span> <span class="n">请求</span>
-<span class="n">附加</span> <span class="n">要求</span> <span class="o">--</span> <span class="n">中号</span><span class="o">-</span><span class="n">TMSI</span><span class="p">:</span> <span class="mh">0xd1006989</span>
-<span class="n">附加</span> <span class="n">要求</span> <span class="o">--</span> <span class="n">基站</span><span class="o">-</span><span class="n">UE</span> <span class="n">S1AP</span> <span class="n">身份证号</span><span class="p">:</span> <span class="mi">1</span>
-<span class="n">附加</span> <span class="n">要求</span> <span class="o">--</span> <span class="n">附加</span> <span class="nb">类型</span><span class="p">:</span> <span class="mi">1</span>
-<span class="n">附加</span> <span class="n">请求</span> <span class="o">--</span> <span class="n">UE</span> <span class="n">网络</span> <span class="n">能力</span> <span class="n">欧洲经济区</span><span class="p">:</span> <span class="mi">11110000</span>
-<span class="n">附加</span> <span class="n">请求</span> <span class="o">--</span> <span class="n">UE</span> <span class="n">网络</span> <span class="n">能力</span> <span class="n">环境影响评估</span><span class="p">:</span> <span class="mi">01110000</span>
-<span class="n">附加</span> <span class="n">请求</span> <span class="o">--</span> <span class="n">多发性硬化症</span> <span class="n">网络</span> <span class="n">能力</span> <span class="n">现在</span><span class="p">:</span> <span class="n">假的</span>
-<span class="n">PDN</span> <span class="n">连接性</span> <span class="n">请求</span> <span class="o">--</span> <span class="n">每股收益</span> <span class="n">承载者</span> <span class="n">身份</span> <span class="n">要求的</span><span class="p">:</span> <span class="mi">0</span>
-<span class="n">PDN</span> <span class="n">连接性</span> <span class="n">请求</span> <span class="o">--</span> <span class="n">程序</span> <span class="n">交易</span> <span class="n">身份证号</span><span class="p">:</span> <span class="mi">1</span>
-<span class="n">PDN</span> <span class="n">连接性</span> <span class="n">请求</span> <span class="o">--</span> <span class="n">环境管理署</span> <span class="n">信息</span> <span class="n">转乘</span> <span class="n">要求的</span><span class="p">:</span> <span class="n">假的</span>
-<span class="n">UL</span> <span class="n">NAS</span><span class="p">:</span> <span class="n">已收到</span> <span class="n">身份</span> <span class="n">回应</span>
-<span class="n">身份证号</span> <span class="n">回应</span> <span class="o">--</span> <span class="n">国际移动用户识别码</span><span class="p">:</span> <span class="mi">901700123456789</span>
-<span class="n">下行</span> <span class="n">NAS</span><span class="p">:</span> <span class="n">已发送</span> <span class="n">认证</span> <span class="n">请求</span>
-<span class="n">UL</span> <span class="n">NAS</span><span class="p">:</span> <span class="n">已收到</span> <span class="n">认证</span> <span class="n">回应</span>
-<span class="n">认证</span> <span class="n">回应</span> <span class="o">--</span> <span class="n">国际移动用户识别码</span> <span class="mi">901700123456789</span>
-<span class="n">UE</span> <span class="n">认证</span> <span class="n">已接受</span><span class="o">.</span>
-<span class="n">生成</span> <span class="n">肯尼布</span> <span class="k">与</span> <span class="n">UL</span> <span class="n">NAS</span> <span class="n">计数</span><span class="p">:</span> <span class="mi">0</span>
-<span class="n">下行</span> <span class="n">NAS</span><span class="p">:</span> <span class="n">发送</span> <span class="n">NAS</span> <span class="n">安全性</span> <span class="n">模式</span> <span class="n">命令</span><span class="o">.</span>
-<span class="n">UL</span> <span class="n">NAS</span><span class="p">:</span> <span class="n">已收到</span> <span class="n">安全性</span> <span class="n">模式</span> <span class="n">完成</span>
-<span class="n">安全性</span> <span class="n">模式</span> <span class="n">命令</span> <span class="n">完成</span> <span class="o">--</span> <span class="n">国际移动用户识别码</span><span class="p">:</span> <span class="mi">901700123456789</span>
-<span class="n">得到</span> <span class="n">订阅</span> <span class="n">信息</span> <span class="o">--</span> <span class="n">质量控制中心</span> <span class="mi">7</span>
-<span class="n">发送</span> <span class="n">创建</span> <span class="n">会议</span> <span class="n">请求</span><span class="o">.</span>
-<span class="n">创造</span> <span class="n">会议</span> <span class="n">回应</span> <span class="o">--</span> <span class="n">国际移动用户识别码</span><span class="p">:</span> <span class="mi">901700123456789</span>
-<span class="n">创造</span> <span class="n">会议</span> <span class="n">回应</span> <span class="o">--</span> <span class="n">微机电系统</span> <span class="n">控制</span> <span class="n">TEID</span><span class="p">:</span> <span class="mi">1</span>
-<span class="n">已收到</span> <span class="n">GTP</span><span class="o">-</span><span class="n">C</span> <span class="n">配电单元</span><span class="o">.</span> <span class="n">留言</span> <span class="nb">类型</span><span class="p">:</span> <span class="n">GTPC_MSG_TYPE_CREATE_SESSION_REQUEST</span>
-<span class="n">SPGW</span><span class="p">:</span> <span class="n">已分配</span> <span class="n">控制键</span> <span class="n">TEID</span> <span class="mi">1</span>
-<span class="n">SPGW</span><span class="p">:</span> <span class="n">已分配</span> <span class="n">用户</span> <span class="n">TEID</span> <span class="mi">1</span>
-<span class="n">SPGW</span><span class="p">:</span> <span class="n">分配</span> <span class="n">UE</span> <span class="n">知识产权</span> <span class="mf">172.16.0.2</span>
-<span class="n">已收到</span> <span class="n">创建</span> <span class="n">会议</span> <span class="n">回应</span>
-<span class="n">创建</span> <span class="n">会议</span> <span class="n">回应</span> <span class="o">--</span> <span class="n">SPGW</span> <span class="n">控制</span> <span class="n">TEID</span> <span class="mi">1</span>
-<span class="n">创建</span> <span class="n">会议</span> <span class="n">回应</span> <span class="o">--</span> <span class="n">SPGW</span> <span class="n">S1</span><span class="o">-</span><span class="n">U</span> <span class="n">地址</span><span class="p">:</span> <span class="mf">127.0.1.100</span>
-<span class="n">SPGW</span> <span class="n">已分配</span> <span class="n">知识产权</span> <span class="mf">172.16.0.2</span> <span class="n">到</span> <span class="n">国际移动用户识别码</span> <span class="mi">901700123456789</span>
-<span class="n">添加</span> <span class="n">附加</span> <span class="n">接受</span> <span class="n">到</span> <span class="n">初始</span> <span class="n">背景</span> <span class="n">设置</span> <span class="n">请求</span>
-<span class="n">已发送</span> <span class="n">初始</span> <span class="n">背景</span> <span class="n">设置</span> <span class="n">请求</span><span class="o">.</span> <span class="n">乙</span><span class="o">-</span><span class="n">RAB</span> <span class="nb">编号</span> <span class="mi">5</span>
-<span class="n">已收到</span> <span class="n">初始</span> <span class="n">背景</span> <span class="n">设置</span> <span class="n">回应</span>
-<span class="n">乙</span><span class="o">-</span><span class="n">RAB</span> <span class="n">背景</span> <span class="n">设置</span><span class="o">.</span> <span class="n">乙</span><span class="o">-</span><span class="n">RAB</span> <span class="nb">编号</span> <span class="mi">5</span>
-<span class="n">乙</span><span class="o">-</span><span class="n">RAB</span> <span class="n">背景</span> <span class="o">--</span> <span class="n">基站</span> <span class="n">TEID</span> <span class="mh">0x1</span><span class="p">;</span> <span class="n">基站</span> <span class="n">GTP</span><span class="o">-</span><span class="n">U</span> <span class="n">地址</span> <span class="mf">127.0.1.1</span>
-<span class="n">UL</span> <span class="n">NAS</span><span class="p">:</span> <span class="n">已收到</span> <span class="n">附加</span> <span class="n">完成</span>
-<span class="n">拆封</span> <span class="n">附</span> <span class="n">完成</span> <span class="n">留言</span><span class="o">.</span> <span class="n">国际移动用户识别码</span> <span class="mi">901700123456789</span>
-<span class="n">拆封</span> <span class="n">激活</span> <span class="n">默认</span> <span class="n">每股收益</span> <span class="n">承载者</span> <span class="n">留言</span><span class="o">.</span> <span class="n">每股收益</span> <span class="n">承载者</span> <span class="nb">编号</span> <span class="mi">5</span>
-<span class="n">已收到</span> <span class="n">GTP</span><span class="o">-</span><span class="n">C</span> <span class="n">配电单元</span><span class="o">.</span> <span class="n">留言</span> <span class="nb">类型</span><span class="p">:</span> <span class="n">GTPC_MSG_TYPE_MODIFY_BEARER_REQUEST</span>
-<span class="n">发送</span> <span class="n">EMM</span> <span class="n">信息</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Initial</span> <span class="n">UE</span> <span class="n">message</span><span class="p">:</span> <span class="n">LIBLTE_MME_MSG_TYPE_ATTACH_REQUEST</span>
+<span class="n">Received</span> <span class="n">Initial</span> <span class="n">UE</span> <span class="n">message</span> <span class="o">--</span> <span class="n">Attach</span> <span class="n">Request</span>
+<span class="n">Attach</span> <span class="n">request</span> <span class="o">--</span> <span class="n">M</span><span class="o">-</span><span class="n">TMSI</span><span class="p">:</span> <span class="mh">0xd1006989</span>
+<span class="n">Attach</span> <span class="n">request</span> <span class="o">--</span> <span class="n">eNB</span><span class="o">-</span><span class="n">UE</span> <span class="n">S1AP</span> <span class="n">Id</span><span class="p">:</span> <span class="mi">1</span>
+<span class="n">Attach</span> <span class="n">request</span> <span class="o">--</span> <span class="n">Attach</span> <span class="nb">type</span><span class="p">:</span> <span class="mi">1</span>
+<span class="n">Attach</span> <span class="n">Request</span> <span class="o">--</span> <span class="n">UE</span> <span class="n">Network</span> <span class="n">Capabilities</span> <span class="n">EEA</span><span class="p">:</span> <span class="mi">11110000</span>
+<span class="n">Attach</span> <span class="n">Request</span> <span class="o">--</span> <span class="n">UE</span> <span class="n">Network</span> <span class="n">Capabilities</span> <span class="n">EIA</span><span class="p">:</span> <span class="mi">01110000</span>
+<span class="n">Attach</span> <span class="n">Request</span> <span class="o">--</span> <span class="n">MS</span> <span class="n">Network</span> <span class="n">Capabilities</span> <span class="n">Present</span><span class="p">:</span> <span class="n">false</span>
+<span class="n">PDN</span> <span class="n">Connectivity</span> <span class="n">Request</span> <span class="o">--</span> <span class="n">EPS</span> <span class="n">Bearer</span> <span class="n">Identity</span> <span class="n">requested</span><span class="p">:</span> <span class="mi">0</span>
+<span class="n">PDN</span> <span class="n">Connectivity</span> <span class="n">Request</span> <span class="o">--</span> <span class="n">Procedure</span> <span class="n">Transaction</span> <span class="n">Id</span><span class="p">:</span> <span class="mi">1</span>
+<span class="n">PDN</span> <span class="n">Connectivity</span> <span class="n">Request</span> <span class="o">--</span> <span class="n">ESM</span> <span class="n">Information</span> <span class="n">Transfer</span> <span class="n">requested</span><span class="p">:</span> <span class="n">false</span>
+<span class="n">UL</span> <span class="n">NAS</span><span class="p">:</span> <span class="n">Received</span> <span class="n">Identity</span> <span class="n">Response</span>
+<span class="n">ID</span> <span class="n">Response</span> <span class="o">--</span> <span class="n">IMSI</span><span class="p">:</span> <span class="mi">901700123456789</span>
+<span class="n">Downlink</span> <span class="n">NAS</span><span class="p">:</span> <span class="n">Sent</span> <span class="n">Authentication</span> <span class="n">Request</span>
+<span class="n">UL</span> <span class="n">NAS</span><span class="p">:</span> <span class="n">Received</span> <span class="n">Authentication</span> <span class="n">Response</span>
+<span class="n">Authentication</span> <span class="n">Response</span> <span class="o">--</span> <span class="n">IMSI</span> <span class="mi">901700123456789</span>
+<span class="n">UE</span> <span class="n">Authentication</span> <span class="n">Accepted</span><span class="o">.</span>
+<span class="n">Generating</span> <span class="n">KeNB</span> <span class="k">with</span> <span class="n">UL</span> <span class="n">NAS</span> <span class="n">COUNT</span><span class="p">:</span> <span class="mi">0</span>
+<span class="n">Downlink</span> <span class="n">NAS</span><span class="p">:</span> <span class="n">Sending</span> <span class="n">NAS</span> <span class="n">Security</span> <span class="n">Mode</span> <span class="n">Command</span><span class="o">.</span>
+<span class="n">UL</span> <span class="n">NAS</span><span class="p">:</span> <span class="n">Received</span> <span class="n">Security</span> <span class="n">Mode</span> <span class="n">Complete</span>
+<span class="n">Security</span> <span class="n">Mode</span> <span class="n">Command</span> <span class="n">Complete</span> <span class="o">--</span> <span class="n">IMSI</span><span class="p">:</span> <span class="mi">901700123456789</span>
+<span class="n">Getting</span> <span class="n">subscription</span> <span class="n">information</span> <span class="o">--</span> <span class="n">QCI</span> <span class="mi">7</span>
+<span class="n">Sending</span> <span class="n">Create</span> <span class="n">Session</span> <span class="n">Request</span><span class="o">.</span>
+<span class="n">Creating</span> <span class="n">Session</span> <span class="n">Response</span> <span class="o">--</span> <span class="n">IMSI</span><span class="p">:</span> <span class="mi">901700123456789</span>
+<span class="n">Creating</span> <span class="n">Session</span> <span class="n">Response</span> <span class="o">--</span> <span class="n">MME</span> <span class="n">control</span> <span class="n">TEID</span><span class="p">:</span> <span class="mi">1</span>
+<span class="n">Received</span> <span class="n">GTP</span><span class="o">-</span><span class="n">C</span> <span class="n">PDU</span><span class="o">.</span> <span class="n">Message</span> <span class="nb">type</span><span class="p">:</span> <span class="n">GTPC_MSG_TYPE_CREATE_SESSION_REQUEST</span>
+<span class="n">SPGW</span><span class="p">:</span> <span class="n">Allocated</span> <span class="n">Ctrl</span> <span class="n">TEID</span> <span class="mi">1</span>
+<span class="n">SPGW</span><span class="p">:</span> <span class="n">Allocated</span> <span class="n">User</span> <span class="n">TEID</span> <span class="mi">1</span>
+<span class="n">SPGW</span><span class="p">:</span> <span class="n">Allocate</span> <span class="n">UE</span> <span class="n">IP</span> <span class="mf">172.16.0.2</span>
+<span class="n">Received</span> <span class="n">Create</span> <span class="n">Session</span> <span class="n">Response</span>
+<span class="n">Create</span> <span class="n">Session</span> <span class="n">Response</span> <span class="o">--</span> <span class="n">SPGW</span> <span class="n">control</span> <span class="n">TEID</span> <span class="mi">1</span>
+<span class="n">Create</span> <span class="n">Session</span> <span class="n">Response</span> <span class="o">--</span> <span class="n">SPGW</span> <span class="n">S1</span><span class="o">-</span><span class="n">U</span> <span class="n">Address</span><span class="p">:</span> <span class="mf">127.0.1.100</span>
+<span class="n">SPGW</span> <span class="n">Allocated</span> <span class="n">IP</span> <span class="mf">172.16.0.2</span> <span class="n">to</span> <span class="n">IMSI</span> <span class="mi">901700123456789</span>
+<span class="n">Adding</span> <span class="n">attach</span> <span class="n">accept</span> <span class="n">to</span> <span class="n">Initial</span> <span class="n">Context</span> <span class="n">Setup</span> <span class="n">Request</span>
+<span class="n">Sent</span> <span class="n">Initial</span> <span class="n">Context</span> <span class="n">Setup</span> <span class="n">Request</span><span class="o">.</span> <span class="n">E</span><span class="o">-</span><span class="n">RAB</span> <span class="nb">id</span> <span class="mi">5</span>
+<span class="n">Received</span> <span class="n">Initial</span> <span class="n">Context</span> <span class="n">Setup</span> <span class="n">Response</span>
+<span class="n">E</span><span class="o">-</span><span class="n">RAB</span> <span class="n">Context</span> <span class="n">Setup</span><span class="o">.</span> <span class="n">E</span><span class="o">-</span><span class="n">RAB</span> <span class="nb">id</span> <span class="mi">5</span>
+<span class="n">E</span><span class="o">-</span><span class="n">RAB</span> <span class="n">Context</span> <span class="o">--</span> <span class="n">eNB</span> <span class="n">TEID</span> <span class="mh">0x1</span><span class="p">;</span> <span class="n">eNB</span> <span class="n">GTP</span><span class="o">-</span><span class="n">U</span> <span class="n">Address</span> <span class="mf">127.0.1.1</span>
+<span class="n">UL</span> <span class="n">NAS</span><span class="p">:</span> <span class="n">Received</span> <span class="n">Attach</span> <span class="n">Complete</span>
+<span class="n">Unpacked</span> <span class="n">Attached</span> <span class="n">Complete</span> <span class="n">Message</span><span class="o">.</span> <span class="n">IMSI</span> <span class="mi">901700123456789</span>
+<span class="n">Unpacked</span> <span class="n">Activate</span> <span class="n">Default</span> <span class="n">EPS</span> <span class="n">Bearer</span> <span class="n">message</span><span class="o">.</span> <span class="n">EPS</span> <span class="n">Bearer</span> <span class="nb">id</span> <span class="mi">5</span>
+<span class="n">Received</span> <span class="n">GTP</span><span class="o">-</span><span class="n">C</span> <span class="n">PDU</span><span class="o">.</span> <span class="n">Message</span> <span class="nb">type</span><span class="p">:</span> <span class="n">GTPC_MSG_TYPE_MODIFY_BEARER_REQUEST</span>
+<span class="n">Sending</span> <span class="n">EMM</span> <span class="n">Information</span>
 </pre></div>
 </div>
 <p><strong>eNB 附加：</strong></p>
 <p>您将在 eNB 上看到 RACH 和连接消息：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">RACH</span><span class="p">:</span>  <span class="n">蒂</span><span class="o">=</span><span class="mi">341</span><span class="p">,</span> <span class="n">抄送</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">序言</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">偏移量</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">临时表</span><span class="o">=</span><span class="mh">0x46</span>
-<span class="n">用户</span> <span class="mh">0x46</span> <span class="n">已连接</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">RACH</span><span class="p">:</span>  <span class="n">tti</span><span class="o">=</span><span class="mi">341</span><span class="p">,</span> <span class="n">cc</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">preamble</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">temp_crnti</span><span class="o">=</span><span class="mh">0x46</span>
+<span class="n">User</span> <span class="mh">0x46</span> <span class="n">connected</span>
 </pre></div>
 </div>
 <p><strong>UE 附：</strong></p>
 <p>UE 控制台将显示以下内容：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">找到了</span> <span class="n">细胞</span><span class="p">:</span>  <span class="n">模式</span><span class="o">=</span><span class="n">FDD</span><span class="p">,</span> <span class="n">PCI</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">PRB</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">港口</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">首席财务官</span><span class="o">=-</span><span class="mf">0.2</span> <span class="n">千赫兹</span>
-<span class="n">当前</span> <span class="n">样品</span> <span class="n">率</span> <span class="ow">是</span> <span class="mf">11.52</span> <span class="n">兆赫兹</span> <span class="k">与</span> <span class="n">一个</span> <span class="n">基地</span> <span class="n">率</span> <span class="n">的</span> <span class="mf">23.04</span> <span class="n">兆赫兹</span> <span class="p">(</span><span class="n">x2</span> <span class="n">抽取</span><span class="p">)</span>
-<span class="n">当前</span> <span class="n">样品</span> <span class="n">率</span> <span class="ow">是</span> <span class="mf">11.52</span> <span class="n">兆赫兹</span> <span class="k">与</span> <span class="n">一个</span> <span class="n">基地</span> <span class="n">率</span> <span class="n">的</span> <span class="mf">23.04</span> <span class="n">兆赫兹</span> <span class="p">(</span><span class="n">x2</span> <span class="n">抽取</span><span class="p">)</span>
-<span class="n">找到了</span> <span class="n">PLMN</span><span class="p">:</span>  <span class="n">身份证号</span><span class="o">=</span><span class="mi">90170</span><span class="p">,</span> <span class="n">TAC</span><span class="o">=</span><span class="mi">7</span>
-<span class="n">随机</span> <span class="n">访问</span> <span class="n">传输</span><span class="p">:</span> <span class="n">序列</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">拉</span><span class="o">-</span><span class="n">rnti</span><span class="o">=</span><span class="mh">0x2</span>
-<span class="n">随机</span> <span class="n">访问</span> <span class="n">完成</span><span class="o">.</span>     <span class="n">c</span><span class="o">-</span><span class="n">rnti</span><span class="o">=</span><span class="mh">0x46</span><span class="p">,</span> <span class="n">塔</span><span class="o">=</span><span class="mi">0</span>
-<span class="n">RRC</span> <span class="n">已连接</span>
-<span class="n">网络</span> <span class="n">附加</span> <span class="n">成功的</span><span class="o">.</span> <span class="n">知识产权</span><span class="p">:</span> <span class="mf">172.16.0.2</span>
-<span class="n">软件</span> <span class="n">收音机</span> <span class="n">系统</span> <span class="n">LTE</span> <span class="p">(</span><span class="n">srsRAN</span> <span class="mi">4</span><span class="n">G</span><span class="p">)</span> <span class="mi">21</span><span class="o">/</span><span class="mi">10</span><span class="o">/</span><span class="mi">2020</span> <span class="mi">12</span><span class="p">:</span><span class="mi">47</span><span class="p">:</span><span class="mi">43</span> <span class="n">泰兹</span><span class="p">:</span><span class="mi">0</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Found</span> <span class="n">Cell</span><span class="p">:</span>  <span class="n">Mode</span><span class="o">=</span><span class="n">FDD</span><span class="p">,</span> <span class="n">PCI</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">PRB</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">Ports</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">CFO</span><span class="o">=-</span><span class="mf">0.2</span> <span class="n">KHz</span>
+<span class="n">Current</span> <span class="n">sample</span> <span class="n">rate</span> <span class="ow">is</span> <span class="mf">11.52</span> <span class="n">MHz</span> <span class="k">with</span> <span class="n">a</span> <span class="n">base</span> <span class="n">rate</span> <span class="n">of</span> <span class="mf">23.04</span> <span class="n">MHz</span> <span class="p">(</span><span class="n">x2</span> <span class="n">decimation</span><span class="p">)</span>
+<span class="n">Current</span> <span class="n">sample</span> <span class="n">rate</span> <span class="ow">is</span> <span class="mf">11.52</span> <span class="n">MHz</span> <span class="k">with</span> <span class="n">a</span> <span class="n">base</span> <span class="n">rate</span> <span class="n">of</span> <span class="mf">23.04</span> <span class="n">MHz</span> <span class="p">(</span><span class="n">x2</span> <span class="n">decimation</span><span class="p">)</span>
+<span class="n">Found</span> <span class="n">PLMN</span><span class="p">:</span>  <span class="n">Id</span><span class="o">=</span><span class="mi">90170</span><span class="p">,</span> <span class="n">TAC</span><span class="o">=</span><span class="mi">7</span>
+<span class="n">Random</span> <span class="n">Access</span> <span class="n">Transmission</span><span class="p">:</span> <span class="n">seq</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">ra</span><span class="o">-</span><span class="n">rnti</span><span class="o">=</span><span class="mh">0x2</span>
+<span class="n">Random</span> <span class="n">Access</span> <span class="n">Complete</span><span class="o">.</span>     <span class="n">c</span><span class="o">-</span><span class="n">rnti</span><span class="o">=</span><span class="mh">0x46</span><span class="p">,</span> <span class="n">ta</span><span class="o">=</span><span class="mi">0</span>
+<span class="n">RRC</span> <span class="n">Connected</span>
+<span class="n">Network</span> <span class="n">attach</span> <span class="n">successful</span><span class="o">.</span> <span class="n">IP</span><span class="p">:</span> <span class="mf">172.16.0.2</span>
+<span class="n">Software</span> <span class="n">Radio</span> <span class="n">Systems</span> <span class="n">LTE</span> <span class="p">(</span><span class="n">srsRAN</span> <span class="mi">4</span><span class="n">G</span><span class="p">)</span> <span class="mi">21</span><span class="o">/</span><span class="mi">10</span><span class="o">/</span><span class="mi">2020</span> <span class="mi">12</span><span class="p">:</span><span class="mi">47</span><span class="p">:</span><span class="mi">43</span> <span class="n">TZ</span><span class="p">:</span><span class="mi">0</span>
 </pre></div>
 </div>
 <p>网络现在已准备好启动和测试切换。为了防止 UE 进入空闲状态，您应该在 UE 和 eNB 之间发送流量。
 这可以通过以下命令来完成：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">须藤</span> <span class="n">ip</span> <span class="n">网络</span> <span class="n">执行</span> <span class="n">UE1</span> <span class="n">平</span> <span class="mf">172.16.0.1</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">ip</span> <span class="n">netns</span> <span class="n">exec</span> <span class="n">ue1</span> <span class="n">ping</span> <span class="mf">172.16.0.1</span>
 </pre></div>
 </div>
 </section>
@@ -883,10 +883,10 @@ Current sample rate is 1.92 MHz with a base rate of 23.04 MHz (x12 decimation)
 </div></blockquote>
 <p><strong>UE 控制台：</strong></p>
 <p>如果切换成功，您应该在 UE 控制台中看到以下读数：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">已收到</span> <span class="n">过氧化氢</span> <span class="n">命令</span> <span class="n">到</span> <span class="n">目标</span> <span class="n">细胞</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">NCC</span><span class="o">=</span><span class="mi">0</span>
-<span class="n">随机</span> <span class="n">访问</span> <span class="n">传输</span><span class="p">:</span> <span class="n">序列</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">拉</span><span class="o">-</span><span class="n">rnti</span><span class="o">=</span><span class="mh">0x2</span>
-<span class="n">随机</span> <span class="n">访问</span> <span class="n">完成</span><span class="o">.</span>     <span class="n">c</span><span class="o">-</span><span class="n">rnti</span><span class="o">=</span><span class="mh">0x47</span><span class="p">,</span> <span class="n">塔</span><span class="o">=</span><span class="mi">0</span>
-<span class="n">过氧化氢</span> <span class="n">成功的</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Received</span> <span class="n">HO</span> <span class="n">command</span> <span class="n">to</span> <span class="n">target</span> <span class="n">PCell</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">NCC</span><span class="o">=</span><span class="mi">0</span>
+<span class="n">Random</span> <span class="n">Access</span> <span class="n">Transmission</span><span class="p">:</span> <span class="n">seq</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">ra</span><span class="o">-</span><span class="n">rnti</span><span class="o">=</span><span class="mh">0x2</span>
+<span class="n">Random</span> <span class="n">Access</span> <span class="n">Complete</span><span class="o">.</span>     <span class="n">c</span><span class="o">-</span><span class="n">rnti</span><span class="o">=</span><span class="mh">0x47</span><span class="p">,</span> <span class="n">ta</span><span class="o">=</span><span class="mi">0</span>
+<span class="n">HO</span> <span class="n">successful</span>
 </pre></div>
 </div>
 <p>现在，通过重复上述步骤，可以根据需要多次重复切换。</p>
@@ -923,29 +923,29 @@ EPC 和其余 Open5GS 应用程序开箱即用，只需少量配置即可与 srs
 <p>在mme.yaml文件中，TAC必须更改为7，这是srsRAN 4G的标准配置。你也可以离开
 这些设置保持原样，并配置 srsRAN 4G 元素。</p>
 <p>下面显示了使用的MME配置：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">嗯</span><span class="p">:</span>
-        <span class="n">自由直径</span><span class="p">:</span> <span class="o">/</span><span class="n">等</span><span class="o">/</span><span class="n">自由直径</span><span class="o">/</span><span class="n">嗯</span><span class="o">.</span><span class="n">会议</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mme</span><span class="p">:</span>
+        <span class="n">freeDiameter</span><span class="p">:</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">freeDiameter</span><span class="o">/</span><span class="n">mme</span><span class="o">.</span><span class="n">conf</span>
         <span class="n">s1ap</span><span class="p">:</span>
-          <span class="o">-</span> <span class="n">地址</span><span class="p">:</span> <span class="mf">127.0.0.2</span>
-        <span class="n">GTPC</span><span class="p">:</span>
-          <span class="o">-</span> <span class="n">地址</span><span class="p">:</span> <span class="mf">127.0.0.2</span>
-        <span class="n">古美</span><span class="p">:</span>
+          <span class="o">-</span> <span class="n">addr</span><span class="p">:</span> <span class="mf">127.0.0.2</span>
+        <span class="n">gtpc</span><span class="p">:</span>
+          <span class="o">-</span> <span class="n">addr</span><span class="p">:</span> <span class="mf">127.0.0.2</span>
+        <span class="n">gummei</span><span class="p">:</span>
           <span class="n">plmn_id</span><span class="p">:</span>
-                <span class="n">MCC</span><span class="p">:</span> <span class="mi">901</span>
-                <span class="n">跨国公司</span><span class="p">:</span> <span class="mi">70</span>
+                <span class="n">mcc</span><span class="p">:</span> <span class="mi">901</span>
+                <span class="n">mnc</span><span class="p">:</span> <span class="mi">70</span>
           <span class="n">mme_gid</span><span class="p">:</span> <span class="mi">2</span>
           <span class="n">mme_code</span><span class="p">:</span> <span class="mi">1</span>
-        <span class="n">泰</span><span class="p">:</span>
+        <span class="n">tai</span><span class="p">:</span>
           <span class="n">plmn_id</span><span class="p">:</span>
-                <span class="n">MCC</span><span class="p">:</span> <span class="mi">901</span>
-                <span class="n">跨国公司</span><span class="p">:</span> <span class="mi">70</span>
-          <span class="n">塔克</span><span class="p">:</span> <span class="mi">7</span>
-        <span class="n">安全</span><span class="p">:</span>
-          <span class="n">完整性顺序</span> <span class="p">:</span> <span class="p">[</span> <span class="n">环评2</span><span class="p">,</span> <span class="n">环评1</span><span class="p">,</span> <span class="n">环境影响评估0</span> <span class="p">]</span>
-          <span class="n">加密顺序</span> <span class="p">:</span> <span class="p">[</span> <span class="n">欧洲经济区0</span><span class="p">,</span> <span class="n">欧洲经济区1</span><span class="p">,</span> <span class="n">欧洲经济区2</span> <span class="p">]</span>
-        <span class="n">网络名称</span><span class="p">:</span>
-          <span class="n">满</span><span class="p">:</span> <span class="n">Open5GS</span>
-        <span class="n">mme_name</span><span class="p">:</span> <span class="n">开放5G</span><span class="o">-</span><span class="n">米梅0</span>
+                <span class="n">mcc</span><span class="p">:</span> <span class="mi">901</span>
+                <span class="n">mnc</span><span class="p">:</span> <span class="mi">70</span>
+          <span class="n">tac</span><span class="p">:</span> <span class="mi">7</span>
+        <span class="n">security</span><span class="p">:</span>
+          <span class="n">integrity_order</span> <span class="p">:</span> <span class="p">[</span> <span class="n">EIA2</span><span class="p">,</span> <span class="n">EIA1</span><span class="p">,</span> <span class="n">EIA0</span> <span class="p">]</span>
+          <span class="n">ciphering_order</span> <span class="p">:</span> <span class="p">[</span> <span class="n">EEA0</span><span class="p">,</span> <span class="n">EEA1</span><span class="p">,</span> <span class="n">EEA2</span> <span class="p">]</span>
+        <span class="n">network_name</span><span class="p">:</span>
+          <span class="n">full</span><span class="p">:</span> <span class="n">Open5GS</span>
+        <span class="n">mme_name</span><span class="p">:</span> <span class="n">open5gs</span><span class="o">-</span><span class="n">mme0</span>
 </pre></div>
 </div>
 <p>作为参考，可以从第 204 行到第 226 行找到此配置。</p>
@@ -966,54 +966,54 @@ EPC 和其余 Open5GS 应用程序开箱即用，只需少量配置即可与 srs
 <p><strong>UE：</strong></p>
 <p>如前所述，必须修改配置文件中的 USIM 凭据。以下部分取自配置文件，显示了需要修改的部分：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#####################################################################</span>
-<span class="p">[</span><span class="n">射频</span><span class="p">]</span>
-<span class="n">频率偏移</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">发送增益</span> <span class="o">=</span> <span class="mi">80</span>
-<span class="c1">#rx_增益= 40</span>
-<span class="c1">#速率= 11.52e6</span>
+<span class="p">[</span><span class="n">rf</span><span class="p">]</span>
+<span class="n">freq_offset</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">tx_gain</span> <span class="o">=</span> <span class="mi">80</span>
+<span class="c1">#rx_gain = 40</span>
+<span class="c1">#srate = 11.52e6</span>
 
-<span class="c1"># I/Q 样本的基于 ZMQ 的 TCP 传输操作示例</span>
-<span class="n">设备名称</span> <span class="o">=</span> <span class="n">兹米克</span>
-<span class="n">设备参数</span> <span class="o">=</span> <span class="n">发送端口</span><span class="o">=</span><span class="n">TCP协议</span><span class="p">:</span><span class="o">//*</span><span class="p">:</span><span class="mi">2001</span><span class="p">,</span><span class="n">接收端口</span><span class="o">=</span><span class="n">TCP协议</span><span class="p">:</span><span class="o">//</span><span class="n">本地主机</span><span class="p">:</span><span class="mi">2000</span><span class="p">,</span><span class="nb">编号</span><span class="o">=</span><span class="n">厄</span><span class="p">,</span><span class="n">基本速率</span><span class="o">=</span><span class="mf">23.04e6</span>
+<span class="c1"># Example for ZMQ-based operation with TCP transport for I/Q samples</span>
+<span class="n">device_name</span> <span class="o">=</span> <span class="n">zmq</span>
+<span class="n">device_args</span> <span class="o">=</span> <span class="n">tx_port</span><span class="o">=</span><span class="n">tcp</span><span class="p">:</span><span class="o">//*</span><span class="p">:</span><span class="mi">2001</span><span class="p">,</span><span class="n">rx_port</span><span class="o">=</span><span class="n">tcp</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">2000</span><span class="p">,</span><span class="nb">id</span><span class="o">=</span><span class="n">ue</span><span class="p">,</span><span class="n">base_srate</span><span class="o">=</span><span class="mf">23.04e6</span>
 
 <span class="c1">#####################################################################</span>
 
-<span class="p">[</span><span class="n">老鼠</span><span class="o">.</span><span class="n">尤特拉</span><span class="p">]</span>
+<span class="p">[</span><span class="n">rat</span><span class="o">.</span><span class="n">eutra</span><span class="p">]</span>
 <span class="n">dl_earfcn</span> <span class="o">=</span> <span class="mi">3350</span>
 <span class="c1">#nof_carriers = 1</span>
 
 <span class="c1">#####################################################################</span>
 
-<span class="p">[</span><span class="n">GW</span><span class="p">]</span>
-<span class="n">网络</span> <span class="o">=</span> <span class="n">UE1</span>
+<span class="p">[</span><span class="n">gw</span><span class="p">]</span>
+<span class="n">netns</span> <span class="o">=</span> <span class="n">ue1</span>
 
 <span class="c1">#####################################################################</span>
 
-<span class="p">[</span><span class="n">乌西姆</span><span class="p">]</span>
-<span class="n">模式</span> <span class="o">=</span> <span class="n">软的</span>
-<span class="n">算法</span> <span class="o">=</span> <span class="n">里程</span>
-<span class="n">OPC</span>  <span class="o">=</span> <span class="mi">63</span><span class="n">BFA50EE6523365FF14C1F45F88737D</span>
+<span class="p">[</span><span class="n">usim</span><span class="p">]</span>
+<span class="n">mode</span> <span class="o">=</span> <span class="n">soft</span>
+<span class="n">algo</span> <span class="o">=</span> <span class="n">milenage</span>
+<span class="n">opc</span>  <span class="o">=</span> <span class="mi">63</span><span class="n">BFA50EE6523365FF14C1F45F88737D</span>
 <span class="n">k</span>    <span class="o">=</span> <span class="mi">00112233445566778899</span><span class="n">aabbccddeeff</span>
-<span class="n">伊姆西</span> <span class="o">=</span> <span class="mi">901700123456789</span>
-<span class="n">串号</span> <span class="o">=</span> <span class="mi">353490069873319</span>
-<span class="c1">#读者=</span>
-<span class="c1">#pin = 1234</span>
+<span class="n">imsi</span> <span class="o">=</span> <span class="mi">901700123456789</span>
+<span class="n">imei</span> <span class="o">=</span> <span class="mi">353490069873319</span>
+<span class="c1">#reader =</span>
+<span class="c1">#pin  = 1234</span>
 </pre></div>
 </div>
 <p>对于此应用程序，下行链路 EARFCN 设置为 3350，这与网络的其余部分相匹配。这将为 UE 和 eNB 设置 LTE 频段和载波频率，它们必须匹配才能成功建立和保持连接。
 这里还显示了将 UE 添加到 EPC 中的订户列表时所做的更改，IMSI 现在以正确的 PLMN 代码开头，并且身份验证算法设置为里程； opc 未注释以启用此功能。</p>
 <p><strong>基站：</strong></p>
 <p>对于 eNB 配置，必须更改 PLMN，MME 地址也必须更改为与 Open5GS EPC 关联的 MME 的地址。以下是对 enb.conf 文件所做的更改：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">恩布</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">enb</span><span class="p">]</span>
 <span class="n">enb_id</span> <span class="o">=</span> <span class="mh">0x19B</span>
-<span class="n">MCC</span> <span class="o">=</span> <span class="mi">901</span>
-<span class="n">跨国公司</span> <span class="o">=</span> <span class="mi">70</span>
-<span class="n">内存地址</span> <span class="o">=</span> <span class="mf">127.0.0.2</span>
-<span class="n">gtp_bind_地址</span> <span class="o">=</span> <span class="mf">127.0.1.1</span>
+<span class="n">mcc</span> <span class="o">=</span> <span class="mi">901</span>
+<span class="n">mnc</span> <span class="o">=</span> <span class="mi">70</span>
+<span class="n">mme_addr</span> <span class="o">=</span> <span class="mf">127.0.0.2</span>
+<span class="n">gtp_bind_addr</span> <span class="o">=</span> <span class="mf">127.0.1.1</span>
 <span class="n">s1c_bind_addr</span> <span class="o">=</span> <span class="mf">127.0.1.1</span>
 <span class="n">n_prb</span> <span class="o">=</span> <span class="mi">50</span>
 <span class="c1">#tm = 4</span>
-<span class="c1">#nof_端口 = 2</span>
+<span class="c1">#nof_ports = 2</span>
 </pre></div>
 </div>
 <p><strong>eNB RR：</strong></p>
@@ -1022,71 +1022,71 @@ EPC 和其余 Open5GS 应用程序开箱即用，只需少量配置即可与 srs
 现有的 rr.conf 被简单地复制到两个新文件中，并且只有 <em>单元格列表</em> 每个新填充物都会发生变化。这应该有助于避免错误配置。</p>
 <p><strong>rr1.conf：</strong></p>
 <p>将 rr.conf 复制到新文件（与现有配置文件位于同一位置）后，必须编辑单元列表。下面的代码片段展示了这一点：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">单元格列表</span> <span class="o">=</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cell_list</span> <span class="o">=</span>
 <span class="p">(</span>
   <span class="p">{</span>
-        <span class="o">//</span> <span class="n">射频端口</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="n">小区编号</span> <span class="o">=</span> <span class="mh">0x01</span><span class="p">;</span>
-        <span class="n">塔克</span> <span class="o">=</span> <span class="mh">0x0007</span><span class="p">;</span>
-        <span class="n">PCI</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-        <span class="n">根序列idx</span> <span class="o">=</span> <span class="mi">204</span><span class="p">;</span>
+        <span class="o">//</span> <span class="n">rf_port</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="n">cell_id</span> <span class="o">=</span> <span class="mh">0x01</span><span class="p">;</span>
+        <span class="n">tac</span> <span class="o">=</span> <span class="mh">0x0007</span><span class="p">;</span>
+        <span class="n">pci</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="n">root_seq_idx</span> <span class="o">=</span> <span class="mi">204</span><span class="p">;</span>
         <span class="n">dl_earfcn</span> <span class="o">=</span> <span class="mi">3350</span><span class="p">;</span>
         <span class="o">//</span><span class="n">ul_earfcn</span> <span class="o">=</span> <span class="mi">21400</span><span class="p">;</span>
-        <span class="n">活跃状态</span> <span class="o">=</span> <span class="n">真实</span><span class="p">;</span>
-        <span class="o">//</span><span class="n">测量间隙周期</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="o">//</span> <span class="mi">0</span> <span class="p">(</span><span class="n">不活跃的</span><span class="p">),</span> <span class="mi">40</span> <span class="ow">或</span> <span class="mi">80</span>
-        <span class="o">//</span><span class="n">测量间隙偏移子帧</span> <span class="o">=</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">30</span><span class="p">];</span>
-        <span class="o">//</span> <span class="n">目标推力sinr</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-        <span class="o">//</span> <span class="n">目标pucch_sinr</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-        <span class="o">//</span> <span class="n">启用_phr_处理</span> <span class="o">=</span> <span class="n">假的</span><span class="p">;</span>
-        <span class="o">//</span> <span class="n">最小短语阈值</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="o">//</span> <span class="n">允许测量带宽</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
-        <span class="o">//</span> <span class="n">t304</span> <span class="o">=</span> <span class="mi">2000</span><span class="p">;</span> <span class="o">//</span> <span class="ow">在</span> <span class="n">毫秒</span><span class="o">.</span> <span class="n">可能</span> <span class="n">价值观</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">2000</span>
+        <span class="n">ho_active</span> <span class="o">=</span> <span class="n">true</span><span class="p">;</span>
+        <span class="o">//</span><span class="n">meas_gap_period</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="o">//</span> <span class="mi">0</span> <span class="p">(</span><span class="n">inactive</span><span class="p">),</span> <span class="mi">40</span> <span class="ow">or</span> <span class="mi">80</span>
+        <span class="o">//</span><span class="n">meas_gap_offset_subframe</span> <span class="o">=</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">30</span><span class="p">];</span>
+        <span class="o">//</span> <span class="n">target_pusch_sinr</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+        <span class="o">//</span> <span class="n">target_pucch_sinr</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+        <span class="o">//</span> <span class="n">enable_phr_handling</span> <span class="o">=</span> <span class="n">false</span><span class="p">;</span>
+        <span class="o">//</span> <span class="n">min_phr_thres</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="o">//</span> <span class="n">allowed_meas_bw</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+        <span class="o">//</span> <span class="n">t304</span> <span class="o">=</span> <span class="mi">2000</span><span class="p">;</span> <span class="o">//</span> <span class="ow">in</span> <span class="n">msec</span><span class="o">.</span> <span class="n">possible</span> <span class="n">values</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">2000</span>
 
-        <span class="o">//</span> <span class="n">CA</span> <span class="n">细胞</span>
+        <span class="o">//</span> <span class="n">CA</span> <span class="n">cells</span>
         <span class="n">scell_list</span> <span class="o">=</span> <span class="p">(</span>
-        <span class="o">//</span> <span class="p">{</span><span class="n">小区编号</span> <span class="o">=</span> <span class="mh">0x02</span><span class="p">;</span> <span class="n">跨运营商调度</span> <span class="o">=</span> <span class="n">假的</span><span class="p">;</span> <span class="n">调度_小区_id</span> <span class="o">=</span> <span class="mh">0x02</span><span class="p">;</span> <span class="n">ul_允许</span> <span class="o">=</span> <span class="n">真实</span><span class="p">}</span>
+        <span class="o">//</span> <span class="p">{</span><span class="n">cell_id</span> <span class="o">=</span> <span class="mh">0x02</span><span class="p">;</span> <span class="n">cross_carrier_scheduling</span> <span class="o">=</span> <span class="n">false</span><span class="p">;</span> <span class="n">scheduling_cell_id</span> <span class="o">=</span> <span class="mh">0x02</span><span class="p">;</span> <span class="n">ul_allowed</span> <span class="o">=</span> <span class="n">true</span><span class="p">}</span>
         <span class="p">)</span>
 
-        <span class="o">//</span> <span class="n">细胞</span> <span class="n">可用</span> <span class="k">为了</span> <span class="n">交接</span>
-        <span class="n">测量单元列表</span> <span class="o">=</span>
+        <span class="o">//</span> <span class="n">Cells</span> <span class="n">available</span> <span class="k">for</span> <span class="n">handover</span>
+        <span class="n">meas_cell_list</span> <span class="o">=</span>
         <span class="p">(</span>
           <span class="p">{</span>
-            <span class="n">埃西</span> <span class="o">=</span> <span class="mh">0x19B01</span><span class="p">;</span>
+            <span class="n">eci</span> <span class="o">=</span> <span class="mh">0x19B01</span><span class="p">;</span>
             <span class="n">dl_earfcn</span> <span class="o">=</span> <span class="mi">3350</span><span class="p">;</span>
-            <span class="n">PCI</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-            <span class="o">//</span><span class="n">可用的直接转发路径</span> <span class="o">=</span> <span class="n">假的</span><span class="p">;</span>
-            <span class="o">//</span><span class="n">允许测量带宽</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
-            <span class="o">//</span><span class="n">单元格个体偏移量</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="n">pci</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="o">//</span><span class="n">direct_forward_path_available</span> <span class="o">=</span> <span class="n">false</span><span class="p">;</span>
+            <span class="o">//</span><span class="n">allowed_meas_bw</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+            <span class="o">//</span><span class="n">cell_individual_offset</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
           <span class="p">},</span>
           <span class="p">{</span>
-            <span class="n">埃西</span> <span class="o">=</span> <span class="mh">0x19C01</span><span class="p">;</span>
+            <span class="n">eci</span> <span class="o">=</span> <span class="mh">0x19C01</span><span class="p">;</span>
             <span class="n">dl_earfcn</span> <span class="o">=</span> <span class="mi">3350</span><span class="p">;</span>
-            <span class="n">PCI</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+            <span class="n">pci</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
           <span class="p">}</span>
         <span class="p">);</span>
 
-        <span class="o">//</span> <span class="n">选择</span> <span class="n">测量</span> <span class="n">报告</span> <span class="n">配置</span> <span class="p">(</span><span class="nb">全部</span> <span class="n">报告</span> <span class="n">是</span> <span class="n">合并的</span> <span class="k">与</span> <span class="nb">全部</span> <span class="n">测量</span> <span class="n">物体</span><span class="p">)</span>
-        <span class="n">测量报告描述</span> <span class="o">=</span>
+        <span class="o">//</span> <span class="n">Select</span> <span class="n">measurement</span> <span class="n">report</span> <span class="n">configuration</span> <span class="p">(</span><span class="nb">all</span> <span class="n">reports</span> <span class="n">are</span> <span class="n">combined</span> <span class="k">with</span> <span class="nb">all</span> <span class="n">measurement</span> <span class="n">objects</span><span class="p">)</span>
+        <span class="n">meas_report_desc</span> <span class="o">=</span>
         <span class="p">(</span>
           <span class="p">{</span>
-            <span class="n">事件A</span> <span class="o">=</span> <span class="mi">3</span>
-            <span class="n">a3_偏移量</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
-            <span class="n">滞后现象</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-            <span class="n">触发时间</span> <span class="o">=</span> <span class="mi">480</span><span class="p">;</span>
-            <span class="n">触发量</span> <span class="o">=</span> <span class="s2">“RSRP”</span><span class="p">;</span>
-            <span class="n">最大报告单元数</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-            <span class="n">报告间隔</span> <span class="o">=</span> <span class="mi">120</span><span class="p">;</span>
-            <span class="n">报告金额</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">eventA</span> <span class="o">=</span> <span class="mi">3</span>
+            <span class="n">a3_offset</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+            <span class="n">hysteresis</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="n">time_to_trigger</span> <span class="o">=</span> <span class="mi">480</span><span class="p">;</span>
+            <span class="n">trigger_quant</span> <span class="o">=</span> <span class="s2">&quot;RSRP&quot;</span><span class="p">;</span>
+            <span class="n">max_report_cells</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">report_interv</span> <span class="o">=</span> <span class="mi">120</span><span class="p">;</span>
+            <span class="n">report_amount</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
           <span class="p">}</span>
         <span class="p">);</span>
 
-        <span class="n">测量定量描述</span> <span class="o">=</span> <span class="p">{</span>
-          <span class="o">//</span> <span class="n">平均</span> <span class="nb">过滤器</span> <span class="n">系数</span>
+        <span class="n">meas_quant_desc</span> <span class="o">=</span> <span class="p">{</span>
+          <span class="o">//</span> <span class="n">averaging</span> <span class="nb">filter</span> <span class="n">coefficient</span>
           <span class="n">rsrq_config</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
           <span class="n">rsrp_config</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
         <span class="p">};</span>
   <span class="p">}</span>
-  <span class="o">//</span> <span class="n">添加</span> <span class="n">这里</span> <span class="n">更多</span> <span class="n">细胞</span>
+  <span class="o">//</span> <span class="n">Add</span> <span class="n">here</span> <span class="n">more</span> <span class="n">cells</span>
 <span class="p">);</span>
 </pre></div>
 </div>
@@ -1095,71 +1095,71 @@ EPC 和其余 Open5GS 应用程序开箱即用，只需少量配置即可与 srs
 与第二eNB相关联。细胞与 <em>eci = 0x19B01</em> 是当前 eNB 上活动的小区。两者的 DL EARFCN 是相同的。</p>
 <p><strong>rr2.conf：</strong></p>
 <p>与 rr1.conf 类似，必须在其中找到其他配置文件并在其中创建文件 rr2.conf <em>单元格列表</em> 更新：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">单元格列表</span> <span class="o">=</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cell_list</span> <span class="o">=</span>
 <span class="p">(</span>
   <span class="p">{</span>
-        <span class="o">//</span> <span class="n">射频端口</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="n">小区编号</span> <span class="o">=</span> <span class="mh">0x01</span><span class="p">;</span>
-        <span class="n">塔克</span> <span class="o">=</span> <span class="mh">0x0007</span><span class="p">;</span>
-        <span class="n">PCI</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
-        <span class="n">根序列idx</span> <span class="o">=</span> <span class="mi">264</span><span class="p">;</span>
+        <span class="o">//</span> <span class="n">rf_port</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="n">cell_id</span> <span class="o">=</span> <span class="mh">0x01</span><span class="p">;</span>
+        <span class="n">tac</span> <span class="o">=</span> <span class="mh">0x0007</span><span class="p">;</span>
+        <span class="n">pci</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+        <span class="n">root_seq_idx</span> <span class="o">=</span> <span class="mi">264</span><span class="p">;</span>
         <span class="n">dl_earfcn</span> <span class="o">=</span> <span class="mi">3350</span><span class="p">;</span>
         <span class="o">//</span><span class="n">ul_earfcn</span> <span class="o">=</span> <span class="mi">21400</span><span class="p">;</span>
-        <span class="n">活跃状态</span> <span class="o">=</span> <span class="n">真实</span><span class="p">;</span>
-        <span class="o">//</span><span class="n">测量间隙周期</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="o">//</span> <span class="mi">0</span> <span class="p">(</span><span class="n">不活跃的</span><span class="p">),</span> <span class="mi">40</span> <span class="ow">或</span> <span class="mi">80</span>
-        <span class="o">//</span><span class="n">测量间隙偏移子帧</span> <span class="o">=</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">30</span><span class="p">];</span>
-        <span class="o">//</span> <span class="n">目标推力sinr</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-        <span class="o">//</span> <span class="n">目标pucch_sinr</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-        <span class="o">//</span> <span class="n">启用_phr_处理</span> <span class="o">=</span> <span class="n">假的</span><span class="p">;</span>
-        <span class="o">//</span> <span class="n">最小短语阈值</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="o">//</span> <span class="n">允许测量带宽</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
-        <span class="o">//</span> <span class="n">t304</span> <span class="o">=</span> <span class="mi">2000</span><span class="p">;</span> <span class="o">//</span> <span class="ow">在</span> <span class="n">毫秒</span><span class="o">.</span> <span class="n">可能</span> <span class="n">价值观</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">2000</span>
+        <span class="n">ho_active</span> <span class="o">=</span> <span class="n">true</span><span class="p">;</span>
+        <span class="o">//</span><span class="n">meas_gap_period</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="o">//</span> <span class="mi">0</span> <span class="p">(</span><span class="n">inactive</span><span class="p">),</span> <span class="mi">40</span> <span class="ow">or</span> <span class="mi">80</span>
+        <span class="o">//</span><span class="n">meas_gap_offset_subframe</span> <span class="o">=</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">30</span><span class="p">];</span>
+        <span class="o">//</span> <span class="n">target_pusch_sinr</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+        <span class="o">//</span> <span class="n">target_pucch_sinr</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+        <span class="o">//</span> <span class="n">enable_phr_handling</span> <span class="o">=</span> <span class="n">false</span><span class="p">;</span>
+        <span class="o">//</span> <span class="n">min_phr_thres</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="o">//</span> <span class="n">allowed_meas_bw</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+        <span class="o">//</span> <span class="n">t304</span> <span class="o">=</span> <span class="mi">2000</span><span class="p">;</span> <span class="o">//</span> <span class="ow">in</span> <span class="n">msec</span><span class="o">.</span> <span class="n">possible</span> <span class="n">values</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">2000</span>
 
-        <span class="o">//</span> <span class="n">CA</span> <span class="n">细胞</span>
+        <span class="o">//</span> <span class="n">CA</span> <span class="n">cells</span>
         <span class="n">scell_list</span> <span class="o">=</span> <span class="p">(</span>
-        <span class="o">//</span> <span class="p">{</span><span class="n">小区编号</span> <span class="o">=</span> <span class="mh">0x02</span><span class="p">;</span> <span class="n">跨运营商调度</span> <span class="o">=</span> <span class="n">假的</span><span class="p">;</span> <span class="n">调度_小区_id</span> <span class="o">=</span> <span class="mh">0x02</span><span class="p">;</span> <span class="n">ul_允许</span> <span class="o">=</span> <span class="n">真实</span><span class="p">}</span>
+        <span class="o">//</span> <span class="p">{</span><span class="n">cell_id</span> <span class="o">=</span> <span class="mh">0x02</span><span class="p">;</span> <span class="n">cross_carrier_scheduling</span> <span class="o">=</span> <span class="n">false</span><span class="p">;</span> <span class="n">scheduling_cell_id</span> <span class="o">=</span> <span class="mh">0x02</span><span class="p">;</span> <span class="n">ul_allowed</span> <span class="o">=</span> <span class="n">true</span><span class="p">}</span>
         <span class="p">)</span>
 
-        <span class="o">//</span> <span class="n">细胞</span> <span class="n">可用</span> <span class="k">为了</span> <span class="n">交接</span>
-        <span class="n">测量单元列表</span> <span class="o">=</span>
+        <span class="o">//</span> <span class="n">Cells</span> <span class="n">available</span> <span class="k">for</span> <span class="n">handover</span>
+        <span class="n">meas_cell_list</span> <span class="o">=</span>
         <span class="p">(</span>
           <span class="p">{</span>
-            <span class="n">埃西</span> <span class="o">=</span> <span class="mh">0x19B01</span><span class="p">;</span>
+            <span class="n">eci</span> <span class="o">=</span> <span class="mh">0x19B01</span><span class="p">;</span>
             <span class="n">dl_earfcn</span> <span class="o">=</span> <span class="mi">3350</span><span class="p">;</span>
-            <span class="n">PCI</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-            <span class="o">//</span><span class="n">可用的直接转发路径</span> <span class="o">=</span> <span class="n">假的</span><span class="p">;</span>
-            <span class="o">//</span><span class="n">允许测量带宽</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
-            <span class="o">//</span><span class="n">单元格个体偏移量</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="n">pci</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="o">//</span><span class="n">direct_forward_path_available</span> <span class="o">=</span> <span class="n">false</span><span class="p">;</span>
+            <span class="o">//</span><span class="n">allowed_meas_bw</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+            <span class="o">//</span><span class="n">cell_individual_offset</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
           <span class="p">},</span>
           <span class="p">{</span>
-            <span class="n">埃西</span> <span class="o">=</span> <span class="mh">0x19C01</span><span class="p">;</span>
+            <span class="n">eci</span> <span class="o">=</span> <span class="mh">0x19C01</span><span class="p">;</span>
             <span class="n">dl_earfcn</span> <span class="o">=</span> <span class="mi">3350</span><span class="p">;</span>
-            <span class="n">PCI</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+            <span class="n">pci</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
           <span class="p">}</span>
         <span class="p">);</span>
 
-        <span class="o">//</span> <span class="n">选择</span> <span class="n">测量</span> <span class="n">报告</span> <span class="n">配置</span> <span class="p">(</span><span class="nb">全部</span> <span class="n">报告</span> <span class="n">是</span> <span class="n">合并的</span> <span class="k">与</span> <span class="nb">全部</span> <span class="n">测量</span> <span class="n">物体</span><span class="p">)</span>
-        <span class="n">测量报告描述</span> <span class="o">=</span>
+        <span class="o">//</span> <span class="n">Select</span> <span class="n">measurement</span> <span class="n">report</span> <span class="n">configuration</span> <span class="p">(</span><span class="nb">all</span> <span class="n">reports</span> <span class="n">are</span> <span class="n">combined</span> <span class="k">with</span> <span class="nb">all</span> <span class="n">measurement</span> <span class="n">objects</span><span class="p">)</span>
+        <span class="n">meas_report_desc</span> <span class="o">=</span>
         <span class="p">(</span>
           <span class="p">{</span>
-            <span class="n">事件A</span> <span class="o">=</span> <span class="mi">3</span>
-            <span class="n">a3_偏移量</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
-            <span class="n">滞后现象</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-            <span class="n">触发时间</span> <span class="o">=</span> <span class="mi">480</span><span class="p">;</span>
-            <span class="n">触发量</span> <span class="o">=</span> <span class="s2">“RSRP”</span><span class="p">;</span>
-            <span class="n">最大报告单元数</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-            <span class="n">报告间隔</span> <span class="o">=</span> <span class="mi">120</span><span class="p">;</span>
-            <span class="n">报告金额</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">eventA</span> <span class="o">=</span> <span class="mi">3</span>
+            <span class="n">a3_offset</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+            <span class="n">hysteresis</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="n">time_to_trigger</span> <span class="o">=</span> <span class="mi">480</span><span class="p">;</span>
+            <span class="n">trigger_quant</span> <span class="o">=</span> <span class="s2">&quot;RSRP&quot;</span><span class="p">;</span>
+            <span class="n">max_report_cells</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">report_interv</span> <span class="o">=</span> <span class="mi">120</span><span class="p">;</span>
+            <span class="n">report_amount</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
           <span class="p">}</span>
         <span class="p">);</span>
 
-        <span class="n">测量定量描述</span> <span class="o">=</span> <span class="p">{</span>
-          <span class="o">//</span> <span class="n">平均</span> <span class="nb">过滤器</span> <span class="n">系数</span>
+        <span class="n">meas_quant_desc</span> <span class="o">=</span> <span class="p">{</span>
+          <span class="o">//</span> <span class="n">averaging</span> <span class="nb">filter</span> <span class="n">coefficient</span>
           <span class="n">rsrq_config</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
           <span class="n">rsrp_config</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
         <span class="p">};</span>
   <span class="p">}</span>
-  <span class="o">//</span> <span class="n">添加</span> <span class="n">这里</span> <span class="n">更多</span> <span class="n">细胞</span>
+  <span class="o">//</span> <span class="n">Add</span> <span class="n">here</span> <span class="n">more</span> <span class="n">cells</span>
 <span class="p">);</span>
 </pre></div>
 </div>
@@ -1176,12 +1176,12 @@ EPC 和其余 Open5GS 应用程序开箱即用，只需少量配置即可与 srs
 文件必须设置为要使用的无线电资源配置：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#!/bin/bash
 
-LOG_ARGS="--log.all_level=debug"
+LOG_ARGS=&quot;--log.all_level=debug&quot;
 
-PORT_ARGS="tx_port=tcp://*:2101,rx_port=tcp://localhost:2100"
-ZMQ_ARGS="--rf.device_name=zmq --rf.device_args=\"${PORT_ARGS},id=enb,base_srate=23.04e6\""
+PORT_ARGS=&quot;tx_port=tcp://*:2101,rx_port=tcp://localhost:2100&quot;
+ZMQ_ARGS=&quot;--rf.device_name=zmq --rf.device_args=\&quot;${PORT_ARGS},id=enb,base_srate=23.04e6\&quot;&quot;
 
-OTHER_ARGS="--enb_files.rr_config=rr1.conf"
+OTHER_ARGS=&quot;--enb_files.rr_config=rr1.conf&quot;
 
 sudo srsenb enb.conf ${LOG_ARGS} ${ZMQ_ARGS} ${OTHER_ARGS} $@
 </pre></div>
@@ -1194,12 +1194,12 @@ sudo srsenb enb.conf ${LOG_ARGS} ${ZMQ_ARGS} ${OTHER_ARGS} $@
 正确实例化。需要修改eNB ID，修改GTP和S1C绑定地址。这是通过以下脚本完成的：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#!/bin/bash
 
-LOG_ARGS="--log.all_level=info"
+LOG_ARGS=&quot;--log.all_level=info&quot;
 
-PORT_ARGS="tx_port=tcp://*:2201,rx_port=tcp://localhost:2200"
-ZMQ_ARGS="--rf.device_name=zmq --rf.device_args=\"${PORT_ARGS},id=enb,base_srate=23.04e6\""
+PORT_ARGS=&quot;tx_port=tcp://*:2201,rx_port=tcp://localhost:2200&quot;
+ZMQ_ARGS=&quot;--rf.device_name=zmq --rf.device_args=\&quot;${PORT_ARGS},id=enb,base_srate=23.04e6\&quot;&quot;
 
-OTHER_ARGS="--enb_files.rr_config=rr2.conf --enb.enb_id=0x19C --enb.gtp_bind_addr=127.0.1.2 --enb.s1c_bind_addr=127.0.1.2"
+OTHER_ARGS=&quot;--enb_files.rr_config=rr2.conf --enb.enb_id=0x19C --enb.gtp_bind_addr=127.0.1.2 --enb.s1c_bind_addr=127.0.1.2&quot;
 
 sudo srsenb enb.conf ${LOG_ARGS} ${ZMQ_ARGS} ${OTHER_ARGS} $@
 </pre></div>
@@ -1208,14 +1208,14 @@ sudo srsenb enb.conf ${LOG_ARGS} ${ZMQ_ARGS} ${OTHER_ARGS} $@
 <p>UE 的脚本将用于设置 ZMQ 设备和端口，同时还用于设置用于 UE 的网络命名空间：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#!/bin/bash
 
-LOG_PARAMS="--log.all_level=debug"
+LOG_PARAMS=&quot;--log.all_level=debug&quot;
 
-PORT_ARGS="tx_port=tcp://*:2001,rx_port=tcp://localhost:2000"
-ZMQ_ARGS="--rf.device_name=zmq --rf.device_args=\"${PORT_ARGS},id=ue,base_srate=23.04e6\" --gw.netns=ue1"
+PORT_ARGS=&quot;tx_port=tcp://*:2001,rx_port=tcp://localhost:2000&quot;
+ZMQ_ARGS=&quot;--rf.device_name=zmq --rf.device_args=\&quot;${PORT_ARGS},id=ue,base_srate=23.04e6\&quot; --gw.netns=ue1&quot;
 
 
 ## Create netns for UE
-ip netns list | grep "ue1" &gt; /dev/null
+ip netns list | grep &quot;ue1&quot; &gt; /dev/null
 if [ $? -eq 1 ]; then
   echo creating netspace ue1...
   sudo ip netns add ue1
@@ -1225,14 +1225,14 @@ if [ $? -eq 1 ]; then
   fi
 fi
 
-sudo srsue ue.conf ${LOG_PARAMS} ${ZMQ_ARGS} --rat.eutra.dl_earfcn=3350 "$@"
+sudo srsue ue.conf ${LOG_PARAMS} ${ZMQ_ARGS} --rat.eutra.dl_earfcn=3350 &quot;$@&quot;
 </pre></div>
 </div>
 <p>UE在实例化时不需要传递任何其他参数。</p>
 </section>
 <section id="gnu-radio">
 <h3>GNU 无线电<a class="headerlink" href="index.html#gnu-radio" title="链接到此标题"></a></h3>
-<p>GRC文件可以下载 <a class="reference download internal" download="" href="../../../../_downloads/41742cf2f30ae7b90c8822332605c811/handover_broker.grc"><code class="xref download docutils literal notranslate"><span class="pre">这里</span></code></a>。下载和/或将文件另存为 <em>.grc</em> 文件。需要时与 GNU-Radio Companion 一起运行。</p>
+<p>GRC文件可以下载 <a class="reference download internal" download="" href="../../../../_downloads/41742cf2f30ae7b90c8822332605c811/handover_broker.grc"><code class="xref download docutils literal notranslate"><span class="pre">here</span></code></a>。下载和/或将文件另存为 <em>.grc</em> 文件。需要时与 GNU-Radio Companion 一起运行。</p>
 <p>这里使用的GRC Broker与eNB内HO使用的GRC Broker相同。下图显示了所使用的流程图：</p>
 <figure class="align-center">
 <img alt="../../../../_images/grc_intra.png" src="../../../../_images/grc_intra.png"/>
@@ -1282,47 +1282,47 @@ sudo srsue ue.conf ${LOG_PARAMS} ${ZMQ_ARGS} --rat.eutra.dl_earfcn=3350 "$@"
 <h3>确认连接<a class="headerlink" href="index.html#id3" title="链接到此标题"></a></h3>
 <p>要确认初始连接已成功，请在相关控制台上查找以下读数。</p>
 <p>源eNB：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">---</span>  <span class="n">软件</span> <span class="n">收音机</span> <span class="n">系统</span> <span class="n">LTE</span> <span class="n">eNodeB</span>  <span class="o">---</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">---</span>  <span class="n">Software</span> <span class="n">Radio</span> <span class="n">Systems</span> <span class="n">LTE</span> <span class="n">eNodeB</span>  <span class="o">---</span>
 
-<span class="n">阅读</span> <span class="n">配置</span> <span class="n">文件</span> <span class="n">恩布</span><span class="o">.</span><span class="n">会议</span><span class="o">...</span>
+<span class="n">Reading</span> <span class="n">configuration</span> <span class="n">file</span> <span class="n">enb</span><span class="o">.</span><span class="n">conf</span><span class="o">...</span>
 
-<span class="n">建成</span> <span class="ow">在</span> <span class="n">发布</span> <span class="n">模式</span> <span class="n">使用</span> <span class="n">提交</span> <span class="mf">7e60</span><span class="n">d8aae</span> <span class="n">上</span> <span class="n">分行</span> <span class="nb">下一个</span><span class="o">.</span>
+<span class="n">Built</span> <span class="ow">in</span> <span class="n">Release</span> <span class="n">mode</span> <span class="n">using</span> <span class="n">commit</span> <span class="mf">7e60</span><span class="n">d8aae</span> <span class="n">on</span> <span class="n">branch</span> <span class="nb">next</span><span class="o">.</span>
 
-<span class="n">开幕</span> <span class="mi">1</span> <span class="n">渠道</span> <span class="ow">在</span> <span class="n">RF</span> <span class="n">装置</span><span class="o">=</span><span class="n">兹米克</span> <span class="k">与</span> <span class="n">参数</span><span class="o">=</span><span class="s2">“tx_port=tcp://*:2101，rx_port=tcp://localhost:2100，id=enb，base_srate=23.04e6”</span>
-<span class="n">CHx</span> <span class="n">基本速率</span><span class="o">=</span><span class="mf">23.04e6</span><span class="s2">"</span>
-<span class="n">CHx</span> <span class="nb">编号</span><span class="o">=</span><span class="n">恩布</span>
-<span class="n">当前</span> <span class="n">样品</span> <span class="n">率</span> <span class="ow">是</span> <span class="mf">1.92</span> <span class="n">兆赫兹</span> <span class="k">与</span> <span class="n">一个</span> <span class="n">基地</span> <span class="n">率</span> <span class="n">的</span> <span class="mf">23.04</span> <span class="n">兆赫兹</span> <span class="p">(</span><span class="n">x12</span> <span class="n">抽取</span><span class="p">)</span>
-<span class="n">CH0</span> <span class="n">接收端口</span><span class="o">=</span><span class="n">TCP协议</span><span class="p">:</span><span class="o">//</span><span class="n">本地主机</span><span class="p">:</span><span class="mi">2100</span>
-<span class="n">CH0</span> <span class="n">发送端口</span><span class="o">=</span><span class="n">TCP协议</span><span class="p">:</span><span class="o">//*</span><span class="p">:</span><span class="mi">2101</span>
-<span class="n">当前</span> <span class="n">样品</span> <span class="n">率</span> <span class="ow">是</span> <span class="mf">11.52</span> <span class="n">兆赫兹</span> <span class="k">与</span> <span class="n">一个</span> <span class="n">基地</span> <span class="n">率</span> <span class="n">的</span> <span class="mf">23.04</span> <span class="n">兆赫兹</span> <span class="p">(</span><span class="n">x2</span> <span class="n">抽取</span><span class="p">)</span>
-<span class="n">当前</span> <span class="n">样品</span> <span class="n">率</span> <span class="ow">是</span> <span class="mf">11.52</span> <span class="n">兆赫兹</span> <span class="k">与</span> <span class="n">一个</span> <span class="n">基地</span> <span class="n">率</span> <span class="n">的</span> <span class="mf">23.04</span> <span class="n">兆赫兹</span> <span class="p">(</span><span class="n">x2</span> <span class="n">抽取</span><span class="p">)</span>
-<span class="n">设置</span> <span class="n">频率</span><span class="p">:</span> <span class="n">DL</span><span class="o">=</span><span class="mf">2630.0</span> <span class="n">兆赫兹</span><span class="p">,</span> <span class="n">UL</span><span class="o">=</span><span class="mf">2510.0</span> <span class="n">兆赫兹</span> <span class="k">为了</span> <span class="n">cc_idx</span><span class="o">=</span><span class="mi">0</span>
+<span class="n">Opening</span> <span class="mi">1</span> <span class="n">channels</span> <span class="ow">in</span> <span class="n">RF</span> <span class="n">device</span><span class="o">=</span><span class="n">zmq</span> <span class="k">with</span> <span class="n">args</span><span class="o">=</span><span class="s2">&quot;tx_port=tcp://*:2101,rx_port=tcp://localhost:2100,id=enb,base_srate=23.04e6&quot;</span>
+<span class="n">CHx</span> <span class="n">base_srate</span><span class="o">=</span><span class="mf">23.04e6</span><span class="s2">&quot;</span>
+<span class="n">CHx</span> <span class="nb">id</span><span class="o">=</span><span class="n">enb</span>
+<span class="n">Current</span> <span class="n">sample</span> <span class="n">rate</span> <span class="ow">is</span> <span class="mf">1.92</span> <span class="n">MHz</span> <span class="k">with</span> <span class="n">a</span> <span class="n">base</span> <span class="n">rate</span> <span class="n">of</span> <span class="mf">23.04</span> <span class="n">MHz</span> <span class="p">(</span><span class="n">x12</span> <span class="n">decimation</span><span class="p">)</span>
+<span class="n">CH0</span> <span class="n">rx_port</span><span class="o">=</span><span class="n">tcp</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">2100</span>
+<span class="n">CH0</span> <span class="n">tx_port</span><span class="o">=</span><span class="n">tcp</span><span class="p">:</span><span class="o">//*</span><span class="p">:</span><span class="mi">2101</span>
+<span class="n">Current</span> <span class="n">sample</span> <span class="n">rate</span> <span class="ow">is</span> <span class="mf">11.52</span> <span class="n">MHz</span> <span class="k">with</span> <span class="n">a</span> <span class="n">base</span> <span class="n">rate</span> <span class="n">of</span> <span class="mf">23.04</span> <span class="n">MHz</span> <span class="p">(</span><span class="n">x2</span> <span class="n">decimation</span><span class="p">)</span>
+<span class="n">Current</span> <span class="n">sample</span> <span class="n">rate</span> <span class="ow">is</span> <span class="mf">11.52</span> <span class="n">MHz</span> <span class="k">with</span> <span class="n">a</span> <span class="n">base</span> <span class="n">rate</span> <span class="n">of</span> <span class="mf">23.04</span> <span class="n">MHz</span> <span class="p">(</span><span class="n">x2</span> <span class="n">decimation</span><span class="p">)</span>
+<span class="n">Setting</span> <span class="n">frequency</span><span class="p">:</span> <span class="n">DL</span><span class="o">=</span><span class="mf">2630.0</span> <span class="n">Mhz</span><span class="p">,</span> <span class="n">UL</span><span class="o">=</span><span class="mf">2510.0</span> <span class="n">MHz</span> <span class="k">for</span> <span class="n">cc_idx</span><span class="o">=</span><span class="mi">0</span>
 
-<span class="o">====</span> <span class="n">eNodeB</span> <span class="n">开始了</span> <span class="o">===</span>
-<span class="n">类型</span> <span class="o">&lt;</span><span class="n">t</span><span class="o">&gt;</span> <span class="n">到</span> <span class="n">查看</span> <span class="n">痕迹</span>
-<span class="n">RACH</span><span class="p">:</span>  <span class="n">蒂</span><span class="o">=</span><span class="mi">341</span><span class="p">,</span> <span class="n">抄送</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">序言</span><span class="o">=</span><span class="mi">38</span><span class="p">,</span> <span class="n">偏移量</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">临时表</span><span class="o">=</span><span class="mh">0x46</span>
-<span class="n">用户</span> <span class="mh">0x46</span> <span class="n">已连接</span>
+<span class="o">====</span> <span class="n">eNodeB</span> <span class="n">started</span> <span class="o">===</span>
+<span class="n">Type</span> <span class="o">&lt;</span><span class="n">t</span><span class="o">&gt;</span> <span class="n">to</span> <span class="n">view</span> <span class="n">trace</span>
+<span class="n">RACH</span><span class="p">:</span>  <span class="n">tti</span><span class="o">=</span><span class="mi">341</span><span class="p">,</span> <span class="n">cc</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">preamble</span><span class="o">=</span><span class="mi">38</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">temp_crnti</span><span class="o">=</span><span class="mh">0x46</span>
+<span class="n">User</span> <span class="mh">0x46</span> <span class="n">connected</span>
 </pre></div>
 </div>
 <p>目标eNB：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">---</span>  <span class="n">软件</span> <span class="n">收音机</span> <span class="n">系统</span> <span class="n">LTE</span> <span class="n">eNodeB</span>  <span class="o">---</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">---</span>  <span class="n">Software</span> <span class="n">Radio</span> <span class="n">Systems</span> <span class="n">LTE</span> <span class="n">eNodeB</span>  <span class="o">---</span>
 
-<span class="n">阅读</span> <span class="n">配置</span> <span class="n">文件</span> <span class="n">恩布</span><span class="o">.</span><span class="n">会议</span><span class="o">...</span>
+<span class="n">Reading</span> <span class="n">configuration</span> <span class="n">file</span> <span class="n">enb</span><span class="o">.</span><span class="n">conf</span><span class="o">...</span>
 
-<span class="n">建成</span> <span class="ow">在</span> <span class="n">发布</span> <span class="n">模式</span> <span class="n">使用</span> <span class="n">提交</span> <span class="mf">7e60</span><span class="n">d8aae</span> <span class="n">上</span> <span class="n">分行</span> <span class="nb">下一个</span><span class="o">.</span>
+<span class="n">Built</span> <span class="ow">in</span> <span class="n">Release</span> <span class="n">mode</span> <span class="n">using</span> <span class="n">commit</span> <span class="mf">7e60</span><span class="n">d8aae</span> <span class="n">on</span> <span class="n">branch</span> <span class="nb">next</span><span class="o">.</span>
 
-<span class="n">开幕</span> <span class="mi">1</span> <span class="n">渠道</span> <span class="ow">在</span> <span class="n">RF</span> <span class="n">装置</span><span class="o">=</span><span class="n">兹米克</span> <span class="k">与</span> <span class="n">参数</span><span class="o">=</span><span class="s2">“tx_port=tcp://*:2201，rx_port=tcp://localhost:2200，id=enb，base_srate=23.04e6”</span>
-<span class="n">CHx</span> <span class="n">基本速率</span><span class="o">=</span><span class="mf">23.04e6</span><span class="s2">"</span>
-<span class="n">CHx</span> <span class="nb">编号</span><span class="o">=</span><span class="n">恩布</span>
-<span class="n">当前</span> <span class="n">样品</span> <span class="n">率</span> <span class="ow">是</span> <span class="mf">1.92</span> <span class="n">兆赫兹</span> <span class="k">与</span> <span class="n">一个</span> <span class="n">基地</span> <span class="n">率</span> <span class="n">的</span> <span class="mf">23.04</span> <span class="n">兆赫兹</span> <span class="p">(</span><span class="n">x12</span> <span class="n">抽取</span><span class="p">)</span>
-<span class="n">CH0</span> <span class="n">接收端口</span><span class="o">=</span><span class="n">TCP协议</span><span class="p">:</span><span class="o">//</span><span class="n">本地主机</span><span class="p">:</span><span class="mi">2200</span>
-<span class="n">CH0</span> <span class="n">发送端口</span><span class="o">=</span><span class="n">TCP协议</span><span class="p">:</span><span class="o">//*</span><span class="p">:</span><span class="mi">2201</span>
-<span class="n">当前</span> <span class="n">样品</span> <span class="n">率</span> <span class="ow">是</span> <span class="mf">11.52</span> <span class="n">兆赫兹</span> <span class="k">与</span> <span class="n">一个</span> <span class="n">基地</span> <span class="n">率</span> <span class="n">的</span> <span class="mf">23.04</span> <span class="n">兆赫兹</span> <span class="p">(</span><span class="n">x2</span> <span class="n">抽取</span><span class="p">)</span>
-<span class="n">当前</span> <span class="n">样品</span> <span class="n">率</span> <span class="ow">是</span> <span class="mf">11.52</span> <span class="n">兆赫兹</span> <span class="k">与</span> <span class="n">一个</span> <span class="n">基地</span> <span class="n">率</span> <span class="n">的</span> <span class="mf">23.04</span> <span class="n">兆赫兹</span> <span class="p">(</span><span class="n">x2</span> <span class="n">抽取</span><span class="p">)</span>
-<span class="n">设置</span> <span class="n">频率</span><span class="p">:</span> <span class="n">DL</span><span class="o">=</span><span class="mf">2630.0</span> <span class="n">兆赫兹</span><span class="p">,</span> <span class="n">UL</span><span class="o">=</span><span class="mf">2510.0</span> <span class="n">兆赫兹</span> <span class="k">为了</span> <span class="n">cc_idx</span><span class="o">=</span><span class="mi">0</span>
+<span class="n">Opening</span> <span class="mi">1</span> <span class="n">channels</span> <span class="ow">in</span> <span class="n">RF</span> <span class="n">device</span><span class="o">=</span><span class="n">zmq</span> <span class="k">with</span> <span class="n">args</span><span class="o">=</span><span class="s2">&quot;tx_port=tcp://*:2201,rx_port=tcp://localhost:2200,id=enb,base_srate=23.04e6&quot;</span>
+<span class="n">CHx</span> <span class="n">base_srate</span><span class="o">=</span><span class="mf">23.04e6</span><span class="s2">&quot;</span>
+<span class="n">CHx</span> <span class="nb">id</span><span class="o">=</span><span class="n">enb</span>
+<span class="n">Current</span> <span class="n">sample</span> <span class="n">rate</span> <span class="ow">is</span> <span class="mf">1.92</span> <span class="n">MHz</span> <span class="k">with</span> <span class="n">a</span> <span class="n">base</span> <span class="n">rate</span> <span class="n">of</span> <span class="mf">23.04</span> <span class="n">MHz</span> <span class="p">(</span><span class="n">x12</span> <span class="n">decimation</span><span class="p">)</span>
+<span class="n">CH0</span> <span class="n">rx_port</span><span class="o">=</span><span class="n">tcp</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">2200</span>
+<span class="n">CH0</span> <span class="n">tx_port</span><span class="o">=</span><span class="n">tcp</span><span class="p">:</span><span class="o">//*</span><span class="p">:</span><span class="mi">2201</span>
+<span class="n">Current</span> <span class="n">sample</span> <span class="n">rate</span> <span class="ow">is</span> <span class="mf">11.52</span> <span class="n">MHz</span> <span class="k">with</span> <span class="n">a</span> <span class="n">base</span> <span class="n">rate</span> <span class="n">of</span> <span class="mf">23.04</span> <span class="n">MHz</span> <span class="p">(</span><span class="n">x2</span> <span class="n">decimation</span><span class="p">)</span>
+<span class="n">Current</span> <span class="n">sample</span> <span class="n">rate</span> <span class="ow">is</span> <span class="mf">11.52</span> <span class="n">MHz</span> <span class="k">with</span> <span class="n">a</span> <span class="n">base</span> <span class="n">rate</span> <span class="n">of</span> <span class="mf">23.04</span> <span class="n">MHz</span> <span class="p">(</span><span class="n">x2</span> <span class="n">decimation</span><span class="p">)</span>
+<span class="n">Setting</span> <span class="n">frequency</span><span class="p">:</span> <span class="n">DL</span><span class="o">=</span><span class="mf">2630.0</span> <span class="n">Mhz</span><span class="p">,</span> <span class="n">UL</span><span class="o">=</span><span class="mf">2510.0</span> <span class="n">MHz</span> <span class="k">for</span> <span class="n">cc_idx</span><span class="o">=</span><span class="mi">0</span>
 
-<span class="o">====</span> <span class="n">eNodeB</span> <span class="n">开始了</span> <span class="o">===</span>
-<span class="n">类型</span> <span class="o">&lt;</span><span class="n">t</span><span class="o">&gt;</span> <span class="n">到</span> <span class="n">查看</span> <span class="n">痕迹</span>
+<span class="o">====</span> <span class="n">eNodeB</span> <span class="n">started</span> <span class="o">===</span>
+<span class="n">Type</span> <span class="o">&lt;</span><span class="n">t</span><span class="o">&gt;</span> <span class="n">to</span> <span class="n">view</span> <span class="n">trace</span>
 </pre></div>
 </div>
 <p>请注意，在 eNB 之间成功进行切换之前，您不会在此 eNB 控制台上看到任何内容。</p>
@@ -1331,8 +1331,8 @@ sudo srsue ue.conf ${LOG_PARAMS} ${ZMQ_ARGS} --rat.eutra.dl_earfcn=3350 "$@"
 
 Built in Release mode using commit 7e60d8aae on branch next.
 
-Opening 1 channels in RF device=zmq with args="tx_port=tcp://*:2001,rx_port=tcp://localhost:2000,id=ue,base_srate=23.04e6"
-CHx base_srate=23.04e6"
+Opening 1 channels in RF device=zmq with args=&quot;tx_port=tcp://*:2001,rx_port=tcp://localhost:2000,id=ue,base_srate=23.04e6&quot;
+CHx base_srate=23.04e6&quot;
 CHx id=ue
 Current sample rate is 1.92 MHz with a base rate of 23.04 MHz (x12 decimation)
 CH0 rx_port=tcp://localhost:2000
@@ -1355,7 +1355,7 @@ nTp) 6/11/2020 15:36:1 TZ:0
 </pre></div>
 </div>
 <p>您现在应该开始在 UE 和 EPC 之间发送流量，这是通过以下命令完成的：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">须藤</span> <span class="n">ip</span> <span class="n">网络</span> <span class="n">执行</span> <span class="n">UE1</span> <span class="n">平</span> <span class="mf">10.45.0.1</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">ip</span> <span class="n">netns</span> <span class="n">exec</span> <span class="n">ue1</span> <span class="n">ping</span> <span class="mf">10.45.0.1</span>
 </pre></div>
 </div>
 <p>这将阻止 UE 超时并保持与内核的连接打开。</p>
@@ -1373,24 +1373,24 @@ nTp) 6/11/2020 15:36:1 TZ:0
 </div></blockquote>
 <p>如果 HO 成功，将在相关控制台输出中看到以下内容：</p>
 <p>源eNB：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">开始</span> <span class="n">S1</span> <span class="n">交接</span> <span class="n">的</span> <span class="n">rnti</span><span class="o">=</span><span class="mh">0x46</span> <span class="n">到</span> <span class="n">赛利德</span><span class="o">=</span><span class="mh">0x19c01</span><span class="o">.</span>
-<span class="n">编码</span> <span class="n">变短MAC</span><span class="p">:</span> <span class="n">小区编号</span><span class="o">=</span><span class="mh">0x19b01</span><span class="p">,</span> <span class="n">PCI</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">rnti</span><span class="o">=</span><span class="mh">0x46</span> <span class="p">(</span><span class="mi">7</span> <span class="nb">字节</span><span class="p">)</span>
-<span class="n">断开连接</span> <span class="n">rnti</span><span class="o">=</span><span class="mh">0x46</span><span class="o">.</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Starting</span> <span class="n">S1</span> <span class="n">Handover</span> <span class="n">of</span> <span class="n">rnti</span><span class="o">=</span><span class="mh">0x46</span> <span class="n">to</span> <span class="n">cellid</span><span class="o">=</span><span class="mh">0x19c01</span><span class="o">.</span>
+<span class="n">Encoded</span> <span class="n">varShortMAC</span><span class="p">:</span> <span class="n">cellId</span><span class="o">=</span><span class="mh">0x19b01</span><span class="p">,</span> <span class="n">PCI</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">rnti</span><span class="o">=</span><span class="mh">0x46</span> <span class="p">(</span><span class="mi">7</span> <span class="nb">bytes</span><span class="p">)</span>
+<span class="n">Disconnecting</span> <span class="n">rnti</span><span class="o">=</span><span class="mh">0x46</span><span class="o">.</span>
 </pre></div>
 </div>
 <p>目标eNB：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">已收到</span> <span class="n">S1</span> <span class="n">过氧化氢</span> <span class="n">请求</span>
-<span class="n">已收到</span> <span class="n">S1</span> <span class="n">MME状态转移</span>
-<span class="n">RACH</span><span class="p">:</span>  <span class="n">蒂</span><span class="o">=</span><span class="mi">3421</span><span class="p">,</span> <span class="n">抄送</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">序言</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">偏移量</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">临时表</span><span class="o">=</span><span class="mh">0x47</span>
-<span class="n">断开连接</span> <span class="n">rnti</span><span class="o">=</span><span class="mh">0x47</span><span class="o">.</span>
-<span class="n">用户</span> <span class="mh">0x46</span> <span class="n">已连接</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Received</span> <span class="n">S1</span> <span class="n">HO</span> <span class="n">Request</span>
+<span class="n">Received</span> <span class="n">S1</span> <span class="n">MMEStatusTransfer</span>
+<span class="n">RACH</span><span class="p">:</span>  <span class="n">tti</span><span class="o">=</span><span class="mi">3421</span><span class="p">,</span> <span class="n">cc</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">preamble</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">temp_crnti</span><span class="o">=</span><span class="mh">0x47</span>
+<span class="n">Disconnecting</span> <span class="n">rnti</span><span class="o">=</span><span class="mh">0x47</span><span class="o">.</span>
+<span class="n">User</span> <span class="mh">0x46</span> <span class="n">connected</span>
 </pre></div>
 </div>
 <p>UE：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">已收到</span> <span class="n">过氧化氢</span> <span class="n">命令</span> <span class="n">到</span> <span class="n">目标</span> <span class="n">细胞</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">NCC</span><span class="o">=</span><span class="mi">2</span>
-<span class="n">随机</span> <span class="n">访问</span> <span class="n">传输</span><span class="p">:</span> <span class="n">序列</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">拉</span><span class="o">-</span><span class="n">rnti</span><span class="o">=</span><span class="mh">0x2</span>
-<span class="n">随机</span> <span class="n">访问</span> <span class="n">完成</span><span class="o">.</span>     <span class="n">c</span><span class="o">-</span><span class="n">rnti</span><span class="o">=</span><span class="mh">0x46</span><span class="p">,</span> <span class="n">塔</span><span class="o">=</span><span class="mi">0</span>
-<span class="n">过氧化氢</span> <span class="n">成功的</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Received</span> <span class="n">HO</span> <span class="n">command</span> <span class="n">to</span> <span class="n">target</span> <span class="n">PCell</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">NCC</span><span class="o">=</span><span class="mi">2</span>
+<span class="n">Random</span> <span class="n">Access</span> <span class="n">Transmission</span><span class="p">:</span> <span class="n">seq</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">ra</span><span class="o">-</span><span class="n">rnti</span><span class="o">=</span><span class="mh">0x2</span>
+<span class="n">Random</span> <span class="n">Access</span> <span class="n">Complete</span><span class="o">.</span>     <span class="n">c</span><span class="o">-</span><span class="n">rnti</span><span class="o">=</span><span class="mh">0x46</span><span class="p">,</span> <span class="n">ta</span><span class="o">=</span><span class="mi">0</span>
+<span class="n">HO</span> <span class="n">successful</span>
 </pre></div>
 </div>
 <p>可以按照上述步骤根据需要重复多次。</p>
@@ -1426,9 +1426,9 @@ nTp) 6/11/2020 15:36:1 TZ:0
 <hr/>
 <div role="contentinfo">
 <p>© 版权所有 2019-2025，软件无线电系统..</p>
-</div>内置 <a href="https://www.sphinx-doc.org/">狮身人面像</a> 使用
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
-    由提供 <a href="https://readthedocs.org">阅读文档</a>.
+</div>基于 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    主题，由 <a href="https://readthedocs.org">Read the Docs</a> 提供。
    
 
 </footer>

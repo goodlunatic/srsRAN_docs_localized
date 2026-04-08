@@ -45,7 +45,7 @@
 <link href="../../../../genindex.html" rel="index" title="索引"/>
 <link href="../../../../search.html" rel="search" title="搜索"/>
 <link href="4_style_aspects_low_level.html" rel="next" title="风格方面：低级问题"/>
-<link href="2_mechanical_source_aspects.html" rel="prev" title="机械源方面"/>
+<link href="2_mechanical_source_aspects.html" rel="prev" title="源代码的机械性规范"/>
 <meta content="srsran-project-docs" name="readthedocs-project-slug"/><meta content="latest" name="readthedocs-version-slug"/><meta content="/dev_guide/source/code_guide/source/3_style_aspects_high_level.html" name="readthedocs-resolver-filename"/><meta content="200" name="readthedocs-http-status"/></head>
 <body class="wy-body-for-nav">
 <div class="wy-grid-for-nav">
@@ -85,7 +85,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../general/source/4_reporting.html">报告问题</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../general/source/4_reporting.html">问题反馈</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../general/source/4_reporting.html#issues">问题</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../general/source/4_reporting.html#vulnerabilities">漏洞</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../general/source/4_reporting.html#support">支持</a></li>
@@ -101,22 +101,22 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../../general/source/5_release_notes.html#initial-public-release">23.3（首次公开发布）</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../general/source/6_dev_status.html">发展现状</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../general/source/6_dev_status.html">开发状态</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">用户手册</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../../user_manuals/source/installation.html">安装指南</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/installation.html#build-tools-and-dependencies">构建工具和依赖项</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/installation.html#rf-drivers">RF-驱动程序</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/installation.html#rf-drivers">RF 驱动程序</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/installation.html#clone-and-build">克隆和构建</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/installation.html#packages">套餐</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/installation.html#packages">软件包</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/installation.html#phy-testvectors">PHY 测试向量</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../user_manuals/source/running.html">运行srsRAN Project</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../user_manuals/source/running.html">运行 srsRAN Project</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/running.html#baseline-requirements">基线要求</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/running.html#system-preparation">系统准备</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/running.html#id1">运行srsRAN Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/running.html#id1">运行 srsRAN Project</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../user_manuals/source/console_ref.html">控制台参考</a></li>
@@ -136,30 +136,30 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#mac-metrics">MAC 指标</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#scheduler-metrics">调度程序指标</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#scheduler-cell-metrics">调度程序单元指标</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#cell-events">细胞事件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#cell-events">小区事件</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#scheduler-ue-metrics">调度程序 UE 指标</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#ofh-metrics">OFH指标</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#ngap-metrics">NGAP 指标</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#rrc-metrics">RRC 指标</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#executors-metrics">执行者指标</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#application-resource-usage-metrics">应用程序资源使用指标</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#executors-metrics">执行器指标</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#application-resource-usage-metrics">应用程序资源占用指标</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../user_manuals/source/config_ref.html">配置参考</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/config_ref.html#id1">配置参考</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/config_ref.html#antenna-configuration">天线配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/config_ref.html#antenna-configuration">天线libconfig</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../user_manuals/source/grafana_gui.html">Grafana 指标 GUI</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/grafana_gui.html#configuration">配置</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/grafana_gui.html#configuration">libconfig</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/grafana_gui.html#id1">Docker</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/grafana_gui.html#project-name">srsRAN Project</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/grafana_gui.html#launching-gui">启动图形用户界面</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/grafana_gui.html#gui-output">图形用户界面输出</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/grafana_gui.html#launching-gui">启动 GUI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/grafana_gui.html#gui-output">GUI 输出</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../user_manuals/source/troubleshooting.html">故障排除</a><ul>
@@ -168,7 +168,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/troubleshooting.html#performance-configuration-script">性能配置脚本</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/troubleshooting.html#usrp-configuration">USRP 配置</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/troubleshooting.html#usrp-configuration">USRP libconfig</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/troubleshooting.html#usrp-time-calibration">USRP 时间校准</a></li>
 </ul>
 </li>
@@ -187,8 +187,8 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../software_arch/source/DU_high/source/mac.html">MAC</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../software_arch/source/DU_high/source/mac.html#implementation">实施</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../software_arch/source/DU_high/source/mac.html#ra-procedure">RA程序</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../software_arch/source/DU_high/source/mac.html#implementation">实现</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../software_arch/source/DU_high/source/mac.html#ra-procedure">RA 过程</a></li>
 </ul>
 </li>
 </ul>
@@ -197,43 +197,43 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">代码风格指南</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="1_language_libraries.html">语言和图书馆</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="1_language_libraries.html">语言与库</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="1_language_libraries.html#c-c-version">C 和 C++ 版本</a></li>
 <li class="toctree-l3"><a class="reference internal" href="1_language_libraries.html#use-of-the-c-standard-library">C++标准库的使用</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="2_mechanical_source_aspects.html">机械源方面</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="2_mechanical_source_aspects.html">源代码的机械性规范</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="2_mechanical_source_aspects.html#source-code-formatting">源代码格式化</a></li>
-<li class="toctree-l3"><a class="reference internal" href="2_mechanical_source_aspects.html#comments">评论</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="2_mechanical_source_aspects.html#comment-guidelines">评论指南</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_mechanical_source_aspects.html#comments">注释</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="2_mechanical_source_aspects.html#comment-guidelines">注释指南</a></li>
 <li class="toctree-l4"><a class="reference internal" href="2_mechanical_source_aspects.html#file-headers">文件头</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="2_mechanical_source_aspects.html#header-guards">割台护罩</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_mechanical_source_aspects.html#header-guards">头文件保护宏</a></li>
 <li class="toctree-l3"><a class="reference internal" href="2_mechanical_source_aspects.html#include-style">#include 样式</a></li>
-<li class="toctree-l3"><a class="reference internal" href="2_mechanical_source_aspects.html#language-and-compiler-aspects">语言和编译器方面</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="2_mechanical_source_aspects.html#language-and-compiler-aspects">语言与编译器</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="2_mechanical_source_aspects.html#treat-compiler-warnings-as-errors">将编译器警告视为错误</a></li>
 <li class="toctree-l4"><a class="reference internal" href="2_mechanical_source_aspects.html#code-portability">代码可移植性</a></li>
 <li class="toctree-l4"><a class="reference internal" href="2_mechanical_source_aspects.html#avoid-rtti-and-exceptions">避免 RTTI 和异常</a></li>
-<li class="toctree-l4"><a class="reference internal" href="2_mechanical_source_aspects.html#use-of-auto">使用汽车</a></li>
+<li class="toctree-l4"><a class="reference internal" href="2_mechanical_source_aspects.html#use-of-auto">使用 auto</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="current reference internal" href="3_style_aspects_high_level.html#">风格方面：高级问题</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="3_style_aspects_high_level.html#self-contained-headers">独立的标头</a></li>
-<li class="toctree-l3"><a class="reference internal" href="3_style_aspects_high_level.html#using-include-sparingly">使用 <code class="docutils literal notranslate"><span class="pre">#包括</span></code> 节俭地</a></li>
-<li class="toctree-l3"><a class="reference internal" href="3_style_aspects_high_level.html#using-internal-headers">使用“内部”标头</a></li>
-<li class="toctree-l3"><a class="reference internal" href="3_style_aspects_high_level.html#use-of-namespace">使用 <code class="docutils literal notranslate"><span class="pre">名称空间</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="3_style_aspects_high_level.html#using-early-exits-and-continue">使用“提前退出”和 <code class="docutils literal notranslate"><span class="pre">继续</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="3_style_aspects_high_level.html#avoid-else-after-a-return-statement">避免 <code class="docutils literal notranslate"><span class="pre">否则</span></code> 经过一个 <code class="docutils literal notranslate"><span class="pre">返回</span></code> 声明</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_style_aspects_high_level.html#self-contained-headers">自包含头文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_style_aspects_high_level.html#using-include-sparingly">使用 <code class="docutils literal notranslate"><span class="pre">#include</span></code> 节俭地</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_style_aspects_high_level.html#using-internal-headers">使用内部头文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_style_aspects_high_level.html#use-of-namespace">使用 <code class="docutils literal notranslate"><span class="pre">namespace</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_style_aspects_high_level.html#using-early-exits-and-continue">使用提前返回与 <code class="docutils literal notranslate"><span class="pre">continue</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_style_aspects_high_level.html#avoid-else-after-a-return-statement">避免在 <code class="docutils literal notranslate"><span class="pre">return</span></code> 之后再写 <code class="docutils literal notranslate"><span class="pre">else</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="3_style_aspects_high_level.html#use-of-static-helper-functions">静态辅助函数的使用</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="4_style_aspects_low_level.html">风格方面：低级问题</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="4_style_aspects_low_level.html#naming-conventions">命名约定</a></li>
 <li class="toctree-l3"><a class="reference internal" href="4_style_aspects_low_level.html#assert-and-expect">断言和期望</a></li>
-<li class="toctree-l3"><a class="reference internal" href="4_style_aspects_low_level.html#do-not-use-using-namespace-std">请勿使用 <code class="docutils literal notranslate"><span class="pre">使用</span> <span class="pre">名称空间</span> <span class="pre">标准</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="4_style_aspects_low_level.html#do-not-use-using-namespace-std">请勿使用 <code class="docutils literal notranslate"><span class="pre">using</span> <span class="pre">namespace</span> <span class="pre">std</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="4_style_aspects_low_level.html#using-range-for-loops">使用范围循环</a></li>
 <li class="toctree-l3"><a class="reference internal" href="4_style_aspects_low_level.html#loop-structure">循环结构</a></li>
 <li class="toctree-l3"><a class="reference internal" href="4_style_aspects_low_level.html#using-pre-increment">使用预自增</a></li>
@@ -272,7 +272,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../testing_policy/source/index.html#exploratory-tests">探索性测试</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../logging_guide/source/index.html">日志记录风格指南</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../logging_guide/source/index.html">日志风格指南</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../logging_guide/source/index.html#rule-1-lists-of-fields-only-need-to-be-separated-by-a-whitespace">规则1：字段列表只需用空格“”分隔</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../logging_guide/source/index.html#rule-2-maintain-consistent-order-between-classes-of-fields">规则 2：保持字段类别之间的顺序一致</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../logging_guide/source/index.html#rule-3-order-of-contextual-fields">规则 3：上下文字段的顺序</a></li>
@@ -338,11 +338,11 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#open5gs">Open5GS</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#id3">零MQ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#id3">ZeroMQ</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#over-the-air-setup">无线设置</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#configuration">配置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#configuration">libconfig</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#gnb">gNB</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#srsue">srsUE</a></li>
 </ul>
@@ -354,7 +354,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#testing-the-network">测试网络</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#routing-configuration">路由配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#routing-configuration">路由libconfig</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#ping">平</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#iperf3">性能3</a></li>
 </ul>
@@ -362,14 +362,14 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#zeromq-based-setup">基于 ZeroMQ 的设置</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#id7">配置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#id7">libconfig</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#id8">gNB</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#id9">srsUE</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#id10">运行网络</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#zmq-testing">测试网络</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#zmq-routing">路由配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#zmq-routing">路由libconfig</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#id13">平</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#id17">性能3</a></li>
 </ul>
@@ -377,7 +377,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#multi-ue-emulation">多 UE 仿真</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#id23">配置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#id23">libconfig</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#gnu-radio-companion">GNU 无线电伴侣</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#id25">Open5GS核心</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#id26">gNB</a></li>
@@ -421,11 +421,11 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/cotsUE/source/index.html#external-clock">外部时钟</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/cotsUE/source/index.html#configuration">配置</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/cotsUE/source/index.html#configuration">libconfig</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/cotsUE/source/index.html#gnb">gNB</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/cotsUE/source/index.html#isim">伊西姆</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/cotsUE/source/index.html#sim-programming">SIM编程</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/cotsUE/source/index.html#suci-configuration">SUCI配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/cotsUE/source/index.html#suci-configuration">SUCIlibconfig</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/cotsUE/source/index.html#adding-user-controlled-plmns">添加用户控制的 PLMN</a></li>
 </ul>
 </li>
@@ -476,13 +476,13 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/amariUE/source/index.html#installation">安装</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/amariUE/source/index.html#id2">零MQ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/amariUE/source/index.html#id2">ZeroMQ</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/amariUE/source/index.html#id3">Amarisoft UE</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/amariUE/source/index.html#zeromq-driver-for-amarisoft-ue">适用于 Amarisoft UE 的 ZeroMQ 驱动程序</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/amariUE/source/index.html#zeromq-based-setup">基于 ZeroMQ 的设置</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/amariUE/source/index.html#configuration">配置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/amariUE/source/index.html#configuration">libconfig</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/amariUE/source/index.html#project-name">srsRAN Project</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/amariUE/source/index.html#id4">Amarisoft UE</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/amariUE/source/index.html#id5">Open5GS 5G 核心</a></li>
@@ -506,7 +506,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/amariUE/source/index.html#over-the-air-setup">无线设置</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/amariUE/source/index.html#id10">配置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/amariUE/source/index.html#id10">libconfig</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/amariUE/source/index.html#id11">srsRAN Project</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/amariUE/source/index.html#id12">Amarisoft UE</a></li>
 </ul>
@@ -594,7 +594,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/handover/source/index.html#cots-ue">现货 UE</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/handover/source/index.html#configuration">配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/handover/source/index.html#configuration">libconfig</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/handover/source/index.html#connecting-the-cots-ue">连接 COTS UE</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/handover/source/index.html#triggering-handover">触发切换</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/handover/source/index.html#from-console">从控制台</a></li>
@@ -617,14 +617,14 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/ntn/source/index.html#installation">安装</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/ntn/source/index.html#id2">零MQ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/ntn/source/index.html#id2">ZeroMQ</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/ntn/source/index.html#project-name">srsRAN Project</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/ntn/source/index.html#id3">Amarisoft UE</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/ntn/source/index.html#zeromq-driver-for-amarisoft-ue">适用于 Amarisoft UE 的 ZeroMQ 驱动程序</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/ntn/source/index.html#id4">GNU 无线电伴侣</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/ntn/source/index.html#configuration">配置</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/ntn/source/index.html#configuration">libconfig</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/ntn/source/index.html#gnb">gNB</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/ntn/source/index.html#amarisoftue">Amari软件UE</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/ntn/source/index.html#ntn-channel-emulator">NTN通道模拟器</a></li>
@@ -638,7 +638,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/ntn/source/index.html#testing-the-network">测试网络</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/ntn/source/index.html#routing-configuration">路由配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/ntn/source/index.html#routing-configuration">路由libconfig</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/ntn/source/index.html#ping">平</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/ntn/source/index.html#iperf">伊珀夫</a></li>
 </ul>
@@ -658,7 +658,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/cu_du_split/source/index.html#cots-ue">现货 UE</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/cu_du_split/source/index.html#configuration">配置</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/cu_du_split/source/index.html#configuration">libconfig</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/cu_du_split/source/index.html#core">核心</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/cu_du_split/source/index.html#srscu">srsCU</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/cu_du_split/source/index.html#srsdu">srsDU</a></li>
@@ -688,13 +688,13 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/oranRU/source/index.html#configuration">配置</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/oranRU/source/index.html#configuration">libconfig</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/oranRU/source/index.html#id1">开关</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/oranRU/source/index.html#id2">CU/DU</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/oranRU/source/index.html#nic-configuration">网卡配置</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/oranRU/source/index.html#ptp-configuration">点对点配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/oranRU/source/index.html#nic-configuration">网卡libconfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/oranRU/source/index.html#ptp-configuration">点对点libconfig</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/oranRU/source/index.html#enabling-ptp-with-dpdk">使用 DPDK 启用 PTP</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/oranRU/source/index.html#srsran-configuration">srsRAN配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/oranRU/source/index.html#srsran-configuration">srsRANlibconfig</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/oranRU/source/index.html#id4">鲁</a></li>
@@ -731,7 +731,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../tutorials/source/near-rt-ric/source/index.html">O-RAN NearRT-RIC 和 xApp</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../tutorials/source/near-rt-ric/source/index.html">O-RAN Near-RT RIC 和 xApp</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/near-rt-ric/source/index.html#overview">概述</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/near-rt-ric/source/index.html#setup-overview">设置概述</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/near-rt-ric/source/index.html#hardware-and-software-overview">硬件和软件概述</a><ul>
@@ -740,12 +740,12 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/near-rt-ric/source/index.html#installation">安装</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/near-rt-ric/source/index.html#open5gs">Open5GS</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/near-rt-ric/source/index.html#id5">零MQ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/near-rt-ric/source/index.html#id5">ZeroMQ</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/near-rt-ric/source/index.html#project-name">srsRAN Project</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/near-rt-ric/source/index.html#srsue">srsUE</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/near-rt-ric/source/index.html#configuration">配置</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/near-rt-ric/source/index.html#configuration">libconfig</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/near-rt-ric/source/index.html#gnb">gNB</a></li>
 </ul>
 </li>
@@ -797,10 +797,10 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../tutorials/source/testmode/source/index.html">srsRAN gNB(-DU) 负载测试</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/testmode/source/index.html#introduction">简介</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/testmode/source/index.html#using-ru-dummy">使用 <code class="docutils literal notranslate"><span class="pre">ru_虚拟</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/testmode/source/index.html#using-ru-emu">使用 <code class="docutils literal notranslate"><span class="pre">鸸鹋</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/testmode/source/index.html#using-no-core">使用 <code class="docutils literal notranslate"><span class="pre">无核心</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/testmode/source/index.html#using-testmode">使用 <code class="docutils literal notranslate"><span class="pre">测试模式</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/testmode/source/index.html#using-ru-dummy">使用 <code class="docutils literal notranslate"><span class="pre">ru_dummy</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/testmode/source/index.html#using-ru-emu">使用 <code class="docutils literal notranslate"><span class="pre">ru_emu</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/testmode/source/index.html#using-no-core">使用 <code class="docutils literal notranslate"><span class="pre">no_core</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/testmode/source/index.html#using-testmode">使用 <code class="docutils literal notranslate"><span class="pre">testmode</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../tutorials/source/hw_kit/source/index.html">E2E O-RAN 与 srsRAN 的测试床</a><ul>
@@ -816,7 +816,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/hw_kit/source/index.html#software">软件</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/hw_kit/source/index.html#configuration">配置</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/hw_kit/source/index.html#configuration">libconfig</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/hw_kit/source/index.html#ptp-grandmaster">PTP大师</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/hw_kit/source/index.html#demanding-dl-requirements">苛刻的 DL 要求</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/hw_kit/source/index.html#demanding-ul-requirements">严格的 UL 要求</a></li>
@@ -836,7 +836,7 @@
 <ul>
 <li class="toctree-l1"><a href="https://www.srsran.com"><i class="web-icon"></i> 网站</a></li>
 <li class="toctree-l1"><a href="https://github.com/srsran/srsran_project"><i class="fa fa-github fa-fw"></i> 源代码</a></li>
-<li class="toctree-l1"><a href="https://github.com/srsran/srsran_project/issues"><i class="fa fa-bug fa-fw"></i> 报告问题</a></li>
+<li class="toctree-l1"><a href="https://github.com/srsran/srsran_project/issues"><i class="fa fa-bug fa-fw"></i> 问题反馈</a></li>
 <li class="toctree-l1"><a href="https://github.com/srsran/srsran_project/discussions"><i class="fa fa-envelope fa-fw"></i> 讨论区</a></li>
 <li class="toctree-l1"><a href="https://twitter.com/srsRANProject"><i class="fa fa-twitter fa-fw"></i> 推特</a></li>
 </ul>
@@ -858,7 +858,7 @@
 <a href="../../../../_sources/dev_guide/source/code_guide/source/3_style_aspects_high_level.rst.txt" rel="nofollow"> 查看页面源码</a>
 </li>
 </ul><div aria-label="顺序页面导航" class="rst-breadcrumbs-buttons" role="navigation">
-<a accesskey="p" class="btn btn-neutral float-left" href="2_mechanical_source_aspects.html" title="机械源方面"><span aria-hidden="true" class="fa fa-arrow-circle-left"></span> 上一页</a>
+<a accesskey="p" class="btn btn-neutral float-left" href="2_mechanical_source_aspects.html" title="源代码的机械性规范"><span aria-hidden="true" class="fa fa-arrow-circle-left"></span> 上一页</a>
 <a accesskey="n" class="btn btn-neutral float-right" href="4_style_aspects_low_level.html" title="风格方面：低级问题">下一步 <span aria-hidden="true" class="fa fa-arrow-circle-right"></span></a>
 </div>
 <hr/>
@@ -868,44 +868,39 @@
 <section id="style-aspects-high-level-issues">
 <span id="code-guide-style-high-level"></span><h1>风格方面：高级问题<a class="headerlink" href="3_style_aspects_high_level.html#style-aspects-high-level-issues" title="链接到此标题"></a></h1>
 <section id="self-contained-headers">
-<h2>独立的标头<a class="headerlink" href="3_style_aspects_high_level.html#self-contained-headers" title="链接到此标题"></a></h2>
+<h2>自包含头文件<a class="headerlink" href="3_style_aspects_high_level.html#self-contained-headers" title="链接到此标题"></a></h2>
 <p>头文件应该是独立的，这意味着它们可以自行编译。</p>
-<p>一般来说，标头可以由一个或多个源文件来实现。每个源文件都将包含定义的头文件
-包含列表中第一个接口（请参阅包含样式）。</p>
+<p>一般来说，一个头文件可以由一个或多个源文件实现。每个源文件都应将其对应的接口头文件放在 include 列表的第一位（参见 include 样式）。</p>
 </section>
 <section id="using-include-sparingly">
-<h2>使用 <code class="docutils literal notranslate"><span class="pre">#包括</span></code> 节俭地<a class="headerlink" href="3_style_aspects_high_level.html#using-include-sparingly" title="链接到此标题"></a></h2>
-<p>其他头文件中包含的头文件会传递传递。例如，如果头文件 <code class="docutils literal notranslate"><span class="pre">foo.h</span></code> 包含头文件 <code class="docutils literal notranslate"><span class="pre">酒吧.h</span></code>,
-任何包含以下内容的文件 <code class="docutils literal notranslate"><span class="pre">foo.h</span></code> 还将包括 <code class="docutils literal notranslate"><span class="pre">酒吧.h</span></code> 隐含地。为了避免长时间的编译时间，包含大的头文件
-应谨慎对待。</p>
-<p>当你要包含一个大的头文件时 <code class="docutils literal notranslate"><span class="pre">Large_include.h</span></code> 在另一个头文件中 <code class="docutils literal notranslate"><span class="pre">my_module.h</span></code>，考虑以下改进：</p>
+<h2>使用 <code class="docutils literal notranslate"><span class="pre">#include</span></code> 节俭地<a class="headerlink" href="3_style_aspects_high_level.html#using-include-sparingly" title="链接到此标题"></a></h2>
+<p>头文件中的包含关系会传递下去。例如，如果头文件 <code class="docutils literal notranslate"><span class="pre">foo.h</span></code> 包含了 <code class="docutils literal notranslate"><span class="pre">bar.h</span></code>，那么任何包含 <code class="docutils literal notranslate"><span class="pre">foo.h</span></code> 的文件也会隐式获得 <code class="docutils literal notranslate"><span class="pre">bar.h</span></code>。为了避免编译时间过长，应谨慎引入体积较大的头文件。</p>
+<p>当你准备在另一个头文件 <code class="docutils literal notranslate"><span class="pre">my_module.h</span></code> 中包含一个较大的头文件 <code class="docutils literal notranslate"><span class="pre">large_include.h</span></code> 时，可以考虑以下优化方式：</p>
 <ol class="arabic simple">
-<li><p>可以 <code class="docutils literal notranslate"><span class="pre">Large_include.h</span></code> 包含在相应的源文件中 <code class="docutils literal notranslate"><span class="pre">我的模块.cpp</span></code> 相反？这将避免传递传播 <code class="docutils literal notranslate"><span class="pre">Large_include.h</span></code> 通过任何包含以下内容的文件 <code class="docutils literal notranslate"><span class="pre">my_module.h</span></code>.</p></li>
-<li><p>可以 <code class="docutils literal notranslate"><span class="pre">my_module.h</span></code> 只包含一个子集 <code class="docutils literal notranslate"><span class="pre">Large_include.h</span></code> 包含标题？例如 <code class="docutils literal notranslate"><span class="pre">my_module.h</span></code> 可能只需要访问接口定义，而不是派生类实现。</p></li>
-<li><p>如果 1. 在不更改代码的情况下无法实现，请考虑进行前向声明 <code class="docutils literal notranslate"><span class="pre">Large_include.h</span></code> 类型并使用引用/指针 <code class="docutils literal notranslate"><span class="pre">my_module.h</span></code>。然后，放置 <code class="docutils literal notranslate"><span class="pre">Large_include.h</span></code> 标头输入 <code class="docutils literal notranslate"><span class="pre">我的模块.cpp</span></code> 相反。</p></li>
+<li><p>是否可以改为只在对应的源文件 <code class="docutils literal notranslate"><span class="pre">my_module.cpp</span></code> 中包含 <code class="docutils literal notranslate"><span class="pre">large_include.h</span></code>？这样可以避免它通过 <code class="docutils literal notranslate"><span class="pre">my_module.h</span></code> 继续向其他文件传播。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">my_module.h</span></code> 是否只需要包含 <code class="docutils literal notranslate"><span class="pre">large_include.h</span></code> 的一部分相关头文件？例如，它可能只需要接口定义，而不需要派生类的具体实现。</p></li>
+<li><p>如果在不改动代码结构的情况下无法做到第 1 点，请考虑对 <code class="docutils literal notranslate"><span class="pre">large_include.h</span></code> 中的类型做前向声明，并在 <code class="docutils literal notranslate"><span class="pre">my_module.h</span></code> 中改用引用或指针。随后再把 <code class="docutils literal notranslate"><span class="pre">large_include.h</span></code> 放到 <code class="docutils literal notranslate"><span class="pre">my_module.cpp</span></code> 中包含。</p></li>
 </ol>
 </section>
 <section id="using-internal-headers">
-<h2>使用“内部”标头<a class="headerlink" href="3_style_aspects_high_level.html#using-internal-headers" title="链接到此标题"></a></h2>
-<p>编写模块时，避免在公共接口标头中添加实现细节、辅助类和实用函数，这些只是
-旨在由模块内部使用。
-相反，在与源文件相同的目录中创建一个私有头文件并将其包含在本地。这样可以避免污染公众
-与不必要的依赖项的接口减少了重新编译。</p>
+<h2>使用内部头文件<a class="headerlink" href="3_style_aspects_high_level.html#using-internal-headers" title="链接到此标题"></a></h2>
+<p>编写模块时，应避免在公共接口头文件中加入实现细节、辅助类和工具函数，因为这些内容本应只在模块内部使用。
+相反，应在与源文件相同的目录中创建私有头文件，并仅在模块内部包含它。这样可以避免公共接口暴露不必要的依赖，也能减少重新编译。</p>
 </section>
 <section id="use-of-namespace">
-<h2>使用 <code class="docutils literal notranslate"><span class="pre">名称空间</span></code><a class="headerlink" href="3_style_aspects_high_level.html#use-of-namespace" title="链接到此标题"></a></h2>
+<h2>使用 <code class="docutils literal notranslate"><span class="pre">namespace</span></code><a class="headerlink" href="3_style_aspects_high_level.html#use-of-namespace" title="链接到此标题"></a></h2>
 <p>避免在跨越整个文件的 .cpp 文件中打开命名空间块。</p>
 <p>在 .cpp 文件中添加自由函数实现时，请避免打开命名空间块。相反，使用命名空间限定符来确保
 函数定义与新声明匹配。</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// foo.h</span>
-<span class="k">名称空间</span><span class="w"> </span><span class="nn">斯鲁斯兰</span><span class="w"> </span><span class="p">{</span>
-<span class="kt">整数</span><span class="w"> </span><span class="nf">富</span><span class="p">(</span><span class="k">常量</span><span class="w"> </span><span class="kt">字符</span><span class="w"> </span><span class="o">*</span><span class="n">s</span><span class="p">);</span>
+<span class="k">namespace</span><span class="w"> </span><span class="nn">srsran</span><span class="w"> </span><span class="p">{</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">foo</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">s</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="c1">// foo.cpp</span>
-<span class="cp">#包括</span><span class="w"> </span><span class="cpf">“foo.h”</span>
-<span class="k">使用</span><span class="w"> </span><span class="k">名称空间</span><span class="w"> </span><span class="nn">斯鲁斯兰</span><span class="p">;</span>
-<span class="kt">整数</span><span class="w"> </span><span class="nf">srsran::foo</span><span class="p">(</span><span class="k">常量</span><span class="w"> </span><span class="kt">字符</span><span class="w"> </span><span class="o">*</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;foo.h&quot;</span>
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">srsran</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">srsran::foo</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="c1">// ...</span>
 <span class="p">}</span>
 </pre></div>
@@ -913,140 +908,140 @@
 <p><strong>避免</strong> 这个：</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// foo.cpp</span>
 
-<span class="cp">#包括</span><span class="w"> </span><span class="cpf">“foo.h”</span>
-<span class="k">名称空间</span><span class="w"> </span><span class="nn">斯鲁斯兰</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// 命名空间块。</span>
-<span class="kt">整数</span><span class="w"> </span><span class="nf">富</span><span class="p">(</span><span class="kt">字符</span><span class="w"> </span><span class="o">*</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// “const char *”和“char *”不匹配</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;foo.h&quot;</span>
+<span class="k">namespace</span><span class="w"> </span><span class="nn">srsran</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// Namespace block.</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">foo</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// Mismatch between &quot;const char *&quot; and &quot;char *&quot;</span>
 <span class="w">    </span><span class="c1">// ...</span>
 <span class="p">}</span>
-<span class="p">}</span><span class="w"> </span><span class="c1">// 结束命名空间 srsran</span>
+<span class="p">}</span><span class="w"> </span><span class="c1">// end namespace srsran</span>
 </pre></div>
 </div>
 <p>上面的代码片段将添加 srsran::foo 的新重载，而不是提供标头中声明的现有函数的定义。
 更糟糕的是，链接器将在构建结束时检测到此错误，而不是立即由编译器检测到。</p>
-<p>关于命名空间限定的最后一句话：当您需要调用 C 库或系统函数时，例如 <code class="docutils literal notranslate"><span class="pre">读()</span></code>, <code class="docutils literal notranslate"><span class="pre">套接字（）</span></code>等等，
-你应该在调用前加上前缀 <code class="docutils literal notranslate"><span class="pre">::</span></code> 比如 <code class="docutils literal notranslate"><span class="pre">::套接字()</span></code>，这将避免潜在的名称冲突和意外行为。</p>
+<p>关于命名空间限定的最后一句话：当您需要调用 C 库或系统函数时，例如 <code class="docutils literal notranslate"><span class="pre">read()</span></code>, <code class="docutils literal notranslate"><span class="pre">socket()</span></code>等等，
+你应该在调用前加上前缀 <code class="docutils literal notranslate"><span class="pre">::</span></code> 比如 <code class="docutils literal notranslate"><span class="pre">::socket()</span></code>，这将避免潜在的名称冲突和意外行为。</p>
 </section>
 <section id="using-early-exits-and-continue">
-<h2>使用“提前退出”和 <code class="docutils literal notranslate"><span class="pre">继续</span></code><a class="headerlink" href="3_style_aspects_high_level.html#using-early-exits-and-continue" title="链接到此标题"></a></h2>
+<h2>使用提前返回与 <code class="docutils literal notranslate"><span class="pre">continue</span></code><a class="headerlink" href="3_style_aspects_high_level.html#using-early-exits-and-continue" title="链接到此标题"></a></h2>
 <p>阅读代码时，请记住读者必须记住多少状态信息和多少先前的决策才能理解代码块。
 尽可能减少缩进，除非这样做会使代码更具可读性。
-做到这一点的一个好方法是利用提前退出和 <code class="docutils literal notranslate"><span class="pre">继续</span></code> 长循环中的关键字。</p>
+做到这一点的一个好方法是利用提前退出和 <code class="docutils literal notranslate"><span class="pre">continue</span></code> 长循环中的关键字。</p>
 <p>此示例不使用提前退出：</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">整数</span><span class="w"> </span><span class="o">*</span><span class="nf">我的函数</span><span class="p">(</span><span class="n">我的班级</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">如果</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">f1</span><span class="p">()</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">p</span><span class="o">-&gt;</span><span class="n">f2</span><span class="p">()</span><span class="w"> </span><span class="o">&amp;&amp;</span>
-<span class="w">      </span><span class="n">我的其他函数</span><span class="p">(</span><span class="n">p</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// ...一些长代码....</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="nf">my_function</span><span class="p">(</span><span class="n">my_class</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">f1</span><span class="p">()</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">p</span><span class="o">-&gt;</span><span class="n">f2</span><span class="p">()</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<span class="w">      </span><span class="n">my_other_function</span><span class="p">(</span><span class="n">p</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// ... some long code ....</span>
 <span class="w">  </span><span class="p">}</span>
 
-<span class="w">  </span><span class="k">返回</span><span class="w"> </span><span class="k">空指针</span><span class="p">;</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="k">nullptr</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>这可以转化为：</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">整数</span><span class="w"> </span><span class="o">*</span><span class="nf">我的函数</span><span class="p">(</span><span class="n">我的班级</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="c1">// 这个 p 的 f1 为真，因为...</span>
-<span class="w">  </span><span class="k">如果</span><span class="w"> </span><span class="p">(</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">f1</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">返回</span><span class="w"> </span><span class="k">空指针</span><span class="p">;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="nf">my_function</span><span class="p">(</span><span class="n">my_class</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// f1 for this p is true because ...</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">f1</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">nullptr</span><span class="p">;</span>
 <span class="w">  </span><span class="p">}</span>
 
-<span class="w">  </span><span class="c1">// 此 p 的 f2 为 false，因为...</span>
-<span class="w">  </span><span class="k">如果</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">f2</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">返回</span><span class="w"> </span><span class="k">空指针</span><span class="p">;</span>
+<span class="w">  </span><span class="c1">// f2 for this p is false because ...</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">f2</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">nullptr</span><span class="p">;</span>
 <span class="w">  </span><span class="p">}</span>
 
-<span class="w">  </span><span class="c1">// 其他的东西...</span>
-<span class="w">  </span><span class="k">如果</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">我的其他函数</span><span class="p">(</span><span class="n">p</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">返回</span><span class="w"> </span><span class="k">空指针</span><span class="p">;</span>
+<span class="w">  </span><span class="c1">// Something else ...</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">my_other_function</span><span class="p">(</span><span class="n">p</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">nullptr</span><span class="p">;</span>
 <span class="w">  </span><span class="p">}</span>
 
-<span class="w">  </span><span class="c1">// ...一些长代码....</span>
+<span class="w">  </span><span class="c1">// ... some long code ....</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>同样，在循环中：</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">为了</span><span class="w"> </span><span class="p">(</span><span class="kt">整数</span><span class="w"> </span><span class="n">我</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">我的向量</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">如果</span><span class="w"> </span><span class="p">(</span><span class="n">我</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">7</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">如果</span><span class="w"> </span><span class="p">(</span><span class="n">检查某事</span><span class="p">(</span><span class="n">我</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="n">做某事</span><span class="p">(</span><span class="n">我</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">否则</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="c1">// ...一些长代码....</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">my_vector</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">7</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">check_something</span><span class="p">(</span><span class="n">i</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">do_something</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// ... some long code ....</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>可以转化为：</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">为了</span><span class="w"> </span><span class="p">(</span><span class="kt">整数</span><span class="w"> </span><span class="n">我</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">我的向量</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">如果</span><span class="w"> </span><span class="p">(</span><span class="n">我</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">7</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">继续</span><span class="p">;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">my_vector</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">7</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">continue</span><span class="p">;</span>
 <span class="w">  </span><span class="p">}</span>
-<span class="w">  </span><span class="k">如果</span><span class="w"> </span><span class="p">(</span><span class="n">检查某事</span><span class="p">(</span><span class="n">我</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">做某事</span><span class="p">(</span><span class="n">我</span><span class="p">);</span>
-<span class="w">    </span><span class="k">继续</span><span class="p">;</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">check_something</span><span class="p">(</span><span class="n">i</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">do_something</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<span class="w">    </span><span class="k">continue</span><span class="p">;</span>
 <span class="w">  </span><span class="p">}</span>
-<span class="w">  </span><span class="c1">// ...一些长代码....</span>
+<span class="w">  </span><span class="c1">// ... some long code ....</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 </section>
 <section id="avoid-else-after-a-return-statement">
-<h2>避免 <code class="docutils literal notranslate"><span class="pre">否则</span></code> 经过一个 <code class="docutils literal notranslate"><span class="pre">返回</span></code> 声明<a class="headerlink" href="3_style_aspects_high_level.html#avoid-else-after-a-return-statement" title="链接到此标题"></a></h2>
-<p>遵循与上一点相同的推理，避免使用 <code class="docutils literal notranslate"><span class="pre">否则</span></code> 或 <cite>否则如果</cite> 在中断控制流的语句之后，如 return、break、 continue、goto 等。</p>
+<h2>避免在 <code class="docutils literal notranslate"><span class="pre">return</span></code> 之后再写 <code class="docutils literal notranslate"><span class="pre">else</span></code><a class="headerlink" href="3_style_aspects_high_level.html#avoid-else-after-a-return-statement" title="链接到此标题"></a></h2>
+<p>遵循与上一点相同的推理，避免使用 <code class="docutils literal notranslate"><span class="pre">else</span></code> 或 <cite>else if</cite> 在中断控制流的语句之后，如 return、break、 continue、goto 等。</p>
 <p>例如：</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">案例</span><span class="w"> </span><span class="mi">2</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">如果</span><span class="w"> </span><span class="p">(</span><span class="n">某事</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">获取缓冲区类型_1</span><span class="p">();</span>
-<span class="w">    </span><span class="k">如果</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">v</span><span class="p">.</span><span class="n">有效</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="n">错误字符串</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">“无效的缓冲区类型 1”</span><span class="p">;</span>
-<span class="w">      </span><span class="k">返回</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">否则</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="k">打破</span><span class="p">;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">case</span><span class="w"> </span><span class="mi">2</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">something</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_buffer_type_1</span><span class="p">();</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">v</span><span class="p">.</span><span class="n">is_valid</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">error_string</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Invalid buffer type 1&quot;</span><span class="p">;</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">break</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">否则</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">获取缓冲区类型2</span><span class="p">();</span>
-<span class="w">    </span><span class="k">如果</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">v</span><span class="p">.</span><span class="n">有效</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="n">错误字符串</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">“无效的缓冲区类型 2”</span><span class="p">;</span>
-<span class="w">      </span><span class="k">返回</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">否则</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="k">打破</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_buffer_type_2</span><span class="p">();</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">v</span><span class="p">.</span><span class="n">is_valid</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">error_string</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Invalid buffer type 2&quot;</span><span class="p">;</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">break</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>可以转化为：</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">案例</span><span class="w"> </span><span class="mi">2</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">如果</span><span class="w"> </span><span class="p">(</span><span class="n">某事</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">获取缓冲区类型_1</span><span class="p">();</span>
-<span class="w">    </span><span class="k">如果</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">v</span><span class="p">.</span><span class="n">有效</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="n">错误字符串</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">“无效的缓冲区类型 1”</span><span class="p">;</span>
-<span class="w">      </span><span class="k">返回</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">case</span><span class="w"> </span><span class="mi">2</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">something</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_buffer_type_1</span><span class="p">();</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">v</span><span class="p">.</span><span class="n">is_valid</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">error_string</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Invalid buffer type 1&quot;</span><span class="p">;</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">否则</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">获取缓冲区类型2</span><span class="p">();</span>
-<span class="w">    </span><span class="k">如果</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">v</span><span class="p">.</span><span class="n">有效</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="n">错误字符串</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">“无效的缓冲区类型 2”</span><span class="p">;</span>
-<span class="w">      </span><span class="k">返回</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_buffer_type_2</span><span class="p">();</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">v</span><span class="p">.</span><span class="n">is_valid</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">error_string</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Invalid buffer type 2&quot;</span><span class="p">;</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">  </span><span class="p">}</span>
-<span class="w">  </span><span class="k">打破</span><span class="p">;</span>
+<span class="w">  </span><span class="k">break</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>或者最佳地：</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">案例</span><span class="w"> </span><span class="mi">2</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">如果</span><span class="w"> </span><span class="p">(</span><span class="n">某事</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">获取缓冲区类型_1</span><span class="p">();</span>
-<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">否则</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">获取缓冲区类型2</span><span class="p">();</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">case</span><span class="w"> </span><span class="mi">2</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">something</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_buffer_type_1</span><span class="p">();</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_buffer_type_2</span><span class="p">();</span>
 <span class="w">  </span><span class="p">}</span>
 
-<span class="w">  </span><span class="k">如果</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">v</span><span class="p">.</span><span class="n">有效</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="n">错误字符串</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">某事</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s">“无效的缓冲区类型 1”</span>
-<span class="w">                                 </span><span class="o">:</span><span class="w"> </span><span class="s">“无效的缓冲区类型 2”</span><span class="p">;</span>
-<span class="w">      </span><span class="k">返回</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">v</span><span class="p">.</span><span class="n">is_valid</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">error_string</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">something</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s">&quot;Invalid buffer type 1&quot;</span>
+<span class="w">                                 </span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Invalid buffer type 2&quot;</span><span class="p">;</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
 <span class="w">  </span><span class="p">}</span>
-<span class="w">  </span><span class="k">打破</span><span class="p">;</span>
+<span class="w">  </span><span class="k">break</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -1055,30 +1050,30 @@
 <section id="use-of-static-helper-functions">
 <h2>静态辅助函数的使用<a class="headerlink" href="3_style_aspects_high_level.html#use-of-static-helper-functions" title="链接到此标题"></a></h2>
 <p>编写仅计算布尔值的小循环是很常见的，例如：</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">布尔值</span><span class="w"> </span><span class="n">发现_有效</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">假的</span><span class="p">;</span>
-<span class="k">为了</span><span class="w"> </span><span class="p">(</span><span class="kt">未签名</span><span class="w"> </span><span class="n">我</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">矢量</span><span class="p">.</span><span class="n">尺寸</span><span class="p">();</span><span class="w"> </span><span class="n">我</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">e</span><span class="p">;</span><span class="w"> </span><span class="o">**</span><span class="n">我</span><span class="p">)</span>
-<span class="w">  </span><span class="k">如果</span><span class="w"> </span><span class="p">(</span><span class="n">矢量</span><span class="p">[</span><span class="n">我</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">有效</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">发现_有效</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">真实</span><span class="p">;</span>
-<span class="w">    </span><span class="k">打破</span><span class="p">;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span><span class="w"> </span><span class="n">found_valid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vector</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">e</span><span class="p">;</span><span class="w"> </span><span class="o">**</span><span class="n">i</span><span class="p">)</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">vector</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">is_valid</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">found_valid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="w">    </span><span class="k">break</span><span class="p">;</span>
 <span class="w">  </span><span class="p">}</span>
 
-<span class="k">如果</span><span class="w"> </span><span class="p">(</span><span class="n">发现_有效</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">found_valid</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="p">...</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>不要将此循环写入更大的函数中，而是将其提取到也使用早期退出的谓词函数（通常是静态的）中：</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">/// 如果输入向量包含有效缓冲区，则返回 true。</span>
-<span class="k">静态的</span><span class="w"> </span><span class="kt">布尔值</span><span class="w"> </span><span class="nf">有_有效_缓冲区</span><span class="p">(</span><span class="k">常量</span><span class="w"> </span><span class="n">标准</span><span class="o">::</span><span class="n">矢量</span><span class="o">&lt;</span><span class="n">缓冲区</span><span class="w"> </span><span class="o">*&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">矢量</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">为了</span><span class="w"> </span><span class="p">(</span><span class="kt">未签名</span><span class="w"> </span><span class="n">我</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">矢量</span><span class="p">.</span><span class="n">尺寸</span><span class="p">();</span><span class="w"> </span><span class="n">我</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">e</span><span class="p">;</span><span class="w"> </span><span class="o">**</span><span class="n">我</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">如果</span><span class="w"> </span><span class="p">(</span><span class="n">矢量</span><span class="p">[</span><span class="n">我</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">有效</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="k">返回</span><span class="w"> </span><span class="nb">真实</span><span class="p">;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">/// Returns true if the input vector contains a valid buffer.</span>
+<span class="k">static</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="nf">has_valid_buffer</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">buffer</span><span class="w"> </span><span class="o">*&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">vector</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vector</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">e</span><span class="p">;</span><span class="w"> </span><span class="o">**</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">vector</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">is_valid</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">  </span><span class="p">}</span>
-<span class="w">  </span><span class="k">返回</span><span class="w"> </span><span class="nb">假的</span><span class="p">;</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="p">...</span>
-<span class="k">如果</span><span class="w"> </span><span class="p">(</span><span class="n">有_有效_缓冲区</span><span class="p">(</span><span class="n">矢量</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">has_valid_buffer</span><span class="p">(</span><span class="n">vector</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="p">...</span>
 <span class="p">}</span>
 </pre></div>
@@ -1097,15 +1092,15 @@
 </div>
 </div>
 <footer><div aria-label="页脚" class="rst-footer-buttons" role="navigation">
-<a accesskey="p" class="btn btn-neutral float-left" href="2_mechanical_source_aspects.html" rel="prev" title="机械源方面"><span aria-hidden="true" class="fa fa-arrow-circle-left"></span> 上一页</a>
+<a accesskey="p" class="btn btn-neutral float-left" href="2_mechanical_source_aspects.html" rel="prev" title="源代码的机械性规范"><span aria-hidden="true" class="fa fa-arrow-circle-left"></span> 上一页</a>
 <a accesskey="n" class="btn btn-neutral float-right" href="4_style_aspects_low_level.html" rel="next" title="风格方面：低级问题">下一步 <span aria-hidden="true" class="fa fa-arrow-circle-right"></span></a>
 </div>
 <hr/>
 <div role="contentinfo">
 <p>© 版权所有 2023-2026，软件无线电系统..</p>
-</div>内置 <a href="https://www.sphinx-doc.org/">狮身人面像</a> 使用
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
-    由提供 <a href="https://readthedocs.org">阅读文档</a>.
+</div>基于 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    主题，由 <a href="https://readthedocs.org">Read the Docs</a> 提供。
    
 
 </footer>

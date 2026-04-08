@@ -12,7 +12,7 @@
         gtag('config', 'G-HVHF6N640X');
     </script>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>机械源方面 — srsRAN Project 文档</title>
+<title>源代码的机械性规范 — srsRAN Project 文档</title>
 <link href="../../../../_static/pygments.css%3Fv=03e43079.css" rel="stylesheet" type="text/css"/>
 <link href="../../../../_static/css/theme.css%3Fv=9edc463e.css" rel="stylesheet" type="text/css"/>
 <link href="../../../../_static/copybutton.css%3Fv=76b2166b.css" rel="stylesheet" type="text/css"/>
@@ -45,7 +45,7 @@
 <link href="../../../../genindex.html" rel="index" title="索引"/>
 <link href="../../../../search.html" rel="search" title="搜索"/>
 <link href="3_style_aspects_high_level.html" rel="next" title="风格方面：高级问题"/>
-<link href="1_language_libraries.html" rel="prev" title="语言和图书馆"/>
+<link href="1_language_libraries.html" rel="prev" title="语言与库"/>
 <meta content="srsran-project-docs" name="readthedocs-project-slug"/><meta content="latest" name="readthedocs-version-slug"/><meta content="/dev_guide/source/code_guide/source/2_mechanical_source_aspects.html" name="readthedocs-resolver-filename"/><meta content="200" name="readthedocs-http-status"/></head>
 <body class="wy-body-for-nav">
 <div class="wy-grid-for-nav">
@@ -85,7 +85,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../general/source/4_reporting.html">报告问题</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../general/source/4_reporting.html">问题反馈</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../general/source/4_reporting.html#issues">问题</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../general/source/4_reporting.html#vulnerabilities">漏洞</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../general/source/4_reporting.html#support">支持</a></li>
@@ -101,22 +101,22 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../../general/source/5_release_notes.html#initial-public-release">23.3（首次公开发布）</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../general/source/6_dev_status.html">发展现状</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../general/source/6_dev_status.html">开发状态</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">用户手册</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../../user_manuals/source/installation.html">安装指南</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/installation.html#build-tools-and-dependencies">构建工具和依赖项</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/installation.html#rf-drivers">RF-驱动程序</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/installation.html#rf-drivers">RF 驱动程序</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/installation.html#clone-and-build">克隆和构建</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/installation.html#packages">套餐</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/installation.html#packages">软件包</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/installation.html#phy-testvectors">PHY 测试向量</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../user_manuals/source/running.html">运行srsRAN Project</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../user_manuals/source/running.html">运行 srsRAN Project</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/running.html#baseline-requirements">基线要求</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/running.html#system-preparation">系统准备</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/running.html#id1">运行srsRAN Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/running.html#id1">运行 srsRAN Project</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../user_manuals/source/console_ref.html">控制台参考</a></li>
@@ -136,30 +136,30 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#mac-metrics">MAC 指标</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#scheduler-metrics">调度程序指标</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#scheduler-cell-metrics">调度程序单元指标</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#cell-events">细胞事件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#cell-events">小区事件</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#scheduler-ue-metrics">调度程序 UE 指标</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#ofh-metrics">OFH指标</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#ngap-metrics">NGAP 指标</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#rrc-metrics">RRC 指标</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#executors-metrics">执行者指标</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#application-resource-usage-metrics">应用程序资源使用指标</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#executors-metrics">执行器指标</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#application-resource-usage-metrics">应用程序资源占用指标</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../user_manuals/source/config_ref.html">配置参考</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/config_ref.html#id1">配置参考</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/config_ref.html#antenna-configuration">天线配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/config_ref.html#antenna-configuration">天线libconfig</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../user_manuals/source/grafana_gui.html">Grafana 指标 GUI</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/grafana_gui.html#configuration">配置</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/grafana_gui.html#configuration">libconfig</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/grafana_gui.html#id1">Docker</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/grafana_gui.html#project-name">srsRAN Project</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/grafana_gui.html#launching-gui">启动图形用户界面</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/grafana_gui.html#gui-output">图形用户界面输出</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/grafana_gui.html#launching-gui">启动 GUI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/grafana_gui.html#gui-output">GUI 输出</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../user_manuals/source/troubleshooting.html">故障排除</a><ul>
@@ -168,7 +168,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/troubleshooting.html#performance-configuration-script">性能配置脚本</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/troubleshooting.html#usrp-configuration">USRP 配置</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/troubleshooting.html#usrp-configuration">USRP libconfig</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/troubleshooting.html#usrp-time-calibration">USRP 时间校准</a></li>
 </ul>
 </li>
@@ -187,8 +187,8 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../software_arch/source/DU_high/source/mac.html">MAC</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../software_arch/source/DU_high/source/mac.html#implementation">实施</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../software_arch/source/DU_high/source/mac.html#ra-procedure">RA程序</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../software_arch/source/DU_high/source/mac.html#implementation">实现</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../software_arch/source/DU_high/source/mac.html#ra-procedure">RA 过程</a></li>
 </ul>
 </li>
 </ul>
@@ -197,43 +197,43 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">代码风格指南</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="1_language_libraries.html">语言和图书馆</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="1_language_libraries.html">语言与库</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="1_language_libraries.html#c-c-version">C 和 C++ 版本</a></li>
 <li class="toctree-l3"><a class="reference internal" href="1_language_libraries.html#use-of-the-c-standard-library">C++标准库的使用</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="2_mechanical_source_aspects.html#">机械源方面</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="2_mechanical_source_aspects.html#">源代码的机械性规范</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="2_mechanical_source_aspects.html#source-code-formatting">源代码格式化</a></li>
-<li class="toctree-l3"><a class="reference internal" href="2_mechanical_source_aspects.html#comments">评论</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="2_mechanical_source_aspects.html#comment-guidelines">评论指南</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_mechanical_source_aspects.html#comments">注释</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="2_mechanical_source_aspects.html#comment-guidelines">注释指南</a></li>
 <li class="toctree-l4"><a class="reference internal" href="2_mechanical_source_aspects.html#file-headers">文件头</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="2_mechanical_source_aspects.html#header-guards">割台护罩</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_mechanical_source_aspects.html#header-guards">头文件保护宏</a></li>
 <li class="toctree-l3"><a class="reference internal" href="2_mechanical_source_aspects.html#include-style">#include 样式</a></li>
-<li class="toctree-l3"><a class="reference internal" href="2_mechanical_source_aspects.html#language-and-compiler-aspects">语言和编译器方面</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="2_mechanical_source_aspects.html#language-and-compiler-aspects">语言与编译器</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="2_mechanical_source_aspects.html#treat-compiler-warnings-as-errors">将编译器警告视为错误</a></li>
 <li class="toctree-l4"><a class="reference internal" href="2_mechanical_source_aspects.html#code-portability">代码可移植性</a></li>
 <li class="toctree-l4"><a class="reference internal" href="2_mechanical_source_aspects.html#avoid-rtti-and-exceptions">避免 RTTI 和异常</a></li>
-<li class="toctree-l4"><a class="reference internal" href="2_mechanical_source_aspects.html#use-of-auto">使用汽车</a></li>
+<li class="toctree-l4"><a class="reference internal" href="2_mechanical_source_aspects.html#use-of-auto">使用 auto</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="3_style_aspects_high_level.html">风格方面：高级问题</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="3_style_aspects_high_level.html#self-contained-headers">独立的标头</a></li>
-<li class="toctree-l3"><a class="reference internal" href="3_style_aspects_high_level.html#using-include-sparingly">使用 <code class="docutils literal notranslate"><span class="pre">#包括</span></code> 节俭地</a></li>
-<li class="toctree-l3"><a class="reference internal" href="3_style_aspects_high_level.html#using-internal-headers">使用“内部”标头</a></li>
-<li class="toctree-l3"><a class="reference internal" href="3_style_aspects_high_level.html#use-of-namespace">使用 <code class="docutils literal notranslate"><span class="pre">名称空间</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="3_style_aspects_high_level.html#using-early-exits-and-continue">使用“提前退出”和 <code class="docutils literal notranslate"><span class="pre">继续</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="3_style_aspects_high_level.html#avoid-else-after-a-return-statement">避免 <code class="docutils literal notranslate"><span class="pre">否则</span></code> 经过一个 <code class="docutils literal notranslate"><span class="pre">返回</span></code> 声明</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_style_aspects_high_level.html#self-contained-headers">自包含头文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_style_aspects_high_level.html#using-include-sparingly">使用 <code class="docutils literal notranslate"><span class="pre">#include</span></code> 节俭地</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_style_aspects_high_level.html#using-internal-headers">使用内部头文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_style_aspects_high_level.html#use-of-namespace">使用 <code class="docutils literal notranslate"><span class="pre">namespace</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_style_aspects_high_level.html#using-early-exits-and-continue">使用提前返回与 <code class="docutils literal notranslate"><span class="pre">continue</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_style_aspects_high_level.html#avoid-else-after-a-return-statement">避免在 <code class="docutils literal notranslate"><span class="pre">else</span></code> 之后再写 <code class="docutils literal notranslate"><span class="pre">return</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="3_style_aspects_high_level.html#use-of-static-helper-functions">静态辅助函数的使用</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="4_style_aspects_low_level.html">风格方面：低级问题</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="4_style_aspects_low_level.html#naming-conventions">命名约定</a></li>
 <li class="toctree-l3"><a class="reference internal" href="4_style_aspects_low_level.html#assert-and-expect">断言和期望</a></li>
-<li class="toctree-l3"><a class="reference internal" href="4_style_aspects_low_level.html#do-not-use-using-namespace-std">请勿使用 <code class="docutils literal notranslate"><span class="pre">使用</span> <span class="pre">名称空间</span> <span class="pre">标准</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="4_style_aspects_low_level.html#do-not-use-using-namespace-std">请勿使用 <code class="docutils literal notranslate"><span class="pre">using</span> <span class="pre">namespace</span> <span class="pre">std</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="4_style_aspects_low_level.html#using-range-for-loops">使用范围循环</a></li>
 <li class="toctree-l3"><a class="reference internal" href="4_style_aspects_low_level.html#loop-structure">循环结构</a></li>
 <li class="toctree-l3"><a class="reference internal" href="4_style_aspects_low_level.html#using-pre-increment">使用预自增</a></li>
@@ -272,7 +272,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../testing_policy/source/index.html#exploratory-tests">探索性测试</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../logging_guide/source/index.html">日志记录风格指南</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../logging_guide/source/index.html">日志风格指南</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../logging_guide/source/index.html#rule-1-lists-of-fields-only-need-to-be-separated-by-a-whitespace">规则1：字段列表只需用空格“”分隔</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../logging_guide/source/index.html#rule-2-maintain-consistent-order-between-classes-of-fields">规则 2：保持字段类别之间的顺序一致</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../logging_guide/source/index.html#rule-3-order-of-contextual-fields">规则 3：上下文字段的顺序</a></li>
@@ -338,11 +338,11 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#open5gs">Open5GS</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#id3">零MQ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#id3">ZeroMQ</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#over-the-air-setup">无线设置</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#configuration">配置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#configuration">libconfig</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#gnb">gNB</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#srsue">srsUE</a></li>
 </ul>
@@ -354,7 +354,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#testing-the-network">测试网络</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#routing-configuration">路由配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#routing-configuration">路由libconfig</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#ping">平</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#iperf3">性能3</a></li>
 </ul>
@@ -362,14 +362,14 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#zeromq-based-setup">基于 ZeroMQ 的设置</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#id7">配置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#id7">libconfig</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#id8">gNB</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#id9">srsUE</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#id10">运行网络</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#zmq-testing">测试网络</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#zmq-routing">路由配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#zmq-routing">路由libconfig</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#id13">平</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#id17">性能3</a></li>
 </ul>
@@ -377,7 +377,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#multi-ue-emulation">多 UE 仿真</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#id23">配置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#id23">libconfig</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#gnu-radio-companion">GNU 无线电伴侣</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#id25">Open5GS核心</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/srsUE/source/index.html#id26">gNB</a></li>
@@ -421,11 +421,11 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/cotsUE/source/index.html#external-clock">外部时钟</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/cotsUE/source/index.html#configuration">配置</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/cotsUE/source/index.html#configuration">libconfig</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/cotsUE/source/index.html#gnb">gNB</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/cotsUE/source/index.html#isim">伊西姆</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/cotsUE/source/index.html#sim-programming">SIM编程</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/cotsUE/source/index.html#suci-configuration">SUCI配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/cotsUE/source/index.html#suci-configuration">SUCIlibconfig</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/cotsUE/source/index.html#adding-user-controlled-plmns">添加用户控制的 PLMN</a></li>
 </ul>
 </li>
@@ -476,13 +476,13 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/amariUE/source/index.html#installation">安装</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/amariUE/source/index.html#id2">零MQ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/amariUE/source/index.html#id2">ZeroMQ</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/amariUE/source/index.html#id3">Amarisoft UE</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/amariUE/source/index.html#zeromq-driver-for-amarisoft-ue">适用于 Amarisoft UE 的 ZeroMQ 驱动程序</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/amariUE/source/index.html#zeromq-based-setup">基于 ZeroMQ 的设置</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/amariUE/source/index.html#configuration">配置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/amariUE/source/index.html#configuration">libconfig</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/amariUE/source/index.html#project-name">srsRAN Project</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/amariUE/source/index.html#id4">Amarisoft UE</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/amariUE/source/index.html#id5">Open5GS 5G 核心</a></li>
@@ -506,7 +506,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/amariUE/source/index.html#over-the-air-setup">无线设置</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/amariUE/source/index.html#id10">配置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/amariUE/source/index.html#id10">libconfig</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/amariUE/source/index.html#id11">srsRAN Project</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/amariUE/source/index.html#id12">Amarisoft UE</a></li>
 </ul>
@@ -594,7 +594,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/handover/source/index.html#cots-ue">现货 UE</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/handover/source/index.html#configuration">配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/handover/source/index.html#configuration">libconfig</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/handover/source/index.html#connecting-the-cots-ue">连接 COTS UE</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/handover/source/index.html#triggering-handover">触发切换</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/handover/source/index.html#from-console">从控制台</a></li>
@@ -617,14 +617,14 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/ntn/source/index.html#installation">安装</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/ntn/source/index.html#id2">零MQ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/ntn/source/index.html#id2">ZeroMQ</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/ntn/source/index.html#project-name">srsRAN Project</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/ntn/source/index.html#id3">Amarisoft UE</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/ntn/source/index.html#zeromq-driver-for-amarisoft-ue">适用于 Amarisoft UE 的 ZeroMQ 驱动程序</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/ntn/source/index.html#id4">GNU 无线电伴侣</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/ntn/source/index.html#configuration">配置</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/ntn/source/index.html#configuration">libconfig</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/ntn/source/index.html#gnb">gNB</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/ntn/source/index.html#amarisoftue">Amari软件UE</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/ntn/source/index.html#ntn-channel-emulator">NTN通道模拟器</a></li>
@@ -638,7 +638,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/ntn/source/index.html#testing-the-network">测试网络</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/ntn/source/index.html#routing-configuration">路由配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/ntn/source/index.html#routing-configuration">路由libconfig</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/ntn/source/index.html#ping">平</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/ntn/source/index.html#iperf">伊珀夫</a></li>
 </ul>
@@ -658,7 +658,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/cu_du_split/source/index.html#cots-ue">现货 UE</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/cu_du_split/source/index.html#configuration">配置</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/cu_du_split/source/index.html#configuration">libconfig</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/cu_du_split/source/index.html#core">核心</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/cu_du_split/source/index.html#srscu">srsCU</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/cu_du_split/source/index.html#srsdu">srsDU</a></li>
@@ -688,13 +688,13 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/oranRU/source/index.html#configuration">配置</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/oranRU/source/index.html#configuration">libconfig</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/oranRU/source/index.html#id1">开关</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/oranRU/source/index.html#id2">CU/DU</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/oranRU/source/index.html#nic-configuration">网卡配置</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/oranRU/source/index.html#ptp-configuration">点对点配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/oranRU/source/index.html#nic-configuration">网卡libconfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/oranRU/source/index.html#ptp-configuration">点对点libconfig</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/oranRU/source/index.html#enabling-ptp-with-dpdk">使用 DPDK 启用 PTP</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/oranRU/source/index.html#srsran-configuration">srsRAN配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../tutorials/source/oranRU/source/index.html#srsran-configuration">srsRANlibconfig</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/oranRU/source/index.html#id4">鲁</a></li>
@@ -731,7 +731,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../tutorials/source/near-rt-ric/source/index.html">O-RAN NearRT-RIC 和 xApp</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../tutorials/source/near-rt-ric/source/index.html">O-RAN Near-RT RIC 和 xApp</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/near-rt-ric/source/index.html#overview">概述</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/near-rt-ric/source/index.html#setup-overview">设置概述</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/near-rt-ric/source/index.html#hardware-and-software-overview">硬件和软件概述</a><ul>
@@ -740,12 +740,12 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/near-rt-ric/source/index.html#installation">安装</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/near-rt-ric/source/index.html#open5gs">Open5GS</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/near-rt-ric/source/index.html#id5">零MQ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/near-rt-ric/source/index.html#id5">ZeroMQ</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/near-rt-ric/source/index.html#project-name">srsRAN Project</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/near-rt-ric/source/index.html#srsue">srsUE</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/near-rt-ric/source/index.html#configuration">配置</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/near-rt-ric/source/index.html#configuration">libconfig</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/near-rt-ric/source/index.html#gnb">gNB</a></li>
 </ul>
 </li>
@@ -797,10 +797,10 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../tutorials/source/testmode/source/index.html">srsRAN gNB(-DU) 负载测试</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/testmode/source/index.html#introduction">简介</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/testmode/source/index.html#using-ru-dummy">使用 <code class="docutils literal notranslate"><span class="pre">ru_虚拟</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/testmode/source/index.html#using-ru-emu">使用 <code class="docutils literal notranslate"><span class="pre">鸸鹋</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/testmode/source/index.html#using-no-core">使用 <code class="docutils literal notranslate"><span class="pre">无核心</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/testmode/source/index.html#using-testmode">使用 <code class="docutils literal notranslate"><span class="pre">测试模式</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/testmode/source/index.html#using-ru-dummy">使用 <code class="docutils literal notranslate"><span class="pre">ru_dummy</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/testmode/source/index.html#using-ru-emu">使用 <code class="docutils literal notranslate"><span class="pre">ru_emu</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/testmode/source/index.html#using-no-core">使用 <code class="docutils literal notranslate"><span class="pre">no_core</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/testmode/source/index.html#using-testmode">使用 <code class="docutils literal notranslate"><span class="pre">testmode</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../tutorials/source/hw_kit/source/index.html">E2E O-RAN 与 srsRAN 的测试床</a><ul>
@@ -816,7 +816,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/hw_kit/source/index.html#software">软件</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/hw_kit/source/index.html#configuration">配置</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../tutorials/source/hw_kit/source/index.html#configuration">libconfig</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/hw_kit/source/index.html#ptp-grandmaster">PTP大师</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/hw_kit/source/index.html#demanding-dl-requirements">苛刻的 DL 要求</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tutorials/source/hw_kit/source/index.html#demanding-ul-requirements">严格的 UL 要求</a></li>
@@ -836,7 +836,7 @@
 <ul>
 <li class="toctree-l1"><a href="https://www.srsran.com"><i class="web-icon"></i> 网站</a></li>
 <li class="toctree-l1"><a href="https://github.com/srsran/srsran_project"><i class="fa fa-github fa-fw"></i> 源代码</a></li>
-<li class="toctree-l1"><a href="https://github.com/srsran/srsran_project/issues"><i class="fa fa-bug fa-fw"></i> 报告问题</a></li>
+<li class="toctree-l1"><a href="https://github.com/srsran/srsran_project/issues"><i class="fa fa-bug fa-fw"></i> 问题反馈</a></li>
 <li class="toctree-l1"><a href="https://github.com/srsran/srsran_project/discussions"><i class="fa fa-envelope fa-fw"></i> 讨论区</a></li>
 <li class="toctree-l1"><a href="https://twitter.com/srsRANProject"><i class="fa fa-twitter fa-fw"></i> 推特</a></li>
 </ul>
@@ -853,12 +853,12 @@
 <ul class="wy-breadcrumbs">
 <li><a aria-label="首页" class="icon icon-home" href="../../../../index.html"></a></li>
 <li class="breadcrumb-item"><a href="index.html">代码风格指南</a></li>
-<li class="breadcrumb-item active">机械源方面</li>
+<li class="breadcrumb-item active">源代码的机械性规范</li>
 <li class="wy-breadcrumbs-aside">
 <a href="../../../../_sources/dev_guide/source/code_guide/source/2_mechanical_source_aspects.rst.txt" rel="nofollow"> 查看页面源码</a>
 </li>
 </ul><div aria-label="顺序页面导航" class="rst-breadcrumbs-buttons" role="navigation">
-<a accesskey="p" class="btn btn-neutral float-left" href="1_language_libraries.html" title="语言和图书馆"><span aria-hidden="true" class="fa fa-arrow-circle-left"></span> 上一页</a>
+<a accesskey="p" class="btn btn-neutral float-left" href="1_language_libraries.html" title="语言与库"><span aria-hidden="true" class="fa fa-arrow-circle-left"></span> 上一页</a>
 <a accesskey="n" class="btn btn-neutral float-right" href="3_style_aspects_high_level.html" title="风格方面：高级问题">下一步 <span aria-hidden="true" class="fa fa-arrow-circle-right"></span></a>
 </div>
 <hr/>
@@ -866,7 +866,7 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div itemprop="articleBody">
 <section id="mechanical-source-aspects">
-<span id="code-guide-mechanical-aspects"></span><h1>机械源方面<a class="headerlink" href="2_mechanical_source_aspects.html#mechanical-source-aspects" title="链接到此标题"></a></h1>
+<span id="code-guide-mechanical-aspects"></span><h1>源代码的机械性规范<a class="headerlink" href="2_mechanical_source_aspects.html#mechanical-source-aspects" title="链接到此标题"></a></h1>
 <section id="source-code-formatting">
 <h2>源代码格式化<a class="headerlink" href="2_mechanical_source_aspects.html#source-code-formatting" title="链接到此标题"></a></h2>
 <p>srsRAN Project 项目使用一组定义的格式化规则，并严重依赖 clang-format 来自动源代码格式化。
@@ -877,86 +877,67 @@
 <hr class="docutils"/>
 </section>
 <section id="comments">
-<span id="id1"></span><h2>评论<a class="headerlink" href="2_mechanical_source_aspects.html#comments" title="链接到此标题"></a></h2>
-<p>注释必须被视为代码的重要组成部分，因为它们极大地方便了审阅者和维护者的任务。从这个角度来看，评论
-应该描述代码试图做什么以及为什么，而不需要深入微观层面的实现细节，最重要的是，目标是
-听众可能不像您那样熟悉当前的主题。</p>
-<p>以下简短部分非常粗略地介绍了开发人员应如何注释代码。可以找到更全面的指南 <a class="hxr-hoverxref hxr-tooltip reference internal" href="6_self_generating_docs.html#self-generating-docs"><span class="std std-ref">这里</span></a>.</p>
+<span id="id1"></span><h2>注释<a class="headerlink" href="2_mechanical_source_aspects.html#comments" title="链接到此标题"></a></h2>
+<p>注释必须被视为代码的重要组成部分，因为它们能极大地方便审阅者和维护者。从这个角度来看，注释应说明代码要做什么以及为什么这样做，而不必陷入过于细碎的实现细节。最重要的是，要假定读者对当前主题未必像你一样熟悉。</p>
+<p>下面只对开发者应如何编写注释做一个非常简要的说明。更完整的指南请参见 <a class="hxr-hoverxref hxr-tooltip reference internal" href="6_self_generating_docs.html#self-generating-docs"><span class="std std-ref">自生成文档</span></a>。</p>
 <section id="comment-guidelines">
-<h3>评论指南<a class="headerlink" href="2_mechanical_source_aspects.html#comment-guidelines" title="链接到此标题"></a></h3>
+<h3>注释指南<a class="headerlink" href="2_mechanical_source_aspects.html#comment-guidelines" title="链接到此标题"></a></h3>
 <ul class="simple">
-<li><p>将评论写成英语散文，使用正确的大写，
-标点符号等，并以句号结束。单词是用美式拼写的
-英语，如主要条目所示 <a class="reference external" href="https://www.merriam-webster.com/">韦氏词典</a>.</p></li>
+<li><p>注释应写成符合英文书面表达的句子，使用正确的大小写和标点，并以句号结尾。单词拼写应遵循美式英语规范，可参考 <a class="reference external" href="https://www.merriam-webster.com/">Merriam-Webster Dictionary</a>。</p></li>
 </ul>
 <ul class="simple">
-<li><p>注释行应以双斜杠开头 <em>正常</em> 评论
-并用三斜线表示 <em>文档</em> 评论。的
-应始终使用双/三斜杠格式，对于多行注释也是如此。</p></li>
+<li><p>普通注释行应以双斜杠开头，文档注释行则应使用三斜杠。即使是多行注释，也始终应采用这种双斜杠/三斜杠格式。</p></li>
 </ul>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">/// \brief 做某事。</span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">/// \brief Does something.</span>
 <span class="c1">///</span>
-<span class="c1">/// 有关该函数的更多详细信息。</span>
-<span class="kt">无效</span><span class="w"> </span><span class="nf">一些_函数</span><span class="p">(){</span>
-<span class="w">  </span><span class="c1">// 现在我们打印一个简单的文本。</span>
-<span class="w">  </span><span class="n">FMMT</span><span class="o">::</span><span class="n">打印</span><span class="p">(</span><span class="s">“一些评论。”</span><span class="p">);</span>
+<span class="c1">/// More details about the function.</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">some_func</span><span class="p">(){</span>
+<span class="w">  </span><span class="c1">// Now we print a simple text.</span>
+<span class="w">  </span><span class="n">fmt</span><span class="o">::</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Some comment.&quot;</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>注释应始终在正在执行的代码上方的新行开始
-评论道。具体来说，文档注释应在课程之前或
-函数声明而不是进入函数体内。正常评论不能
-放置在代码旁边或函数体之外。</p></li>
+<li><p>注释应始终另起一行，放在其所说明的代码之前。特别是，文档注释应写在类或函数声明之前，而不是写进函数体内部。普通注释也不应写成行尾注释，或脱离函数体单独放置。</p></li>
 </ul>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// 函数体之外的一些一般注释 - 错误！</span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Some general comment outside the body of a function - WRONG!</span>
 
-<span class="c1">/// 做某事。 - 好的</span>
-<span class="kt">无效</span><span class="w"> </span><span class="nf">一些_函数</span><span class="p">(){</span>
-<span class="w">  </span><span class="c1">// 现在我们打印一个简单的文本。 - 好的</span>
-<span class="w">  </span><span class="n">FMMT</span><span class="o">::</span><span class="n">打印</span><span class="p">(</span><span class="s">“一些评论。”</span><span class="p">);</span>
+<span class="c1">/// Does something. - OK</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">some_func</span><span class="p">(){</span>
+<span class="w">  </span><span class="c1">// Now we print a simple text. - OK</span>
+<span class="w">  </span><span class="n">fmt</span><span class="o">::</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Some comment.&quot;</span><span class="p">);</span>
 
-<span class="w">  </span><span class="n">FMMT</span><span class="o">::</span><span class="n">打印</span><span class="p">(</span><span class="s">“还有别的事。”</span><span class="p">);</span><span class="w"> </span><span class="c1">// 旁注。 - 错误的！</span>
+<span class="w">  </span><span class="n">fmt</span><span class="o">::</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Something else.&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Side comment. - WRONG!</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>如果缩进有助于支持内容的情况
-注释，建议的形式是以一个或多个“更大
-比” (&gt;) 符号，具体取决于缩进级别。例如，注释
-在下面的示例中表明 PUCCH 配置是
-UL 配置。</p></li>
+<li><p>如果注释内容本身需要体现层级缩进，建议根据缩进层级在开头使用一个或多个“大于号” (&gt;)。例如，下面示例中的注释表明 PUCCH 配置从属于 UL 配置。</p></li>
 </ul>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">上行链路配置</span><span class="w"> </span><span class="nf">srsran::config_helpers::make_default_ue_uplink_config</span><span class="p">(</span><span class="k">常量</span><span class="w"> </span><span class="n">cell_config_builder_params</span><span class="o">&amp;</span><span class="w"> </span><span class="n">参数</span><span class="p">)</span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">uplink_config</span><span class="w"> </span><span class="nf">srsran::config_helpers::make_default_ue_uplink_config</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">cell_config_builder_params</span><span class="o">&amp;</span><span class="w"> </span><span class="n">params</span><span class="p">)</span>
 <span class="p">{</span>
-<span class="w">  </span><span class="c1">// &gt; UL 配置。</span>
-<span class="w">  </span><span class="n">上行链路配置</span><span class="w"> </span><span class="n">ul_config</span><span class="p">{};</span>
-<span class="w">  </span><span class="n">ul_config</span><span class="p">.</span><span class="n">初始化_ul_bwp</span><span class="p">.</span><span class="n">pucch_cfg</span><span class="p">.</span><span class="n">安置</span><span class="p">();</span>
+<span class="w">  </span><span class="c1">// &gt; UL configuration.</span>
+<span class="w">  </span><span class="n">uplink_config</span><span class="w"> </span><span class="n">ul_config</span><span class="p">{};</span>
+<span class="w">  </span><span class="n">ul_config</span><span class="p">.</span><span class="n">init_ul_bwp</span><span class="p">.</span><span class="n">pucch_cfg</span><span class="p">.</span><span class="n">emplace</span><span class="p">();</span>
 
-<span class="w">  </span><span class="c1">// &gt;&gt; PUCCH 配置。</span>
-<span class="w">  </span><span class="k">汽车</span><span class="o">&amp;</span><span class="w"> </span><span class="n">pucch_cfg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ul_config</span><span class="p">.</span><span class="n">初始化_ul_bwp</span><span class="p">.</span><span class="n">pucch_cfg</span><span class="p">.</span><span class="n">值</span><span class="p">();</span>
+<span class="w">  </span><span class="c1">// &gt;&gt; PUCCH configuration.</span>
+<span class="w">  </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">pucch_cfg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ul_config</span><span class="p">.</span><span class="n">init_ul_bwp</span><span class="p">.</span><span class="n">pucch_cfg</span><span class="p">.</span><span class="n">value</span><span class="p">();</span>
 
-<span class="w">  </span><span class="c1">// ...更多代码...</span>
+<span class="w">  </span><span class="c1">// ... more code ...</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>C风格的注释 <code class="docutils literal notranslate"><span class="pre">/*</span> <span class="pre">*/</span></code> 一般来说，是不允许的。唯一的
-例外情况是文件头（见下文）和参数文档
-函数调用（非常有用，例如传递一个 <code class="docutils literal notranslate"><span class="pre">布尔值</span></code> 或一个
-<code class="docutils literal notranslate"><span class="pre">空指针</span></code> 作为参数）。</p></li>
+<li><p>通常不允许使用 C 风格注释 <code class="docutils literal notranslate"><span class="pre">/*</span> <span class="pre">*/</span></code>。唯一的例外是文件头部（见下文）以及函数调用中的参数说明注释，这在传递 <code class="docutils literal notranslate"><span class="pre">bool</span></code> 或 <code class="docutils literal notranslate"><span class="pre">nullptr</span></code> 之类的参数时尤其有用。</p></li>
 </ul>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// 很难看出“true”和“nullptr”实际指的是什么。</span>
-<span class="n">对象</span><span class="p">.</span><span class="n">方法</span><span class="p">(</span><span class="n">一个</span><span class="p">,</span><span class="w"> </span><span class="n">乙</span><span class="p">,</span><span class="w"> </span><span class="nb">真实</span><span class="p">,</span><span class="w"> </span><span class="k">空指针</span><span class="p">);</span>
-<span class="c1">// 很容易看出输入值的实际作用。</span>
-<span class="n">对象</span><span class="p">.</span><span class="n">方法</span><span class="p">(</span><span class="n">一个</span><span class="p">,</span><span class="w"> </span><span class="n">乙</span><span class="p">,</span><span class="w"> </span><span class="cm">/*启用_X=*/</span><span class="nb">真实</span><span class="p">,</span><span class="w"> </span><span class="cm">/*选项=*/</span><span class="k">空指针</span><span class="p">);</span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Hard to see what &quot;true&quot; and &quot;nullptr&quot; actually refer to.</span>
+<span class="n">obj</span><span class="p">.</span><span class="n">method</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span><span class="w"> </span><span class="k">nullptr</span><span class="p">);</span>
+<span class="c1">// Easy to see what the input values actually do.</span>
+<span class="n">obj</span><span class="p">.</span><span class="n">method</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="cm">/*enable_X=*/</span><span class="nb">true</span><span class="p">,</span><span class="w"> </span><span class="cm">/*options=*/</span><span class="k">nullptr</span><span class="p">);</span>
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>合并请求应该 <strong>不</strong> 包含已被执行的代码行
-注释掉了。如果您确实需要出于文档目的或可能这样做
-对于调试打印，请使用 <code class="docutils literal notranslate"><span class="pre">#如果</span> <span class="pre">0</span></code> 和 <code class="docutils literal notranslate"><span class="pre">#endif</span></code>。这些巢
-正确并且总体上比 C 风格的注释表现得更好。</p></li>
+<li><p>合并请求中 <strong>不应</strong> 包含被注释掉的代码行。如果确实需要为了说明或临时保留调试打印，请使用 <code class="docutils literal notranslate"><span class="pre">#if</span> <span class="pre">0</span></code> 和 <code class="docutils literal notranslate"><span class="pre">#endif</span></code>。这种方式可以正确嵌套，整体上也比 C 风格注释更稳妥。</p></li>
 </ul>
 </section>
 <section id="file-headers">
@@ -965,23 +946,23 @@ UL 配置。</p></li>
 下面的例子。</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="cm">/*</span>
 <span class="cm"> *</span>
-<span class="cm"> * 版权所有 2021-2023 软件无线电系统有限公司</span>
+<span class="cm"> * Copyright 2021-2023 Software Radio Systems Limited</span>
 <span class="cm"> *</span>
-<span class="cm"> * 该文件是 srsRAN 的一部分。</span>
+<span class="cm"> * This file is part of srsRAN.</span>
 <span class="cm"> *</span>
-<span class="cm"> * srsRAN 是免费软件：您可以重新分发和/或修改</span>
-<span class="cm"> * 根据 GNU Affero 通用公共许可证的条款</span>
-<span class="cm"> * 由自由软件基金会发布，版本 3</span>
-<span class="cm"> * 许可证，或（由您选择）任何更高版本。</span>
+<span class="cm"> * srsRAN is free software: you can redistribute it and/or modify</span>
+<span class="cm"> * it under the terms of the GNU Affero General Public License as</span>
+<span class="cm"> * published by the Free Software Foundation, either version 3 of</span>
+<span class="cm"> * the License, or (at your option) any later version.</span>
 <span class="cm"> *</span>
-<span class="cm"> * srsRAN 发布是为了希望它有用，</span>
-<span class="cm"> * 但不提供任何保证；甚至没有默示保证</span>
-<span class="cm"> * 适销性或特定用途的适用性。  请参阅</span>
-<span class="cm"> * GNU Affero 通用公共许可证了解更多详细信息。</span>
+<span class="cm"> * srsRAN is distributed in the hope that it will be useful,</span>
+<span class="cm"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<span class="cm"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<span class="cm"> * GNU Affero General Public License for more details.</span>
 <span class="cm"> *</span>
-<span class="cm"> * GNU Affero 通用公共许可证的副本可以在</span>
-<span class="cm"> * 该发行版顶级目录中的LICENSE文件</span>
-<span class="cm"> * 以及http://www.gnu.org/licenses/。</span>
+<span class="cm"> * A copy of the GNU Affero General Public License can be found in</span>
+<span class="cm"> * the LICENSE file in the top-level directory of this distribution</span>
+<span class="cm"> * and at http://www.gnu.org/licenses/.</span>
 <span class="cm"> *</span>
 <span class="cm">*/</span>
 </pre></div>
@@ -990,21 +971,19 @@ UL 配置。</p></li>
 </section>
 <hr class="docutils"/>
 <section id="header-guards">
-<h2>割台护罩<a class="headerlink" href="2_mechanical_source_aspects.html#header-guards" title="链接到此标题"></a></h2>
-<p>所有头文件都应该有一个包含保护以防止重复包含。
-srsRAN Project 代码库使用 <code class="docutils literal notranslate"><span class="pre">#pragma</span> <span class="pre">一次</span></code> 指令，被常见编译器广泛支持。
-与传统的包含防护不同（通过 <code class="docutils literal notranslate"><span class="pre">#ifndef</span></code> 和 <code class="docutils literal notranslate"><span class="pre">#定义</span></code>)，既不是唯一标识符，也不是结束表达式 (<code class="docutils literal notranslate"><span class="pre">#endif</span></code>）是必需的。</p>
+<h2>头文件保护宏<a class="headerlink" href="2_mechanical_source_aspects.html#header-guards" title="链接到此标题"></a></h2>
+<p>所有头文件都应具备防止重复包含的保护机制。srsRAN Project 代码库使用 <code class="docutils literal notranslate"><span class="pre">#pragma</span> <span class="pre">once</span></code> 指令，这一写法已被主流编译器广泛支持。与传统的 include guard（通过 <code class="docutils literal notranslate"><span class="pre">#ifndef</span></code> 和 <code class="docutils literal notranslate"><span class="pre">#define</span></code> 实现）不同，它不需要唯一标识符，也不需要结尾的 <code class="docutils literal notranslate"><span class="pre">#endif</span></code>。</p>
 <p>以下示例说明了这一点：</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
-<span class="cm"> * 文件头...</span>
+<span class="cm"> * File header...</span>
 <span class="cm"> */</span>
 
-<span class="cp">#pragma 一次</span>
+<span class="cp">#pragma once</span>
 
-<span class="cp">#包括</span><span class="w"> </span><span class="cpf">“foo.h”</span>
-<span class="cp">#包括</span><span class="w"> </span><span class="cpf">&lt;文件.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;foo.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;file.h&gt;</span>
 
-<span class="k">名称空间</span><span class="w"> </span><span class="nn">srsgnb</span><span class="w"> </span><span class="p">{</span>
+<span class="k">namespace</span><span class="w"> </span><span class="nn">srsgnb</span><span class="w"> </span><span class="p">{</span>
 <span class="c1">// ...</span>
 <span class="p">}</span><span class="w"> </span><span class="c1">// srsgnb</span>
 </pre></div>
@@ -1013,9 +992,8 @@ srsRAN Project 代码库使用 <code class="docutils literal notranslate"><span 
 <hr class="docutils"/>
 <section id="include-style">
 <h2>#include 样式<a class="headerlink" href="2_mechanical_source_aspects.html#include-style" title="链接到此标题"></a></h2>
-<p>尝试包含最少的列表 <code class="docutils literal notranslate"><span class="pre">#包括</span></code> 并在依赖项发生变化时清除冗余头文件。为此，
-可以利用包含传递传递的事实。所以，如果举例来说 <em>foo.h</em> 已经包括 <em>酒吧.h</em>, 仅
-<em>foo.h</em> 使用两个文件中的函数或类时需要包含。</p>
+<p>尝试包含最少的列表 <code class="docutils literal notranslate"><span class="pre">#include</span></code> 并在依赖项发生变化时清除冗余头文件。为此，
+可以利用头文件的传递包含特性。例如，如果 <em>foo.h</em> 已经包含了 <em>bar.h</em>，那么在需要使用这两个文件中定义的函数或类时，仅包含 <em>foo.h</em> 即可。</p>
 <p>包含列表应紧接在头文件注释之后，如果处理头文件，则应在包含防护之后。
 包含文件应按以下顺序列出：</p>
 <ol class="arabic simple">
@@ -1026,20 +1004,20 @@ srsRAN Project 代码库使用 <code class="docutils literal notranslate"><span 
 </ol>
 <p>保持每个类别按完整路径按字典顺序排序，并避免在类别之间添加换行符或包含指令。
 主模块头应该始终位于列表中的第一个。子项目标头应包含在 srsran 标头之前（从最具体到最不具体，例如：srsran 之前的 srsgnb）。</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#包括</span><span class="w"> </span><span class="cpf">“my_class_header.h”</span><span class="c1">            // 类别 1</span>
-<span class="cp">#包括</span><span class="w"> </span><span class="cpf">“私有_模块_utils.h”</span><span class="c1">       // 类别 2</span>
-<span class="cp">#包括</span><span class="w"> </span><span class="cpf">“srsenb/hdr/public_header.h”</span><span class="c1">   // 类别 3</span>
-<span class="cp">#包括</span><span class="w"> </span><span class="cpf">“srsran/adt/bounded_vector.h”</span><span class="c1">  // 类别 3</span>
-<span class="cp">#包括</span><span class="w"> </span><span class="cpf">&lt;字符串&gt;</span><span class="c1">                       // 类别 4</span>
-<span class="cp">#包括</span><span class="w"> </span><span class="cpf">&lt;矢量&gt;</span><span class="c1">                       // 类别 4</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;my_class_header.h&quot;</span><span class="c1">            // category 1</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;private_module_utils.h&quot;</span><span class="c1">       // category 2</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;srsenb/hdr/public_header.h&quot;</span><span class="c1">   // category 3</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;srsran/adt/bounded_vector.h&quot;</span><span class="c1">  // category 3</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span><span class="c1">                       // category 4</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span><span class="c1">                       // category 4</span>
 </pre></div>
 </div>
-<p>在C++文件中使用C++库头文件而不是使用C库头文件，例如： <code class="docutils literal notranslate"><span class="pre">字符串</span></code>, <code class="docutils literal notranslate"><span class="pre">卡塞特</span></code>, <code class="docutils literal notranslate"><span class="pre">cstdint</span></code>等</p>
-<p>最后一点， <code class="docutils literal notranslate"><span class="pre">clang 格式</span></code> 将自动为您按字典顺序对所有包含文件进行排序。</p>
+<p>在C++文件中使用C++库头文件而不是使用C库头文件，例如： <code class="docutils literal notranslate"><span class="pre">cstring</span></code>, <code class="docutils literal notranslate"><span class="pre">cassert</span></code>, <code class="docutils literal notranslate"><span class="pre">cstdint</span></code>等</p>
+<p>最后一点， <code class="docutils literal notranslate"><span class="pre">clang-format</span></code> 将自动为您按字典顺序对所有包含文件进行排序。</p>
 </section>
 <hr class="docutils"/>
 <section id="language-and-compiler-aspects">
-<h2>语言和编译器方面<a class="headerlink" href="2_mechanical_source_aspects.html#language-and-compiler-aspects" title="链接到此标题"></a></h2>
+<h2>语言与编译器<a class="headerlink" href="2_mechanical_source_aspects.html#language-and-compiler-aspects" title="链接到此标题"></a></h2>
 <section id="treat-compiler-warnings-as-errors">
 <h3>将编译器警告视为错误<a class="headerlink" href="2_mechanical_source_aspects.html#treat-compiler-warnings-as-errors" title="链接到此标题"></a></h3>
 <p>避免提交生成编译器警告的代码。有时您可能会收到误报警告，在这种情况下找到一种方法来抑制它。</p>
@@ -1051,15 +1029,15 @@ srsRAN Project 代码库使用 <code class="docutils literal notranslate"><span 
 </section>
 <section id="avoid-rtti-and-exceptions">
 <h3>避免 RTTI 和异常<a class="headerlink" href="2_mechanical_source_aspects.html#avoid-rtti-and-exceptions" title="链接到此标题"></a></h3>
-<p>在 C++ 代码中， <strong>不</strong> 使用异常或 RTTI（运行时类型信息，例如：<code class="docutils literal notranslate"><span class="pre">动态_cast&lt;&gt;</span></code>).</p>
+<p>在 C++ 代码中， <strong>不</strong> 使用异常或 RTTI（运行时类型信息，例如：<code class="docutils literal notranslate"><span class="pre">dynamic_cast&lt;&gt;</span></code>).</p>
 </section>
 <section id="use-of-auto">
-<h3>使用汽车<a class="headerlink" href="2_mechanical_source_aspects.html#use-of-auto" title="链接到此标题"></a></h3>
+<h3>使用 auto<a class="headerlink" href="2_mechanical_source_aspects.html#use-of-auto" title="链接到此标题"></a></h3>
 <p>一般来说，当 auto 使代码更具可读性且更易于维护时，请使用 auto。典型的情况是迭代器或复杂的模板类型。
 一些例子：</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">汽车</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">标准</span><span class="o">::</span><span class="n">唯一指针</span><span class="o">&lt;</span><span class="kt">整数</span><span class="o">&gt;</span><span class="p">(</span><span class="k">新的</span><span class="w"> </span><span class="kt">整数</span><span class="p">);</span><span class="w">  </span><span class="c1">// 好：很容易推断出 p 是一个 int*</span>
-<span class="k">汽车</span><span class="w"> </span><span class="n">我</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">我的地图</span><span class="p">.</span><span class="n">开始</span><span class="p">();</span><span class="w">                  </span><span class="c1">// 很好，很容易看出它是一个迭代器，并且避免编写 std::unordered_map&lt;std::string, int&gt;::iterator</span>
-<span class="k">汽车</span><span class="w"> </span><span class="n">一个</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">我的函数</span><span class="p">();</span><span class="w">                       </span><span class="c1">// 不好：my_func 返回什么类型？</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="p">);</span><span class="w">  </span><span class="c1">// good: easy to infer that p is an int*</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">my_map</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span><span class="w">                  </span><span class="c1">// good, easy to see it is an iterator and avoids writing std::unordered_map&lt;std::string, int&gt;::iterator</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">my_func</span><span class="p">();</span><span class="w">                       </span><span class="c1">// bad: what type does my_func return?</span>
 </pre></div>
 </div>
 </section>
@@ -1068,15 +1046,15 @@ srsRAN Project 代码库使用 <code class="docutils literal notranslate"><span 
 </div>
 </div>
 <footer><div aria-label="页脚" class="rst-footer-buttons" role="navigation">
-<a accesskey="p" class="btn btn-neutral float-left" href="1_language_libraries.html" rel="prev" title="语言和图书馆"><span aria-hidden="true" class="fa fa-arrow-circle-left"></span> 上一页</a>
+<a accesskey="p" class="btn btn-neutral float-left" href="1_language_libraries.html" rel="prev" title="语言与库"><span aria-hidden="true" class="fa fa-arrow-circle-left"></span> 上一页</a>
 <a accesskey="n" class="btn btn-neutral float-right" href="3_style_aspects_high_level.html" rel="next" title="风格方面：高级问题">下一步 <span aria-hidden="true" class="fa fa-arrow-circle-right"></span></a>
 </div>
 <hr/>
 <div role="contentinfo">
 <p>© 版权所有 2023-2026，软件无线电系统..</p>
-</div>内置 <a href="https://www.sphinx-doc.org/">狮身人面像</a> 使用
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
-    由提供 <a href="https://readthedocs.org">阅读文档</a>.
+</div>基于 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    主题，由 <a href="https://readthedocs.org">Read the Docs</a> 提供。
    
 
 </footer>

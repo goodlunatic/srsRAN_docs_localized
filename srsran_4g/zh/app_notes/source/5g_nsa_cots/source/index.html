@@ -69,12 +69,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../getting_started.html">开始使用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../feature_list.html">srsRAN 4G特点</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../feature_list.html#srsue">srsUE</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../feature_list.html#srsenb">血清ENB</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../feature_list.html#srsepc">超级EPC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../feature_list.html#srsenb">srsENB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../feature_list.html#srsepc">srsEPC</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../reporting_issues.html">报告问题</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../dev_status.html">发展现状</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../reporting_issues.html">问题反馈</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../dev_status.html">开发状态</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">第一步</span></p>
 <ul>
@@ -82,7 +82,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../../general/source/1_installation.html#which-installation-should-i-use">我应该使用哪种安装？</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../general/source/1_installation.html#package-installation">包安装</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../general/source/1_installation.html#installation-from-source">从源安装</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/1_installation.html#getting-support">获得支持</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/1_installation.html#getting-support">获取支持</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../general/source/2_release_notes.html">发行说明</a></li>
@@ -106,8 +106,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../usermanuals/source/1_setup.html">LTE 设置指南</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../usermanuals/source/1_setup.html#baseline-hardware-requirements">基准硬件要求</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../usermanuals/source/1_setup.html#running-a-4g-end-to-end-system">运行 4G 端到端系统</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/1_setup.html#srsepc">超级EPC</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/1_setup.html#srsenb">血清ENB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/1_setup.html#srsepc">srsEPC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/1_setup.html#srsenb">srsENB</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/1_setup.html#srsue">srsUE</a></li>
 </ul>
 </li>
@@ -123,14 +123,14 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/2_ue_getstarted.html">开始使用</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/2_ue_getstarted.html#running-the-software">运行软件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/2_ue_getstarted.html#configuration">配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/2_ue_getstarted.html#configuration">libconfig</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/2_ue_getstarted.html#hardware-setup">硬件设置</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/2_ue_getstarted.html#operating-system-setup">操作系统设置</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/2_ue_getstarted.html#observing-results">观察结果</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/3_ue_trouble.html">故障排除</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/3_ue_trouble.html#rf-configuration">RF 配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/3_ue_trouble.html#rf-configuration">RF libconfig</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/3_ue_trouble.html#network-attach">网络连接</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/3_ue_trouble.html#misconfigured-network">网络配置错误</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/3_ue_trouble.html#rf-issues">RF 问题</a></li>
@@ -163,7 +163,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/2_enb_getstarted.html">开始使用</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/2_enb_getstarted.html#running-the-software">运行软件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/2_enb_getstarted.html#configuration">配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/2_enb_getstarted.html#configuration">libconfig</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/2_enb_getstarted.html#hardware-setup">硬件设置</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/2_enb_getstarted.html#operating-system-setup">操作系统设置</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/2_enb_getstarted.html#observing-results">观察结果</a></li>
@@ -204,7 +204,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../usermanuals/source/srsepc/source/2_epc_getstarted.html">开始使用</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsepc/source/2_epc_getstarted.html#running-the-software">运行软件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsepc/source/2_epc_getstarted.html#configuration">配置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsepc/source/2_epc_getstarted.html#configuration">libconfig</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../../../usermanuals/source/srsepc/source/2_epc_getstarted.html#adding-an-ue-to-hss-database">将 UE 添加到 HSS 数据库</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../../usermanuals/source/srsepc/source/2_epc_getstarted.html#enbs-and-srsepc-on-separate-machines">eNB 和 srsEPC 位于不同的机器上</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../../usermanuals/source/srsepc/source/2_epc_getstarted.html#connecting-ues-to-the-internet">将UE连接到互联网</a></li>
@@ -299,13 +299,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../../2ca/source/index.html">载波聚合</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../2ca/source/index.html#introduction">简介</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../2ca/source/index.html#carrier-aggregation-using-sdr-hardware">使用 SDR 硬件进行载波聚合</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../2ca/source/index.html#enodeb-configuration">eNodeB 配置</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../2ca/source/index.html#ue-configuration">UE 配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../2ca/source/index.html#enodeb-configuration">eNodeB libconfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../2ca/source/index.html#ue-configuration">UE libconfig</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../2ca/source/index.html#carrier-aggregation-using-zeromq-rf-emulation">使用 ZeroMQ RF 仿真进行载波聚合</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../2ca/source/index.html#id2">eNodeB 配置</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../2ca/source/index.html#id3">UE 配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../2ca/source/index.html#id2">eNodeB libconfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../2ca/source/index.html#id3">UE libconfig</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../2ca/source/index.html#known-issues">已知问题</a></li>
@@ -325,9 +325,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../embms/source/index.html">eMBMS 端到端</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../embms/source/index.html#introduction">简介</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../embms/source/index.html#setup">设置</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../embms/source/index.html#srsenb-configuration">srsENB配置</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../embms/source/index.html#srsmbms-configuration">srsMBMS配置</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../embms/source/index.html#srsue-configuration">srsUE配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../embms/source/index.html#srsenb-configuration">srsENBlibconfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../embms/source/index.html#srsmbms-configuration">srsMBMSlibconfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../embms/source/index.html#srsue-configuration">srsUElibconfig</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../embms/source/index.html#usage">用途</a></li>
@@ -346,7 +346,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../pi4/source/index.html#introduction">简介</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../pi4/source/index.html#pi4-enodeb-hardware-requirements">Pi4 eNodeB 硬件要求</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../pi4/source/index.html#software-setup">软件设置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../pi4/source/index.html#pi4-enodeb-config">Pi4 eNodeB 配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pi4/source/index.html#pi4-enodeb-config">Pi4 eNodeB libconfig</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../pi4/source/index.html#running-the-pi4-enodeb">运行 Pi4 eNodeB</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../pi4/source/index.html#known-issues">已知问题</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../pi4/source/index.html#running-on-ubuntu-22-04-lts">在 Ubuntu 22.04 LTS 上运行</a></li>
@@ -359,18 +359,18 @@
 <li class="toctree-l3"><a class="reference internal" href="../../hw_packs/source/index.html#sdr-criteria">特别提款权标准</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../hw_packs/source/index.html#packages">套餐</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../hw_packs/source/index.html#package-1">套餐1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../hw_packs/source/index.html#packages">软件包</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../hw_packs/source/index.html#package-1">软件包 1</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../hw_packs/source/index.html#advantages">优点</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../hw_packs/source/index.html#limitations">局限性</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../hw_packs/source/index.html#package-2">套餐2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../hw_packs/source/index.html#package-2">软件包 2</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../hw_packs/source/index.html#id1">优点</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../hw_packs/source/index.html#id2">局限性</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../hw_packs/source/index.html#package-3">套餐3</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../hw_packs/source/index.html#package-3">软件包 3</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../hw_packs/source/index.html#id3">优点</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../hw_packs/source/index.html#id4">局限性</a></li>
 </ul>
@@ -389,7 +389,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../5g_sa_amari/source/index.html#hardware-requirements">硬件要求</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../5g_sa_amari/source/index.html#hardware-setup">硬件设置</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../5g_sa_amari/source/index.html#limitations">局限性</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../5g_sa_amari/source/index.html#configuration">配置</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../5g_sa_amari/source/index.html#configuration">libconfig</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../5g_sa_amari/source/index.html#srsue">srsUE</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../5g_sa_amari/source/index.html#callbox">电话亭</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../5g_sa_amari/source/index.html#enable-nr-support">启用 NR 支持</a></li>
@@ -419,7 +419,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../5g_nsa_amari/source/index.html#limitations">局限性</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../5g_nsa_amari/source/index.html#hardware-requirements">硬件要求</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../5g_nsa_amari/source/index.html#hardware-setup">硬件设置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../5g_nsa_amari/source/index.html#configuration">配置</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../5g_nsa_amari/source/index.html#configuration">libconfig</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../5g_nsa_amari/source/index.html#srsue">srsUE</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../5g_nsa_amari/source/index.html#callbox">电话亭</a></li>
 </ul>
@@ -504,7 +504,7 @@
 <li><p>USIM/SIM 卡（必须是测试卡或可编程卡，且密钥已知）</p></li>
 </ul>
 </div></blockquote>
-<p>对于此实施，使用以下设备：</p>
+<p>对于此实现，使用以下设备：</p>
 <blockquote>
 <div><ul class="simple">
 <li><p>配备 10GigE NIC 的台式计算机（至少为第 6 代 i7 或类似型号）</p></li>
@@ -533,7 +533,7 @@
 <h2>依赖关系<a class="headerlink" href="index.html#dependencies" title="链接到此标题"></a></h2>
 <section id="rf-driver">
 <h3>RF驱动程序<a class="headerlink" href="index.html#rf-driver" title="链接到此标题"></a></h3>
-<p>我们仅使用 Ettus Research 设备测试了 NSA 模式 <a class="reference external" href="https://github.com/EttusResearch/uhd">超高清</a>。对于本应用说明，我们使用 UHD 版本 v3.15 的 USRP X310。</p>
+<p>我们仅使用 Ettus Research 设备测试了 NSA 模式 <a class="reference external" href="https://github.com/EttusResearch/uhd">UHD</a>。对于本应用说明，我们使用 UHD 版本 v3.15 的 USRP X310。</p>
 </section>
 <section id="srsran-4g">
 <h3>srsRAN 4G<a class="headerlink" href="index.html#srsran-4g" title="链接到此标题"></a></h3>
@@ -546,7 +546,7 @@
 <section id="checking-drivers">
 <h3>检查驱动程序<a class="headerlink" href="index.html#checking-drivers" title="链接到此标题"></a></h3>
 <p>检查运行时是否已拾取 RF 驱动程序 <code class="docutils literal notranslate"><span class="pre">cmake</span> <span class="pre">..</span></code> 在构建过程中，您可以运行：</p>
-<p><code class="docutils literal notranslate"><span class="pre">grep</span> <span class="pre">&lt;驱动程序&gt;</span> <span class="pre">srsRAN_4G/build/CMakeCache.txt</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">grep</span> <span class="pre">&lt;driver&gt;</span> <span class="pre">srsRAN_4G/build/CMakeCache.txt</span></code></p>
 <p>如果您使用 UHD 作为驱动程序，则当 srsRAN 4G 成功检测到它时，您应该会看到以下输出 <code class="docutils literal notranslate"><span class="pre">cmake</span> <span class="pre">..</span></code> 运行：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ grep UHD -m 4 CMakeCache.txt
 
@@ -563,10 +563,10 @@ UHD_LIBRARIES:FILEPATH=/usr/local/lib/libuhd.so
 <p>网络必须配置为支持 NSA 网络并与 COTS UE 配合使用。以下 srsRAN 4G 配置文件需要更新：</p>
 <blockquote>
 <div><ul class="simple">
-<li><p><a class="reference download internal" download="" href="../../../../_downloads/c05cadec2c40d37764bbdcd4a74b535f/enb.conf"><code class="xref download docutils literal notranslate"><span class="pre">enb配置文件</span></code></a></p></li>
-<li><p><a class="reference download internal" download="" href="../../../../_downloads/d5b09aae40b5dc6b75b56eb8ceec7b5d/rr.conf"><code class="xref download docutils literal notranslate"><span class="pre">日志配置文件</span></code></a></p></li>
-<li><p><a class="reference download internal" download="" href="../../../../_downloads/8bdcebd33dd23a9f1a5365d59a19741a/epc.conf"><code class="xref download docutils literal notranslate"><span class="pre">EPC配置文件</span></code></a></p></li>
-<li><p><a class="reference download internal" download="" href="../../../../_downloads/cd89be9fb1ff3e7925891374649aa44a/user_db.csv"><code class="xref download docutils literal notranslate"><span class="pre">用户数据库.csv</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../../_downloads/c05cadec2c40d37764bbdcd4a74b535f/enb.conf"><code class="xref download docutils literal notranslate"><span class="pre">enb.conf</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../../_downloads/d5b09aae40b5dc6b75b56eb8ceec7b5d/rr.conf"><code class="xref download docutils literal notranslate"><span class="pre">rr.conf</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../../_downloads/8bdcebd33dd23a9f1a5365d59a19741a/epc.conf"><code class="xref download docutils literal notranslate"><span class="pre">epc.conf</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../../_downloads/cd89be9fb1ff3e7925891374649aa44a/user_db.csv"><code class="xref download docutils literal notranslate"><span class="pre">user_db.csv</span></code></a></p></li>
 </ul>
 </div></blockquote>
 <p>需要编辑 enb.conf 和 epc.conf 文件，以使 MCC 和 MNC 值与 USIM 的值匹配。
@@ -575,7 +575,7 @@ UHD_LIBRARIES:FILEPATH=/usr/local/lib/libuhd.so
 <p>上面附有用于此示例设置的配置文件以供参考。用户可能需要编辑相关字段，以便网络支持其特定的 COTS UE。</p>
 <section id="add-apn-to-cots-ue">
 <h3>将 APN 添加到 COTS UE<a class="headerlink" href="index.html#add-apn-to-cots-ue" title="链接到此标题"></a></h3>
-<p>要将 APN 添加到 UE，请导航至正在使用的 USIM 的网络设置。从这里可以添加 APN，通常在 <code class="docutils literal notranslate"><span class="pre">访问</span> <span class="pre">点</span> <span class="pre">名字</span></code>。使用名称和 APN 创建新的 APN <code class="docutils literal notranslate"><span class="pre">测试123</span></code>，如下图所示。</p>
+<p>要将 APN 添加到 UE，请导航至正在使用的 USIM 的网络设置。从这里可以添加 APN，通常在 <code class="docutils literal notranslate"><span class="pre">Access</span> <span class="pre">point</span> <span class="pre">names</span></code>。使用名称和 APN 创建新的 APN <code class="docutils literal notranslate"><span class="pre">test123</span></code>，如下图所示。</p>
 <blockquote>
 <div><a class="reference internal image-reference" href="../../../../_images/apn_ue.jpg"><img alt="../../../../_images/apn_ue.jpg" class="align-center" src="../../../../_images/apn_ue.jpg" style="height: 500px;"/>
 </a>
@@ -583,52 +583,52 @@ UHD_LIBRARIES:FILEPATH=/usr/local/lib/libuhd.so
 <p>所有其他设置可以保留默认选项。这里的APN名称实际上并不重要，只要UE和EPC之间的命名保持一致即可。</p>
 </section>
 <section id="srsenb">
-<h3>血清ENB<a class="headerlink" href="index.html#srsenb" title="链接到此标题"></a></h3>
+<h3>srsENB<a class="headerlink" href="index.html#srsenb" title="链接到此标题"></a></h3>
 <section id="enb-conf">
 <h4>enb配置文件<a class="headerlink" href="index.html#enb-conf" title="链接到此标题"></a></h4>
-<p>的 <code class="docutils literal notranslate"><span class="pre">中冶集团</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">跨国公司</span></code> 必须在 enb.conf 中更新代码以反映 sim 使用的值。可以在配置文件的以下部分中编辑这些内容：</p>
+<p>的 <code class="docutils literal notranslate"><span class="pre">MCC</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">MNC</span></code> 必须在 enb.conf 中更新代码以反映 sim 使用的值。可以在配置文件的以下部分中编辑这些内容：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#####################################################################</span>
-<span class="p">[</span><span class="n">恩布</span><span class="p">]</span>
+<span class="p">[</span><span class="n">enb</span><span class="p">]</span>
 <span class="n">enb_id</span> <span class="o">=</span> <span class="mh">0x19B</span>
-<span class="n">MCC</span> <span class="o">=</span> <span class="mi">901</span>
-<span class="n">跨国公司</span> <span class="o">=</span> <span class="mi">70</span>
-<span class="n">内存地址</span> <span class="o">=</span> <span class="mf">127.0.1.100</span>
-<span class="n">gtp_bind_地址</span> <span class="o">=</span> <span class="mf">127.0.1.1</span>
+<span class="n">mcc</span> <span class="o">=</span> <span class="mi">901</span>
+<span class="n">mnc</span> <span class="o">=</span> <span class="mi">70</span>
+<span class="n">mme_addr</span> <span class="o">=</span> <span class="mf">127.0.1.100</span>
+<span class="n">gtp_bind_addr</span> <span class="o">=</span> <span class="mf">127.0.1.1</span>
 <span class="n">s1c_bind_addr</span> <span class="o">=</span> <span class="mf">127.0.1.1</span>
 <span class="n">n_prb</span> <span class="o">=</span> <span class="mi">50</span>
 <span class="c1">#tm = 4</span>
-<span class="c1">#nof_端口 = 2</span>
+<span class="c1">#nof_ports = 2</span>
 
 <span class="c1">#####################################################################</span>
 </pre></div>
 </div>
 <p>对于 X310，我们通过以下设备参数看到了可接受的结果：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">射频</span><span class="p">]</span>
-<span class="n">设备参数</span><span class="o">=</span><span class="nb">类型</span><span class="o">=</span><span class="n">x300</span><span class="p">,</span><span class="n">时钟</span><span class="o">=</span><span class="n">外部的</span><span class="p">,</span><span class="n">采样率</span><span class="o">=</span><span class="mf">11.52e6</span><span class="p">,</span><span class="n">lo_freq_offset_hz</span><span class="o">=</span><span class="mf">11.52e6</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">rf</span><span class="p">]</span>
+<span class="n">device_args</span><span class="o">=</span><span class="nb">type</span><span class="o">=</span><span class="n">x300</span><span class="p">,</span><span class="n">clock</span><span class="o">=</span><span class="n">external</span><span class="p">,</span><span class="n">sampling_rate</span><span class="o">=</span><span class="mf">11.52e6</span><span class="p">,</span><span class="n">lo_freq_offset_hz</span><span class="o">=</span><span class="mf">11.52e6</span>
 </pre></div>
 </div>
 <p>其余选项可以保留默认值。它们可以根据需要进行更改，但进一步修改
 无需成功连接 COTS UE。</p>
 </section>
 <section id="rr-conf">
-<h4>日志配置文件<a class="headerlink" href="index.html#rr-conf" title="链接到此标题"></a></h4>
+<h4>rr.conf<a class="headerlink" href="index.html#rr-conf" title="链接到此标题"></a></h4>
 <p>对 rr.conf 文件的主要更改是将 NR 单元添加到单元列表中。这被添加到文件的末尾：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">编号单元列表</span> <span class="o">=</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nr_cell_list</span> <span class="o">=</span>
 <span class="p">(</span>
    <span class="p">{</span>
-    <span class="n">射频端口</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-    <span class="n">小区编号</span> <span class="o">=</span> <span class="mh">0x02</span><span class="p">;</span>
-    <span class="n">塔克</span> <span class="o">=</span> <span class="mh">0x0007</span><span class="p">;</span>
-    <span class="n">PCI</span> <span class="o">=</span> <span class="mi">500</span><span class="p">;</span>
-    <span class="n">根序列idx</span> <span class="o">=</span> <span class="mi">204</span><span class="p">;</span>
+    <span class="n">rf_port</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">cell_id</span> <span class="o">=</span> <span class="mh">0x02</span><span class="p">;</span>
+    <span class="n">tac</span> <span class="o">=</span> <span class="mh">0x0007</span><span class="p">;</span>
+    <span class="n">pci</span> <span class="o">=</span> <span class="mi">500</span><span class="p">;</span>
+    <span class="n">root_seq_idx</span> <span class="o">=</span> <span class="mi">204</span><span class="p">;</span>
 
     <span class="o">//</span> <span class="n">TDD</span><span class="p">:</span>
     <span class="o">//</span><span class="n">dl_arfcn</span> <span class="o">=</span> <span class="mi">634240</span><span class="p">;</span>
-    <span class="o">//</span><span class="n">乐队</span> <span class="o">=</span> <span class="mi">78</span><span class="p">;</span>
+    <span class="o">//</span><span class="n">band</span> <span class="o">=</span> <span class="mi">78</span><span class="p">;</span>
 
     <span class="o">//</span> <span class="n">FDD</span><span class="p">:</span>
     <span class="n">dl_arfcn</span> <span class="o">=</span> <span class="mi">368500</span><span class="p">;</span>
-    <span class="n">乐队</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+    <span class="n">band</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
   <span class="p">}</span>
 <span class="p">);</span>
 </pre></div>
@@ -640,20 +640,20 @@ UHD_LIBRARIES:FILEPATH=/usr/local/lib/libuhd.so
 <h3>核心<a class="headerlink" href="index.html#core" title="链接到此标题"></a></h3>
 <section id="epc-conf">
 <h4>EPC配置文件<a class="headerlink" href="index.html#epc-conf" title="链接到此标题"></a></h4>
-<p>必须修改 EPC 配置文件以反映 <code class="docutils literal notranslate"><span class="pre">中冶集团</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">跨国公司</span></code>，以及 <code class="docutils literal notranslate"><span class="pre">接入点网络</span></code> 由 UE 使用：</p>
+<p>必须修改 EPC 配置文件以反映 <code class="docutils literal notranslate"><span class="pre">MCC</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">MNC</span></code>，以及 <code class="docutils literal notranslate"><span class="pre">APN</span></code> 由 UE 使用：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#####################################################################</span>
-<span class="p">[</span><span class="n">嗯</span><span class="p">]</span>
+<span class="p">[</span><span class="n">mme</span><span class="p">]</span>
 <span class="n">mme_code</span> <span class="o">=</span> <span class="mh">0x1a</span>
 <span class="n">mme_group</span> <span class="o">=</span> <span class="mh">0x0001</span>
-<span class="n">塔克</span> <span class="o">=</span> <span class="mh">0x0007</span>
-<span class="n">MCC</span> <span class="o">=</span> <span class="mi">901</span>
-<span class="n">跨国公司</span> <span class="o">=</span> <span class="mi">70</span>
-<span class="n">mme_bind_地址</span> <span class="o">=</span> <span class="mf">127.0.1.100</span>
-<span class="n">接入点</span> <span class="o">=</span> <span class="n">测试123</span>
-<span class="n">域名地址</span> <span class="o">=</span> <span class="mf">8.8.8.8</span>
-<span class="n">加密算法</span> <span class="o">=</span> <span class="n">欧洲经济区0</span>
-<span class="n">完整性算法</span> <span class="o">=</span> <span class="n">环评1</span>
-<span class="n">分页定时器</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">tac</span> <span class="o">=</span> <span class="mh">0x0007</span>
+<span class="n">mcc</span> <span class="o">=</span> <span class="mi">901</span>
+<span class="n">mnc</span> <span class="o">=</span> <span class="mi">70</span>
+<span class="n">mme_bind_addr</span> <span class="o">=</span> <span class="mf">127.0.1.100</span>
+<span class="n">apn</span> <span class="o">=</span> <span class="n">test123</span>
+<span class="n">dns_addr</span> <span class="o">=</span> <span class="mf">8.8.8.8</span>
+<span class="n">encryption_algo</span> <span class="o">=</span> <span class="n">EEA0</span>
+<span class="n">integrity_algo</span> <span class="o">=</span> <span class="n">EIA1</span>
+<span class="n">paging_timer</span> <span class="o">=</span> <span class="mi">2</span>
 
 <span class="c1">#####################################################################</span>
 </pre></div>
@@ -661,7 +661,7 @@ UHD_LIBRARIES:FILEPATH=/usr/local/lib/libuhd.so
 </section>
 <section id="user-db-csv">
 <h4>用户数据库.csv<a class="headerlink" href="index.html#user-db-csv" title="链接到此标题"></a></h4>
-<p>下面的列表描述了包含在 <code class="docutils literal notranslate"><span class="pre">用户数据库.csv</span></code> 文件。作为标准，该文件
+<p>下面的列表描述了包含在 <code class="docutils literal notranslate"><span class="pre">user_db.csv</span></code> 文件。作为标准，该文件
 将附带输入到 CSV 中的两个虚拟 UE，这些有助于提供如何填写文件的示例。</p>
 <blockquote>
 <div><ul class="simple">
@@ -685,28 +685,28 @@ UHD_LIBRARIES:FILEPATH=/usr/local/lib/libuhd.so
 </div></blockquote>
 <p>这将生成一个 user_db.csv 文件，应如下所示：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
-<span class="c1"># .csv 将 UE 的信息存储在 HSS 中</span>
-<span class="c1"># 保留以下格式：“Name,Auth,IMSI,Key,OP_Type,OP,AMF,SQN,QCI,IP_alloc”</span>
+<span class="c1"># .csv to store UE&#39;s information in HSS</span>
+<span class="c1"># Kept in the following format: &quot;Name,Auth,IMSI,Key,OP_Type,OP,AMF,SQN,QCI,IP_alloc&quot;</span>
 <span class="c1">#</span>
-<span class="c1"># 名称：人类可读的名称，有助于区分 UE。被 HSS 忽略</span>
-<span class="c1"># IMSI: UE的IMSI值</span>
-<span class="c1"># Auth：UE使用的认证算法。有效算法是异或</span>
-<span class="c1">#（异或）和里程（百万）</span>
-<span class="c1"># Key：UE的密钥，其他密钥均源自该密钥。以十六进制存储</span>
-<span class="c1"># OP_Type：操作员的代码类型，可以是 OP 或 OPc</span>
-<span class="c1"># OP/OPc：操作员代码/加密操作员代码，以十六进制存储</span>
-<span class="c1"># AMF：认证管理字段，以十六进制存储</span>
-<span class="c1"># SQN：UE 的验证新鲜度的序列号</span>
-<span class="c1"># QCI：UE 默认承载的 QoS 类标识符。</span>
-<span class="c1"># IP_alloc：SPGW 的 IP 分配策略。</span>
-<span class="c1"># 使用“动态”SPGW 将自动分配 IP</span>
-<span class="c1"># 有了有效的 IPv4（例如“172.16.0.2”），UE 将拥有静态分配的 IP。</span>
+<span class="c1"># Name:     Human readable name to help distinguish UE&#39;s. Ignored by the HSS</span>
+<span class="c1"># IMSI:     UE&#39;s IMSI value</span>
+<span class="c1"># Auth:     Authentication algorithm used by the UE. Valid algorithms are XOR</span>
+<span class="c1">#           (xor) and MILENAGE (mil)</span>
+<span class="c1"># Key:      UE&#39;s key, where other keys are derived from. Stored in hexadecimal</span>
+<span class="c1"># OP_Type:  Operator&#39;s code type, either OP or OPc</span>
+<span class="c1"># OP/OPc:   Operator Code/Cyphered Operator Code, stored in hexadecimal</span>
+<span class="c1"># AMF:      Authentication management field, stored in hexadecimal</span>
+<span class="c1"># SQN:      UE&#39;s Sequence number for freshness of the authentication</span>
+<span class="c1"># QCI:      QoS Class Identifier for the UE&#39;s default bearer.</span>
+<span class="c1"># IP_alloc: IP allocation stratagy for the SPGW.</span>
+<span class="c1">#           With &#39;dynamic&#39; the SPGW will automatically allocate IPs</span>
+<span class="c1">#           With a valid IPv4 (e.g. &#39;172.16.0.2&#39;) the UE will have a statically assigned IP.</span>
 <span class="c1">#</span>
-<span class="c1"># 注意：以“#”开头的行将被忽略并被覆盖</span>
-<span class="n">COTS_UE</span><span class="p">,</span><span class="n">米尔</span><span class="p">,</span><span class="mi">901700000020936</span><span class="p">,</span><span class="mi">4933</span><span class="n">f9c5a83e5718c52e54066dc78dcf</span><span class="p">,</span><span class="n">OPC</span><span class="p">,</span><span class="n">FC632f97bd249ce0d16ba79e6505d300</span><span class="p">,</span><span class="mi">9000</span><span class="p">,</span><span class="mi">0000000060</span><span class="n">f8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="n">动态</span>
+<span class="c1"># Note: Lines starting by &#39;#&#39; are ignored and will be overwritten</span>
+<span class="n">COTS_UE</span><span class="p">,</span><span class="n">mil</span><span class="p">,</span><span class="mi">901700000020936</span><span class="p">,</span><span class="mi">4933</span><span class="n">f9c5a83e5718c52e54066dc78dcf</span><span class="p">,</span><span class="n">opc</span><span class="p">,</span><span class="n">fc632f97bd249ce0d16ba79e6505d300</span><span class="p">,</span><span class="mi">9000</span><span class="p">,</span><span class="mi">0000000060</span><span class="n">f8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="n">dynamic</span>
 </pre></div>
 </div>
-<p>auth、IMSI、密钥、OP 类型和 OP 是与所使用的 USIM 关联的值。分配给 AMF、SQN、QCI 和 IP Alloc 的值是上面的默认值，对此进行了进一步解释 <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../../usermanuals/source/srsepc/source/2_epc_getstarted.html#config-csv"><span class="std std-ref">这里</span></a> 在 EPC 文档中。确保每个条目中的值之间没有空格，因为这将导致文件读取不正确。</p>
+<p>auth、IMSI、密钥、OP 类型和 OP 是与所使用的 USIM 关联的值。分配给 AMF、SQN、QCI 和 IP Alloc 的值是上面的默认值，这些值的进一步说明可参见 EPC 文档中的 <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../../usermanuals/source/srsepc/source/2_epc_getstarted.html#config-csv"><span class="std std-ref">配置 CSV 说明</span></a>。确保每个条目中的值之间没有空格，因为这将导致文件读取不正确。</p>
 </section>
 </section>
 <section id="masquerading-script">
@@ -714,23 +714,23 @@ UHD_LIBRARIES:FILEPATH=/usr/local/lib/libuhd.so
 <p>要允许 UE 通过 EPC 连接到互联网，必须运行预先配置的伪装脚本。这可以在 <code class="docutils literal notranslate"><span class="pre">srsRAN_4G/srsepc</span></code>.</p>
 <p>伪装脚本启用 IP 转发并设置网络地址转换以在 srsRAN 4G 网络和外部网络之间传递流量。每次重新启动计算机时都必须运行该脚本，并且可以在 srsRAN 4G 运行之前或运行时执行。在运行此脚本之前，UE 将无法与更广泛的互联网进行通信。</p>
 <p>在运行脚本之前，确定用于将 PC 连接到互联网的接口非常重要。该脚本需要将此作为参数，如下所示：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">路线</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">route</span>
 </pre></div>
 </div>
 <p>您将看到类似于以下内容的输出：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">内核</span> <span class="n">知识产权</span> <span class="n">路由</span> <span class="n">表</span>
-<span class="n">目的地</span>     <span class="n">网关</span>         <span class="n">基因面膜</span>         <span class="n">旗帜</span> <span class="n">公制</span> <span class="n">参考号</span>    <span class="n">使用</span> <span class="n">伊法斯</span>
-<span class="n">默认</span>         <span class="n">_网关</span>        <span class="mf">0.0.0.0</span>         <span class="n">UG</span>    <span class="mi">100</span>    <span class="mi">0</span>        <span class="mi">0</span> <span class="n">enxc03ebab05013</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Kernel</span> <span class="n">IP</span> <span class="n">routing</span> <span class="n">table</span>
+<span class="n">Destination</span>     <span class="n">Gateway</span>         <span class="n">Genmask</span>         <span class="n">Flags</span> <span class="n">Metric</span> <span class="n">Ref</span>    <span class="n">Use</span> <span class="n">Iface</span>
+<span class="n">default</span>         <span class="n">_gateway</span>        <span class="mf">0.0.0.0</span>         <span class="n">UG</span>    <span class="mi">100</span>    <span class="mi">0</span>        <span class="mi">0</span> <span class="n">enxc03ebab05013</span>
 <span class="mf">10.12.1.0</span>       <span class="mf">0.0.0.0</span>         <span class="mf">255.255.255.0</span>   <span class="n">U</span>     <span class="mi">100</span>    <span class="mi">0</span>        <span class="mi">0</span> <span class="n">enxc03ebab05013</span>
 </pre></div>
 </div>
 <p>与相关的接口 (Iface) <em>默认</em> 目的地是必须传递到 masq 中的目的地。脚本。在上面的输出中，这是 <code class="docutils literal notranslate"><span class="pre">enxc03ebab05013</span></code> 界面。</p>
 <p>面具。现在可以从以下文件夹运行脚本： <code class="docutils literal notranslate"><span class="pre">srsRAN_4G/srsEPC</span></code></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">须藤</span> <span class="o">./</span><span class="n">srsepc_if_masq</span><span class="o">.</span><span class="n">嘘</span> <span class="o">&lt;</span><span class="n">接口</span><span class="o">&gt;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">./</span><span class="n">srsepc_if_masq</span><span class="o">.</span><span class="n">sh</span> <span class="o">&lt;</span><span class="n">interface</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>如果执行成功，您将看到以下消息：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">伪装</span> <span class="n">接口</span> <span class="o">&lt;</span><span class="n">接口</span><span class="o">&gt;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Masquerading</span> <span class="n">Interface</span> <span class="o">&lt;</span><span class="n">interface</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>配置文件、用户 DB 和 UE 现在已正确设置，以允许 COTS UE 连接到 eNB 和 Core。</p>
@@ -743,67 +743,67 @@ UHD_LIBRARIES:FILEPATH=/usr/local/lib/libuhd.so
 <section id="id1">
 <h3>核心<a class="headerlink" href="index.html#id1" title="链接到此标题"></a></h3>
 <p>首次运行 srsEPC：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">须藤</span> <span class="n">SRSEPC</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">srsepc</span>
 </pre></div>
 </div>
 <p>控制台上应显示以下输出：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">建成</span> <span class="ow">在</span> <span class="n">发布</span> <span class="n">模式</span> <span class="n">使用</span> <span class="n">提交</span> <span class="n">c892ae56b</span> <span class="n">上</span> <span class="n">分行</span> <span class="n">大师</span><span class="o">.</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Built</span> <span class="ow">in</span> <span class="n">Release</span> <span class="n">mode</span> <span class="n">using</span> <span class="n">commit</span> <span class="n">c892ae56b</span> <span class="n">on</span> <span class="n">branch</span> <span class="n">master</span><span class="o">.</span>
 
-<span class="o">---</span>  <span class="n">软件</span> <span class="n">收音机</span> <span class="n">系统</span> <span class="n">EPC</span>  <span class="o">---</span>
+<span class="o">---</span>  <span class="n">Software</span> <span class="n">Radio</span> <span class="n">Systems</span> <span class="n">EPC</span>  <span class="o">---</span>
 
-<span class="n">阅读</span> <span class="n">配置</span> <span class="n">文件</span> <span class="o">/</span><span class="n">等</span><span class="o">/</span><span class="n">srsran_4G</span><span class="o">/</span><span class="n">EPC</span><span class="o">.</span><span class="n">会议</span><span class="o">...</span>
-<span class="n">高速钢</span> <span class="n">已初始化</span><span class="o">.</span>
-<span class="n">微机电系统</span> <span class="n">S11</span> <span class="n">已初始化</span>
-<span class="n">微机电系统</span> <span class="n">GTP</span><span class="o">-</span><span class="n">C</span> <span class="n">已初始化</span>
-<span class="n">微机电系统</span> <span class="n">已初始化</span><span class="o">.</span> <span class="n">中冶集团</span><span class="p">:</span> <span class="mh">0xf901</span><span class="p">,</span> <span class="n">跨国公司</span><span class="p">:</span> <span class="mh">0xff70</span>
-<span class="n">SPGW</span> <span class="n">GTP</span><span class="o">-</span><span class="n">U</span> <span class="n">已初始化</span><span class="o">.</span>
-<span class="n">SPGW</span> <span class="n">S11</span> <span class="n">已初始化</span><span class="o">.</span>
-<span class="n">SP</span><span class="o">-</span><span class="n">GW</span> <span class="n">已初始化</span><span class="o">.</span>
+<span class="n">Reading</span> <span class="n">configuration</span> <span class="n">file</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">srsran_4G</span><span class="o">/</span><span class="n">epc</span><span class="o">.</span><span class="n">conf</span><span class="o">...</span>
+<span class="n">HSS</span> <span class="n">Initialized</span><span class="o">.</span>
+<span class="n">MME</span> <span class="n">S11</span> <span class="n">Initialized</span>
+<span class="n">MME</span> <span class="n">GTP</span><span class="o">-</span><span class="n">C</span> <span class="n">Initialized</span>
+<span class="n">MME</span> <span class="n">Initialized</span><span class="o">.</span> <span class="n">MCC</span><span class="p">:</span> <span class="mh">0xf901</span><span class="p">,</span> <span class="n">MNC</span><span class="p">:</span> <span class="mh">0xff70</span>
+<span class="n">SPGW</span> <span class="n">GTP</span><span class="o">-</span><span class="n">U</span> <span class="n">Initialized</span><span class="o">.</span>
+<span class="n">SPGW</span> <span class="n">S11</span> <span class="n">Initialized</span><span class="o">.</span>
+<span class="n">SP</span><span class="o">-</span><span class="n">GW</span> <span class="n">Initialized</span><span class="o">.</span>
 </pre></div>
 </div>
 </section>
 <section id="id2">
-<h3>血清ENB<a class="headerlink" href="index.html#id2" title="链接到此标题"></a></h3>
+<h3>srsENB<a class="headerlink" href="index.html#id2" title="链接到此标题"></a></h3>
 <p>现在启动 srsENB：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">须藤</span> <span class="n">斯尔森布</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">srsenb</span>
 </pre></div>
 </div>
 <p>控制台应显示以下或类似内容：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">---</span>  <span class="n">软件</span> <span class="n">收音机</span> <span class="n">系统</span> <span class="n">LTE</span> <span class="n">eNodeB</span>  <span class="o">---</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">---</span>  <span class="n">Software</span> <span class="n">Radio</span> <span class="n">Systems</span> <span class="n">LTE</span> <span class="n">eNodeB</span>  <span class="o">---</span>
 
-<span class="n">开幕</span> <span class="mi">2</span> <span class="n">渠道</span> <span class="ow">在</span> <span class="n">RF</span> <span class="n">装置</span><span class="o">=</span><span class="n">超高清</span> <span class="k">与</span> <span class="n">参数</span><span class="o">=</span><span class="nb">类型</span><span class="o">=</span><span class="n">x300</span><span class="p">,</span><span class="n">时钟</span><span class="o">=</span><span class="n">外部的</span><span class="p">,</span><span class="n">采样率</span><span class="o">=</span><span class="mf">11.52e6</span><span class="p">,</span><span class="n">lo_freq_offset_hz</span><span class="o">=</span><span class="mf">23.04e6</span><span class="p">,</span><span class="n">发送帧大小</span><span class="o">=</span><span class="mi">8000</span><span class="p">,</span><span class="n">接收帧大小</span><span class="o">=</span><span class="mi">8000</span><span class="p">,</span><span class="n">发送帧数</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span><span class="n">接收帧数</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span><span class="kc">无</span>
-<span class="p">[</span><span class="n">信息</span><span class="p">]</span> <span class="p">[</span><span class="n">超高清</span><span class="p">]</span> <span class="n">操作系统</span><span class="p">;</span> <span class="n">GNU</span> <span class="n">C</span><span class="o">++</span> <span class="n">版本</span> <span class="mf">9.3.1</span> <span class="mi">20200408</span> <span class="p">(</span><span class="n">红色</span> <span class="n">帽子</span> <span class="mf">9.3.1</span><span class="o">-</span><span class="mi">2</span><span class="p">);</span> <span class="n">Boost_106900</span><span class="p">;</span> <span class="n">超高清_3</span><span class="mf">.15.0.0</span><span class="o">-</span><span class="mi">62</span><span class="o">-</span><span class="n">G7A3F1516</span>
-<span class="p">[</span><span class="n">信息</span><span class="p">]</span> <span class="p">[</span><span class="n">记录</span><span class="p">]</span> <span class="n">快速路径</span> <span class="n">记录</span> <span class="n">残疾人</span> <span class="n">在</span> <span class="n">运行时</span><span class="o">.</span>
-<span class="n">开幕</span> <span class="n">USRP</span> <span class="n">渠道</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">参数</span><span class="p">:</span> <span class="nb">类型</span><span class="o">=</span><span class="n">x300</span><span class="p">,</span><span class="n">lo_freq_offset_hz</span><span class="o">=</span><span class="mf">23.04e6</span><span class="p">,</span><span class="n">发送帧大小</span><span class="o">=</span><span class="mi">8000</span><span class="p">,</span><span class="n">接收帧大小</span><span class="o">=</span><span class="mi">8000</span><span class="p">,</span><span class="n">发送帧数</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span><span class="n">接收帧数</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span><span class="kc">无</span><span class="o">=</span><span class="p">,</span><span class="n">主时钟速率</span><span class="o">=</span><span class="mf">184.32e6</span>
-<span class="p">[</span><span class="n">信息</span><span class="p">]</span> <span class="p">[</span><span class="n">超高清</span> <span class="n">RF</span><span class="p">]</span> <span class="n">RF</span> <span class="n">超高清</span> <span class="n">通用</span> <span class="n">实例</span> <span class="n">建造的</span>
-<span class="p">[</span><span class="n">信息</span><span class="p">]</span> <span class="p">[</span><span class="n">X300</span><span class="p">]</span> <span class="n">X300</span> <span class="n">初始化</span> <span class="n">序列</span><span class="o">...</span>
-<span class="p">[</span><span class="n">信息</span><span class="p">]</span> <span class="p">[</span><span class="n">X300</span><span class="p">]</span> <span class="n">最大</span> <span class="n">框架</span> <span class="n">尺寸</span><span class="p">:</span> <span class="mi">8000</span> <span class="nb">字节</span><span class="o">.</span>
-<span class="p">[</span><span class="n">信息</span><span class="p">]</span> <span class="p">[</span><span class="n">X300</span><span class="p">]</span> <span class="n">收音机</span> <span class="mi">1</span><span class="n">x</span> <span class="n">时钟</span><span class="p">:</span> <span class="mf">184.32</span> <span class="n">兆赫兹</span>
-<span class="p">[</span><span class="n">信息</span><span class="p">]</span> <span class="p">[</span><span class="mi">0</span><span class="o">/</span><span class="n">DMAFIFO_0</span><span class="p">]</span> <span class="n">正在初始化</span> <span class="n">块</span> <span class="n">控制</span> <span class="p">(</span><span class="n">国家奥委会</span> <span class="n">身份证号</span><span class="p">:</span> <span class="mh">0xF1F0D00000000000</span><span class="p">)</span>
-<span class="p">[</span><span class="n">信息</span><span class="p">]</span> <span class="p">[</span><span class="mi">0</span><span class="o">/</span><span class="n">DMAFIFO_0</span><span class="p">]</span> <span class="n">内建自测试</span> <span class="n">通过了</span> <span class="p">(</span><span class="n">吞吐量</span><span class="p">:</span> <span class="mi">1315</span> <span class="n">MB</span><span class="o">/</span><span class="n">s</span><span class="p">)</span>
-<span class="p">[</span><span class="n">信息</span><span class="p">]</span> <span class="p">[</span><span class="mi">0</span><span class="o">/</span><span class="n">DMAFIFO_0</span><span class="p">]</span> <span class="n">内建自测试</span> <span class="n">通过了</span> <span class="p">(</span><span class="n">吞吐量</span><span class="p">:</span> <span class="mi">1307</span> <span class="n">MB</span><span class="o">/</span><span class="n">s</span><span class="p">)</span>
-<span class="p">[</span><span class="n">信息</span><span class="p">]</span> <span class="p">[</span><span class="mi">0</span><span class="o">/</span><span class="n">电台_0</span><span class="p">]</span> <span class="n">正在初始化</span> <span class="n">块</span> <span class="n">控制</span> <span class="p">(</span><span class="n">国家奥委会</span> <span class="n">身份证号</span><span class="p">:</span> <span class="mh">0x12AD100000000001</span><span class="p">)</span>
-<span class="p">[</span><span class="n">信息</span><span class="p">]</span> <span class="p">[</span><span class="mi">0</span><span class="o">/</span><span class="n">电台_1</span><span class="p">]</span> <span class="n">正在初始化</span> <span class="n">块</span> <span class="n">控制</span> <span class="p">(</span><span class="n">国家奥委会</span> <span class="n">身份证号</span><span class="p">:</span> <span class="mh">0x12AD100000000001</span><span class="p">)</span>
-<span class="p">[</span><span class="n">信息</span><span class="p">]</span> <span class="p">[</span><span class="mi">0</span><span class="o">/</span><span class="n">DDC_0</span><span class="p">]</span> <span class="n">正在初始化</span> <span class="n">块</span> <span class="n">控制</span> <span class="p">(</span><span class="n">国家奥委会</span> <span class="n">身份证号</span><span class="p">:</span> <span class="mh">0xDDC0000000000000</span><span class="p">)</span>
-<span class="p">[</span><span class="n">信息</span><span class="p">]</span> <span class="p">[</span><span class="mi">0</span><span class="o">/</span><span class="n">DDC_1</span><span class="p">]</span> <span class="n">正在初始化</span> <span class="n">块</span> <span class="n">控制</span> <span class="p">(</span><span class="n">国家奥委会</span> <span class="n">身份证号</span><span class="p">:</span> <span class="mh">0xDDC0000000000000</span><span class="p">)</span>
-<span class="p">[</span><span class="n">信息</span><span class="p">]</span> <span class="p">[</span><span class="mi">0</span><span class="o">/</span><span class="n">DUC_0</span><span class="p">]</span> <span class="n">正在初始化</span> <span class="n">块</span> <span class="n">控制</span> <span class="p">(</span><span class="n">国家奥委会</span> <span class="n">身份证号</span><span class="p">:</span> <span class="mh">0xD0C0000000000000</span><span class="p">)</span>
-<span class="p">[</span><span class="n">信息</span><span class="p">]</span> <span class="p">[</span><span class="mi">0</span><span class="o">/</span><span class="n">DUC_1</span><span class="p">]</span> <span class="n">正在初始化</span> <span class="n">块</span> <span class="n">控制</span> <span class="p">(</span><span class="n">国家奥委会</span> <span class="n">身份证号</span><span class="p">:</span> <span class="mh">0xD0C0000000000000</span><span class="p">)</span>
-<span class="p">[</span><span class="n">信息</span><span class="p">]</span> <span class="p">[</span><span class="n">多USRP</span><span class="p">]</span>     <span class="mi">1</span><span class="p">)</span> <span class="n">抓住</span> <span class="n">时间</span> <span class="n">过渡</span> <span class="n">在</span> <span class="n">聚苯硫醚</span> <span class="n">边缘</span>
-<span class="p">[</span><span class="n">信息</span><span class="p">]</span> <span class="p">[</span><span class="n">多USRP</span><span class="p">]</span>     <span class="mi">2</span><span class="p">)</span> <span class="nb">设置</span> <span class="n">次</span> <span class="nb">下一个</span> <span class="n">聚苯硫醚</span> <span class="p">(</span><span class="n">同步地</span><span class="p">)</span>
+<span class="n">Opening</span> <span class="mi">2</span> <span class="n">channels</span> <span class="ow">in</span> <span class="n">RF</span> <span class="n">device</span><span class="o">=</span><span class="n">uhd</span> <span class="k">with</span> <span class="n">args</span><span class="o">=</span><span class="nb">type</span><span class="o">=</span><span class="n">x300</span><span class="p">,</span><span class="n">clock</span><span class="o">=</span><span class="n">external</span><span class="p">,</span><span class="n">sampling_rate</span><span class="o">=</span><span class="mf">11.52e6</span><span class="p">,</span><span class="n">lo_freq_offset_hz</span><span class="o">=</span><span class="mf">23.04e6</span><span class="p">,</span><span class="n">send_frame_size</span><span class="o">=</span><span class="mi">8000</span><span class="p">,</span><span class="n">recv_frame_size</span><span class="o">=</span><span class="mi">8000</span><span class="p">,</span><span class="n">num_send_frames</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span><span class="n">num_recv_frames</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span><span class="kc">None</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span> <span class="p">[</span><span class="n">UHD</span><span class="p">]</span> <span class="n">linux</span><span class="p">;</span> <span class="n">GNU</span> <span class="n">C</span><span class="o">++</span> <span class="n">version</span> <span class="mf">9.3.1</span> <span class="mi">20200408</span> <span class="p">(</span><span class="n">Red</span> <span class="n">Hat</span> <span class="mf">9.3.1</span><span class="o">-</span><span class="mi">2</span><span class="p">);</span> <span class="n">Boost_106900</span><span class="p">;</span> <span class="n">UHD_3</span><span class="mf">.15.0.0</span><span class="o">-</span><span class="mi">62</span><span class="o">-</span><span class="n">g7a3f1516</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span> <span class="p">[</span><span class="n">LOGGING</span><span class="p">]</span> <span class="n">Fastpath</span> <span class="n">logging</span> <span class="n">disabled</span> <span class="n">at</span> <span class="n">runtime</span><span class="o">.</span>
+<span class="n">Opening</span> <span class="n">USRP</span> <span class="n">channels</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">args</span><span class="p">:</span> <span class="nb">type</span><span class="o">=</span><span class="n">x300</span><span class="p">,</span><span class="n">lo_freq_offset_hz</span><span class="o">=</span><span class="mf">23.04e6</span><span class="p">,</span><span class="n">send_frame_size</span><span class="o">=</span><span class="mi">8000</span><span class="p">,</span><span class="n">recv_frame_size</span><span class="o">=</span><span class="mi">8000</span><span class="p">,</span><span class="n">num_send_frames</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span><span class="n">num_recv_frames</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span><span class="kc">None</span><span class="o">=</span><span class="p">,</span><span class="n">master_clock_rate</span><span class="o">=</span><span class="mf">184.32e6</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span> <span class="p">[</span><span class="n">UHD</span> <span class="n">RF</span><span class="p">]</span> <span class="n">RF</span> <span class="n">UHD</span> <span class="n">Generic</span> <span class="n">instance</span> <span class="n">constructed</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span> <span class="p">[</span><span class="n">X300</span><span class="p">]</span> <span class="n">X300</span> <span class="n">initialization</span> <span class="n">sequence</span><span class="o">...</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span> <span class="p">[</span><span class="n">X300</span><span class="p">]</span> <span class="n">Maximum</span> <span class="n">frame</span> <span class="n">size</span><span class="p">:</span> <span class="mi">8000</span> <span class="nb">bytes</span><span class="o">.</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span> <span class="p">[</span><span class="n">X300</span><span class="p">]</span> <span class="n">Radio</span> <span class="mi">1</span><span class="n">x</span> <span class="n">clock</span><span class="p">:</span> <span class="mf">184.32</span> <span class="n">MHz</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span> <span class="p">[</span><span class="mi">0</span><span class="o">/</span><span class="n">DmaFIFO_0</span><span class="p">]</span> <span class="n">Initializing</span> <span class="n">block</span> <span class="n">control</span> <span class="p">(</span><span class="n">NOC</span> <span class="n">ID</span><span class="p">:</span> <span class="mh">0xF1F0D00000000000</span><span class="p">)</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span> <span class="p">[</span><span class="mi">0</span><span class="o">/</span><span class="n">DmaFIFO_0</span><span class="p">]</span> <span class="n">BIST</span> <span class="n">passed</span> <span class="p">(</span><span class="n">Throughput</span><span class="p">:</span> <span class="mi">1315</span> <span class="n">MB</span><span class="o">/</span><span class="n">s</span><span class="p">)</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span> <span class="p">[</span><span class="mi">0</span><span class="o">/</span><span class="n">DmaFIFO_0</span><span class="p">]</span> <span class="n">BIST</span> <span class="n">passed</span> <span class="p">(</span><span class="n">Throughput</span><span class="p">:</span> <span class="mi">1307</span> <span class="n">MB</span><span class="o">/</span><span class="n">s</span><span class="p">)</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span> <span class="p">[</span><span class="mi">0</span><span class="o">/</span><span class="n">Radio_0</span><span class="p">]</span> <span class="n">Initializing</span> <span class="n">block</span> <span class="n">control</span> <span class="p">(</span><span class="n">NOC</span> <span class="n">ID</span><span class="p">:</span> <span class="mh">0x12AD100000000001</span><span class="p">)</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span> <span class="p">[</span><span class="mi">0</span><span class="o">/</span><span class="n">Radio_1</span><span class="p">]</span> <span class="n">Initializing</span> <span class="n">block</span> <span class="n">control</span> <span class="p">(</span><span class="n">NOC</span> <span class="n">ID</span><span class="p">:</span> <span class="mh">0x12AD100000000001</span><span class="p">)</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span> <span class="p">[</span><span class="mi">0</span><span class="o">/</span><span class="n">DDC_0</span><span class="p">]</span> <span class="n">Initializing</span> <span class="n">block</span> <span class="n">control</span> <span class="p">(</span><span class="n">NOC</span> <span class="n">ID</span><span class="p">:</span> <span class="mh">0xDDC0000000000000</span><span class="p">)</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span> <span class="p">[</span><span class="mi">0</span><span class="o">/</span><span class="n">DDC_1</span><span class="p">]</span> <span class="n">Initializing</span> <span class="n">block</span> <span class="n">control</span> <span class="p">(</span><span class="n">NOC</span> <span class="n">ID</span><span class="p">:</span> <span class="mh">0xDDC0000000000000</span><span class="p">)</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span> <span class="p">[</span><span class="mi">0</span><span class="o">/</span><span class="n">DUC_0</span><span class="p">]</span> <span class="n">Initializing</span> <span class="n">block</span> <span class="n">control</span> <span class="p">(</span><span class="n">NOC</span> <span class="n">ID</span><span class="p">:</span> <span class="mh">0xD0C0000000000000</span><span class="p">)</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span> <span class="p">[</span><span class="mi">0</span><span class="o">/</span><span class="n">DUC_1</span><span class="p">]</span> <span class="n">Initializing</span> <span class="n">block</span> <span class="n">control</span> <span class="p">(</span><span class="n">NOC</span> <span class="n">ID</span><span class="p">:</span> <span class="mh">0xD0C0000000000000</span><span class="p">)</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span> <span class="p">[</span><span class="n">MULTI_USRP</span><span class="p">]</span>     <span class="mi">1</span><span class="p">)</span> <span class="n">catch</span> <span class="n">time</span> <span class="n">transition</span> <span class="n">at</span> <span class="n">pps</span> <span class="n">edge</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span> <span class="p">[</span><span class="n">MULTI_USRP</span><span class="p">]</span>     <span class="mi">2</span><span class="p">)</span> <span class="nb">set</span> <span class="n">times</span> <span class="nb">next</span> <span class="n">pps</span> <span class="p">(</span><span class="n">synchronously</span><span class="p">)</span>
 
-<span class="o">====</span> <span class="n">eNodeB</span> <span class="n">开始了</span> <span class="o">===</span>
-<span class="n">类型</span> <span class="o">&lt;</span><span class="n">t</span><span class="o">&gt;</span> <span class="n">到</span> <span class="n">查看</span> <span class="n">痕迹</span>
-<span class="n">设置</span> <span class="n">频率</span><span class="p">:</span> <span class="n">DL</span><span class="o">=</span><span class="mf">806.0</span> <span class="n">兆赫兹</span><span class="p">,</span> <span class="n">UL</span><span class="o">=</span><span class="mf">847.0</span> <span class="n">兆赫兹</span> <span class="k">为了</span> <span class="n">cc_idx</span><span class="o">=</span><span class="mi">0</span> <span class="n">nof_prb</span><span class="o">=</span><span class="mi">50</span>
-<span class="n">设置</span> <span class="n">频率</span><span class="p">:</span> <span class="n">DL</span><span class="o">=</span><span class="mf">1842.5</span> <span class="n">兆赫兹</span><span class="p">,</span> <span class="n">UL</span><span class="o">=</span><span class="mf">1747.5</span> <span class="n">兆赫兹</span> <span class="k">为了</span> <span class="n">cc_idx</span><span class="o">=</span><span class="mi">1</span> <span class="n">nof_prb</span><span class="o">=</span><span class="mi">52</span>
+<span class="o">====</span> <span class="n">eNodeB</span> <span class="n">started</span> <span class="o">===</span>
+<span class="n">Type</span> <span class="o">&lt;</span><span class="n">t</span><span class="o">&gt;</span> <span class="n">to</span> <span class="n">view</span> <span class="n">trace</span>
+<span class="n">Setting</span> <span class="n">frequency</span><span class="p">:</span> <span class="n">DL</span><span class="o">=</span><span class="mf">806.0</span> <span class="n">Mhz</span><span class="p">,</span> <span class="n">UL</span><span class="o">=</span><span class="mf">847.0</span> <span class="n">MHz</span> <span class="k">for</span> <span class="n">cc_idx</span><span class="o">=</span><span class="mi">0</span> <span class="n">nof_prb</span><span class="o">=</span><span class="mi">50</span>
+<span class="n">Setting</span> <span class="n">frequency</span><span class="p">:</span> <span class="n">DL</span><span class="o">=</span><span class="mf">1842.5</span> <span class="n">Mhz</span><span class="p">,</span> <span class="n">UL</span><span class="o">=</span><span class="mf">1747.5</span> <span class="n">MHz</span> <span class="k">for</span> <span class="n">cc_idx</span><span class="o">=</span><span class="mi">1</span> <span class="n">nof_prb</span><span class="o">=</span><span class="mi">52</span>
 </pre></div>
 </div>
 <p>如果 eNB 已成功连接到核心，EPC 控制台现在应该打印更新：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">已收到</span> <span class="n">S1</span> <span class="n">设置</span> <span class="n">请求</span><span class="o">.</span>
-<span class="n">S1</span> <span class="n">设置</span> <span class="n">请求</span> <span class="o">-</span> <span class="n">基站</span> <span class="n">名称</span><span class="p">:</span> <span class="n">srsenb01</span><span class="p">,</span> <span class="n">基站</span> <span class="nb">编号</span><span class="p">:</span> <span class="mh">0x19b</span>
-<span class="n">S1</span> <span class="n">设置</span> <span class="n">请求</span> <span class="o">-</span> <span class="n">中冶集团</span><span class="p">:</span><span class="mi">901</span><span class="p">,</span> <span class="n">跨国公司</span><span class="p">:</span><span class="mi">70</span><span class="p">,</span> <span class="n">PLMN</span><span class="p">:</span> <span class="mi">651527</span>
-<span class="n">S1</span> <span class="n">设置</span> <span class="n">请求</span> <span class="o">-</span> <span class="n">TAC</span> <span class="mi">0</span><span class="p">,</span> <span class="n">乙</span><span class="o">-</span><span class="n">PLMN</span> <span class="mi">0</span>
-<span class="n">S1</span> <span class="n">设置</span> <span class="n">请求</span> <span class="o">-</span> <span class="n">寻呼</span> <span class="n">不连续接收</span> <span class="n">v128</span>
-<span class="n">发送</span> <span class="n">S1</span> <span class="n">设置</span> <span class="n">回应</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Received</span> <span class="n">S1</span> <span class="n">Setup</span> <span class="n">Request</span><span class="o">.</span>
+<span class="n">S1</span> <span class="n">Setup</span> <span class="n">Request</span> <span class="o">-</span> <span class="n">eNB</span> <span class="n">Name</span><span class="p">:</span> <span class="n">srsenb01</span><span class="p">,</span> <span class="n">eNB</span> <span class="nb">id</span><span class="p">:</span> <span class="mh">0x19b</span>
+<span class="n">S1</span> <span class="n">Setup</span> <span class="n">Request</span> <span class="o">-</span> <span class="n">MCC</span><span class="p">:</span><span class="mi">901</span><span class="p">,</span> <span class="n">MNC</span><span class="p">:</span><span class="mi">70</span><span class="p">,</span> <span class="n">PLMN</span><span class="p">:</span> <span class="mi">651527</span>
+<span class="n">S1</span> <span class="n">Setup</span> <span class="n">Request</span> <span class="o">-</span> <span class="n">TAC</span> <span class="mi">0</span><span class="p">,</span> <span class="n">B</span><span class="o">-</span><span class="n">PLMN</span> <span class="mi">0</span>
+<span class="n">S1</span> <span class="n">Setup</span> <span class="n">Request</span> <span class="o">-</span> <span class="n">Paging</span> <span class="n">DRX</span> <span class="n">v128</span>
+<span class="n">Sending</span> <span class="n">S1</span> <span class="n">Setup</span> <span class="n">Response</span>
 </pre></div>
 </div>
 <p>网络现已准备好供 COTS UE 连接。</p>
@@ -825,21 +825,21 @@ UHD_LIBRARIES:FILEPATH=/usr/local/lib/libuhd.so
 <h2>确认连接<a class="headerlink" href="index.html#confirming-connection" title="链接到此标题"></a></h2>
 <p>UE 连接到网络后，srsENB 和 srsEPC 的控制台输出可用于确认连接成功。</p>
 <section id="id3">
-<h3>血清ENB<a class="headerlink" href="index.html#id3" title="链接到此标题"></a></h3>
-<p>如果连接成功，则会出现 <code class="docutils literal notranslate"><span class="pre">RACH</span></code> 应该看到消息后面跟着一个 <code class="docutils literal notranslate"><span class="pre">用户</span> <span class="pre">&lt;ID&gt;</span> <span class="pre">已连接</span></code> 消息，其中“&lt;ID&gt;”是分配给 UE 的 RNTI：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">====</span> <span class="n">eNodeB</span> <span class="n">开始了</span> <span class="o">===</span>
-<span class="n">类型</span> <span class="o">&lt;</span><span class="n">t</span><span class="o">&gt;</span> <span class="n">到</span> <span class="n">查看</span> <span class="n">痕迹</span>
-<span class="n">设置</span> <span class="n">频率</span><span class="p">:</span> <span class="n">DL</span><span class="o">=</span><span class="mf">806.0</span> <span class="n">兆赫兹</span><span class="p">,</span> <span class="n">UL</span><span class="o">=</span><span class="mf">847.0</span> <span class="n">兆赫兹</span> <span class="k">为了</span> <span class="n">cc_idx</span><span class="o">=</span><span class="mi">0</span> <span class="n">nof_prb</span><span class="o">=</span><span class="mi">50</span>
-<span class="n">设置</span> <span class="n">频率</span><span class="p">:</span> <span class="n">DL</span><span class="o">=</span><span class="mf">1842.5</span> <span class="n">兆赫兹</span><span class="p">,</span> <span class="n">UL</span><span class="o">=</span><span class="mf">1747.5</span> <span class="n">兆赫兹</span> <span class="k">为了</span> <span class="n">cc_idx</span><span class="o">=</span><span class="mi">1</span> <span class="n">nof_prb</span><span class="o">=</span><span class="mi">52</span>
-<span class="n">用户</span> <span class="mh">0x46</span> <span class="n">已连接</span>
-<span class="n">RACH</span><span class="p">:</span>  <span class="n">插槽</span><span class="o">=</span><span class="mi">7691</span><span class="p">,</span> <span class="n">抄送</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">序言</span><span class="o">=</span><span class="mi">41</span><span class="p">,</span> <span class="n">偏移量</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">临时表</span><span class="o">=</span><span class="mh">0x4602</span>
+<h3>srsENB<a class="headerlink" href="index.html#id3" title="链接到此标题"></a></h3>
+<p>如果连接成功，则会出现 <code class="docutils literal notranslate"><span class="pre">RACH</span></code> 应该看到消息后面跟着一个 <code class="docutils literal notranslate"><span class="pre">USER</span> <span class="pre">&lt;ID&gt;</span> <span class="pre">connected</span></code> 消息，其中“&lt;ID&gt;”是分配给 UE 的 RNTI：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">====</span> <span class="n">eNodeB</span> <span class="n">started</span> <span class="o">===</span>
+<span class="n">Type</span> <span class="o">&lt;</span><span class="n">t</span><span class="o">&gt;</span> <span class="n">to</span> <span class="n">view</span> <span class="n">trace</span>
+<span class="n">Setting</span> <span class="n">frequency</span><span class="p">:</span> <span class="n">DL</span><span class="o">=</span><span class="mf">806.0</span> <span class="n">Mhz</span><span class="p">,</span> <span class="n">UL</span><span class="o">=</span><span class="mf">847.0</span> <span class="n">MHz</span> <span class="k">for</span> <span class="n">cc_idx</span><span class="o">=</span><span class="mi">0</span> <span class="n">nof_prb</span><span class="o">=</span><span class="mi">50</span>
+<span class="n">Setting</span> <span class="n">frequency</span><span class="p">:</span> <span class="n">DL</span><span class="o">=</span><span class="mf">1842.5</span> <span class="n">Mhz</span><span class="p">,</span> <span class="n">UL</span><span class="o">=</span><span class="mf">1747.5</span> <span class="n">MHz</span> <span class="k">for</span> <span class="n">cc_idx</span><span class="o">=</span><span class="mi">1</span> <span class="n">nof_prb</span><span class="o">=</span><span class="mi">52</span>
+<span class="n">User</span> <span class="mh">0x46</span> <span class="n">connected</span>
+<span class="n">RACH</span><span class="p">:</span>  <span class="n">slot</span><span class="o">=</span><span class="mi">7691</span><span class="p">,</span> <span class="n">cc</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">preamble</span><span class="o">=</span><span class="mi">41</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">temp_crnti</span><span class="o">=</span><span class="mh">0x4602</span>
 
           <span class="o">-----------------</span><span class="n">DL</span><span class="o">----------------|-------------------------</span><span class="n">UL</span><span class="o">-------------------------</span>
-<span class="n">LTE</span>   <span class="mi">46</span>   <span class="mi">12</span>   <span class="mi">0</span>    <span class="mi">5</span>   <span class="mf">2.5</span><span class="n">k</span>    <span class="mi">4</span>    <span class="mi">0</span>   <span class="mi">0</span><span class="o">%</span> <span class="o">|</span>  <span class="mf">25.7</span>    <span class="mf">9.4</span>   <span class="mi">23</span>   <span class="mi">23</span>    <span class="mi">17</span><span class="n">k</span>    <span class="mi">4</span>    <span class="mi">0</span>   <span class="mi">0</span><span class="o">%</span>    <span class="mf">0.0</span>
- <span class="n">号</span> <span class="mi">4601</span>  <span class="n">n</span><span class="o">/</span><span class="n">一个</span>   <span class="mi">0</span>    <span class="mi">0</span>      <span class="mi">0</span>    <span class="mi">0</span>    <span class="mi">0</span>   <span class="mi">0</span><span class="o">%</span> <span class="o">|</span>   <span class="n">n</span><span class="o">/</span><span class="n">一个</span>    <span class="n">n</span><span class="o">/</span><span class="n">一个</span>    <span class="mi">0</span>    <span class="mi">0</span>    <span class="mi">38</span><span class="n">k</span>    <span class="mi">4</span>    <span class="mi">0</span>   <span class="mi">0</span><span class="o">%</span>    <span class="mf">0.0</span>
-<span class="n">LTE</span>   <span class="mi">46</span>   <span class="mi">13</span>   <span class="mi">0</span>    <span class="mi">0</span>      <span class="mi">0</span>    <span class="mi">0</span>    <span class="mi">0</span>   <span class="mi">0</span><span class="o">%</span> <span class="o">|</span>   <span class="n">n</span><span class="o">/</span><span class="n">一个</span>    <span class="mf">6.2</span>    <span class="mi">0</span>    <span class="mi">0</span>      <span class="mi">0</span>    <span class="mi">0</span>    <span class="mi">0</span>   <span class="mi">0</span><span class="o">%</span>    <span class="mf">0.0</span>
- <span class="n">号</span> <span class="mi">4601</span>  <span class="n">n</span><span class="o">/</span><span class="n">一个</span>   <span class="mi">0</span>    <span class="mi">0</span>      <span class="mi">0</span>    <span class="mi">0</span>    <span class="mi">0</span>   <span class="mi">0</span><span class="o">%</span> <span class="o">|</span>   <span class="n">n</span><span class="o">/</span><span class="n">一个</span>    <span class="n">n</span><span class="o">/</span><span class="n">一个</span>    <span class="mi">0</span>    <span class="mi">0</span>      <span class="mi">0</span>    <span class="mi">0</span>    <span class="mi">0</span>   <span class="mi">0</span><span class="o">%</span>    <span class="mf">0.0</span>
-<span class="n">LTE</span>   <span class="mi">46</span>   <span class="mi">13</span>   <span class="mi">0</span>    <span class="mi">0</span>      <span class="mi">0</span>    <span class="mi">0</span>    <span class="mi">0</span>   <span class="mi">0</span><span class="o">%</span> <span class="o">|</span>   <span class="n">n</span><span class="o">/</span><span class="n">一个</span>    <span class="mf">6.2</span>    <span class="mi">0</span>    <span class="mi">0</span>      <span class="mi">0</span>    <span class="mi">0</span>    <span class="mi">0</span>   <span class="mi">0</span><span class="o">%</span>    <span class="mf">0.0</span>
+<span class="n">lte</span>   <span class="mi">46</span>   <span class="mi">12</span>   <span class="mi">0</span>    <span class="mi">5</span>   <span class="mf">2.5</span><span class="n">k</span>    <span class="mi">4</span>    <span class="mi">0</span>   <span class="mi">0</span><span class="o">%</span> <span class="o">|</span>  <span class="mf">25.7</span>    <span class="mf">9.4</span>   <span class="mi">23</span>   <span class="mi">23</span>    <span class="mi">17</span><span class="n">k</span>    <span class="mi">4</span>    <span class="mi">0</span>   <span class="mi">0</span><span class="o">%</span>    <span class="mf">0.0</span>
+ <span class="n">nr</span> <span class="mi">4601</span>  <span class="n">n</span><span class="o">/</span><span class="n">a</span>   <span class="mi">0</span>    <span class="mi">0</span>      <span class="mi">0</span>    <span class="mi">0</span>    <span class="mi">0</span>   <span class="mi">0</span><span class="o">%</span> <span class="o">|</span>   <span class="n">n</span><span class="o">/</span><span class="n">a</span>    <span class="n">n</span><span class="o">/</span><span class="n">a</span>    <span class="mi">0</span>    <span class="mi">0</span>    <span class="mi">38</span><span class="n">k</span>    <span class="mi">4</span>    <span class="mi">0</span>   <span class="mi">0</span><span class="o">%</span>    <span class="mf">0.0</span>
+<span class="n">lte</span>   <span class="mi">46</span>   <span class="mi">13</span>   <span class="mi">0</span>    <span class="mi">0</span>      <span class="mi">0</span>    <span class="mi">0</span>    <span class="mi">0</span>   <span class="mi">0</span><span class="o">%</span> <span class="o">|</span>   <span class="n">n</span><span class="o">/</span><span class="n">a</span>    <span class="mf">6.2</span>    <span class="mi">0</span>    <span class="mi">0</span>      <span class="mi">0</span>    <span class="mi">0</span>    <span class="mi">0</span>   <span class="mi">0</span><span class="o">%</span>    <span class="mf">0.0</span>
+ <span class="n">nr</span> <span class="mi">4601</span>  <span class="n">n</span><span class="o">/</span><span class="n">a</span>   <span class="mi">0</span>    <span class="mi">0</span>      <span class="mi">0</span>    <span class="mi">0</span>    <span class="mi">0</span>   <span class="mi">0</span><span class="o">%</span> <span class="o">|</span>   <span class="n">n</span><span class="o">/</span><span class="n">a</span>    <span class="n">n</span><span class="o">/</span><span class="n">a</span>    <span class="mi">0</span>    <span class="mi">0</span>      <span class="mi">0</span>    <span class="mi">0</span>    <span class="mi">0</span>   <span class="mi">0</span><span class="o">%</span>    <span class="mf">0.0</span>
+<span class="n">lte</span>   <span class="mi">46</span>   <span class="mi">13</span>   <span class="mi">0</span>    <span class="mi">0</span>      <span class="mi">0</span>    <span class="mi">0</span>    <span class="mi">0</span>   <span class="mi">0</span><span class="o">%</span> <span class="o">|</span>   <span class="n">n</span><span class="o">/</span><span class="n">a</span>    <span class="mf">6.2</span>    <span class="mi">0</span>    <span class="mi">0</span>      <span class="mi">0</span>    <span class="mi">0</span>    <span class="mi">0</span>   <span class="mi">0</span><span class="o">%</span>    <span class="mf">0.0</span>
 </pre></div>
 </div>
 <p>UE 现已连接到网络，并且现在应在每次开机时自动连接到该网络。 UE 现在还应该可以访问互联网 - 就像连接到商业 5G 网络一样。</p>
@@ -861,7 +861,7 @@ UHD_LIBRARIES:FILEPATH=/usr/local/lib/libuhd.so
 <h3>NR载波误码率高<a class="headerlink" href="index.html#nr-carrier-has-high-error-rate" title="链接到此标题"></a></h3>
 <p>NR 调度器当前的限制之一是缺少动态 MCS 自适应。因此，固定MCS用于下行链路(PDSCH)和上行链路(PUSCH)传输。
 默认情况下，我们使用 MCS 28 的最大值作为最大速率。然而，根据 RF 的条件，该值可能太高。在这种情况下，尝试使用较低的 MCS，例如：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">调度程序</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">scheduler</span><span class="p">]</span>
 <span class="n">nr_pdsch_mcs</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="n">nr_pusch_mcs</span> <span class="o">=</span> <span class="mi">10</span>
 </pre></div>
@@ -871,11 +871,11 @@ UHD_LIBRARIES:FILEPATH=/usr/local/lib/libuhd.so
 <h3>埃特斯研究 USRP N310<a class="headerlink" href="index.html#ettus-research-usrp-n310" title="链接到此标题"></a></h3>
 <p>N310 是另一种可用于 NSA 的设备。但是，需要对配置文件进行一些更改。</p>
 <p>在 enb.conf 中，我们需要更改设备参数以选择正确的 RF 子设备（LTE 的频段 20 和 NR 的频段 n3 相距太远，无法使用默认值），并使用 N310 支持的采样率：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">射频</span><span class="p">]</span>
-<span class="n">设备参数</span> <span class="o">=</span> <span class="nb">类型</span><span class="o">=</span><span class="n">n3xx</span><span class="p">,</span><span class="n">tx_subdev_spec</span><span class="o">=</span><span class="n">一个</span><span class="p">:</span><span class="mi">0</span> <span class="n">乙</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="n">rx_subdev_spec</span><span class="o">=</span><span class="n">一个</span><span class="p">:</span><span class="mi">0</span> <span class="n">乙</span><span class="p">:</span><span class="mi">0</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">rf</span><span class="p">]</span>
+<span class="n">device_args</span> <span class="o">=</span> <span class="nb">type</span><span class="o">=</span><span class="n">n3xx</span><span class="p">,</span><span class="n">tx_subdev_spec</span><span class="o">=</span><span class="n">A</span><span class="p">:</span><span class="mi">0</span> <span class="n">B</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="n">rx_subdev_spec</span><span class="o">=</span><span class="n">A</span><span class="p">:</span><span class="mi">0</span> <span class="n">B</span><span class="p">:</span><span class="mi">0</span>
 
-<span class="p">[</span><span class="n">专家</span><span class="p">]</span>
-<span class="n">lte_样本_率</span> <span class="o">=</span> <span class="n">真实</span>
+<span class="p">[</span><span class="n">expert</span><span class="p">]</span>
+<span class="n">lte_sample_rates</span> <span class="o">=</span> <span class="n">true</span>
 </pre></div>
 </div>
 <p>测试是使用 UHD 4.1 使用 N310 进行的。</p>
@@ -888,9 +888,9 @@ UHD_LIBRARIES:FILEPATH=/usr/local/lib/libuhd.so
 <hr/>
 <div role="contentinfo">
 <p>© 版权所有 2019-2025，软件无线电系统..</p>
-</div>内置 <a href="https://www.sphinx-doc.org/">狮身人面像</a> 使用
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
-    由提供 <a href="https://readthedocs.org">阅读文档</a>.
+</div>基于 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    主题，由 <a href="https://readthedocs.org">Read the Docs</a> 提供。
    
 
 </footer>

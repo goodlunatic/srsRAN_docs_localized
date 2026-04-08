@@ -71,12 +71,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../getting_started.html">开始使用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../feature_list.html">srsRAN 4G特点</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../feature_list.html#srsue">srsUE</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../feature_list.html#srsenb">血清ENB</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../feature_list.html#srsepc">超级EPC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../feature_list.html#srsenb">srsENB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../feature_list.html#srsepc">srsEPC</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../reporting_issues.html">报告问题</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../dev_status.html">发展现状</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../reporting_issues.html">问题反馈</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../dev_status.html">开发状态</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">第一步</span></p>
 <ul>
@@ -84,7 +84,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../../general/source/1_installation.html#which-installation-should-i-use">我应该使用哪种安装？</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../general/source/1_installation.html#package-installation">包安装</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../general/source/1_installation.html#installation-from-source">从源安装</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/1_installation.html#getting-support">获得支持</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/1_installation.html#getting-support">获取支持</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../general/source/2_release_notes.html">发行说明</a></li>
@@ -108,8 +108,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../../1_setup.html">LTE 设置指南</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../1_setup.html#baseline-hardware-requirements">基准硬件要求</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../1_setup.html#running-a-4g-end-to-end-system">运行 4G 端到端系统</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../1_setup.html#srsepc">超级EPC</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../1_setup.html#srsenb">血清ENB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../1_setup.html#srsepc">srsEPC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../1_setup.html#srsenb">srsENB</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../1_setup.html#srsue">srsUE</a></li>
 </ul>
 </li>
@@ -125,14 +125,14 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../srsue/source/2_ue_getstarted.html">开始使用</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../srsue/source/2_ue_getstarted.html#running-the-software">运行软件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../srsue/source/2_ue_getstarted.html#configuration">配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../srsue/source/2_ue_getstarted.html#configuration">libconfig</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../srsue/source/2_ue_getstarted.html#hardware-setup">硬件设置</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../srsue/source/2_ue_getstarted.html#operating-system-setup">操作系统设置</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../srsue/source/2_ue_getstarted.html#observing-results">观察结果</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../srsue/source/3_ue_trouble.html">故障排除</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../srsue/source/3_ue_trouble.html#rf-configuration">RF 配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../srsue/source/3_ue_trouble.html#rf-configuration">RF libconfig</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../srsue/source/3_ue_trouble.html#network-attach">网络连接</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../srsue/source/3_ue_trouble.html#misconfigured-network">网络配置错误</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../srsue/source/3_ue_trouble.html#rf-issues">RF 问题</a></li>
@@ -165,7 +165,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../srsenb/source/2_enb_getstarted.html">开始使用</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../srsenb/source/2_enb_getstarted.html#running-the-software">运行软件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../srsenb/source/2_enb_getstarted.html#configuration">配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../srsenb/source/2_enb_getstarted.html#configuration">libconfig</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../srsenb/source/2_enb_getstarted.html#hardware-setup">硬件设置</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../srsenb/source/2_enb_getstarted.html#operating-system-setup">操作系统设置</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../srsenb/source/2_enb_getstarted.html#observing-results">观察结果</a></li>
@@ -206,7 +206,7 @@
 </li>
 <li class="toctree-l2 current"><a class="current reference internal" href="2_epc_getstarted.html#">开始使用</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="2_epc_getstarted.html#running-the-software">运行软件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="2_epc_getstarted.html#configuration">配置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="2_epc_getstarted.html#configuration">libconfig</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="2_epc_getstarted.html#adding-an-ue-to-hss-database">将 UE 添加到 HSS 数据库</a></li>
 <li class="toctree-l4"><a class="reference internal" href="2_epc_getstarted.html#enbs-and-srsepc-on-separate-machines">eNB 和 srsEPC 位于不同的机器上</a></li>
 <li class="toctree-l4"><a class="reference internal" href="2_epc_getstarted.html#connecting-ues-to-the-internet">将UE连接到互联网</a></li>
@@ -301,13 +301,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../app_notes/source/2ca/source/index.html">载波聚合</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../app_notes/source/2ca/source/index.html#introduction">简介</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../app_notes/source/2ca/source/index.html#carrier-aggregation-using-sdr-hardware">使用 SDR 硬件进行载波聚合</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../../app_notes/source/2ca/source/index.html#enodeb-configuration">eNodeB 配置</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../app_notes/source/2ca/source/index.html#ue-configuration">UE 配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../app_notes/source/2ca/source/index.html#enodeb-configuration">eNodeB libconfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../app_notes/source/2ca/source/index.html#ue-configuration">UE libconfig</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../app_notes/source/2ca/source/index.html#carrier-aggregation-using-zeromq-rf-emulation">使用 ZeroMQ RF 仿真进行载波聚合</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../../app_notes/source/2ca/source/index.html#id2">eNodeB 配置</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../app_notes/source/2ca/source/index.html#id3">UE 配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../app_notes/source/2ca/source/index.html#id2">eNodeB libconfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../app_notes/source/2ca/source/index.html#id3">UE libconfig</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../app_notes/source/2ca/source/index.html#known-issues">已知问题</a></li>
@@ -327,9 +327,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../app_notes/source/embms/source/index.html">eMBMS 端到端</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../app_notes/source/embms/source/index.html#introduction">简介</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../app_notes/source/embms/source/index.html#setup">设置</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../../app_notes/source/embms/source/index.html#srsenb-configuration">srsENB配置</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../app_notes/source/embms/source/index.html#srsmbms-configuration">srsMBMS配置</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../app_notes/source/embms/source/index.html#srsue-configuration">srsUE配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../app_notes/source/embms/source/index.html#srsenb-configuration">srsENBlibconfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../app_notes/source/embms/source/index.html#srsmbms-configuration">srsMBMSlibconfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../app_notes/source/embms/source/index.html#srsue-configuration">srsUElibconfig</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../app_notes/source/embms/source/index.html#usage">用途</a></li>
@@ -348,7 +348,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../../app_notes/source/pi4/source/index.html#introduction">简介</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../app_notes/source/pi4/source/index.html#pi4-enodeb-hardware-requirements">Pi4 eNodeB 硬件要求</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../app_notes/source/pi4/source/index.html#software-setup">软件设置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../app_notes/source/pi4/source/index.html#pi4-enodeb-config">Pi4 eNodeB 配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../app_notes/source/pi4/source/index.html#pi4-enodeb-config">Pi4 eNodeB libconfig</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../app_notes/source/pi4/source/index.html#running-the-pi4-enodeb">运行 Pi4 eNodeB</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../app_notes/source/pi4/source/index.html#known-issues">已知问题</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../app_notes/source/pi4/source/index.html#running-on-ubuntu-22-04-lts">在 Ubuntu 22.04 LTS 上运行</a></li>
@@ -361,18 +361,18 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../../app_notes/source/hw_packs/source/index.html#sdr-criteria">特别提款权标准</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../app_notes/source/hw_packs/source/index.html#packages">套餐</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../../app_notes/source/hw_packs/source/index.html#package-1">套餐1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../app_notes/source/hw_packs/source/index.html#packages">软件包</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../app_notes/source/hw_packs/source/index.html#package-1">软件包 1</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../../../app_notes/source/hw_packs/source/index.html#advantages">优点</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../../app_notes/source/hw_packs/source/index.html#limitations">局限性</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../app_notes/source/hw_packs/source/index.html#package-2">套餐2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../app_notes/source/hw_packs/source/index.html#package-2">软件包 2</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../../../app_notes/source/hw_packs/source/index.html#id1">优点</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../../app_notes/source/hw_packs/source/index.html#id2">局限性</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../app_notes/source/hw_packs/source/index.html#package-3">套餐3</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../app_notes/source/hw_packs/source/index.html#package-3">软件包 3</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../../../app_notes/source/hw_packs/source/index.html#id3">优点</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../../app_notes/source/hw_packs/source/index.html#id4">局限性</a></li>
 </ul>
@@ -391,7 +391,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../../app_notes/source/5g_sa_amari/source/index.html#hardware-requirements">硬件要求</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../app_notes/source/5g_sa_amari/source/index.html#hardware-setup">硬件设置</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../app_notes/source/5g_sa_amari/source/index.html#limitations">局限性</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../app_notes/source/5g_sa_amari/source/index.html#configuration">配置</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../app_notes/source/5g_sa_amari/source/index.html#configuration">libconfig</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../app_notes/source/5g_sa_amari/source/index.html#srsue">srsUE</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../app_notes/source/5g_sa_amari/source/index.html#callbox">电话亭</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../../../app_notes/source/5g_sa_amari/source/index.html#enable-nr-support">启用 NR 支持</a></li>
@@ -421,7 +421,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../../app_notes/source/5g_nsa_amari/source/index.html#limitations">局限性</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../app_notes/source/5g_nsa_amari/source/index.html#hardware-requirements">硬件要求</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../app_notes/source/5g_nsa_amari/source/index.html#hardware-setup">硬件设置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../app_notes/source/5g_nsa_amari/source/index.html#configuration">配置</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../app_notes/source/5g_nsa_amari/source/index.html#configuration">libconfig</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../app_notes/source/5g_nsa_amari/source/index.html#srsue">srsUE</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../app_notes/source/5g_nsa_amari/source/index.html#callbox">电话亭</a></li>
 </ul>
@@ -478,38 +478,38 @@
 <p>要开始使用 srsEPC，您需要一台装有基于 GNU/Linux 操作系统的 PC。
 这可以是您喜欢的发行版，例如 Ubuntu、Debian、Fedora 等。</p>
 <p>如果您使用的是 Ubuntu，则可以从提供的二进制包进行安装：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">须藤</span> <span class="n">添加</span><span class="o">-</span><span class="n">适合</span><span class="o">-</span><span class="n">存储库</span> <span class="n">聚苯胺</span><span class="p">:</span><span class="n">srste</span><span class="o">/</span><span class="n">发布</span>
-<span class="n">须藤</span> <span class="n">适合</span><span class="o">-</span><span class="n">得到</span> <span class="n">更新</span>
-<span class="n">须藤</span> <span class="n">适合</span><span class="o">-</span><span class="n">得到</span> <span class="n">安装</span> <span class="n">SRSEPC</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">add</span><span class="o">-</span><span class="n">apt</span><span class="o">-</span><span class="n">repository</span> <span class="n">ppa</span><span class="p">:</span><span class="n">srslte</span><span class="o">/</span><span class="n">releases</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">srsepc</span>
 </pre></div>
 </div>
-<p>如果您使用不同的发行版，您可以使用项目中提供的指南从源代码安装 <a class="reference external" href="https://github.com/srsRAN/srsRAN_4G/">GitHub 页面</a>.</p>
-<p>安装软件后，您可以将配置文件安装到默认位置（<code class="docutils literal notranslate"><span class="pre">〜/.config/srsran_4g</span></code>），通过运行：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">srsran_4g_install_configs</span><span class="o">.</span><span class="n">嘘</span> <span class="n">用户</span>
+<p>如果您使用其他发行版，可以参考项目的 <a class="reference external" href="https://github.com/srsRAN/srsRAN_4G/">GitHub 页面</a>，按源代码方式安装。</p>
+<p>安装完成后，您可以运行以下命令，将配置文件安装到默认位置（<code class="docutils literal notranslate"><span class="pre">~/.config/srsran_4g</span></code>）：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">srsran_4g_install_configs</span><span class="o">.</span><span class="n">sh</span> <span class="n">user</span>
 </pre></div>
 </div>
 <section id="running-the-software">
 <h2>运行软件<a class="headerlink" href="2_epc_getstarted.html#running-the-software" title="链接到此标题"></a></h2>
-<p>要使用默认参数运行 srsEPC，请运行 <code class="docutils literal notranslate"><span class="pre">须藤</span> <span class="pre">SRSEPC</span></code> 在命令行上。 srsEPC 需要以 sudo 管理员权限运行才能创建 TUN 设备。这将启动 EPC 并等待 eNB 和 UE 连接到它。</p>
+<p>要使用默认参数运行 srsEPC，请运行 <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">srsepc</span></code> 在命令行上。 srsEPC 需要以 sudo 管理员权限运行才能创建 TUN 设备。这将启动 EPC 并等待 eNB 和 UE 连接到它。</p>
 <p>srsEPC将启动TUN接口 <code class="docutils literal notranslate"><span class="pre">srs_spgw_sgi</span></code> 这将允许用户平面数据包到达 UE。</p>
 </section>
 <section id="configuration">
 <span id="epcconfig"></span><h2>配置<a class="headerlink" href="2_epc_getstarted.html#configuration" title="链接到此标题"></a></h2>
-<p>EPC可以通过两个配置文件进行配置： <code class="docutils literal notranslate"><span class="pre">EPC配置文件</span></code> 和 <code class="docutils literal notranslate"><span class="pre">用户数据库.csv</span></code>。
-的 <code class="docutils literal notranslate"><span class="pre">EPC配置文件</span></code> 将保存MME、SPGW和HSS的通用配置参数。
+<p>EPC可以通过两个配置文件进行配置： <code class="docutils literal notranslate"><span class="pre">epc.conf</span></code> 和 <code class="docutils literal notranslate"><span class="pre">user_db.csv</span></code>。
+的 <code class="docutils literal notranslate"><span class="pre">epc.conf</span></code> 将保存MME、SPGW和HSS的通用配置参数。
 这包括 PLMN 值、完整性/加密算法、APN、SGi IP 地址、GTP-U 绑定地址等。</p>
-<p>的 <code class="docutils literal notranslate"><span class="pre">用户数据库.csv</span></code> 用于保存 UE HSS 的特定参数。
+<p>的 <code class="docutils literal notranslate"><span class="pre">user_db.csv</span></code> 用于保存 UE HSS 的特定参数。
 这将包括 IMSI、身份验证算法、K、OP 或 OPc 等。</p>
 <p>在以下小节中，我们将介绍 srsEPC 的一些常见配置案例：将新的 UE 添加到 HSS 数据库、在不同的计算机上运行 eNB 和 EPC，以及设置网络路由以使 UE 连接到互联网。</p>
 <section id="adding-an-ue-to-hss-database">
 <span id="config-csv"></span><h3>将 UE 添加到 HSS 数据库<a class="headerlink" href="2_epc_getstarted.html#adding-an-ue-to-hss-database" title="链接到此标题"></a></h3>
-<p>添加 UE 时能够 <code class="docutils literal notranslate"><span class="pre">用户数据库.csv</span></code> HSS 将使用的数据库，您必须确保该文件中的参数与 UE 的 USIM 卡中存储的参数匹配。</p>
+<p>添加 UE 时能够 <code class="docutils literal notranslate"><span class="pre">user_db.csv</span></code> HSS 将使用的数据库，您必须确保该文件中的参数与 UE 的 USIM 卡中存储的参数匹配。</p>
 <p>特别相关的是 IMSI、身份验证算法、K 和 OP 或 OPc（如果使用 MILENAGE 算法）。
 IMSI 是 SIM 卡的唯一标识符，K 是 HSS 和 UE 用于相互验证的密钥。</p>
 <p>SIM 卡通常使用的身份验证算法是 MILENAGE，但也有测试 SIM 卡使用 XOR 身份验证。
 如果使用MILENAGE算法，还必须知道使用的是OP还是OPc以及该参数对应的值。</p>
 <p>一旦您知道这些参数，您就可以在 user_db.csv 中进行替换，其格式如下：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">ue_name</span><span class="p">),(</span><span class="n">算法</span><span class="p">),(</span><span class="n">伊姆西</span><span class="p">),(</span><span class="n">K</span><span class="p">),(</span><span class="n">OP</span><span class="o">/</span><span class="n">OPc_类型</span><span class="p">),(</span><span class="n">OP</span><span class="o">/</span><span class="n">OPc_值</span><span class="p">),(</span><span class="n">AMF</span><span class="p">),(</span><span class="n">序列号</span><span class="p">),(</span><span class="n">质量控制中心</span><span class="p">),(</span><span class="n">IP_分配</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">ue_name</span><span class="p">),(</span><span class="n">algo</span><span class="p">),(</span><span class="n">imsi</span><span class="p">),(</span><span class="n">K</span><span class="p">),(</span><span class="n">OP</span><span class="o">/</span><span class="n">OPc_type</span><span class="p">),(</span><span class="n">OP</span><span class="o">/</span><span class="n">OPc_value</span><span class="p">),(</span><span class="n">AMF</span><span class="p">),(</span><span class="n">SQN</span><span class="p">),(</span><span class="n">QCI</span><span class="p">),(</span><span class="n">IP_alloc</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>因此，如果您的 SIM 卡具有以下参数：</p>
@@ -522,25 +522,25 @@ IMSI 是 SIM 卡的唯一标识符，K 是 HSS 和 UE 用于相互验证的密�
 <li><p>OPc = 63bfa50ee6523365ff14c1f45f88737d</p></li>
 </ul>
 </div></blockquote>
-<p>您可以配置 <code class="docutils literal notranslate"><span class="pre">用户数据库.csv</span></code> 像这样：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">UE1</span><span class="p">,</span><span class="n">米尔</span><span class="p">,</span><span class="mi">999700000000001</span><span class="p">,</span><span class="mi">00112233445566778899</span><span class="n">aabbccddeeff</span><span class="p">,</span><span class="n">OPC</span><span class="p">,</span><span class="mi">63</span><span class="n">bfa50ee6523365ff14c1f45f88737d</span><span class="p">,</span><span class="mi">9000</span><span class="p">,</span><span class="mi">000000000000</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="n">动态</span>
+<p>您可以配置 <code class="docutils literal notranslate"><span class="pre">user_db.csv</span></code> 像这样：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ue1</span><span class="p">,</span><span class="n">mil</span><span class="p">,</span><span class="mi">999700000000001</span><span class="p">,</span><span class="mi">00112233445566778899</span><span class="n">aabbccddeeff</span><span class="p">,</span><span class="n">opc</span><span class="p">,</span><span class="mi">63</span><span class="n">bfa50ee6523365ff14c1f45f88737d</span><span class="p">,</span><span class="mi">9000</span><span class="p">,</span><span class="mi">000000000000</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="n">dynamic</span>
 </pre></div>
 </div>
 </section>
 <section id="enbs-and-srsepc-on-separate-machines">
 <h3>eNB 和 srsEPC 位于不同的机器上<a class="headerlink" href="2_epc_getstarted.html#enbs-and-srsepc-on-separate-machines" title="链接到此标题"></a></h3>
 <p>默认情况下，srsEPC 配置为与 srsENB 在同一台计算机上运行。
-当在单独的机器上运行带有 eNB 的 srsEPC 时，只需配置 <code class="docutils literal notranslate"><span class="pre">mme_bind_地址</span></code> 和 <code class="docutils literal notranslate"><span class="pre">gtpu_bind_地址</span></code>.</p>
+当在单独的机器上运行带有 eNB 的 srsEPC 时，只需配置 <code class="docutils literal notranslate"><span class="pre">mme_bind_addr</span></code> 和 <code class="docutils literal notranslate"><span class="pre">gtpu_bind_addr</span></code>.</p>
 <p>MME 绑定地址将指定 MME 将在何处监听 eNB S1AP 连接。 GTP-U 绑定地址应与 MME 绑定地址相同，除非您希望在与 S1AP 连接不同的子网上运行用户平面。</p>
 <p>所以如果你想在有IP的接口上监听eNB <em>10.0.1.10</em>，你可以这样做：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">须藤</span> <span class="n">SRSEPC</span> <span class="o">--</span><span class="n">嗯</span><span class="o">.</span><span class="n">mme_bind_地址</span> <span class="mf">10.0.1.10</span> <span class="o">--</span><span class="n">斯普格威</span><span class="o">.</span><span class="n">gtpu_bind_地址</span> <span class="mf">10.0.1.10</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">srsepc</span> <span class="o">--</span><span class="n">mme</span><span class="o">.</span><span class="n">mme_bind_addr</span> <span class="mf">10.0.1.10</span> <span class="o">--</span><span class="n">spgw</span><span class="o">.</span><span class="n">gtpu_bind_addr</span> <span class="mf">10.0.1.10</span>
 </pre></div>
 </div>
 </section>
 <section id="connecting-ues-to-the-internet">
 <span id="connecting-to-net"></span><h3>将UE连接到互联网<a class="headerlink" href="2_epc_getstarted.html#connecting-ues-to-the-internet" title="链接到此标题"></a></h3>
 <p>为了让UE能够连接到Internet，需要进行IP伪装。如果不进行伪装，Linux 内核将不会将数据包从一个子网转发到另一个子网。</p>
-<p>要启用此功能，您可以运行一个便捷脚本 <code class="docutils literal notranslate"><span class="pre">须藤</span> <span class="pre">srsepc_if_masq</span> <span class="pre">&lt;输出接口&gt;</span></code>, 其中 <em>输出接口</em> 是将PC连接到Internet的接口。</p>
+<p>要启用此功能，您可以运行一个便捷脚本 <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">srsepc_if_masq</span> <span class="pre">&lt;out_interface&gt;</span></code>, 其中 <em>输出接口</em> 是将PC连接到Internet的接口。</p>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
 <p><em>输出接口</em> 不是 <em>srs_spgw_sgi</em> 接口，而是将 PC 连接到互联网的以太网或 WiFi 以太网。</p>
@@ -550,7 +550,7 @@ IMSI 是 SIM 卡的唯一标识符，K 是 HSS 和 UE 用于相互验证的密�
 <section id="observing-results">
 <span id="observing-res"></span><h2>观察结果<a class="headerlink" href="2_epc_getstarted.html#observing-results" title="链接到此标题"></a></h2>
 <p>默认情况下，日志文件存储在 <code class="docutils literal notranslate"><span class="pre">/tmp/epc.log</span></code>。可以检查此文件以解决与 srsEPC 相关的任何问题。
-日志文件可以有多个详细级别，可以在 <code class="docutils literal notranslate"><span class="pre">EPC配置文件</span></code> 或通过命令行。它们还可以在每层容量上启用，这在对特定层进行故障排除时非常有用。</p>
+日志文件可以有多个详细级别，可以在 <code class="docutils literal notranslate"><span class="pre">epc.conf</span></code> 或通过命令行。它们还可以在每层容量上启用，这在对特定层进行故障排除时非常有用。</p>
 </section>
 </section>
 </div>
@@ -562,9 +562,9 @@ IMSI 是 SIM 卡的唯一标识符，K 是 HSS 和 UE 用于相互验证的密�
 <hr/>
 <div role="contentinfo">
 <p>© 版权所有 2019-2025，软件无线电系统..</p>
-</div>内置 <a href="https://www.sphinx-doc.org/">狮身人面像</a> 使用
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
-    由提供 <a href="https://readthedocs.org">阅读文档</a>.
+</div>基于 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    主题，由 <a href="https://readthedocs.org">Read the Docs</a> 提供。
    
 
 </footer>

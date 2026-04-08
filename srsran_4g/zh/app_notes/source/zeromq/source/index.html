@@ -71,12 +71,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../getting_started.html">开始使用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../feature_list.html">srsRAN 4G特点</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../feature_list.html#srsue">srsUE</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../feature_list.html#srsenb">血清ENB</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../feature_list.html#srsepc">超级EPC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../feature_list.html#srsenb">srsENB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../feature_list.html#srsepc">srsEPC</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../reporting_issues.html">报告问题</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../dev_status.html">发展现状</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../reporting_issues.html">问题反馈</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../dev_status.html">开发状态</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">第一步</span></p>
 <ul>
@@ -84,7 +84,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../../general/source/1_installation.html#which-installation-should-i-use">我应该使用哪种安装？</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../general/source/1_installation.html#package-installation">包安装</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../general/source/1_installation.html#installation-from-source">从源安装</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/1_installation.html#getting-support">获得支持</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/1_installation.html#getting-support">获取支持</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../general/source/2_release_notes.html">发行说明</a></li>
@@ -108,8 +108,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../usermanuals/source/1_setup.html">LTE 设置指南</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../usermanuals/source/1_setup.html#baseline-hardware-requirements">基准硬件要求</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../usermanuals/source/1_setup.html#running-a-4g-end-to-end-system">运行 4G 端到端系统</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/1_setup.html#srsepc">超级EPC</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/1_setup.html#srsenb">血清ENB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/1_setup.html#srsepc">srsEPC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/1_setup.html#srsenb">srsENB</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/1_setup.html#srsue">srsUE</a></li>
 </ul>
 </li>
@@ -125,14 +125,14 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/2_ue_getstarted.html">开始使用</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/2_ue_getstarted.html#running-the-software">运行软件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/2_ue_getstarted.html#configuration">配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/2_ue_getstarted.html#configuration">libconfig</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/2_ue_getstarted.html#hardware-setup">硬件设置</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/2_ue_getstarted.html#operating-system-setup">操作系统设置</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/2_ue_getstarted.html#observing-results">观察结果</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/3_ue_trouble.html">故障排除</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/3_ue_trouble.html#rf-configuration">RF 配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/3_ue_trouble.html#rf-configuration">RF libconfig</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/3_ue_trouble.html#network-attach">网络连接</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/3_ue_trouble.html#misconfigured-network">网络配置错误</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/3_ue_trouble.html#rf-issues">RF 问题</a></li>
@@ -165,7 +165,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/2_enb_getstarted.html">开始使用</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/2_enb_getstarted.html#running-the-software">运行软件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/2_enb_getstarted.html#configuration">配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/2_enb_getstarted.html#configuration">libconfig</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/2_enb_getstarted.html#hardware-setup">硬件设置</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/2_enb_getstarted.html#operating-system-setup">操作系统设置</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/2_enb_getstarted.html#observing-results">观察结果</a></li>
@@ -206,7 +206,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../usermanuals/source/srsepc/source/2_epc_getstarted.html">开始使用</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsepc/source/2_epc_getstarted.html#running-the-software">运行软件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsepc/source/2_epc_getstarted.html#configuration">配置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsepc/source/2_epc_getstarted.html#configuration">libconfig</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../../../usermanuals/source/srsepc/source/2_epc_getstarted.html#adding-an-ue-to-hss-database">将 UE 添加到 HSS 数据库</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../../usermanuals/source/srsepc/source/2_epc_getstarted.html#enbs-and-srsepc-on-separate-machines">eNB 和 srsEPC 位于不同的机器上</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../../usermanuals/source/srsepc/source/2_epc_getstarted.html#connecting-ues-to-the-internet">将UE连接到互联网</a></li>
@@ -301,13 +301,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../../2ca/source/index.html">载波聚合</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../2ca/source/index.html#introduction">简介</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../2ca/source/index.html#carrier-aggregation-using-sdr-hardware">使用 SDR 硬件进行载波聚合</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../2ca/source/index.html#enodeb-configuration">eNodeB 配置</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../2ca/source/index.html#ue-configuration">UE 配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../2ca/source/index.html#enodeb-configuration">eNodeB libconfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../2ca/source/index.html#ue-configuration">UE libconfig</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../2ca/source/index.html#carrier-aggregation-using-zeromq-rf-emulation">使用 ZeroMQ RF 仿真进行载波聚合</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../2ca/source/index.html#id2">eNodeB 配置</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../2ca/source/index.html#id3">UE 配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../2ca/source/index.html#id2">eNodeB libconfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../2ca/source/index.html#id3">UE libconfig</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../2ca/source/index.html#known-issues">已知问题</a></li>
@@ -327,9 +327,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../embms/source/index.html">eMBMS 端到端</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../embms/source/index.html#introduction">简介</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../embms/source/index.html#setup">设置</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../embms/source/index.html#srsenb-configuration">srsENB配置</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../embms/source/index.html#srsmbms-configuration">srsMBMS配置</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../embms/source/index.html#srsue-configuration">srsUE配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../embms/source/index.html#srsenb-configuration">srsENBlibconfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../embms/source/index.html#srsmbms-configuration">srsMBMSlibconfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../embms/source/index.html#srsue-configuration">srsUElibconfig</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../embms/source/index.html#usage">用途</a></li>
@@ -348,7 +348,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../pi4/source/index.html#introduction">简介</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../pi4/source/index.html#pi4-enodeb-hardware-requirements">Pi4 eNodeB 硬件要求</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../pi4/source/index.html#software-setup">软件设置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../pi4/source/index.html#pi4-enodeb-config">Pi4 eNodeB 配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pi4/source/index.html#pi4-enodeb-config">Pi4 eNodeB libconfig</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../pi4/source/index.html#running-the-pi4-enodeb">运行 Pi4 eNodeB</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../pi4/source/index.html#known-issues">已知问题</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../pi4/source/index.html#running-on-ubuntu-22-04-lts">在 Ubuntu 22.04 LTS 上运行</a></li>
@@ -361,18 +361,18 @@
 <li class="toctree-l3"><a class="reference internal" href="../../hw_packs/source/index.html#sdr-criteria">特别提款权标准</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../hw_packs/source/index.html#packages">套餐</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../hw_packs/source/index.html#package-1">套餐1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../hw_packs/source/index.html#packages">软件包</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../hw_packs/source/index.html#package-1">软件包 1</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../hw_packs/source/index.html#advantages">优点</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../hw_packs/source/index.html#limitations">局限性</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../hw_packs/source/index.html#package-2">套餐2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../hw_packs/source/index.html#package-2">软件包 2</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../hw_packs/source/index.html#id1">优点</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../hw_packs/source/index.html#id2">局限性</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../hw_packs/source/index.html#package-3">套餐3</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../hw_packs/source/index.html#package-3">软件包 3</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../hw_packs/source/index.html#id3">优点</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../hw_packs/source/index.html#id4">局限性</a></li>
 </ul>
@@ -391,7 +391,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../5g_sa_amari/source/index.html#hardware-requirements">硬件要求</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../5g_sa_amari/source/index.html#hardware-setup">硬件设置</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../5g_sa_amari/source/index.html#limitations">局限性</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../5g_sa_amari/source/index.html#configuration">配置</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../5g_sa_amari/source/index.html#configuration">libconfig</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../5g_sa_amari/source/index.html#srsue">srsUE</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../5g_sa_amari/source/index.html#callbox">电话亭</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../5g_sa_amari/source/index.html#enable-nr-support">启用 NR 支持</a></li>
@@ -421,7 +421,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../5g_nsa_amari/source/index.html#limitations">局限性</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../5g_nsa_amari/source/index.html#hardware-requirements">硬件要求</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../5g_nsa_amari/source/index.html#hardware-setup">硬件设置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../5g_nsa_amari/source/index.html#configuration">配置</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../5g_nsa_amari/source/index.html#configuration">libconfig</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../5g_nsa_amari/source/index.html#srsue">srsUE</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../5g_nsa_amari/source/index.html#callbox">电话亭</a></li>
 </ul>
@@ -484,47 +484,47 @@
 <h2>ZeroMQ安装<a class="headerlink" href="index.html#zeromq-installation" title="链接到此标题"></a></h2>
 <p>首先是安装 ZeroMQ 并构建 srsRAN 4G。在Ubuntu上，可以安装ZeroMQ开发库
 与：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">须藤</span> <span class="n">适合</span><span class="o">-</span><span class="n">得到</span> <span class="n">安装</span> <span class="n">libzmq3</span><span class="o">-</span><span class="n">开发者</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">libzmq3</span><span class="o">-</span><span class="n">dev</span>
 </pre></div>
 </div>
 <p>或者，也可以从源安装。</p>
 <p>首先，需要安装 libzmq：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">克隆</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">零MQ</span><span class="o">/</span><span class="n">libzmq</span><span class="o">.</span><span class="n">git</span>
-<span class="n">光盘</span> <span class="n">libzmq</span>
-<span class="o">./</span><span class="n">自动生成器</span><span class="o">.</span><span class="n">嘘</span>
-<span class="o">./</span><span class="n">配置</span>
-<span class="n">使</span>
-<span class="n">须藤</span> <span class="n">使</span> <span class="n">安装</span>
-<span class="n">须藤</span> <span class="n">LD配置</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">zeromq</span><span class="o">/</span><span class="n">libzmq</span><span class="o">.</span><span class="n">git</span>
+<span class="n">cd</span> <span class="n">libzmq</span>
+<span class="o">./</span><span class="n">autogen</span><span class="o">.</span><span class="n">sh</span>
+<span class="o">./</span><span class="n">configure</span>
+<span class="n">make</span>
+<span class="n">sudo</span> <span class="n">make</span> <span class="n">install</span>
+<span class="n">sudo</span> <span class="n">ldconfig</span>
 </pre></div>
 </div>
 <p>二、安装czmq：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">克隆</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">零MQ</span><span class="o">/</span><span class="n">陈志明</span><span class="o">.</span><span class="n">git</span>
-<span class="n">光盘</span> <span class="n">陈志明</span>
-<span class="o">./</span><span class="n">自动生成器</span><span class="o">.</span><span class="n">嘘</span>
-<span class="o">./</span><span class="n">配置</span>
-<span class="n">使</span>
-<span class="n">须藤</span> <span class="n">使</span> <span class="n">安装</span>
-<span class="n">须藤</span> <span class="n">LD配置</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">zeromq</span><span class="o">/</span><span class="n">czmq</span><span class="o">.</span><span class="n">git</span>
+<span class="n">cd</span> <span class="n">czmq</span>
+<span class="o">./</span><span class="n">autogen</span><span class="o">.</span><span class="n">sh</span>
+<span class="o">./</span><span class="n">configure</span>
+<span class="n">make</span>
+<span class="n">sudo</span> <span class="n">make</span> <span class="n">install</span>
+<span class="n">sudo</span> <span class="n">ldconfig</span>
 </pre></div>
 </div>
 <p>最后，您需要编译srsRAN 4G（假设您已经安装了所有必需的依赖项）。
 请注意，如果您在安装 ZMQ 和其他依赖项之前已经构建并安装了 srsRAN 4G，那么您
 必须重新运行 make 命令以确保 srsRAN 4G 识别 ZMQ 的添加：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">克隆</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">srsRAN</span><span class="o">/</span><span class="n">srsRAN_4G</span><span class="o">.</span><span class="n">git</span>
-<span class="n">光盘</span> <span class="n">srsRAN_4G</span>
-<span class="n">目录</span> <span class="n">建造</span>
-<span class="n">光盘</span> <span class="n">建造</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">srsRAN</span><span class="o">/</span><span class="n">srsRAN_4G</span><span class="o">.</span><span class="n">git</span>
+<span class="n">cd</span> <span class="n">srsRAN_4G</span>
+<span class="n">mkdir</span> <span class="n">build</span>
+<span class="n">cd</span> <span class="n">build</span>
 <span class="n">cmake</span> <span class="o">../</span>
-<span class="n">使</span>
+<span class="n">make</span>
 </pre></div>
 </div>
-<p>请特别注意 cmake 控制台输出。确保您阅读以下行：</p>
+<p>请请特别留意 cmake 的控制台输出，确认其中出现如下内容：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
-<span class="o">--</span> <span class="n">发现</span> <span class="n">零MQ</span><span class="o">.</span>
-<span class="o">--</span> <span class="n">检查</span> <span class="k">为了</span> <span class="n">模块</span> <span class="s1">'ZeroMQ'</span>
-<span class="o">--</span>   <span class="n">否</span> <span class="n">包</span> <span class="s1">'ZeroMQ'</span> <span class="n">发现</span>
-<span class="o">--</span> <span class="n">找到了</span> <span class="n">libZEROMQ</span><span class="p">:</span> <span class="o">/</span><span class="n">使用者</span><span class="o">/</span><span class="n">本地的</span><span class="o">/</span><span class="n">包括</span><span class="p">,</span> <span class="o">/</span><span class="n">使用者</span><span class="o">/</span><span class="n">本地的</span><span class="o">/</span><span class="n">库</span><span class="o">/</span><span class="n">libzmq</span><span class="o">.</span><span class="n">所以</span>
+<span class="o">--</span> <span class="n">FINDING</span> <span class="n">ZEROMQ</span><span class="o">.</span>
+<span class="o">--</span> <span class="n">Checking</span> <span class="k">for</span> <span class="n">module</span> <span class="s1">&#39;ZeroMQ&#39;</span>
+<span class="o">--</span>   <span class="n">No</span> <span class="n">package</span> <span class="s1">&#39;ZeroMQ&#39;</span> <span class="n">found</span>
+<span class="o">--</span> <span class="n">Found</span> <span class="n">libZEROMQ</span><span class="p">:</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">include</span><span class="p">,</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">libzmq</span><span class="o">.</span><span class="n">so</span>
 <span class="o">...</span>
 </pre></div>
 </div>
@@ -547,11 +547,11 @@ UE 用于在其中创建其 TUN 接口的网络命名空间 (netns)。</p>
 <section id="network-namespace-creation">
 <h3>网络命名空间创建<a class="headerlink" href="index.html#network-namespace-creation" title="链接到此标题"></a></h3>
 <p>让我们开始为（第一个）UE 创建一个名为“ue1”的新网络命名空间：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">须藤</span> <span class="n">ip</span> <span class="n">网络</span> <span class="n">添加</span> <span class="n">UE1</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">ip</span> <span class="n">netns</span> <span class="n">add</span> <span class="n">ue1</span>
 </pre></div>
 </div>
 <p>要验证新的“ue1”网络是否存在，请运行：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">须藤</span> <span class="n">ip</span> <span class="n">网络</span> <span class="nb">清单</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">ip</span> <span class="n">netns</span> <span class="nb">list</span>
 </pre></div>
 </div>
 </section>
@@ -559,7 +559,7 @@ UE 用于在其中创建其 TUN 接口的网络命名空间 (netns)。</p>
 <h3>运行 EPC<a class="headerlink" href="index.html#running-the-epc" title="链接到此标题"></a></h3>
 <p>现在让我们启动EPC。这将在默认情况下创建一个 TUN 设备
 网络命名空间，因此需要 root 权限。</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">须藤</span> <span class="o">./</span><span class="n">SRSEPC</span><span class="o">/</span><span class="n">源代码</span><span class="o">/</span><span class="n">SRSEPC</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">./</span><span class="n">srsepc</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">srsepc</span>
 </pre></div>
 </div>
 </section>
@@ -569,14 +569,14 @@ UE 用于在其中创建其 TUN 接口的网络命名空间 (netns)。</p>
 需要通过命令行参数为 ZMQ 调整的所有参数。如果你
 想让它们持久化，只需将它们添加到本地 enb.conf 中即可。 eNB 可以是
 无需 root 权限即可启动。</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">斯尔森布</span><span class="o">/</span><span class="n">源代码</span><span class="o">/</span><span class="n">斯尔森布</span> <span class="o">--</span><span class="n">射频</span><span class="o">.</span><span class="n">设备名称</span><span class="o">=</span><span class="n">兹米克</span> <span class="o">--</span><span class="n">射频</span><span class="o">.</span><span class="n">设备参数</span><span class="o">=</span><span class="s2">“fail_on_disconnect=true，tx_port=tcp://*:2000，rx_port=tcp://localhost:2001，id=enb，base_srate=23.04e6”</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">srsenb</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">srsenb</span> <span class="o">--</span><span class="n">rf</span><span class="o">.</span><span class="n">device_name</span><span class="o">=</span><span class="n">zmq</span> <span class="o">--</span><span class="n">rf</span><span class="o">.</span><span class="n">device_args</span><span class="o">=</span><span class="s2">&quot;fail_on_disconnect=true,tx_port=tcp://*:2000,rx_port=tcp://localhost:2001,id=enb,base_srate=23.04e6&quot;</span>
 </pre></div>
 </div>
 </section>
 <section id="running-the-ue">
 <h3>运行 UE<a class="headerlink" href="index.html#running-the-ue" title="链接到此标题"></a></h3>
 <p>最后我们可以启动 UE，再次使用 root 权限来创建 TUN 设备。</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">须藤</span> <span class="o">./</span><span class="n">斯苏埃</span><span class="o">/</span><span class="n">源代码</span><span class="o">/</span><span class="n">斯苏埃</span> <span class="o">--</span><span class="n">射频</span><span class="o">.</span><span class="n">设备名称</span><span class="o">=</span><span class="n">兹米克</span> <span class="o">--</span><span class="n">射频</span><span class="o">.</span><span class="n">设备参数</span><span class="o">=</span><span class="s2">“tx_port=tcp://*:2001，rx_port=tcp://localhost:2000，id=ue，base_srate=23.04e6”</span> <span class="o">--</span><span class="n">GW</span><span class="o">.</span><span class="n">网络</span><span class="o">=</span><span class="n">UE1</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">./</span><span class="n">srsue</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">srsue</span> <span class="o">--</span><span class="n">rf</span><span class="o">.</span><span class="n">device_name</span><span class="o">=</span><span class="n">zmq</span> <span class="o">--</span><span class="n">rf</span><span class="o">.</span><span class="n">device_args</span><span class="o">=</span><span class="s2">&quot;tx_port=tcp://*:2001,rx_port=tcp://localhost:2000,id=ue,base_srate=23.04e6&quot;</span> <span class="o">--</span><span class="n">gw</span><span class="o">.</span><span class="n">netns</span><span class="o">=</span><span class="n">ue1</span>
 </pre></div>
 </div>
 <p>最后一个命令应启动 UE 并将其连接到核心网络。
@@ -586,19 +586,19 @@ UE 将被分配一个配置范围内的 IP 地址（例如 172.16.0.2）。</p>
 <h3>流量生成<a class="headerlink" href="index.html#traffic-generation" title="链接到此标题"></a></h3>
 <p>要在下行链路方向（即来自 EPC）交换流量，只需运行 ping
 或像往常一样在命令行上使用 iperf，例如：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">平</span> <span class="mf">172.16.0.2</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ping</span> <span class="mf">172.16.0.2</span>
 </pre></div>
 </div>
 <p>为了生成上行链路方向的流量，运行 ping 命令非常重要
 在 UE 的网络命名空间中。</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">须藤</span> <span class="n">ip</span> <span class="n">网络</span> <span class="n">执行</span> <span class="n">UE1</span> <span class="n">平</span> <span class="mf">172.16.0.1</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">ip</span> <span class="n">netns</span> <span class="n">exec</span> <span class="n">ue1</span> <span class="n">ping</span> <span class="mf">172.16.0.1</span>
 </pre></div>
 </div>
 </section>
 <section id="namespace-deletion">
 <h3>命名空间删除<a class="headerlink" href="index.html#namespace-deletion" title="链接到此标题"></a></h3>
 <p>完成后，请务必再次取下网。</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">须藤</span> <span class="n">ip</span> <span class="n">网络</span> <span class="n">删除</span> <span class="n">UE1</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">ip</span> <span class="n">netns</span> <span class="n">delete</span> <span class="n">ue1</span>
 </pre></div>
 </div>
 </section>
@@ -624,7 +624,7 @@ UE 将被分配一个配置范围内的 IP 地址（例如 172.16.0.2）。</p>
 <thead>
 <tr class="row-odd"><th class="head"><p>港口方向</p></th>
 <th class="head"><p>srsUE</p></th>
-<th class="head"><p>血清ENB</p></th>
+<th class="head"><p>srsENB</p></th>
 </tr>
 </thead>
 <tbody>
@@ -674,9 +674,9 @@ UE 将被分配一个配置范围内的 IP 地址（例如 172.16.0.2）。</p>
 <hr/>
 <div role="contentinfo">
 <p>© 版权所有 2019-2025，软件无线电系统..</p>
-</div>内置 <a href="https://www.sphinx-doc.org/">狮身人面像</a> 使用
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
-    由提供 <a href="https://readthedocs.org">阅读文档</a>.
+</div>基于 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    主题，由 <a href="https://readthedocs.org">Read the Docs</a> 提供。
    
 
 </footer>

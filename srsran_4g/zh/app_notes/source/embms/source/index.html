@@ -71,12 +71,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../getting_started.html">开始使用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../feature_list.html">srsRAN 4G特点</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../feature_list.html#srsue">srsUE</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../feature_list.html#srsenb">血清ENB</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../feature_list.html#srsepc">超级EPC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../feature_list.html#srsenb">srsENB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../feature_list.html#srsepc">srsEPC</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../reporting_issues.html">报告问题</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../dev_status.html">发展现状</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../reporting_issues.html">问题反馈</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../dev_status.html">开发状态</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">第一步</span></p>
 <ul>
@@ -84,7 +84,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../../general/source/1_installation.html#which-installation-should-i-use">我应该使用哪种安装？</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../general/source/1_installation.html#package-installation">包安装</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../general/source/1_installation.html#installation-from-source">从源安装</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/1_installation.html#getting-support">获得支持</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/1_installation.html#getting-support">获取支持</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../general/source/2_release_notes.html">发行说明</a></li>
@@ -108,8 +108,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../usermanuals/source/1_setup.html">LTE 设置指南</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../usermanuals/source/1_setup.html#baseline-hardware-requirements">基准硬件要求</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../usermanuals/source/1_setup.html#running-a-4g-end-to-end-system">运行 4G 端到端系统</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/1_setup.html#srsepc">超级EPC</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/1_setup.html#srsenb">血清ENB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/1_setup.html#srsepc">srsEPC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/1_setup.html#srsenb">srsENB</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/1_setup.html#srsue">srsUE</a></li>
 </ul>
 </li>
@@ -125,14 +125,14 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/2_ue_getstarted.html">开始使用</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/2_ue_getstarted.html#running-the-software">运行软件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/2_ue_getstarted.html#configuration">配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/2_ue_getstarted.html#configuration">libconfig</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/2_ue_getstarted.html#hardware-setup">硬件设置</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/2_ue_getstarted.html#operating-system-setup">操作系统设置</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/2_ue_getstarted.html#observing-results">观察结果</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/3_ue_trouble.html">故障排除</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/3_ue_trouble.html#rf-configuration">RF 配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/3_ue_trouble.html#rf-configuration">RF libconfig</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/3_ue_trouble.html#network-attach">网络连接</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/3_ue_trouble.html#misconfigured-network">网络配置错误</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/3_ue_trouble.html#rf-issues">RF 问题</a></li>
@@ -165,7 +165,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/2_enb_getstarted.html">开始使用</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/2_enb_getstarted.html#running-the-software">运行软件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/2_enb_getstarted.html#configuration">配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/2_enb_getstarted.html#configuration">libconfig</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/2_enb_getstarted.html#hardware-setup">硬件设置</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/2_enb_getstarted.html#operating-system-setup">操作系统设置</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/2_enb_getstarted.html#observing-results">观察结果</a></li>
@@ -206,7 +206,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../usermanuals/source/srsepc/source/2_epc_getstarted.html">开始使用</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsepc/source/2_epc_getstarted.html#running-the-software">运行软件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsepc/source/2_epc_getstarted.html#configuration">配置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsepc/source/2_epc_getstarted.html#configuration">libconfig</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../../../usermanuals/source/srsepc/source/2_epc_getstarted.html#adding-an-ue-to-hss-database">将 UE 添加到 HSS 数据库</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../../usermanuals/source/srsepc/source/2_epc_getstarted.html#enbs-and-srsepc-on-separate-machines">eNB 和 srsEPC 位于不同的机器上</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../../usermanuals/source/srsepc/source/2_epc_getstarted.html#connecting-ues-to-the-internet">将UE连接到互联网</a></li>
@@ -301,13 +301,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../../2ca/source/index.html">载波聚合</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../2ca/source/index.html#introduction">简介</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../2ca/source/index.html#carrier-aggregation-using-sdr-hardware">使用 SDR 硬件进行载波聚合</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../2ca/source/index.html#enodeb-configuration">eNodeB 配置</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../2ca/source/index.html#ue-configuration">UE 配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../2ca/source/index.html#enodeb-configuration">eNodeB libconfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../2ca/source/index.html#ue-configuration">UE libconfig</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../2ca/source/index.html#carrier-aggregation-using-zeromq-rf-emulation">使用 ZeroMQ RF 仿真进行载波聚合</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../2ca/source/index.html#id2">eNodeB 配置</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../2ca/source/index.html#id3">UE 配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../2ca/source/index.html#id2">eNodeB libconfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../2ca/source/index.html#id3">UE libconfig</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../2ca/source/index.html#known-issues">已知问题</a></li>
@@ -327,9 +327,9 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="index.html#">eMBMS 端到端</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="index.html#introduction">简介</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#setup">设置</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="index.html#srsenb-configuration">srsENB配置</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#srsmbms-configuration">srsMBMS配置</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#srsue-configuration">srsUE配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#srsenb-configuration">srsENBlibconfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#srsmbms-configuration">srsMBMSlibconfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#srsue-configuration">srsUElibconfig</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#usage">用途</a></li>
@@ -348,7 +348,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../pi4/source/index.html#introduction">简介</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../pi4/source/index.html#pi4-enodeb-hardware-requirements">Pi4 eNodeB 硬件要求</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../pi4/source/index.html#software-setup">软件设置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../pi4/source/index.html#pi4-enodeb-config">Pi4 eNodeB 配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pi4/source/index.html#pi4-enodeb-config">Pi4 eNodeB libconfig</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../pi4/source/index.html#running-the-pi4-enodeb">运行 Pi4 eNodeB</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../pi4/source/index.html#known-issues">已知问题</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../pi4/source/index.html#running-on-ubuntu-22-04-lts">在 Ubuntu 22.04 LTS 上运行</a></li>
@@ -361,18 +361,18 @@
 <li class="toctree-l3"><a class="reference internal" href="../../hw_packs/source/index.html#sdr-criteria">特别提款权标准</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../hw_packs/source/index.html#packages">套餐</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../hw_packs/source/index.html#package-1">套餐1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../hw_packs/source/index.html#packages">软件包</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../hw_packs/source/index.html#package-1">软件包 1</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../hw_packs/source/index.html#advantages">优点</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../hw_packs/source/index.html#limitations">局限性</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../hw_packs/source/index.html#package-2">套餐2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../hw_packs/source/index.html#package-2">软件包 2</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../hw_packs/source/index.html#id1">优点</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../hw_packs/source/index.html#id2">局限性</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../hw_packs/source/index.html#package-3">套餐3</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../hw_packs/source/index.html#package-3">软件包 3</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../hw_packs/source/index.html#id3">优点</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../hw_packs/source/index.html#id4">局限性</a></li>
 </ul>
@@ -391,7 +391,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../5g_sa_amari/source/index.html#hardware-requirements">硬件要求</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../5g_sa_amari/source/index.html#hardware-setup">硬件设置</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../5g_sa_amari/source/index.html#limitations">局限性</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../5g_sa_amari/source/index.html#configuration">配置</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../5g_sa_amari/source/index.html#configuration">libconfig</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../5g_sa_amari/source/index.html#srsue">srsUE</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../5g_sa_amari/source/index.html#callbox">电话亭</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../5g_sa_amari/source/index.html#enable-nr-support">启用 NR 支持</a></li>
@@ -421,7 +421,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../5g_nsa_amari/source/index.html#limitations">局限性</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../5g_nsa_amari/source/index.html#hardware-requirements">硬件要求</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../5g_nsa_amari/source/index.html#hardware-setup">硬件设置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../5g_nsa_amari/source/index.html#configuration">配置</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../5g_nsa_amari/source/index.html#configuration">libconfig</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../5g_nsa_amari/source/index.html#srsue">srsUE</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../5g_nsa_amari/source/index.html#callbox">电话亭</a></li>
 </ul>
@@ -488,7 +488,7 @@ TUN虚拟网络接口并将其提供给eNodeB中的eMBMS承载。</p>
 在提供的示例配置中，假设 srsmbms、srsepc 和 srsenb 在同一台物理计算机上运行。</p>
 <section id="srsenb-configuration">
 <h3>srsENB配置<a class="headerlink" href="index.html#srsenb-configuration" title="链接到此标题"></a></h3>
-<p>在eNodeB上，需要额外的配置才能支持eMBMS传输。首先，不要使用默认的 <code class="docutils literal notranslate"><span class="pre">sib.conf.示例</span></code>，替代方案 <code class="docutils literal notranslate"><span class="pre">sib.conf.mbsfn. 示例</span></code> 应该使用。此版本的 sib 配置添加了 eMBMS
+<p>在eNodeB上，需要额外的配置才能支持eMBMS传输。首先，不要使用默认的 <code class="docutils literal notranslate"><span class="pre">sib.conf.example</span></code>，替代方案 <code class="docutils literal notranslate"><span class="pre">sib.conf.mbsfn.example</span></code> 应该使用。此版本的 sib 配置添加了 eMBMS
 SIB2 的参数，并包括特定于 eMBMS 的 SIB 13。这些 SIB 修改定义了以下关键 eMBMS 网络
 参数：</p>
 <blockquote>
@@ -502,22 +502,22 @@ SIB2 的参数，并包括特定于 eMBMS 的 SIB 13。这些 SIB 修改定义�
 <li><p>MCCH 重复周期</p></li>
 </ul>
 </div></blockquote>
-<p>除了使用 eMBMS SIB 配置文件之外，还必须在 <code class="docutils literal notranslate"><span class="pre">enb配置文件</span></code>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">enb_文件</span><span class="p">]</span>
-<span class="n">同胞配置</span> <span class="o">=</span> <span class="n">同胞</span><span class="o">.</span><span class="n">会议</span><span class="o">.</span><span class="n">mbsfn</span>
+<p>除了使用 eMBMS SIB 配置文件之外，还必须在 <code class="docutils literal notranslate"><span class="pre">enb.conf</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">enb_files</span><span class="p">]</span>
+<span class="n">sib_config</span> <span class="o">=</span> <span class="n">sib</span><span class="o">.</span><span class="n">conf</span><span class="o">.</span><span class="n">mbsfn</span>
 
-<span class="p">[</span><span class="n">嵌入物</span><span class="p">]</span>
-<span class="n">启用</span> <span class="o">=</span> <span class="n">真实</span>
+<span class="p">[</span><span class="n">embms</span><span class="p">]</span>
+<span class="n">enable</span> <span class="o">=</span> <span class="n">true</span>
 
-<span class="p">[</span><span class="n">调度程序</span><span class="p">]</span>
+<span class="p">[</span><span class="n">scheduler</span><span class="p">]</span>
 <span class="n">min_nof_ctrl_symbols</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="n">最大nof_ctrl_符号</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">max_nof_ctrl_symbols</span> <span class="o">=</span> <span class="mi">2</span>
 
-<span class="p">[</span><span class="n">专家</span><span class="p">]</span>
-<span class="n">nof_phy_线程</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="p">[</span><span class="n">expert</span><span class="p">]</span>
+<span class="n">nof_phy_threads</span> <span class="o">=</span> <span class="mi">2</span>
 </pre></div>
 </div>
-<p>套装 <code class="docutils literal notranslate"><span class="pre">m1u_if_地址</span></code> 到像这样的本地主机地址 <code class="docutils literal notranslate"><span class="pre">127.0.1.201</span></code> 或 srsMBMS 二进制文件可用的网络的本地 IP。完成这些设置调整后，eNodeB 应准备好在 eMBMS 模式下运行。</p>
+<p>套装 <code class="docutils literal notranslate"><span class="pre">m1u_if_addr</span></code> 到像这样的本地主机地址 <code class="docutils literal notranslate"><span class="pre">127.0.1.201</span></code> 或 srsMBMS 二进制文件可用的网络的本地 IP。完成这些设置调整后，eNodeB 应准备好在 eMBMS 模式下运行。</p>
 </section>
 <section id="srsmbms-configuration">
 <h3>srsMBMS配置<a class="headerlink" href="index.html#srsmbms-configuration" title="链接到此标题"></a></h3>
@@ -526,21 +526,21 @@ SIB2 的参数，并包括特定于 eMBMS 的 SIB 13。这些 SIB 修改定义�
 <span class="n">m1u_multi_if</span>   <span class="o">=</span> <span class="mf">127.0.1.200</span>
 </pre></div>
 </div>
-<p>套装 <code class="docutils literal notranslate"><span class="pre">m1u_if_地址</span></code> 到像这样的本地主机地址 <code class="docutils literal notranslate"><span class="pre">127.0.1.200</span></code> 或 eNodeB 可用的网络的本地 IP。</p>
+<p>套装 <code class="docutils literal notranslate"><span class="pre">m1u_if_addr</span></code> 到像这样的本地主机地址 <code class="docutils literal notranslate"><span class="pre">127.0.1.200</span></code> 或 eNodeB 可用的网络的本地 IP。</p>
 </section>
 <section id="srsue-configuration">
 <h3>srsUE配置<a class="headerlink" href="index.html#srsue-configuration" title="链接到此标题"></a></h3>
 <p>对于 UE，将从下行链路信号中存在的 SIB 和 MCCH 自动检测 eMBMS 传输的存在。要接收活动的 eMBMS 服务，必须在中设置以下参数 <code class="docutils literal notranslate"><span class="pre">ue.conf</span></code>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">RRC</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">rrc</span><span class="p">]</span>
 <span class="n">mbms_service_id</span> <span class="o">=</span> <span class="mi">0</span>
 </pre></div>
 </div>
 <p>请注意，此服务 ID 必须与网络使用的服务 ID 匹配。</p>
 <p>此外，我们建议使用以下设置以获得 eMBMS 的最佳性能：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">物理层</span><span class="p">]</span>
-<span class="n">interpolate_subframe_enabled</span> <span class="o">=</span> <span class="n">真实</span>
-<span class="n">snr_估计_alg</span> <span class="o">=</span> <span class="n">空的</span>
-<span class="n">nof_phy_线程</span> <span class="o">=</span> <span class="mi">2</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">phy</span><span class="p">]</span>
+<span class="n">interpolate_subframe_enabled</span> <span class="o">=</span> <span class="n">true</span>
+<span class="n">snr_estim_alg</span> <span class="o">=</span> <span class="n">empty</span>
+<span class="n">nof_phy_threads</span> <span class="o">=</span> <span class="mi">2</span>
 </pre></div>
 </div>
 <p>完成这些配置后，您的 UE 应准备好运行 eMBMS。</p>
@@ -549,32 +549,32 @@ SIB2 的参数，并包括特定于 eMBMS 的 SIB 13。这些 SIB 修改定义�
 <section id="usage">
 <h2>用途<a class="headerlink" href="index.html#usage" title="链接到此标题"></a></h2>
 <p>首先，在同一台计算机上运行 srsMBMS（MBMS 网关）、srsEPC 和 srsENB：</p>
-<p><code class="docutils literal notranslate"><span class="pre">须藤</span> <span class="pre">./srsmbms</span> <span class="pre">〜/.config/srsran_4g/mbms.conf</span></code></p>
-<p><code class="docutils literal notranslate"><span class="pre">须藤</span> <span class="pre">./srsepc</span> <span class="pre">〜/.config/srsran_4g/epc.conf</span></code></p>
-<p><code class="docutils literal notranslate"><span class="pre">须藤</span> <span class="pre">./srsenb</span> <span class="pre">〜/.config/srsran_4g/enb.conf</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">./srsmbms</span> <span class="pre">~/.config/srsran_4g/mbms.conf</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">./srsepc</span> <span class="pre">~/.config/srsran_4g/epc.conf</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">./srsenb</span> <span class="pre">~/.config/srsran_4g/enb.conf</span></code></p>
 <p>MBMS 网关将创建一个 TUN 接口，所有用于多播的流量都应写入该接口。然后，它将通过专用于 eMBMS 流量的单独 GTPU 隧道将此流量转发到 eNodeB。</p>
 <p>要使用 srsMBMS、srsEPC 和 srsENB 测试 eMBMS，我们可以使用 <a class="reference external" href="https://en.wikipedia.org/wiki/Iperf">伊珀夫</a>。在MBMS网关处，创建路由并启动下行流量：</p>
-<p><code class="docutils literal notranslate"><span class="pre">须藤</span> <span class="pre">路线</span> <span class="pre">添加</span> <span class="pre">-网络</span> <span class="pre">239.255.1.0</span> <span class="pre">网络掩码</span> <span class="pre">255.255.255.0</span> <span class="pre">开发者</span> <span class="pre">sgi_mb</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">route</span> <span class="pre">add</span> <span class="pre">-net</span> <span class="pre">239.255.1.0</span> <span class="pre">netmask</span> <span class="pre">255.255.255.0</span> <span class="pre">dev</span> <span class="pre">sgi_mb</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">iperf</span> <span class="pre">-u</span> <span class="pre">-c</span> <span class="pre">239.255.1.1</span> <span class="pre">-b</span> <span class="pre">10M</span> <span class="pre">-T</span> <span class="pre">64</span> <span class="pre">-t</span> <span class="pre">60</span></code></p>
 <p>接下来，我们可以在单独的机器上运行 srsUE 来接收 eMBMS 数据：</p>
-<p><code class="docutils literal notranslate"><span class="pre">须藤</span> <span class="pre">./srsue</span> <span class="pre">〜/.config/srsran_4g/ue.conf</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">./srsue</span> <span class="pre">~/.config/srsran_4g/ue.conf</span></code></p>
 <blockquote>
 <div><p>在启用了 eMBMS 的 eNodeB 上运行 srsUE 后，您应该在 UE 的终端看到以下输出：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">搜寻中</span> <span class="n">细胞</span> <span class="ow">在</span> <span class="n">DL</span> <span class="n">EARFC网络</span><span class="o">=</span><span class="mi">3400</span><span class="p">,</span> <span class="n">f_dl</span><span class="o">=</span><span class="mf">2685.0</span> <span class="n">兆赫兹</span><span class="p">,</span> <span class="n">f_ul</span><span class="o">=</span><span class="mf">2565.0</span> <span class="n">兆赫兹</span>
-<span class="n">找到了</span> <span class="n">细胞</span><span class="p">:</span>  <span class="n">模式</span><span class="o">=</span><span class="n">FDD</span><span class="p">,</span> <span class="n">PCI</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">PRB</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">港口</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">首席财务官</span><span class="o">=-</span><span class="mf">0.0</span> <span class="n">千赫兹</span>
-<span class="n">找到了</span> <span class="n">PLMN</span><span class="p">:</span>  <span class="n">身份证号</span><span class="o">=</span><span class="mi">00101</span><span class="p">,</span> <span class="n">TAC</span><span class="o">=</span><span class="mi">7</span>
-<span class="n">随机</span> <span class="n">访问</span> <span class="n">传输</span><span class="p">:</span> <span class="n">序列</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">拉</span><span class="o">-</span><span class="n">rnti</span><span class="o">=</span><span class="mh">0x2</span>
-<span class="n">随机</span> <span class="n">访问</span> <span class="n">完成</span><span class="o">.</span>     <span class="n">c</span><span class="o">-</span><span class="n">rnti</span><span class="o">=</span><span class="mh">0x46</span><span class="p">,</span> <span class="n">塔</span><span class="o">=</span><span class="mi">1</span>
-<span class="n">RRC</span> <span class="n">已连接</span>
-<span class="n">MBMS</span> <span class="n">服务</span> <span class="n">开始了</span><span class="o">.</span> <span class="n">服务</span> <span class="nb">编号</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span> <span class="n">港口</span><span class="p">:</span> <span class="mi">4321</span>
-<span class="n">网络</span> <span class="n">附加</span> <span class="n">成功的</span><span class="o">.</span> <span class="n">知识产权</span><span class="p">:</span> <span class="mf">172.16.0.2</span>
-<span class="n">软件</span> <span class="n">收音机</span> <span class="n">系统</span> <span class="n">LTE</span> <span class="p">(</span><span class="n">srsRAN</span>  <span class="mi">4</span><span class="n">G</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Searching</span> <span class="n">cell</span> <span class="ow">in</span> <span class="n">DL</span> <span class="n">EARFCN</span><span class="o">=</span><span class="mi">3400</span><span class="p">,</span> <span class="n">f_dl</span><span class="o">=</span><span class="mf">2685.0</span> <span class="n">MHz</span><span class="p">,</span> <span class="n">f_ul</span><span class="o">=</span><span class="mf">2565.0</span> <span class="n">MHz</span>
+<span class="n">Found</span> <span class="n">Cell</span><span class="p">:</span>  <span class="n">Mode</span><span class="o">=</span><span class="n">FDD</span><span class="p">,</span> <span class="n">PCI</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">PRB</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">Ports</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">CFO</span><span class="o">=-</span><span class="mf">0.0</span> <span class="n">KHz</span>
+<span class="n">Found</span> <span class="n">PLMN</span><span class="p">:</span>  <span class="n">Id</span><span class="o">=</span><span class="mi">00101</span><span class="p">,</span> <span class="n">TAC</span><span class="o">=</span><span class="mi">7</span>
+<span class="n">Random</span> <span class="n">Access</span> <span class="n">Transmission</span><span class="p">:</span> <span class="n">seq</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">ra</span><span class="o">-</span><span class="n">rnti</span><span class="o">=</span><span class="mh">0x2</span>
+<span class="n">Random</span> <span class="n">Access</span> <span class="n">Complete</span><span class="o">.</span>     <span class="n">c</span><span class="o">-</span><span class="n">rnti</span><span class="o">=</span><span class="mh">0x46</span><span class="p">,</span> <span class="n">ta</span><span class="o">=</span><span class="mi">1</span>
+<span class="n">RRC</span> <span class="n">Connected</span>
+<span class="n">MBMS</span> <span class="n">service</span> <span class="n">started</span><span class="o">.</span> <span class="n">Service</span> <span class="nb">id</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span> <span class="n">port</span><span class="p">:</span> <span class="mi">4321</span>
+<span class="n">Network</span> <span class="n">attach</span> <span class="n">successful</span><span class="o">.</span> <span class="n">IP</span><span class="p">:</span> <span class="mf">172.16.0.2</span>
+<span class="n">Software</span> <span class="n">Radio</span> <span class="n">Systems</span> <span class="n">LTE</span> <span class="p">(</span><span class="n">srsRAN</span>  <span class="mi">4</span><span class="n">G</span><span class="p">)</span>
 </pre></div>
 </div>
 </div></blockquote>
 <p>的 <em>MBMS服务启动。服务ID：0，端口：4321</em> 表示eMBMS服务已成功启动。</p>
 <p>要接收组播 iperf 数据，请添加到 UE 的路由并启动 iperf 服务器：</p>
-<p><code class="docutils literal notranslate"><span class="pre">须藤</span> <span class="pre">路线</span> <span class="pre">添加</span> <span class="pre">-网络</span> <span class="pre">239.255.1.0</span> <span class="pre">网络掩码</span> <span class="pre">255.255.255.0</span> <span class="pre">开发者</span> <span class="pre">tun_srsue</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">route</span> <span class="pre">add</span> <span class="pre">-net</span> <span class="pre">239.255.1.0</span> <span class="pre">netmask</span> <span class="pre">255.255.255.0</span> <span class="pre">dev</span> <span class="pre">tun_srsue</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">iperf</span> <span class="pre">-s</span> <span class="pre">-u</span> <span class="pre">-B</span> <span class="pre">239.255.1.1</span> <span class="pre">-i</span> <span class="pre">1</span></code></p>
 </section>
 </section>
@@ -587,9 +587,9 @@ SIB2 的参数，并包括特定于 eMBMS 的 SIB 13。这些 SIB 修改定义�
 <hr/>
 <div role="contentinfo">
 <p>© 版权所有 2019-2025，软件无线电系统..</p>
-</div>内置 <a href="https://www.sphinx-doc.org/">狮身人面像</a> 使用
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
-    由提供 <a href="https://readthedocs.org">阅读文档</a>.
+</div>基于 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    主题，由 <a href="https://readthedocs.org">Read the Docs</a> 提供。
    
 
 </footer>

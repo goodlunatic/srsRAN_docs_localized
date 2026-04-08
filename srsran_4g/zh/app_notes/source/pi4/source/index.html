@@ -71,12 +71,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../getting_started.html">开始使用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../feature_list.html">srsRAN 4G特点</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../feature_list.html#srsue">srsUE</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../feature_list.html#srsenb">血清ENB</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../feature_list.html#srsepc">超级EPC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../feature_list.html#srsenb">srsENB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../feature_list.html#srsepc">srsEPC</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../reporting_issues.html">报告问题</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../dev_status.html">发展现状</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../reporting_issues.html">问题反馈</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../dev_status.html">开发状态</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">第一步</span></p>
 <ul>
@@ -84,7 +84,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../../general/source/1_installation.html#which-installation-should-i-use">我应该使用哪种安装？</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../general/source/1_installation.html#package-installation">包安装</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../general/source/1_installation.html#installation-from-source">从源安装</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/1_installation.html#getting-support">获得支持</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/1_installation.html#getting-support">获取支持</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../general/source/2_release_notes.html">发行说明</a></li>
@@ -108,8 +108,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../usermanuals/source/1_setup.html">LTE 设置指南</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../usermanuals/source/1_setup.html#baseline-hardware-requirements">基准硬件要求</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../usermanuals/source/1_setup.html#running-a-4g-end-to-end-system">运行 4G 端到端系统</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/1_setup.html#srsepc">超级EPC</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/1_setup.html#srsenb">血清ENB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/1_setup.html#srsepc">srsEPC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/1_setup.html#srsenb">srsENB</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/1_setup.html#srsue">srsUE</a></li>
 </ul>
 </li>
@@ -125,14 +125,14 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/2_ue_getstarted.html">开始使用</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/2_ue_getstarted.html#running-the-software">运行软件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/2_ue_getstarted.html#configuration">配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/2_ue_getstarted.html#configuration">libconfig</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/2_ue_getstarted.html#hardware-setup">硬件设置</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/2_ue_getstarted.html#operating-system-setup">操作系统设置</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/2_ue_getstarted.html#observing-results">观察结果</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/3_ue_trouble.html">故障排除</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/3_ue_trouble.html#rf-configuration">RF 配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/3_ue_trouble.html#rf-configuration">RF libconfig</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/3_ue_trouble.html#network-attach">网络连接</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/3_ue_trouble.html#misconfigured-network">网络配置错误</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../../usermanuals/source/srsue/source/3_ue_trouble.html#rf-issues">RF 问题</a></li>
@@ -165,7 +165,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/2_enb_getstarted.html">开始使用</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/2_enb_getstarted.html#running-the-software">运行软件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/2_enb_getstarted.html#configuration">配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/2_enb_getstarted.html#configuration">libconfig</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/2_enb_getstarted.html#hardware-setup">硬件设置</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/2_enb_getstarted.html#operating-system-setup">操作系统设置</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsenb/source/2_enb_getstarted.html#observing-results">观察结果</a></li>
@@ -206,7 +206,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../usermanuals/source/srsepc/source/2_epc_getstarted.html">开始使用</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsepc/source/2_epc_getstarted.html#running-the-software">运行软件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsepc/source/2_epc_getstarted.html#configuration">配置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usermanuals/source/srsepc/source/2_epc_getstarted.html#configuration">libconfig</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../../../usermanuals/source/srsepc/source/2_epc_getstarted.html#adding-an-ue-to-hss-database">将 UE 添加到 HSS 数据库</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../../usermanuals/source/srsepc/source/2_epc_getstarted.html#enbs-and-srsepc-on-separate-machines">eNB 和 srsEPC 位于不同的机器上</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../../usermanuals/source/srsepc/source/2_epc_getstarted.html#connecting-ues-to-the-internet">将UE连接到互联网</a></li>
@@ -301,13 +301,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../../2ca/source/index.html">载波聚合</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../2ca/source/index.html#introduction">简介</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../2ca/source/index.html#carrier-aggregation-using-sdr-hardware">使用 SDR 硬件进行载波聚合</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../2ca/source/index.html#enodeb-configuration">eNodeB 配置</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../2ca/source/index.html#ue-configuration">UE 配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../2ca/source/index.html#enodeb-configuration">eNodeB libconfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../2ca/source/index.html#ue-configuration">UE libconfig</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../2ca/source/index.html#carrier-aggregation-using-zeromq-rf-emulation">使用 ZeroMQ RF 仿真进行载波聚合</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../2ca/source/index.html#id2">eNodeB 配置</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../2ca/source/index.html#id3">UE 配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../2ca/source/index.html#id2">eNodeB libconfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../2ca/source/index.html#id3">UE libconfig</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../2ca/source/index.html#known-issues">已知问题</a></li>
@@ -327,9 +327,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../embms/source/index.html">eMBMS 端到端</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../embms/source/index.html#introduction">简介</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../embms/source/index.html#setup">设置</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../embms/source/index.html#srsenb-configuration">srsENB配置</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../embms/source/index.html#srsmbms-configuration">srsMBMS配置</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../embms/source/index.html#srsue-configuration">srsUE配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../embms/source/index.html#srsenb-configuration">srsENBlibconfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../embms/source/index.html#srsmbms-configuration">srsMBMSlibconfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../embms/source/index.html#srsue-configuration">srsUElibconfig</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../embms/source/index.html#usage">用途</a></li>
@@ -348,7 +348,7 @@
 <li class="toctree-l2"><a class="reference internal" href="index.html#introduction">简介</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#pi4-enodeb-hardware-requirements">Pi4 eNodeB 硬件要求</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#software-setup">软件设置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#pi4-enodeb-config">Pi4 eNodeB 配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#pi4-enodeb-config">Pi4 eNodeB libconfig</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#running-the-pi4-enodeb">运行 Pi4 eNodeB</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#known-issues">已知问题</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#running-on-ubuntu-22-04-lts">在 Ubuntu 22.04 LTS 上运行</a></li>
@@ -361,18 +361,18 @@
 <li class="toctree-l3"><a class="reference internal" href="../../hw_packs/source/index.html#sdr-criteria">特别提款权标准</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../hw_packs/source/index.html#packages">套餐</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../hw_packs/source/index.html#package-1">套餐1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../hw_packs/source/index.html#packages">软件包</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../hw_packs/source/index.html#package-1">软件包 1</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../hw_packs/source/index.html#advantages">优点</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../hw_packs/source/index.html#limitations">局限性</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../hw_packs/source/index.html#package-2">套餐2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../hw_packs/source/index.html#package-2">软件包 2</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../hw_packs/source/index.html#id1">优点</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../hw_packs/source/index.html#id2">局限性</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../hw_packs/source/index.html#package-3">套餐3</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../hw_packs/source/index.html#package-3">软件包 3</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../hw_packs/source/index.html#id3">优点</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../hw_packs/source/index.html#id4">局限性</a></li>
 </ul>
@@ -391,7 +391,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../5g_sa_amari/source/index.html#hardware-requirements">硬件要求</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../5g_sa_amari/source/index.html#hardware-setup">硬件设置</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../5g_sa_amari/source/index.html#limitations">局限性</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../5g_sa_amari/source/index.html#configuration">配置</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../5g_sa_amari/source/index.html#configuration">libconfig</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../5g_sa_amari/source/index.html#srsue">srsUE</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../5g_sa_amari/source/index.html#callbox">电话亭</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../5g_sa_amari/source/index.html#enable-nr-support">启用 NR 支持</a></li>
@@ -421,7 +421,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../5g_nsa_amari/source/index.html#limitations">局限性</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../5g_nsa_amari/source/index.html#hardware-requirements">硬件要求</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../5g_nsa_amari/source/index.html#hardware-setup">硬件设置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../5g_nsa_amari/source/index.html#configuration">配置</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../5g_nsa_amari/source/index.html#configuration">libconfig</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../5g_nsa_amari/source/index.html#srsue">srsUE</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../5g_nsa_amari/source/index.html#callbox">电话亭</a></li>
 </ul>
@@ -501,76 +501,76 @@
 <p>在撰写本应用说明时，它已在 Ubuntu Server 20.04 LTS aarch64 映像之上使用 srsLTE 19.12 版本进行了测试。
 以下安装说明将适用于此配置。在文档的末尾，有一些关于如何在最新的 Ubuntu Server 22.04 LTS aarch64 映像上安装最新的 srsRAN 4G 版本的注释。</p>
 <p>首先是安装 SDR 驱动程序并构建 srsRAN 4G。 USRP 需要 UHD 驱动程序，LimeSDR 需要 SoapySDR/LimeSuite。</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">须藤</span> <span class="n">适合</span> <span class="n">更新</span>
-<span class="n">须藤</span> <span class="n">适合</span> <span class="n">升级</span>
-<span class="n">须藤</span> <span class="n">适合</span> <span class="n">安装</span> <span class="n">cmake</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">update</span>
+<span class="n">sudo</span> <span class="n">apt</span> <span class="n">upgrade</span>
+<span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">cmake</span>
 </pre></div>
 </div>
-<p><strong>超高清驱动程序</strong> 可以安装：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">须藤</span> <span class="n">适合</span> <span class="n">安装</span> <span class="n">利布德</span><span class="o">-</span><span class="n">开发者</span> <span class="n">libuhd3</span><span class="mf">.15.0</span> <span class="n">超高清</span><span class="o">-</span><span class="n">主机</span>
-<span class="n">须藤</span> <span class="o">/</span><span class="n">使用者</span><span class="o">/</span><span class="n">库</span><span class="o">/</span><span class="n">超高清</span><span class="o">/</span><span class="n">实用程序</span><span class="o">/</span><span class="n">uhd_images_downloader</span><span class="o">.</span><span class="n">py</span>
+<p><strong>UHD驱动程序</strong> 可以安装：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">libuhd</span><span class="o">-</span><span class="n">dev</span> <span class="n">libuhd3</span><span class="mf">.15.0</span> <span class="n">uhd</span><span class="o">-</span><span class="n">host</span>
+<span class="n">sudo</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">uhd</span><span class="o">/</span><span class="n">utils</span><span class="o">/</span><span class="n">uhd_images_downloader</span><span class="o">.</span><span class="n">py</span>
 
-<span class="c1">## 然后输入以下命令测试连接：</span>
-<span class="n">须藤</span> <span class="n">uhd_usrp_probe</span>
+<span class="c1">## Then test the connection by typing:</span>
+<span class="n">sudo</span> <span class="n">uhd_usrp_probe</span>
 </pre></div>
 </div>
-<p><strong>肥皂SDR</strong> 和 <strong>石灰套件</strong> 可以安装：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">克隆</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">陶瓷器皿</span><span class="o">/</span><span class="n">肥皂SDR</span><span class="o">.</span><span class="n">git</span>
-<span class="n">光盘</span> <span class="n">肥皂SDR</span>
-<span class="n">git</span> <span class="n">结账</span> <span class="n">标签</span><span class="o">/</span><span class="n">肥皂味的</span><span class="o">-</span><span class="n">特别提款权</span><span class="o">-</span><span class="mf">0.7.2</span>
-<span class="n">目录</span> <span class="n">建造</span> <span class="o">&amp;&amp;</span> <span class="n">光盘</span> <span class="n">建造</span>
+<p><strong>SoapySDR</strong> 和 <strong>LimeSuite</strong> 可以安装：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">pothosware</span><span class="o">/</span><span class="n">SoapySDR</span><span class="o">.</span><span class="n">git</span>
+<span class="n">cd</span> <span class="n">SoapySDR</span>
+<span class="n">git</span> <span class="n">checkout</span> <span class="n">tags</span><span class="o">/</span><span class="n">soapy</span><span class="o">-</span><span class="n">sdr</span><span class="o">-</span><span class="mf">0.7.2</span>
+<span class="n">mkdir</span> <span class="n">build</span> <span class="o">&amp;&amp;</span> <span class="n">cd</span> <span class="n">build</span>
 <span class="n">cmake</span> <span class="o">..</span>
-<span class="n">使</span> <span class="o">-</span><span class="n">j4</span>
-<span class="n">须藤</span> <span class="n">使</span> <span class="n">安装</span>
-<span class="n">须藤</span> <span class="n">LD配置</span>
+<span class="n">make</span> <span class="o">-</span><span class="n">j4</span>
+<span class="n">sudo</span> <span class="n">make</span> <span class="n">install</span>
+<span class="n">sudo</span> <span class="n">ldconfig</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">须藤</span> <span class="n">适合</span> <span class="n">安装</span> <span class="n">libusb</span><span class="o">-</span><span class="mf">1.0</span><span class="o">-</span><span class="mi">0</span><span class="o">-</span><span class="n">开发者</span>
-<span class="n">git</span> <span class="n">克隆</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">无数的</span><span class="o">/</span><span class="n">石灰套件</span><span class="o">.</span><span class="n">git</span>
-<span class="n">光盘</span> <span class="n">石灰套件</span>
-<span class="n">git</span> <span class="n">结账</span> <span class="n">标签</span><span class="o">/</span><span class="n">v20</span><span class="mf">.01.0</span>
-<span class="n">目录</span> <span class="n">构建目录</span> <span class="o">&amp;&amp;</span> <span class="n">光盘</span> <span class="n">构建目录</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">libusb</span><span class="o">-</span><span class="mf">1.0</span><span class="o">-</span><span class="mi">0</span><span class="o">-</span><span class="n">dev</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">myriadrf</span><span class="o">/</span><span class="n">LimeSuite</span><span class="o">.</span><span class="n">git</span>
+<span class="n">cd</span> <span class="n">LimeSuite</span>
+<span class="n">git</span> <span class="n">checkout</span> <span class="n">tags</span><span class="o">/</span><span class="n">v20</span><span class="mf">.01.0</span>
+<span class="n">mkdir</span> <span class="n">builddir</span> <span class="o">&amp;&amp;</span> <span class="n">cd</span> <span class="n">builddir</span>
 <span class="n">cmake</span> <span class="o">../</span>
-<span class="n">使</span> <span class="o">-</span><span class="n">j4</span>
-<span class="n">须藤</span> <span class="n">使</span> <span class="n">安装</span>
-<span class="n">须藤</span> <span class="n">LD配置</span>
-<span class="n">光盘</span> <span class="o">..</span>
-<span class="n">光盘</span> <span class="n">乌德夫</span><span class="o">-</span><span class="n">规则</span>
-<span class="n">须藤</span> <span class="o">./</span><span class="n">安装</span><span class="o">.</span><span class="n">嘘</span>
+<span class="n">make</span> <span class="o">-</span><span class="n">j4</span>
+<span class="n">sudo</span> <span class="n">make</span> <span class="n">install</span>
+<span class="n">sudo</span> <span class="n">ldconfig</span>
+<span class="n">cd</span> <span class="o">..</span>
+<span class="n">cd</span> <span class="n">udev</span><span class="o">-</span><span class="n">rules</span>
+<span class="n">sudo</span> <span class="o">./</span><span class="n">install</span><span class="o">.</span><span class="n">sh</span>
 
-<span class="c1">## 然后输入以下命令测试连接：</span>
-<span class="n">石灰工具</span> <span class="o">--</span><span class="n">找到</span>
-<span class="n">石灰工具</span> <span class="o">--</span><span class="n">更新</span>
-<span class="n">SoapySDRUtil</span> <span class="o">--</span><span class="n">找到</span>
+<span class="c1">## Then test the connection by typing:</span>
+<span class="n">LimeUtil</span> <span class="o">--</span><span class="n">find</span>
+<span class="n">LimeUtil</span> <span class="o">--</span><span class="n">update</span>
+<span class="n">SoapySDRUtil</span> <span class="o">--</span><span class="n">find</span>
 </pre></div>
 </div>
 <p>接下来， <strong>srsRAN</strong> 可以编译为：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">须藤</span> <span class="n">适合</span> <span class="n">安装</span> <span class="n">libfftw3</span><span class="o">-</span><span class="n">开发者</span> <span class="n">libmbedtls</span><span class="o">-</span><span class="n">开发者</span> <span class="n">libboost</span><span class="o">-</span><span class="n">节目</span><span class="o">-</span><span class="n">选项</span><span class="o">-</span><span class="n">开发者</span> <span class="n">库配置</span><span class="o">++-</span><span class="n">开发者</span> <span class="n">库文件</span><span class="o">-</span><span class="n">开发者</span>
-<span class="n">git</span> <span class="n">克隆</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">srsRAN</span><span class="o">/</span><span class="n">srsRAN_4G</span><span class="o">.</span><span class="n">git</span>
-<span class="n">光盘</span> <span class="n">srsRAN_4G</span>
-<span class="n">git</span> <span class="n">结账</span> <span class="n">标签</span><span class="o">/</span><span class="n">发布_19_12</span>
-<span class="n">目录</span> <span class="n">建造</span> <span class="o">&amp;&amp;</span> <span class="n">光盘</span> <span class="n">建造</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">libfftw3</span><span class="o">-</span><span class="n">dev</span> <span class="n">libmbedtls</span><span class="o">-</span><span class="n">dev</span> <span class="n">libboost</span><span class="o">-</span><span class="n">program</span><span class="o">-</span><span class="n">options</span><span class="o">-</span><span class="n">dev</span> <span class="n">libconfig</span><span class="o">++-</span><span class="n">dev</span> <span class="n">libsctp</span><span class="o">-</span><span class="n">dev</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">srsRAN</span><span class="o">/</span><span class="n">srsRAN_4G</span><span class="o">.</span><span class="n">git</span>
+<span class="n">cd</span> <span class="n">srsRAN_4G</span>
+<span class="n">git</span> <span class="n">checkout</span> <span class="n">tags</span><span class="o">/</span><span class="n">release_19_12</span>
+<span class="n">mkdir</span> <span class="n">build</span> <span class="o">&amp;&amp;</span> <span class="n">cd</span> <span class="n">build</span>
 <span class="n">cmake</span> <span class="o">../</span>
-<span class="n">使</span> <span class="o">-</span><span class="n">j4</span>
-<span class="n">须藤</span> <span class="n">使</span> <span class="n">安装</span>
-<span class="n">须藤</span> <span class="n">LD配置</span>
+<span class="n">make</span> <span class="o">-</span><span class="n">j4</span>
+<span class="n">sudo</span> <span class="n">make</span> <span class="n">install</span>
+<span class="n">sudo</span> <span class="n">ldconfig</span>
 
-<span class="c1">## 将配置复制到/root</span>
-<span class="n">须藤</span> <span class="o">./</span><span class="n">srsran_4g_install_configs</span><span class="o">.</span><span class="n">嘘</span> <span class="n">用户</span>
+<span class="c1">## copy configs to /root</span>
+<span class="n">sudo</span> <span class="o">./</span><span class="n">srsran_4g_install_configs</span><span class="o">.</span><span class="n">sh</span> <span class="n">user</span>
 </pre></div>
 </div>
 <p>最后，修改 <strong>Pi CPU 缩放_调节器</strong> 确保它在性能模式下运行：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">须藤</span> <span class="n">系统控制</span> <span class="n">禁用</span> <span class="n">点播</span>
-<span class="n">须藤</span> <span class="n">适合</span> <span class="n">安装</span> <span class="n">操作系统</span><span class="o">-</span><span class="n">工具</span><span class="o">-</span><span class="n">拉斯皮</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">systemctl</span> <span class="n">disable</span> <span class="n">ondemand</span>
+<span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">linux</span><span class="o">-</span><span class="n">tools</span><span class="o">-</span><span class="n">raspi</span>
 
-<span class="n">须藤</span> <span class="n">纳米</span> <span class="o">/</span><span class="n">等</span><span class="o">/</span><span class="n">默认</span><span class="o">/</span><span class="n">cpu频率工具</span>
-<span class="o">*</span> <span class="n">插入</span><span class="p">:</span>
-<span class="o">*</span> <span class="n">总督</span><span class="o">=</span><span class="s2">「表现」</span>
+<span class="n">sudo</span> <span class="n">nano</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">default</span><span class="o">/</span><span class="n">cpufrequtils</span>
+<span class="o">*</span> <span class="n">insert</span><span class="p">:</span>
+<span class="o">*</span> <span class="n">GOVERNOR</span><span class="o">=</span><span class="s2">&quot;performance&quot;</span>
 
-<span class="c1">## 重新启动</span>
+<span class="c1">## reboot</span>
 
-<span class="n">须藤</span> <span class="n">中央处理器功率</span> <span class="n">频率</span><span class="o">-</span><span class="n">信息</span>
-<span class="o">*</span> <span class="n">应该</span> <span class="n">显示</span> <span class="n">那个</span> <span class="n">的</span> <span class="n">中央处理器</span> <span class="ow">是</span> <span class="n">跑步</span> <span class="ow">在</span> <span class="n">表现</span> <span class="n">模式</span><span class="p">,</span> <span class="n">在</span> <span class="n">最大</span> <span class="n">时钟</span> <span class="n">速度</span>
+<span class="n">sudo</span> <span class="n">cpupower</span> <span class="n">frequency</span><span class="o">-</span><span class="n">info</span>
+<span class="o">*</span> <span class="n">should</span> <span class="n">show</span> <span class="n">that</span> <span class="n">the</span> <span class="n">CPU</span> <span class="ow">is</span> <span class="n">running</span> <span class="ow">in</span> <span class="n">performance</span> <span class="n">mode</span><span class="p">,</span> <span class="n">at</span> <span class="n">maxiumum</span> <span class="n">clock</span> <span class="n">speed</span>
 </pre></div>
 </div>
 </section>
@@ -579,59 +579,59 @@
 <p>在测试过程中，以下 eNodeB 配置选项已被证明在与 USRP B210 一起运行时稳定 24 小时以上，在与 LimeSDR 一起运行时稳定 2 小时以上，因此对您来说应该是一个很好的起点。</p>
 <p>Pi4 eNodeB 已在 LTE B3（1800MHz 频段）中使用 3MHz 宽单元进行测试，DL=1878.40 UL=1783.40。它位于英国新的“1800MHz 共享接入频段”内，您可以合法地获得低成本、 <a class="reference external" href="https://www.ofcom.org.uk/manage-your-licence/radiocommunication-licences/shared-access">Ofcom 的低功耗共享接入频谱许可证</a> 如果您在英国工作。</p>
 <p>更改默认 enb.conf <strong>USRP B210</strong>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">须藤</span> <span class="n">纳米</span> <span class="o">/</span><span class="n">根</span><span class="o">/.</span><span class="n">配置</span><span class="o">/</span><span class="n">srsran_4g</span><span class="o">/</span><span class="n">恩布</span><span class="o">.</span><span class="n">会议</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">nano</span> <span class="o">/</span><span class="n">root</span><span class="o">/.</span><span class="n">config</span><span class="o">/</span><span class="n">srsran_4g</span><span class="o">/</span><span class="n">enb</span><span class="o">.</span><span class="n">conf</span>
 
-<span class="p">[</span><span class="n">恩布</span><span class="p">]</span>
-<span class="n">MCC</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">你的MCC</span><span class="o">&gt;</span>
-<span class="n">跨国公司</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">你的跨国公司</span><span class="o">&gt;</span>
-<span class="n">内存地址</span> <span class="o">=</span> <span class="mf">127.0.1.100</span>     <span class="c1">## 或外部 MME 的 IP，例如。 192.168.1.10</span>
-<span class="n">gtp_bind_地址</span> <span class="o">=</span> <span class="mf">127.0.1.1</span>  <span class="c1">## 或外部 S1-U 的本地接口 IP，例如。 192.168.1.3</span>
-<span class="n">s1c_bind_addr</span> <span class="o">=</span> <span class="mf">127.0.1.1</span>  <span class="c1">## 或外部 S1-MME 的本地接口 IP，例如。 192.168.1.3</span>
+<span class="p">[</span><span class="n">enb</span><span class="p">]</span>
+<span class="n">mcc</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">yourMCC</span><span class="o">&gt;</span>
+<span class="n">mnc</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">yourMNC</span><span class="o">&gt;</span>
+<span class="n">mme_addr</span> <span class="o">=</span> <span class="mf">127.0.1.100</span>     <span class="c1">## or IP for external MME, eg. 192.168.1.10</span>
+<span class="n">gtp_bind_addr</span> <span class="o">=</span> <span class="mf">127.0.1.1</span>  <span class="c1">## or local interface IP for external S1-U, eg. 192.168.1.3</span>
+<span class="n">s1c_bind_addr</span> <span class="o">=</span> <span class="mf">127.0.1.1</span>  <span class="c1">## or local interface IP for external S1-MME, eg. 192.168.1.3</span>
 <span class="n">n_prb</span> <span class="o">=</span> <span class="mi">15</span>
-<span class="n">TM</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="n">nof_端口</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">tm</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">nof_ports</span> <span class="o">=</span> <span class="mi">2</span>
 
-<span class="p">[</span><span class="n">射频</span><span class="p">]</span>
+<span class="p">[</span><span class="n">rf</span><span class="p">]</span>
 <span class="n">dl_earfcn</span> <span class="o">=</span> <span class="mi">1934</span>
-<span class="n">发送增益</span> <span class="o">=</span> <span class="mi">80</span>               <span class="c1">## 这个能力似乎效果最好</span>
-<span class="n">接收增益</span> <span class="o">=</span> <span class="mi">40</span>
-<span class="n">设备名称</span> <span class="o">=</span> <span class="n">超高清</span>
-<span class="n">设备参数</span> <span class="o">=</span> <span class="n">汽车</span>         <span class="c1">## 不适用于“auto”以外的任何内容</span>
+<span class="n">tx_gain</span> <span class="o">=</span> <span class="mi">80</span>               <span class="c1">## this power seems to work best</span>
+<span class="n">rx_gain</span> <span class="o">=</span> <span class="mi">40</span>
+<span class="n">device_name</span> <span class="o">=</span> <span class="n">UHD</span>
+<span class="n">device_args</span> <span class="o">=</span> <span class="n">auto</span>         <span class="c1">## does not work with anything other than &#39;auto&#39;</span>
 </pre></div>
 </div>
 <p>更改默认 enb.conf <strong>LimeSDR-USB 或 LimeSDR-Mini</strong>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">须藤</span> <span class="n">纳米</span> <span class="o">/</span><span class="n">根</span><span class="o">/.</span><span class="n">配置</span><span class="o">/</span><span class="n">srsran_4g</span><span class="o">/</span><span class="n">恩布</span><span class="o">.</span><span class="n">会议</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">nano</span> <span class="o">/</span><span class="n">root</span><span class="o">/.</span><span class="n">config</span><span class="o">/</span><span class="n">srsran_4g</span><span class="o">/</span><span class="n">enb</span><span class="o">.</span><span class="n">conf</span>
 
-<span class="p">[</span><span class="n">恩布</span><span class="p">]</span>
-<span class="n">MCC</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">你的MCC</span><span class="o">&gt;</span>
-<span class="n">跨国公司</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">你的跨国公司</span><span class="o">&gt;</span>
-<span class="n">内存地址</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">ip地址</span><span class="o">&gt;</span>        <span class="c1">## 外部 MME 的 IP，例如。 192.168.1.10</span>
-<span class="n">gtp_bind_地址</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">ip地址</span><span class="o">&gt;</span>   <span class="c1">## 外部 S1-U 的本地接口 IP，例如。 192.168.1.3</span>
-<span class="n">s1c_bind_addr</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">ip地址</span><span class="o">&gt;</span>   <span class="c1">## 外部S1-MME的本地接口IP，例如。 192.168.1.3</span>
+<span class="p">[</span><span class="n">enb</span><span class="p">]</span>
+<span class="n">mcc</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">yourMCC</span><span class="o">&gt;</span>
+<span class="n">mnc</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">yourMNC</span><span class="o">&gt;</span>
+<span class="n">mme_addr</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">ipaddr</span><span class="o">&gt;</span>        <span class="c1">## IP for external MME, eg. 192.168.1.10</span>
+<span class="n">gtp_bind_addr</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">ipaddr</span><span class="o">&gt;</span>   <span class="c1">## local interface IP for external S1-U, eg. 192.168.1.3</span>
+<span class="n">s1c_bind_addr</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">ipaddr</span><span class="o">&gt;</span>   <span class="c1">## local interface IP for external S1-MME, eg. 192.168.1.3</span>
 <span class="n">n_prb</span> <span class="o">=</span> <span class="mi">15</span>
-<span class="n">TM</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">nof_端口</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">tm</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">nof_ports</span> <span class="o">=</span> <span class="mi">1</span>
 
-<span class="p">[</span><span class="n">射频</span><span class="p">]</span>
+<span class="p">[</span><span class="n">rf</span><span class="p">]</span>
 <span class="n">dl_earfcn</span> <span class="o">=</span> <span class="mi">1934</span>
-<span class="n">发送增益</span> <span class="o">=</span> <span class="mi">60</span>               <span class="c1">## 这个能力似乎效果最好</span>
-<span class="n">接收增益</span> <span class="o">=</span> <span class="mi">40</span>
-<span class="n">设备名称</span> <span class="o">=</span> <span class="n">肥皂味的</span>
-<span class="n">设备参数</span> <span class="o">=</span> <span class="n">汽车</span>         <span class="c1">## 不适用于“auto”以外的任何内容</span>
+<span class="n">tx_gain</span> <span class="o">=</span> <span class="mi">60</span>               <span class="c1">## this power seems to work best</span>
+<span class="n">rx_gain</span> <span class="o">=</span> <span class="mi">40</span>
+<span class="n">device_name</span> <span class="o">=</span> <span class="n">soapy</span>
+<span class="n">device_args</span> <span class="o">=</span> <span class="n">auto</span>         <span class="c1">## does not work with anything other than &#39;auto&#39;</span>
 </pre></div>
 </div>
 <p>srsEPC 核心网络默认配置的更改：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">须藤</span> <span class="n">纳米</span> <span class="o">/</span><span class="n">根</span><span class="o">/.</span><span class="n">配置</span><span class="o">/</span><span class="n">srsran_4g</span><span class="o">/</span><span class="n">EPC</span><span class="o">.</span><span class="n">会议</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">nano</span> <span class="o">/</span><span class="n">root</span><span class="o">/.</span><span class="n">config</span><span class="o">/</span><span class="n">srsran_4g</span><span class="o">/</span><span class="n">epc</span><span class="o">.</span><span class="n">conf</span>
 
-<span class="p">[</span><span class="n">嗯</span><span class="p">]</span>
-<span class="n">MCC</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">你的MCC</span><span class="o">&gt;</span>
-<span class="n">跨国公司</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">你的跨国公司</span><span class="o">&gt;</span>
-<span class="n">mme_bind_地址</span> <span class="o">=</span> <span class="mf">127.0.1.100</span>  <span class="c1">## 或外部 S1-MME 的本地接口 IP，例如。 192.168.1.10</span>
+<span class="p">[</span><span class="n">mme</span><span class="p">]</span>
+<span class="n">mcc</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">yourMCC</span><span class="o">&gt;</span>
+<span class="n">mnc</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">yourMNC</span><span class="o">&gt;</span>
+<span class="n">mme_bind_addr</span> <span class="o">=</span> <span class="mf">127.0.1.100</span>  <span class="c1">## or local interface IP for external S1-MME, eg. 192.168.1.10</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">须藤</span> <span class="n">纳米</span> <span class="o">/</span><span class="n">根</span><span class="o">/.</span><span class="n">配置</span><span class="o">/</span><span class="n">srsran_4g</span><span class="o">/</span><span class="n">用户数据库</span><span class="o">.</span><span class="n">数据集</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">nano</span> <span class="o">/</span><span class="n">root</span><span class="o">/.</span><span class="n">config</span><span class="o">/</span><span class="n">srsran_4g</span><span class="o">/</span><span class="n">user_db</span><span class="o">.</span><span class="n">csv</span>
 
-<span class="o">*</span> <span class="n">添加</span> <span class="n">详情</span> <span class="n">的</span> <span class="n">你的</span> <span class="n">SIM卡</span> <span class="n">卡片</span>
+<span class="o">*</span> <span class="n">add</span> <span class="n">details</span> <span class="n">of</span> <span class="n">your</span> <span class="n">SIM</span> <span class="n">cards</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -639,8 +639,8 @@
 <p>在外部设备（例如另一个 Pi）上运行 srsEPC 时，您必须打开传入防火墙端口以允许来自 srsENB 的 S1-MME 和 S1-U 连接。</p>
 <p>S1-MME = sctp，端口 36412 ||  S1-U = udp，端口 2152</p>
 <p>如果使用 iptables，</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">须藤</span> <span class="n">iptables</span> <span class="o">-</span><span class="n">一个</span> <span class="n">输入</span> <span class="o">-</span><span class="n">p</span> <span class="n">sctp</span> <span class="o">-</span><span class="n">米</span> <span class="n">sctp</span> <span class="o">--</span><span class="n">数据端口</span> <span class="mi">36412</span> <span class="o">-</span><span class="n">j</span> <span class="n">接受</span>
-<span class="n">须藤</span> <span class="n">iptables</span> <span class="o">-</span><span class="n">一个</span> <span class="n">输入</span> <span class="o">-</span><span class="n">p</span> <span class="n">UDP协议</span> <span class="o">-</span><span class="n">米</span> <span class="n">UDP协议</span> <span class="o">--</span><span class="n">数据端口</span> <span class="mi">2152</span> <span class="o">-</span><span class="n">j</span> <span class="n">接受</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">iptables</span> <span class="o">-</span><span class="n">A</span> <span class="n">INPUT</span> <span class="o">-</span><span class="n">p</span> <span class="n">sctp</span> <span class="o">-</span><span class="n">m</span> <span class="n">sctp</span> <span class="o">--</span><span class="n">dport</span> <span class="mi">36412</span> <span class="o">-</span><span class="n">j</span> <span class="n">ACCEPT</span>
+<span class="n">sudo</span> <span class="n">iptables</span> <span class="o">-</span><span class="n">A</span> <span class="n">INPUT</span> <span class="o">-</span><span class="n">p</span> <span class="n">udp</span> <span class="o">-</span><span class="n">m</span> <span class="n">udp</span> <span class="o">--</span><span class="n">dport</span> <span class="mi">2152</span> <span class="o">-</span><span class="n">j</span> <span class="n">ACCEPT</span>
 </pre></div>
 </div>
 </div>
@@ -649,7 +649,7 @@
 <h2>运行 Pi4 eNodeB<a class="headerlink" href="index.html#running-the-pi4-enodeb" title="链接到此标题"></a></h2>
 <p>在单独的 ssh 窗口中或使用 screen 启动软件。请记住为 SDR 使用外部电源。<strong>第一次运行 srsENB 软件时，您需要等待几分钟才能完成设置</strong>。第一次之后它将立即开始。</p>
 <p>启动 Pi4 eNodeB：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">须藤</span> <span class="n">斯尔森布</span> <span class="o">/</span><span class="n">根</span><span class="o">/.</span><span class="n">配置</span><span class="o">/</span><span class="n">srsran_4g</span><span class="o">/</span><span class="n">恩布</span><span class="o">.</span><span class="n">会议</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">srsenb</span> <span class="o">/</span><span class="n">root</span><span class="o">/.</span><span class="n">config</span><span class="o">/</span><span class="n">srsran_4g</span><span class="o">/</span><span class="n">enb</span><span class="o">.</span><span class="n">conf</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -657,8 +657,8 @@
 <p>在使用 LimeSDR-USB 运行期间，您有时需要物理拔下并重新连接 SDR 以重新启动它。</p>
 </div>
 <p>启动核心网络（在单独的设备上，或使用 USRP B210 时在 Pi4 eNodeB 上）：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">须藤</span> <span class="n">SRSEPC</span> <span class="o">/</span><span class="n">根</span><span class="o">/.</span><span class="n">配置</span><span class="o">/</span><span class="n">srsran_4g</span><span class="o">/</span><span class="n">EPC</span><span class="o">.</span><span class="n">会议</span>
-<span class="n">须藤</span> <span class="o">/</span><span class="n">使用者</span><span class="o">/</span><span class="n">本地的</span><span class="o">/</span><span class="nb">垃圾箱</span><span class="o">/</span><span class="n">srsepc_if_masq</span><span class="o">.</span><span class="n">嘘</span> <span class="n">以太网0</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">srsepc</span> <span class="o">/</span><span class="n">root</span><span class="o">/.</span><span class="n">config</span><span class="o">/</span><span class="n">srsran_4g</span><span class="o">/</span><span class="n">epc</span><span class="o">.</span><span class="n">conf</span>
+<span class="n">sudo</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">srsepc_if_masq</span><span class="o">.</span><span class="n">sh</span> <span class="n">eth0</span>
 </pre></div>
 </div>
 <p>以下 htop 屏幕截图显示了在 Pi 4B /4GB RAM 上运行软件时的资源利用率，其中 x2 UE 连接到 USRP B210 单元。 srsRAN 4G软件在这里运行了18个小时以上，没有出现任何问题。仅使用了一半的 RAM，CPU 核心的利用率约为 25%。因此，该软件配置有可能适用于 Pi 4B /2GB RAM 版本，也可能适用于其他最新的基于 Arm 的开发板。如果您可以获得适用于替代硬件的工作单元，请告知 srsran-users 邮件列表！</p>
@@ -673,11 +673,11 @@
 <section id="running-on-ubuntu-22-04-lts">
 <h2>在 Ubuntu 22.04 LTS 上运行<a class="headerlink" href="index.html#running-on-ubuntu-22-04-lts" title="链接到此标题"></a></h2>
 <p>从版本 22.10 开始，srsRAN 4G 无需修改即可在 Ubuntu 22.04 LTS 上编译。但是，新的 Ubuntu 22.04 LTS 映像在内核配置选项方面略有不同。它还缺少默认配置中的 SCTP 内核模块。后者可以安装：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">须藤</span> <span class="n">适合</span><span class="o">-</span><span class="n">得到</span> <span class="n">安装</span> <span class="n">操作系统</span><span class="o">-</span><span class="n">模块</span><span class="o">-</span><span class="n">额外的</span><span class="o">-</span><span class="n">拉斯皮</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">linux</span><span class="o">-</span><span class="n">modules</span><span class="o">-</span><span class="n">extra</span><span class="o">-</span><span class="n">raspi</span>
 </pre></div>
 </div>
 <p>成功通过所有测试所需的第二个更改是增加 <code class="docutils literal notranslate"><span class="pre">RLIMIT_MEMLOCK</span></code> 设置在 <code class="docutils literal notranslate"><span class="pre">/etc/security/limits.conf</span></code>。提供了基本更改的详细描述 <a class="reference external" href="https://github.com/srsran/srsRAN_4G/issues/881">这里</a> 以及有关的信息 <code class="docutils literal notranslate"><span class="pre">RLIMIT_MEMLOCK</span></code> 可以找到 <a class="reference external" href="https://man7.org/linux/man-pages/man2/getrlimit.2.html">这里</a>。要解除限制，请将以下行添加到 <code class="docutils literal notranslate"><span class="pre">/etc/security/limits.conf</span></code>.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span>               <span class="o">-</span>       <span class="n">内存锁</span>         <span class="n">无限</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span>               <span class="o">-</span>       <span class="n">memlock</span>         <span class="n">unlimited</span>
 </pre></div>
 </div>
 <p>通过这些更改，srsRAN 4G 应该可以在 Ubuntu 22.04 LTS aarch64 系统上编译并通过所有测试。</p>
@@ -692,9 +692,9 @@
 <hr/>
 <div role="contentinfo">
 <p>© 版权所有 2019-2025，软件无线电系统..</p>
-</div>内置 <a href="https://www.sphinx-doc.org/">狮身人面像</a> 使用
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
-    由提供 <a href="https://readthedocs.org">阅读文档</a>.
+</div>基于 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    主题，由 <a href="https://readthedocs.org">Read the Docs</a> 提供。
    
 
 </footer>
