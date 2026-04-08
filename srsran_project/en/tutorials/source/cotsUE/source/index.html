@@ -1,0 +1,1620 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="readthedocs-addons-api-version" content="1"><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HVHF6N640X"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-HVHF6N640X');
+    </script>
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>srsRAN gNB with COTS UEs &mdash; srsRAN Project  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css%3Fv=03e43079.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css%3Fv=9edc463e.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css%3Fv=76b2166b.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster.custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster.bundle.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster-sideTip-shadow.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster-sideTip-punk.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster-sideTip-noir.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster-sideTip-light.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster-sideTip-borderless.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/micromodal.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/sphinx_rtd_theme.css%3Fv=3234e928.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/tabs.css%3Fv=a5c4661c.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom.css%3Fv=257617e2.css" />
+
+  
+    <link rel="shortcut icon" href="../../../../_static/favicon.png"/>
+      <script src="../../../../_static/jquery.js%3Fv=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js%3Fv=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js%3Fv=5929fcd5"></script>
+      <script src="../../../../_static/doctools.js%3Fv=9bcbadda"></script>
+      <script src="../../../../_static/sphinx_highlight.js%3Fv=dc90522c"></script>
+      <script src="../../../../_static/clipboard.min.js%3Fv=a7894cd8"></script>
+      <script src="../../../../_static/copybutton.js%3Fv=f281be69"></script>
+      <script src="../../../../_static/js/hoverxref.js"></script>
+      <script src="../../../../_static/js/tooltipster.bundle.min.js"></script>
+      <script src="../../../../_static/js/micromodal.min.js"></script>
+      <script src="../../../../_static/tabs.js%3Fv=3030b3cb"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <script src="../../../../_static/js/versions.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="srsRAN gNB with Amarisoft UE" href="../../amariUE/source/index.html" />
+    <link rel="prev" title="srsRAN gNB with srsUE" href="../../srsUE/source/index.html" /> 
+<script async type="text/javascript" src="../../../../../../../../_/static/javascript/readthedocs-addons.js"></script><meta name="readthedocs-project-slug" content="srsran-project-docs" /><meta name="readthedocs-version-slug" content="latest" /><meta name="readthedocs-resolver-filename" content="/tutorials/source/cotsUE/source/index.html" /><meta name="readthedocs-http-status" content="200" /></head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            srsRAN Project
+              <img src="../../../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="switch-menus">
+                <div class="version-switch"></div>
+                <div class="language-switch"></div>
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+    
+              <p class="caption" role="heading"><span class="caption-text">General</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../general/source/2_features_and_roadmap.html">Features and Roadmap</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/2_features_and_roadmap.html#current-features">Current Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/2_features_and_roadmap.html#coming-soon">Coming Soon</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../general/source/3_contributions.html">Contribution Guidelines</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/3_contributions.html#faq">FAQ</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../general/source/3_contributions.html#what-is-a-copyright-license-agreement-cla-and-why-do-i-need-one">1. What is a Copyright License Agreement (CLA) and why do I need one?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../general/source/3_contributions.html#how-do-i-complete-and-submit-the-cla">2. How do I complete and submit the CLA?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../general/source/3_contributions.html#how-will-my-contributions-to-project-name-be-used">3. How will my contributions to srsRAN Project be used?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../general/source/3_contributions.html#if-i-do-not-own-the-copyright-in-the-entire-work-of-authorship">4. If I do not own the copyright in the entire work of authorship?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../general/source/4_reporting.html">Reporting Issues</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/4_reporting.html#issues">Issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/4_reporting.html#vulnerabilities">Vulnerabilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/4_reporting.html#support">Support</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../general/source/5_release_notes.html">Release Notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/5_release_notes.html#id1">25.04</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/5_release_notes.html#id2">24.10.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/5_release_notes.html#id3">24.10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/5_release_notes.html#id4">24.4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/5_release_notes.html#id5">23.10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/5_release_notes.html#id6">23.5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/5_release_notes.html#initial-public-release">23.3 (initial public release)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../general/source/6_dev_status.html">Development Status</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Manual</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../user_manuals/source/installation.html">Installation Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/installation.html#build-tools-and-dependencies">Build Tools and Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/installation.html#rf-drivers">RF-drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/installation.html#clone-and-build">Clone and Build</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/installation.html#packages">Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/installation.html#phy-testvectors">PHY testvectors</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../user_manuals/source/running.html">Running srsRAN Project</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/running.html#baseline-requirements">Baseline Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/running.html#system-preparation">System Preparation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/running.html#id1">Running srsRAN Project</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../user_manuals/source/console_ref.html">Console Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../user_manuals/source/outputs.html">Outputs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#logs">Logs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#pcaps">PCAPs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#mac">MAC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#rlc">RLC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#ngap">NGAP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#n3">N3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#e1ap">E1AP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#f1ap">F1AP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#e2ap">E2AP</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#json-metrics">JSON Metrics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#mac-metrics">MAC metrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#scheduler-metrics">Scheduler metrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#scheduler-cell-metrics">Scheduler cell metrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#cell-events">Cell events</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#scheduler-ue-metrics">Scheduler UE metrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#ofh-metrics">OFH metrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#ngap-metrics">NGAP metrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#rrc-metrics">RRC metrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#executors-metrics">Executors metrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#application-resource-usage-metrics">Application resource usage metrics</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../user_manuals/source/config_ref.html">Configuration Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/config_ref.html#id1">Configuration Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/config_ref.html#antenna-configuration">Antenna Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../user_manuals/source/grafana_gui.html">Grafana Metrics GUI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/grafana_gui.html#configuration">Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/grafana_gui.html#id1">Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/grafana_gui.html#project-name">srsRAN Project</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/grafana_gui.html#launching-gui">Launching GUI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/grafana_gui.html#gui-output">GUI Output</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../user_manuals/source/troubleshooting.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/troubleshooting.html#performance-tuning">Performance Tuning</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/troubleshooting.html#cpu-performance-mode">CPU Performance Mode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/troubleshooting.html#performance-configuration-script">Performance Configuration Script</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/troubleshooting.html#usrp-configuration">USRP Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/troubleshooting.html#usrp-time-calibration">USRP Time Calibration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developers Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../dev_guide/source/software_arch/source/index.html">Software Architecture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/software_arch/source/CU_cp/source/index.html">CU-CP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/software_arch/source/CU_up/source/index.html">CU-UP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/software_arch/source/DU_high/source/index.html">DU-high</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/software_arch/source/DU_high/source/du_manager.html">DU Manager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/software_arch/source/DU_high/source/rlc.html">Radio Link Control (RLC)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../dev_guide/source/software_arch/source/DU_high/source/rlc_am.html">RLC Acknowledged Mode (AM)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/software_arch/source/DU_high/source/mac.html">MAC</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../dev_guide/source/software_arch/source/DU_high/source/mac.html#implementation">Implementation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../dev_guide/source/software_arch/source/DU_high/source/mac.html#ra-procedure">RA Procedure</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/software_arch/source/DU_low/source/index.html">DU-low</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/index.html">Code Style Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/1_language_libraries.html">Language and libraries</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/1_language_libraries.html#c-c-version">C &amp; C++ version</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/1_language_libraries.html#use-of-the-c-standard-library">Use of the C++ standard library</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/2_mechanical_source_aspects.html">Mechanical source aspects</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/2_mechanical_source_aspects.html#source-code-formatting">Source Code Formatting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/2_mechanical_source_aspects.html#comments">Comments</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/2_mechanical_source_aspects.html#comment-guidelines">Comment Guidelines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/2_mechanical_source_aspects.html#file-headers">File Headers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/2_mechanical_source_aspects.html#header-guards">Header Guards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/2_mechanical_source_aspects.html#include-style">#include Style</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/2_mechanical_source_aspects.html#language-and-compiler-aspects">Language and compiler aspects</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/2_mechanical_source_aspects.html#treat-compiler-warnings-as-errors">Treat compiler warnings as errors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/2_mechanical_source_aspects.html#code-portability">Code Portability</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/2_mechanical_source_aspects.html#avoid-rtti-and-exceptions">Avoid RTTI and Exceptions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/2_mechanical_source_aspects.html#use-of-auto">Use of auto</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/3_style_aspects_high_level.html">Style Aspects: High Level Issues</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/3_style_aspects_high_level.html#self-contained-headers">Self-contained Headers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/3_style_aspects_high_level.html#using-include-sparingly">Using <code class="docutils literal notranslate"><span class="pre">#include</span></code> Sparingly</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/3_style_aspects_high_level.html#using-internal-headers">Using “Internal” Headers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/3_style_aspects_high_level.html#use-of-namespace">Use of <code class="docutils literal notranslate"><span class="pre">namespace</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/3_style_aspects_high_level.html#using-early-exits-and-continue">Using “early exits” and <code class="docutils literal notranslate"><span class="pre">continue</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/3_style_aspects_high_level.html#avoid-else-after-a-return-statement">Avoid <code class="docutils literal notranslate"><span class="pre">else</span></code> after a <code class="docutils literal notranslate"><span class="pre">return</span></code> statement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/3_style_aspects_high_level.html#use-of-static-helper-functions">Use of Static Helper Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/4_style_aspects_low_level.html">Style Aspects: Low Level Issues</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/4_style_aspects_low_level.html#naming-conventions">Naming Conventions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/4_style_aspects_low_level.html#assert-and-expect">Assert and expect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/4_style_aspects_low_level.html#do-not-use-using-namespace-std">Do not use <code class="docutils literal notranslate"><span class="pre">using</span> <span class="pre">namespace</span> <span class="pre">std</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/4_style_aspects_low_level.html#using-range-for-loops">Using Range for Loops</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/4_style_aspects_low_level.html#loop-structure">Loop Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/4_style_aspects_low_level.html#using-pre-increment">Using Pre-increment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/4_style_aspects_low_level.html#use-of-anonymous-namespaces">Use of Anonymous Namespaces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/4_style_aspects_low_level.html#using-c-casts">Using C++ Casts</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/5_recommendations.html">Recommendations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/5_recommendations.html#function-and-class-length">Function and Class Length</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/5_recommendations.html#scope">Scope</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/5_recommendations.html#logical-operators">Logical Operators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/5_recommendations.html#using-references-over-pointers">Using References(&amp;) Over Pointers(*)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/5_recommendations.html#const-correctness">Const Correctness</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/5_recommendations.html#avoid-complex-expressions">Avoid Complex Expressions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/5_recommendations.html#magic-numbers">Magic numbers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/5_recommendations.html#fixed-width-integer-types">Fixed Width Integer Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/5_recommendations.html#function-signatures">Function signatures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/5_recommendations.html#class-layout-example">Class Layout Example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/6_self_generating_docs.html">Self Generating Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/6_self_generating_docs.html#general-aspects">General Aspects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/6_self_generating_docs.html#files">Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/6_self_generating_docs.html#classes-and-structures">Classes and Structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/6_self_generating_docs.html#class-methods-and-free-functions">Class Methods and Free Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/6_self_generating_docs.html#class-data-members-objects-variables">Class Data Members, Objects, Variables</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/7_commit_formatting.html">Commit Formatting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../dev_guide/source/testing_policy/source/index.html">Testing Policy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/testing_policy/source/index.html#unit-tests">Unit Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/testing_policy/source/index.html#integration-and-component-tests">Integration and Component Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/testing_policy/source/index.html#end-to-end-e2e-tests">End-to-End (E2E) Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/testing_policy/source/index.html#exploratory-tests">Exploratory Tests</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../dev_guide/source/logging_guide/source/index.html">Logging Style Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/logging_guide/source/index.html#rule-1-lists-of-fields-only-need-to-be-separated-by-a-whitespace">Rule 1: Lists of fields only need to be separated by a whitespace “   “</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/logging_guide/source/index.html#rule-2-maintain-consistent-order-between-classes-of-fields">Rule 2: Maintain consistent order between classes of fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/logging_guide/source/index.html#rule-3-order-of-contextual-fields">Rule 3: Order of contextual fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/logging_guide/source/index.html#rule-4-for-one-time-events-provide-a-cause-whenever-it-s-unclear-what-it-might-be">Rule 4: For one time events, provide a cause whenever it’s unclear what it might be</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/logging_guide/source/index.html#rule-5-asn-1-messages-should-be-represented-using-the-respective-asn-1-type-name">Rule 5: ASN.1 Messages should be represented using the respective ASN.1 type name.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/logging_guide/source/index.html#rule-6-procedures-should-be-identified-by-the-name-specified-in-the-ts-clauses">Rule 6: Procedures should be identified by the name specified in the TS clauses.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/logging_guide/source/index.html#rule-7-messages-with-a-context-that-is-not-formatted-are-strictly-forbidden">Rule 7: Messages with a context that is not formatted are strictly forbidden!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/logging_guide/source/index.html#general-tips">General Tips</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Knowledge Base</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../knowledge_base/source/oran_gnb/source/index.html">O-RAN gNB Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../knowledge_base/source/oran_gnb/source/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../knowledge_base/source/oran_gnb/source/index.html#split-7-2x-architecture">Split 7.2x Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../knowledge_base/source/oran_gnb/source/index.html#project-name">srsRAN Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../knowledge_base/source/oran_gnb/source/index.html#further-reading">Further Reading</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../knowledge_base/source/gnb_components/source/index.html">O-RAN gNB Components</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../knowledge_base/source/gnb_components/source/index.html#centralized-unit-cu">Centralized Unit (CU)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../knowledge_base/source/gnb_components/source/index.html#distributed-unit-du">Distributed Unit (DU)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../knowledge_base/source/gnb_components/source/index.html#du-high">DU-high</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../knowledge_base/source/gnb_components/source/index.html#du-low">DU-low</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../knowledge_base/source/gnb_interfaces/source/index.html">gNB Interfaces</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../knowledge_base/source/gnb_interfaces/source/index.html#e1">E1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../knowledge_base/source/gnb_interfaces/source/index.html#e2">E2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../knowledge_base/source/gnb_interfaces/source/index.html#f1">F1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../knowledge_base/source/gnb_interfaces/source/index.html#f1-c">F1-C</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../knowledge_base/source/gnb_interfaces/source/index.html#f1-u">F1-U</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../knowledge_base/source/gnb_interfaces/source/index.html#fapi">FAPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../knowledge_base/source/gnb_interfaces/source/index.html#ng">NG</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../knowledge_base/source/gnb_interfaces/source/index.html#ng-c">NG-C</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../knowledge_base/source/gnb_interfaces/source/index.html#ng-u">NG-U</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../knowledge_base/source/gnb_interfaces/source/index.html#o1">O1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../knowledge_base/source/gnb_interfaces/source/index.html#open-fronthaul">Open FrontHaul</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../knowledge_base/source/cots_ues/source/index.html">COTS UEs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../knowledge_base/source/cots_ues/source/index.html#tested-cots-ues">Tested COTS UEs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../knowledge_base/source/cots_ues/source/index.html#user-reported-working-ues">User reported working UEs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../knowledge_base/source/cots_ues/source/index.html#ue-capability-messages">UE Capability Messages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../knowledge_base/source/cots_ues/source/index.html#references">References</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../srsUE/source/index.html">srsRAN gNB with srsUE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../srsUE/source/index.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../srsUE/source/index.html#hardware-and-software-overview">Hardware and Software Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#id2">srsRAN 4G</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#limitations">Limitations</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#open5gs">Open5GS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#id3">ZeroMQ</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../srsUE/source/index.html#over-the-air-setup">Over-the-air Setup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#configuration">Configuration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#gnb">gNB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#srsue">srsUE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#running-the-network">Running the Network</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#open5gs-core">Open5GS Core</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#id5">gNB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#id6">srsUE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#testing-the-network">Testing the Network</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#routing-configuration">Routing Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#ping">Ping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#iperf3">iPerf3</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../srsUE/source/index.html#zeromq-based-setup">ZeroMQ-based Setup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#id7">Configuration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#id8">gNB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#id9">srsUE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#id10">Running the Network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#zmq-testing">Testing the Network</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#zmq-routing">Routing Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#id13">Ping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#id17">iPerf3</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../srsUE/source/index.html#multi-ue-emulation">Multi-UE Emulation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#id23">Configuration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#gnu-radio-companion">GNU-Radio Companion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#id25">Open5GS Core</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#id26">gNB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#id27">srsUE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#id28">Running the Network</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#id29">Open5GS Core</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#id30">gNB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#id31">srsUE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#id32">GNU-Radio Companion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#path-loss-control">Path-loss Control</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#id33">Testing the Network</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../srsUE/source/index.html#troubleshooting">Troubleshooting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#performance-issues">Performance Issues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#reference-clock">Reference clock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#g-qos-identifier">5G QoS Identifier</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#ue-does-not-get-ip-address">UE does not get IP address</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#ue-ip-forwarding">UE IP Forwarding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#nd-open5gs-instance-installed-manually">2nd Open5GS instance (installed manually)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#run-zmq-based-setup-on-two-host-machines">Run ZMQ-based setup on two host machines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#multiple-gnbs-connected-to-a-single-docker-based-open5gs">Multiple gNBs connected to a single Docker-based Open5gs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#usrp-x300-x310">USRP X300/X310</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../srsUE/source/index.html#id34">Limitations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#id35">srsUE</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="index.html#">srsRAN gNB with COTS UEs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#setup-considerations">Setup Considerations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="index.html#open5gs">Open5GS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#cots-ue">COTS UE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#external-clock">External Clock</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#configuration">Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="index.html#gnb">gNB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#isim">ISIM</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="index.html#sim-programming">SIM Programming</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#suci-configuration">SUCI Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#adding-user-controlled-plmns">Adding user-controlled PLMNs</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id1">Open5GS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="index.html#amf-yml">amf.yml</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#upf-yml">upf.yml</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#nrf-yml">nrf.yml</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#user-database">User Database</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id4">COTS UE</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="index.html#enable-isim-5g-and-data-roaming">Enable ISIM, 5G and data roaming</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#configure-apn">Configure APN</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#force-nr">Force NR</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#connecting-the-cots-ue">Connecting the COTS UE</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="index.html#setting-up-the-network">Setting-up the Network</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="index.html#check-that-the-core-is-running-correctly">Check that the Core is running correctly</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#run-the-gnb">Run the gNB</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#connecting-to-the-network">Connecting to the Network</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#traffic-and-testing">Traffic and Testing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="index.html#speed-test">Speed Test</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#video-test">Video Test</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#troubleshooting">Troubleshooting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="index.html#network-not-visible">Network Not Visible</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#unable-to-attach">Unable to Attach</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#no-internet-access">No Internet Access</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#ue-disconnects-after-a-few-minutes">UE Disconnects after a few Minutes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#tested-devices">Tested Devices</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../amariUE/source/index.html">srsRAN gNB with Amarisoft UE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../amariUE/source/index.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../amariUE/source/index.html#hardware-and-software-overview">Hardware and Software Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../amariUE/source/index.html#id1">Amarisoft UE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../amariUE/source/index.html#open5gs">Open5GS</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../amariUE/source/index.html#installation">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../amariUE/source/index.html#id2">ZeroMQ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../amariUE/source/index.html#id3">Amarisoft UE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../amariUE/source/index.html#zeromq-driver-for-amarisoft-ue">ZeroMQ driver for Amarisoft UE</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../amariUE/source/index.html#zeromq-based-setup">ZeroMQ-based Setup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../amariUE/source/index.html#configuration">Configuration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#project-name">srsRAN Project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#id4">Amarisoft UE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#id5">Open5GS 5G Core</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../amariUE/source/index.html#running-the-5g-network">Running the 5G Network</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#id7">Open5gs 5G Core</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#id8">srsRAN Project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#id9">Amarisoft UE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../amariUE/source/index.html#testing-the-network">Testing the Network</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#ping">Ping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#iperf">iPerf</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#iperf-output">iPerf Output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#gnb-console-output">gNB Console Output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#packet-capture">Packet Capture</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../amariUE/source/index.html#configuring-amarisoft-for-multiple-ues">Configuring Amarisoft for multiple UEs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../amariUE/source/index.html#over-the-air-setup">Over-the-air Setup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../amariUE/source/index.html#id10">Configuration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#id11">srsRAN Project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#id12">Amarisoft UE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../amariUE/source/index.html#id13">Running the 5G Network</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#id14">Open5gs 5G Core</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#id15">srsRAN Project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#id16">Amarisoft UE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../amariUE/source/index.html#amariue-radios-test">Testing the Network</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#id18">Ping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#id19">iPerf</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#id20">iPerf Output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#id21">gNB Console Output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#id22">Packet Capture</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../amariUE/source/index.html#troubleshooting">Troubleshooting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../amariUE/source/index.html#zmq-setup">ZMQ setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../amariUE/source/index.html#reference-clock-for-over-the-air">Reference clock for over-the-air</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../amariUE/source/index.html#g-qos-identifier">5G QoS Identifier</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../dpdk/source/index.html">srsRAN gNB with DPDK</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../dpdk/source/index.html#introduction">Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../dpdk/source/index.html#further-reading">Further Reading</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../dpdk/source/index.html#installing-dpdk">Installing DPDK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dpdk/source/index.html#configuring-dpdk">Configuring DPDK</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../dpdk/source/index.html#configure-hugepages">Configure Hugepages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dpdk/source/index.html#binding-to-dpdk">Binding to DPDK</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dpdk/source/index.html#id1">EAL Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../dpdk/source/index.html#running-srsran-with-dpdk">Running srsRAN with DPDK</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../k8s/source/index.html">srsRAN gNB on Kubernetes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../k8s/source/index.html#introduction">Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../k8s/source/index.html#further-reading">Further Reading</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../k8s/source/index.html#setup-considerations">Setup Considerations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../k8s/source/index.html#cu-du">CU/DU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../k8s/source/index.html#ru">RU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../k8s/source/index.html#g-core">5G Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../k8s/source/index.html#clocking-synchronization">Clocking &amp; Synchronization</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../k8s/source/index.html#set-up-a-k8s-k3s-bare-metal-cluster">Set up a K8s/K3s Bare Metal Cluster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../k8s/source/index.html#deploy-a-kubernetes-cluster">1. Deploy a Kubernetes Cluster</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../k8s/source/index.html#install-realtime-kernel">2. Install Realtime Kernel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../k8s/source/index.html#install-tuned">3. Install TuneD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../k8s/source/index.html#install-dpdk">4. Install DPDK</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../k8s/source/index.html#set-up-ptp-synchronization">Set Up PTP Synchronization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../k8s/source/index.html#set-up-core-network-open5gs">Set Up Core Network: Open5GS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../k8s/source/index.html#set-up-gnb">Set Up gNB</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../k8s/source/index.html#connecting-to-internal-core-networks-within-the-cluster">1. Connecting to Internal Core Networks Within the Cluster</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../k8s/source/index.html#assign-dpdk-devices-without-the-sr-iov-plugin">2. Assign DPDK Devices Without the SR-IOV Plugin</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../k8s/source/index.html#load-testing">Load Testing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../k8s/source/index.html#srsran-ru-emulator">1. srsRAN RU Emulator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../k8s/source/index.html#assess-maximum-latency-using-cyclictest">2. Assess Maximum Latency Using cyclictest</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../k8s/source/index.html#visualizing-kpis-via-grafana">Visualizing KPIs via Grafana</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../k8s/source/index.html#clean-up-deployments">Clean Up Deployments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../handover/source/index.html">srsRAN gNB Handover</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../handover/source/index.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../handover/source/index.html#hardware-and-software-overview">Hardware and Software Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../handover/source/index.html#project-name">srsRAN Project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../handover/source/index.html#x310-usrp">X310 USRP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../handover/source/index.html#open5gs">Open5GS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../handover/source/index.html#cots-ue">COTS UE</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../handover/source/index.html#configuration">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../handover/source/index.html#connecting-the-cots-ue">Connecting the COTS UE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../handover/source/index.html#triggering-handover">Triggering Handover</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../handover/source/index.html#from-console">From Console</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../handover/source/index.html#physically">Physically</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../handover/source/index.html#grafana-output">Grafana Output</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../handover/source/index.html#limitations">Limitations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../ntn/source/index.html">srsRAN gNB for 5G NTN</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ntn/source/index.html#overview">Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#limitations">Limitations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../ntn/source/index.html#hardware-and-software-overview">Hardware and Software Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#amarisoft-ue">Amarisoft UE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#open5gs">Open5GS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#id1">GNU-Radio Companion</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../ntn/source/index.html#installation">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#id2">ZeroMQ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#project-name">srsRAN Project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#id3">Amarisoft UE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#zeromq-driver-for-amarisoft-ue">ZeroMQ driver for Amarisoft UE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#id4">GNU-Radio Companion</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../ntn/source/index.html#configuration">Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#gnb">gNB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#amarisoftue">AmarisoftUE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#ntn-channel-emulator">NTN Channel Emulator</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../ntn/source/index.html#running-the-network">Running the Network</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#open5gs-core">Open5GS Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#geo-ntn-channel-emulator">GEO NTN Channel Emulator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#id5">gNB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#id6">AmarisoftUE</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../ntn/source/index.html#testing-the-network">Testing the Network</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#routing-configuration">Routing Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#ping">Ping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#iperf">Iperf</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../ntn/source/index.html#troubleshooting">Troubleshooting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#running-gnb-and-amarisoftue-on-separate-machines">Running gNB and AmarisoftUE on separate machines</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../cu_du_split/source/index.html">O-RAN CU-DU Split</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../cu_du_split/source/index.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cu_du_split/source/index.html#hardware-and-software-overview">Hardware and Software Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../cu_du_split/source/index.html#project-name">srsRAN Project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../cu_du_split/source/index.html#b210">B210</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../cu_du_split/source/index.html#open5gs">Open5GS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../cu_du_split/source/index.html#cots-ue">COTS UE</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../cu_du_split/source/index.html#configuration">Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../cu_du_split/source/index.html#core">Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../cu_du_split/source/index.html#srscu">srsCU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../cu_du_split/source/index.html#srsdu">srsDU</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../cu_du_split/source/index.html#running-the-network">Running the Network</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../cu_du_split/source/index.html#id1">Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../cu_du_split/source/index.html#id2">srsCU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../cu_du_split/source/index.html#id3">srsDU</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../cu_du_split/source/index.html#connecting-to-the-network">Connecting to the Network</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../cu_du_split/source/index.html#console-outputs">Console Outputs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../oranRU/source/index.html">O-RAN 7.2 RU Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../oranRU/source/index.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oranRU/source/index.html#setup-considerations">Setup Considerations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../oranRU/source/index.html#cu-du">CU/DU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../oranRU/source/index.html#ru">RU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../oranRU/source/index.html#g-core">5G Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../oranRU/source/index.html#synchronization">Synchronization</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../oranRU/source/index.html#switch">Switch</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../oranRU/source/index.html#configuration">Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../oranRU/source/index.html#id1">Switch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../oranRU/source/index.html#id2">CU/DU</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../oranRU/source/index.html#nic-configuration">NIC configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../oranRU/source/index.html#ptp-configuration">PTP configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../oranRU/source/index.html#enabling-ptp-with-dpdk">Enabling PTP with DPDK</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../oranRU/source/index.html#srsran-configuration">srsRAN configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../oranRU/source/index.html#id4">RU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../oranRU/source/index.html#core">Core</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../oranRU/source/index.html#initializing-the-network">Initializing the Network</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../oranRU/source/index.html#id5">RU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../oranRU/source/index.html#id6">CU/DU</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../oranRU/source/index.html#connecting-to-the-network">Connecting to the Network</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../oranRU/source/index.html#cots-ue">COTS UE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../oranRU/source/index.html#amariue">AmariUE</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../oranRU/source/index.html#sending-traffic">Sending Traffic</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../oranRU/source/index.html#integration-guide">Integration Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../oranRU/source/hw_integration.html">RUs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../oranRU/source/rus/foxconn.html">Foxconn RPQN-(48/78)00(E/I)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../oranRU/source/rus/picocom.html">Picocom</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../oranRU/source/rus/liteon.html">LITEON FlexFi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../oranRU/source/rus/vvdn.html">VVDN</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../oranRU/source/rus/r550.html">Benetel RAN550/RAN650</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../oranRU/source/hw_integration.html#switches">Switches</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../oranRU/source/switches/falcon.html">Falcon-RX Switch</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../near-rt-ric/source/index.html">O-RAN NearRT-RIC and xApp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../near-rt-ric/source/index.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../near-rt-ric/source/index.html#setup-overview">Setup Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../near-rt-ric/source/index.html#hardware-and-software-overview">Hardware and Software Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../near-rt-ric/source/index.html#limitations">Limitations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../near-rt-ric/source/index.html#installation">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../near-rt-ric/source/index.html#open5gs">Open5GS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../near-rt-ric/source/index.html#id5">ZeroMQ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../near-rt-ric/source/index.html#project-name">srsRAN Project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../near-rt-ric/source/index.html#srsue">srsUE</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../near-rt-ric/source/index.html#configuration">Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../near-rt-ric/source/index.html#gnb">gNB</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../near-rt-ric/source/index.html#running-the-network">Running the Network</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../near-rt-ric/source/index.html#open5gs-core">Open5GS Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../near-rt-ric/source/index.html#nearrt-ric">NearRT-RIC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../near-rt-ric/source/index.html#id6">gNB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../near-rt-ric/source/index.html#id7">srsUE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../near-rt-ric/source/index.html#ip-traffic-with-ping">IP Traffic with ping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../near-rt-ric/source/index.html#xapps">xApps</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../near-rt-ric/source/index.html#e2ap-packet-analyzer">E2AP packet analyzer</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../near-rt-ric/source/index.html#enable-e2ap-pcap">Enable E2AP PCAP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../near-rt-ric/source/index.html#live-capture">Live capture</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../near-rt-ric/source/index.html#troubleshooting">Troubleshooting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../near-rt-ric/source/index.html#pcap">PCAP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../near-rt-ric/source/index.html#core-network-not-running">Core Network not running</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../near-rt-ric/source/index.html#ue-issues">UE issues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../near-rt-ric/source/index.html#ue-ip-forwarding">UE IP Forwarding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../near-rt-ric/source/index.html#nd-open5gs-instance-installed-manually">2nd Open5GS instance (installed manually)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../near-rt-ric/source/index.html#ric-running-on-a-different-machine">RIC running on a different machine</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../matlab/source/index.html">MATLAB Testing Tools</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../matlab/source/index.html#overview">Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../matlab/source/index.html#test-vector-generation">Test Vector Generation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../matlab/source/index.html#signal-analyzers">Signal Analyzers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../matlab/source/index.html#simulators">Simulators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../matlab/source/index.html#set-up-considerations">Set-Up Considerations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../matlab/source/index.html#installation">Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tuning/source/index.html">srsRAN gNB Performance Tuning</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tuning/source/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tuning/source/index.html#tuned">TuneD</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tuning/source/index.html#installation">Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tuning/source/index.html#srsran-tuning-profile">srsRAN tuning profile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tuning/source/index.html#further-reading">Further Reading</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../testmode/source/index.html">srsRAN gNB(-DU) Load Testing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../testmode/source/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../testmode/source/index.html#using-ru-dummy">Using <code class="docutils literal notranslate"><span class="pre">ru_dummy</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../testmode/source/index.html#using-ru-emu">Using <code class="docutils literal notranslate"><span class="pre">ru_emu</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../testmode/source/index.html#using-no-core">Using <code class="docutils literal notranslate"><span class="pre">no_core</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../testmode/source/index.html#using-testmode">Using <code class="docutils literal notranslate"><span class="pre">testmode</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../hw_kit/source/index.html">E2E O-RAN Tesbed with srsRAN</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../hw_kit/source/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../hw_kit/source/index.html#testbed-setup">Testbed setup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../hw_kit/source/index.html#hardware-components">Hardware components</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../hw_kit/source/index.html#workstation-pc">Workstation PC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../hw_kit/source/index.html#o-ru">O-RU</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../hw_kit/source/index.html#g-ue">5G UE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../hw_kit/source/index.html#auxiliary-elements">Auxiliary elements</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../hw_kit/source/index.html#software">Software</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../hw_kit/source/index.html#configuration">Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../hw_kit/source/index.html#ptp-grandmaster">PTP Grandmaster</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../hw_kit/source/index.html#demanding-dl-requirements">Demanding DL requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../hw_kit/source/index.html#demanding-ul-requirements">Demanding UL requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../hw_kit/source/index.html#low-latency-with-demanding-ul-requirements">Low-latency with demanding UL requirements</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+    
+        <p class="caption">
+            <span class="caption-text">
+            
+                Links
+            
+            </span>
+        </p>
+        <ul>
+            
+                
+                    <li class="toctree-l1"><a href="https://www.srsran.com"><i class="web-icon"></i> Website</a></li>
+                
+            
+                
+                    <li class="toctree-l1"><a href="https://github.com/srsran/srsran_project"><i class="fa fa-github fa-fw"></i> Source code</a></li>
+                
+            
+                
+                    <li class="toctree-l1"><a href="https://github.com/srsran/srsran_project/issues"><i class="fa fa-bug fa-fw"></i> Report an issue</a></li>
+                
+            
+                
+                    <li class="toctree-l1"><a href="https://github.com/srsran/srsran_project/discussions"><i class="fa fa-envelope fa-fw"></i> Discussions Board</a></li>
+                
+            
+                
+                    <li class="toctree-l1"><a href="https://twitter.com/srsRANProject"><i class="fa fa-twitter fa-fw"></i> Twitter</a></li>
+                
+            
+        </ul>
+    
+
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">srsRAN Project</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">srsRAN gNB with COTS UEs</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/tutorials/source/cotsUE/source/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="../../srsUE/source/index.html" class="btn btn-neutral float-left" title="srsRAN gNB with srsUE" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../amariUE/source/index.html" class="btn btn-neutral float-right" title="srsRAN gNB with Amarisoft UE" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="srsran-gnb-with-cots-ues">
+<span id="cots-ue-tutorial"></span><h1>srsRAN gNB with COTS UEs<a class="headerlink" href="index.html#srsran-gnb-with-cots-ues" title="Link to this heading"></a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Operating a private 5G SA network on cellular frequency bands may be tightly regulated in your jurisdiction. Seek the approval of your telecommunications regulator before doing so.</p>
+</div>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="index.html#overview" title="Link to this heading"></a></h2>
+<p>This tutorial demonstrates how to configure and connect a 5G capable COTS UE to a 5G SA network using srsRAN Project and a 3rd-party 5G core (Open5GS in this example).</p>
+<p>To connect a COTS UE to a 5G network using srsRAN Project users will need the following requirements:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>A PC with a linux based OS</p></li>
+<li><p>srsRAN Project  CU/DU</p></li>
+<li><p>RF-frontend compatible with srsRAN Project</p></li>
+<li><p>A third-party 5G Core</p></li>
+<li><p>A 5G SA capable COTS UE</p></li>
+<li><p>A test USIM/ISIM/SIM card (must be a test sim or programmable card with known keys)</p></li>
+<li><p>We also recommend the use of an external clock source such as an octoclock or GPSDO</p></li>
+</ul>
+</div></blockquote>
+<p>This specific implementation uses the following:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Dell XPS-13 (Intel i7-10510U CPU) with Ubuntu 20.04</p></li>
+<li><p>srsRAN Project  CU/DU</p></li>
+<li><p>B210 USRP</p></li>
+<li><p>Open5GS 5G Core</p></li>
+<li><p>OnePlus 8T</p></li>
+<li><p>SysmoISIM-SJA2 with reprogrammed credentials</p></li>
+<li><p>Leo Bodnar GPS Reference Clock</p></li>
+</ul>
+</div></blockquote>
+</section>
+<hr class="docutils" />
+<section id="setup-considerations">
+<h2>Setup Considerations<a class="headerlink" href="index.html#setup-considerations" title="Link to this heading"></a></h2>
+<section id="open5gs">
+<h3>Open5GS<a class="headerlink" href="index.html#open5gs" title="Link to this heading"></a></h3>
+<p>For this example we are using Open5GS as the 5G Core.</p>
+<p>Open5GS is a C-language Open Source implementation for 5G Core and EPC. The following links will provide you
+with the information needed to download and set-up Open5GS so that it is ready to use with srsRAN Project:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://github.com/open5gs/open5gs">GitHub</a></p></li>
+<li><p><a class="reference external" href="https://open5gs.org/open5gs/docs/guide/01-quickstart/">Quickstart Guide</a></p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="cots-ue">
+<h3>COTS UE<a class="headerlink" href="index.html#cots-ue" title="Link to this heading"></a></h3>
+<p>You should make sure your device is capable of operating in 5G SA mode and that it operates in the bands supported by srsRAN Project.</p>
+</section>
+<section id="external-clock">
+<h3>External Clock<a class="headerlink" href="index.html#external-clock" title="Link to this heading"></a></h3>
+<p>A <a class="reference external" href="http://www.leobodnar.com/shop/index.php?main_page=product_info&amp;cPath=107&amp;products_id=234">Leo Bodnar GPS reference clock</a> was used as the USRP clock source for this set-up.</p>
+<p>The use of an external clock is not essential, but it mitigates possible errors occurring as result of inaccuracies in the internal clock of the RF front-end being used. The issue comes
+from the CFOs and timings tolerated by 5G handsets - the onboard clocks within SDRs are not always accurate enough to operate within the limits allowed by the handsets. Using an
+external clock, which is much more accurate than an SDR onboard clock, reduces the likelihood that a COTS UE will be unable to see/ connect to the network due to synchronization issues.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="configuration">
+<h2>Configuration<a class="headerlink" href="index.html#configuration" title="Link to this heading"></a></h2>
+<p>The following srsRAN configuration files were modified for this set-up:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference download internal" download="" href="../../../../_downloads/cc142413003e87e53c16e0b63203ac57/gnb_b210_20MHz_oneplus_8t.yml"><code class="xref download docutils literal notranslate"><span class="pre">gnb_b210_20MHz_oneplus_8t.yml</span></code></a></p></li>
+</ul>
+</div></blockquote>
+<p>The following Open5GS configuration files were modified for this set-up:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference download internal" download="" href="../../../../_downloads/d190d4445cf9bdc54802e8c115f07124/amf.yaml"><code class="xref download docutils literal notranslate"><span class="pre">amf.yaml</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../../_downloads/5d0ab839492b615de92127433e86c391/upf.yaml"><code class="xref download docutils literal notranslate"><span class="pre">upf.yaml</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../../_downloads/93443a03898ffbcc106663a0c655e1e4/nrf.yaml"><code class="xref download docutils literal notranslate"><span class="pre">nrf.yaml</span></code></a></p></li>
+</ul>
+</div></blockquote>
+<p>The aspects of the network should be configured in the following order:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>gNB</p></li>
+<li><p>ISIM</p></li>
+<li><p>Core</p></li>
+<li><p>COTS UE</p></li>
+</ol>
+</div></blockquote>
+<section id="gnb">
+<h3>gNB<a class="headerlink" href="index.html#gnb" title="Link to this heading"></a></h3>
+<p>The gNB is configured using the base configuration example found <a class="reference external" href="https://github.com/srsran/srsRAN_Project/blob/main/configs/gnb_rf_b200_tdd_n78_20mhz.yml">here</a>, with some slight modifications.</p>
+<p>The configuration has the following modifications from the original example:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Set the clock source of the USRP to <code class="docutils literal notranslate"><span class="pre">internal</span></code>. If you are using an external clock source (such as the Leo Bodnar GPSDO) set this to <code class="docutils literal notranslate"><span class="pre">external</span></code>.</p></li>
+<li><p>Set the ARFCN of the cell to <code class="docutils literal notranslate"><span class="pre">627340</span></code>. This ensured the gNB was broadcasting in a free area of spectrum with a BW of 20 MHz in our location.</p></li>
+<li><p>The PLMN is changed to <code class="docutils literal notranslate"><span class="pre">90170</span></code>. Using the OnePlus 8t, we have found that by forcing a roaming scenario, the phone sees the network and attaches more reliably. A roaming scenario is forced by setting different PLMNs in the cell and the ISIM in the phone.</p></li>
+</ul>
+</div></blockquote>
+<p>The above modifications are specific to the set-up being used here. It is recommended to adjust the ARFCN to your local set-up so that you are transmitting in a free area of spectrum.</p>
+<p>To configure the connection between the core and the gNB, you need to set the AMF <code class="docutils literal notranslate"><span class="pre">addr</span></code> to the address of the AMF. In this example, the default value is used in the gNB configuration file, and the relevant changes are made in the Open5GS configuration files.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>   cu_cp:
+<span class="w"> </span>     amf:
+<span class="w"> </span>       addr: 127.0.1.100                                            # The address or hostname of the AMF.
+<span class="w"> </span>       bind_addr: 127.0.0.1                                        # A local IP that the gNB binds to for traffic from the AMF.
+<span class="w"> </span>       supported_tracking_areas:                                   # Configure the TA associated with the CU-CP
+<span class="w"> </span>       - tac: 7
+<span class="w"> </span>           plmn_list:
+<span class="w"> </span>           - plmn: &quot;90170&quot;
+<span class="w"> </span>               tai_slice_support_list:
+<span class="w"> </span>               - sst: 1
+
+<span class="w"> </span>   ru_sdr:
+<span class="w"> </span>     device_driver: uhd                                            # The RF driver name.
+<span class="w"> </span>     device_args: type=b200,num_recv_frames=64,num_send_frames=64  # Optionally pass arguments to the selected RF driver.
+<span class="gd">-     clock:                                                        # Specify the clock source used by the RF.</span>
+<span class="gi">+     clock: internal                                               # Set to external only if using Leo Bodnar GPSDO as 10 MHz reference.</span>
+<span class="w"> </span>     srate: 23.04                                                  # RF sample rate might need to be adjusted according to selected bandwidth.
+<span class="w"> </span>     otw_format: sc12
+<span class="w"> </span>     tx_gain: 50                                                   # Transmit gain of the RF might need to adjusted to the given situation.
+<span class="w"> </span>     rx_gain: 60                                                   # Receive gain of the RF might need to adjusted to the given situation.
+
+<span class="w"> </span>   cell_cfg:
+<span class="gd">-     dl_arfcn: 632628                                              # ARFCN of the downlink carrier (center frequency).</span>
+<span class="gi">+     dl_arfcn: 627340</span>
+<span class="w"> </span>     band: 78                                                      # The NR band.
+<span class="w"> </span>     channel_bandwidth_MHz: 20                                     # Bandwith in MHz. Number of PRBs will be automatically derived.
+<span class="w"> </span>     common_scs: 30                                                # Subcarrier spacing in kHz used for data.
+<span class="gd">-     plmn: &quot;00101&quot;                                                 # PLMN broadcasted by the gNB.</span>
+<span class="gi">+     plmn: &quot;90170&quot;</span>
+<span class="w"> </span>     tac: 7                                                        # Tracking area code (needs to match the core configuration).
+<span class="w"> </span>     pci: 1                                                        # Physical cell ID.
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>srsRAN Project supports all NR bands up to Rel. 17. Not all BWs are supported in all bands, to confirm that your configuration is correct, you should
+reference <em>Table 5.3.5-1</em> in <a class="reference external" href="https://www.etsi.org/deliver/etsi_ts/138100_138199/138104/16.06.00_60/ts_138104v160600p.pdf">TS 38.104</a>.</p>
+</div>
+</section>
+<section id="isim">
+<h3>ISIM<a class="headerlink" href="index.html#isim" title="Link to this heading"></a></h3>
+<section id="sim-programming">
+<h4>SIM Programming<a class="headerlink" href="index.html#sim-programming" title="Link to this heading"></a></h4>
+<p>As outlined previously, this set-up uses the OnePlus 8t, during internal tests it was found that this phone (and other OnePlus devices) sometimes connect to the network more easily in a roaming scenario. This is achieved by setting different PLMNs for the cell and the ISIM in the phone.</p>
+<p>The MCC, MNC, IMSI and other credentials in the ISIM can be set by reprogramming. We reprogrammed our SysmoISIM-SJA2 using the following steps.</p>
+<p>Download <a class="reference external" href="https://github.com/osmocom/pysim">pySim</a> :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/osmocom/pysim
+<span class="nb">cd</span><span class="w"> </span>pysim
+sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>--no-install-recommends<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>pcscd<span class="w"> </span>libpcsclite-dev<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>python3<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>python3-setuptools<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>python3-pyscard<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>python3-pip
+pip3<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</pre></div>
+</div>
+<p>You can then run the following commands from within the <code class="docutils literal notranslate"><span class="pre">pysim</span></code> directory.</p>
+<p>Check the current ISIM configuration:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./pySim-read.py<span class="w"> </span>-p0
+</pre></div>
+</div>
+<p>Reconfigure the ISIM:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./pySim-prog.py<span class="w"> </span>-p0<span class="w"> </span>-s<span class="w"> </span>&lt;ICCID&gt;<span class="w"> </span>--mcc<span class="o">=</span>&lt;MCC&gt;<span class="w"> </span>--mnc<span class="o">=</span>&lt;MNC&gt;<span class="w"> </span>-a<span class="w"> </span>&lt;ADM-KEY&gt;<span class="w"> </span>--imsi<span class="o">=</span>&lt;IMSI&gt;<span class="w"> </span>-k<span class="w"> </span>&lt;KI&gt;<span class="w"> </span>--opc<span class="o">=</span>&lt;OPC&gt;
+</pre></div>
+</div>
+<p>You need to at least set the PLMN to 00101, optionally you can also reconfigure other aspects of the ISIM. For this set-up the following command was used:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./pySim-prog.py<span class="w"> </span>-p0<span class="w"> </span>-s<span class="w"> </span><span class="m">8988211000000689615</span><span class="w"> </span>--mcc<span class="o">=</span><span class="m">001</span><span class="w"> </span>--mnc<span class="o">=</span><span class="m">01</span><span class="w"> </span>-a<span class="w"> </span><span class="m">77190612</span><span class="w"> </span>--imsi<span class="o">=</span><span class="m">001010123456789</span><span class="w">  </span>-k<span class="w"> </span>41B7157E3337F0ADD8DA89210D89E17F<span class="w"> </span>--opc<span class="o">=</span>1CD638FC96E02EBD35AA0D41EB6F812F
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You will need to get the ICCID, ADM-KEY and other security information from the SIM provider.</p>
+</div>
+</section>
+<section id="suci-configuration">
+<h4>SUCI Configuration<a class="headerlink" href="index.html#suci-configuration" title="Link to this heading"></a></h4>
+<p>If you are using a sysmoISIM-SJA2 ISIM (5G-enabled) as in this example, then you will need to modify the 5G-related fields of the sim card. In particular you need to configure or disable SUPI concealment (SUCI).</p>
+<p>SUPI concealment can be disabled using the following commands. You should replace <code class="docutils literal notranslate"><span class="pre">&lt;ADM-KEY&gt;</span></code> with the ADM key of the respective SIM card.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">verify_adm</span></code> does not print any output on success. If you see something like <cite>“SW Mismatch: Expected 9000 and got 6982”</cite> the ADM key is not correct. Keep in mind that after
+3 failed write attempts due to a wrong ADM key the SIM is blocked and cannot be rewritten again.</p>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pySIM-shell<span class="w"> </span><span class="o">(</span>MF<span class="o">)</span>&gt;<span class="w"> </span><span class="k">select</span><span class="w"> </span>MF
+pySIM-shell<span class="w"> </span><span class="o">(</span>MF<span class="o">)</span>&gt;<span class="w"> </span><span class="k">select</span><span class="w"> </span>ADF.USIM
+pySIM-shell<span class="w"> </span><span class="o">(</span>MF/ADF.USIM<span class="o">)</span>&gt;<span class="w"> </span><span class="k">select</span><span class="w"> </span>EF.UST
+pySIM-shell<span class="w"> </span><span class="o">(</span>MF<span class="o">)</span>&gt;<span class="w"> </span>verify_adm<span class="w"> </span>&lt;ADM-KEY&gt;
+pySIM-shell<span class="w"> </span><span class="o">(</span>MF/ADF.USIM/EF.UST<span class="o">)</span>&gt;<span class="w"> </span>ust_service_deactivate<span class="w"> </span><span class="m">124</span>
+pySIM-shell<span class="w"> </span><span class="o">(</span>MF/ADF.USIM/EF.UST<span class="o">)</span>&gt;<span class="w"> </span>ust_service_deactivate<span class="w"> </span><span class="m">125</span>
+</pre></div>
+</div>
+<p>After these steps <strong>UST service 124</strong> and <strong>125</strong> should be disabled. You can verify the ISIM configuration using the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./pySim-read.py<span class="w"> </span>-p0
+</pre></div>
+</div>
+<p>More information on pySim and SUCI configuration can be found in <a class="reference external" href="https://downloads.osmocom.org/docs/pysim/master/html/suci-tutorial.html">this guide</a> in the pySim documentation.</p>
+</section>
+<section id="adding-user-controlled-plmns">
+<h4>Adding user-controlled PLMNs<a class="headerlink" href="index.html#adding-user-controlled-plmns" title="Link to this heading"></a></h4>
+<p>If you want to add user-controlled PLMNs to the USIM, you can do this by extending the EF_PLMNwACT EF.
+The following commands will add the PLMN <code class="docutils literal notranslate"><span class="pre">90170</span></code> to the USIM. First verify the current PLMN list which should
+include your home PLMN, e.g. <code class="docutils literal notranslate"><span class="pre">00101</span></code>. Then with  <cite>edit_binary_decoded</cite> you can add the new PLMN.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pySIM-shell<span class="w"> </span><span class="o">(</span>MF<span class="o">)</span>&gt;<span class="w"> </span><span class="k">select</span><span class="w"> </span>MF
+pySIM-shell<span class="w"> </span><span class="o">(</span>MF<span class="o">)</span>&gt;<span class="w"> </span><span class="k">select</span><span class="w"> </span>ADF.USIM
+pySIM-shell<span class="w"> </span><span class="o">(</span>MF/ADF.USIM<span class="o">)</span>&gt;<span class="w"> </span><span class="k">select</span><span class="w"> </span>EF.PLMNwAcT
+pySIM-shell<span class="w"> </span><span class="o">(</span><span class="m">00</span>:MF/ADF.USIM/EF.PLMNwAcT<span class="o">)</span>&gt;<span class="w"> </span>read_binary_decoded
+<span class="o">[</span>
+<span class="o">{</span>
+<span class="w">    </span><span class="s2">&quot;mcc&quot;</span>:<span class="w"> </span><span class="s2">&quot;001&quot;</span>,
+<span class="w">    </span><span class="s2">&quot;mnc&quot;</span>:<span class="w"> </span><span class="s2">&quot;01&quot;</span>,
+<span class="w">    </span><span class="s2">&quot;act&quot;</span>:<span class="w"> </span><span class="o">[</span>
+<span class="w">        </span><span class="s2">&quot;E-UTRAN NB-S1&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;E-UTRAN WB-S1&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;EC-GSM-IoT&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;GSM&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;GSM COMPACT&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;NG-RAN&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;UTRAN&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;cdma2000 1xRTT&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;cdma2000 HRPD&quot;</span>
+<span class="w">    </span><span class="o">]</span>
+<span class="o">}</span>
+..
+pySIM-shell<span class="w"> </span><span class="o">(</span><span class="m">00</span>:MF/ADF.USIM/EF.PLMNwAcT<span class="o">)</span>&gt;<span class="w"> </span>edit_binary_decoded
+<span class="o">{</span>
+<span class="w">    </span><span class="s2">&quot;mcc&quot;</span>:<span class="w"> </span><span class="s2">&quot;901&quot;</span>,
+<span class="w">    </span><span class="s2">&quot;mnc&quot;</span>:<span class="w"> </span><span class="s2">&quot;70&quot;</span>,
+<span class="w">    </span><span class="s2">&quot;act&quot;</span>:<span class="w"> </span><span class="o">[</span>
+<span class="w">        </span><span class="s2">&quot;E-UTRAN NB-S1&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;E-UTRAN WB-S1&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;EC-GSM-IoT&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;GSM&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;GSM COMPACT&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;NG-RAN&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;UTRAN&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;cdma2000 1xRTT&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;cdma2000 HRPD&quot;</span>
+<span class="w">    </span><span class="o">]</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="id1">
+<span id="id2"></span><h3>Open5GS<a class="headerlink" href="index.html#id1" title="Link to this heading"></a></h3>
+<p>For this set-up Open5GS is running as a service on the machine, this is the “default” way of running Open5GS as described in their documentation. If you are running open5GS in a docker container, or other environment, your configuration will vary slightly.</p>
+<p>The Open5GS <a class="reference external" href="https://open5gs.org/open5gs/docs/guide/01-quickstart/#:~:text=restart%20open5gs%2Dsgwud-,Setup%20a%205G%20Core,-You%20will%20need">5G Core Quickstart Guide</a> provides a comprehensive overview of how to configure Open5GS to run as a 5G Core.</p>
+<p>To configure the core correctly the following steps need to be taken:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Configure the core to connect to the gNB.</p></li>
+<li><p>Configure the PLMN and TAC values so that they are the same as those present in the gNB configuration.</p></li>
+<li><p>Register the ISIM credentials to the list of subscribers through the Open5GS WebUI.</p></li>
+</ul>
+</div></blockquote>
+<section id="amf-yml">
+<h4>amf.yml<a class="headerlink" href="index.html#amf-yml" title="Link to this heading"></a></h4>
+<p>In the AMF configuration file the following modifications need to be made:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Set the NGAP addr, this should be the same as the AMF addr as seen in the gNB configuration file</p></li>
+<li><p>Set the MCC, MNC and TAC values such that they are the same as the PLMN and TAC used in the gNB configuration file, and different to that of the ISIM</p></li>
+</ul>
+</div></blockquote>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>   ngap:
+<span class="gd">-      - addr: 127.0.0.5</span>
+<span class="gi">+      - addr: 127.0.1.100</span>
+<span class="w"> </span>    metrics:
+<span class="w"> </span>        addr: 127.0.0.5
+<span class="w"> </span>        port: 9090
+<span class="w"> </span>    guami:
+<span class="w"> </span>      - plmn_id:
+<span class="gd">-          mcc: 999</span>
+<span class="gd">-          mnc: 70</span>
+<span class="gi">+          mcc: 901</span>
+<span class="gi">+          mnc: 70</span>
+<span class="w"> </span>        amf_id:
+<span class="w"> </span>          region: 2
+<span class="w"> </span>          set: 1
+<span class="w"> </span>    tai:
+<span class="w"> </span>      - plmn_id:
+<span class="gd">-          mcc: 999</span>
+<span class="gd">-          mnc: 70</span>
+<span class="gi">+          mcc: 901</span>
+<span class="gi">+          mnc: 70</span>
+<span class="gd">-        tac: 1</span>
+<span class="gi">+        tac: 7</span>
+<span class="w"> </span>    plmn_support:
+<span class="w"> </span>      - plmn_id:
+<span class="gd">-          mcc: 999</span>
+<span class="gd">-          mnc: 70</span>
+<span class="gi">+          mcc: 901</span>
+<span class="gi">+          mnc: 70</span>
+</pre></div>
+</div>
+</section>
+<section id="upf-yml">
+<h4>upf.yml<a class="headerlink" href="index.html#upf-yml" title="Link to this heading"></a></h4>
+<p>In the UPF configuration file the following modifications need to be made:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Set the GTPU addr, this should be the same as the AMF addr as seen in the gNB configuration file</p></li>
+</ul>
+</div></blockquote>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>   upf:
+<span class="w"> </span>    pfcp:
+<span class="w"> </span>      - addr: 127.0.0.7
+<span class="w"> </span>    gtpu:
+<span class="gd">-      - addr: 127.0.0.7</span>
+<span class="gi">+      - addr: 127.0.1.100</span>
+<span class="w"> </span>    subnet:
+<span class="w"> </span>      - addr: 10.45.0.1/16
+<span class="w"> </span>      - addr: 2001:db8:cafe::1/48
+<span class="w"> </span>    metrics:
+<span class="w"> </span>      - addr: 127.0.0.7
+<span class="w"> </span>        port: 9090
+</pre></div>
+</div>
+</section>
+<section id="nrf-yml">
+<h4>nrf.yml<a class="headerlink" href="index.html#nrf-yml" title="Link to this heading"></a></h4>
+<p>In the NRF configuration, the following modifications need to be made:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Set the PLMN to match that of the gNB and AMF configuration files</p></li>
+<li><p>Check that the address of the AMF matches that of the gNB configuration file</p></li>
+</ul>
+</div></blockquote>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>   logger:
+<span class="w"> </span>     file:
+<span class="w"> </span>       path: /var/log/open5gs/nrf.log
+<span class="w"> </span>   #  level: info   # fatal|error|warn|info(default)|debug|trace
+
+<span class="w"> </span>   global:
+<span class="w"> </span>     max:
+<span class="w"> </span>       ue: 1024  # The number of UE can be increased depending on memory size.
+<span class="w"> </span>   #    peer: 64
+
+<span class="w"> </span>   nrf:
+<span class="w"> </span>     serving:  # 5G roaming requires PLMN in NRF
+<span class="w"> </span>       - plmn_id:
+<span class="gd">-          mcc: 999</span>
+<span class="gd">-          mnc: 70</span>
+<span class="gi">+          mcc: 901</span>
+<span class="gi">+          mnc: 70</span>
+<span class="w"> </span>   sbi:
+<span class="w"> </span>     server:
+<span class="w"> </span>       - addr: 127.0.0.10
+<span class="w"> </span>         port: 7777
+</pre></div>
+</div>
+</section>
+<section id="user-database">
+<h4>User Database<a class="headerlink" href="index.html#user-database" title="Link to this heading"></a></h4>
+<p>You can see how to register subscriber information with the core <a class="reference external" href="https://open5gs.org/open5gs/docs/guide/01-quickstart/#:~:text=Register%20Subscriber%20Information">here</a>.</p>
+<p>You will need to at least fill the IMSI, AMF, K and OPc related to the subscriber, as well as the APN.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Set the APN to IPv4, not IPv4/6 or IPv6.</p>
+</div>
+</section>
+</section>
+<section id="id4">
+<h3>COTS UE<a class="headerlink" href="index.html#id4" title="Link to this heading"></a></h3>
+<p>To configure the OnePlus 8t to connect to the network the following steps must be taken:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Enable the ISIM</p></li>
+<li><p>Enable 5G SA Mode</p></li>
+<li><p>Enable data roaming</p></li>
+<li><p>Disable VoLTE and/or VoNR</p></li>
+<li><p>Configure the APN</p></li>
+<li><p>Force NR only</p></li>
+</ol>
+</div></blockquote>
+<section id="enable-isim-5g-and-data-roaming">
+<h4>Enable ISIM, 5G and data roaming<a class="headerlink" href="index.html#enable-isim-5g-and-data-roaming" title="Link to this heading"></a></h4>
+<p>The first step in configuring the UE is to make sure the SIM and the use of a 5G NR carrier is enabled. In this example the ISIM is placed in SIM tray 1, and there is no other SIM present.</p>
+<p>In the first image, you can see that the ISIM is correctly found, and that mobile data is enabled. In the second image you can see that the ISIM is enabled, data roaming is enabled and that 5G is set as the preferred network type.</p>
+<p><a class="reference internal" href="../../../../_images/sim_1.jpg"><img alt="sim1" src="../../../../_images/sim_1.jpg" style="width: 20%;" /></a> <a class="reference internal" href="../../../../_images/sim_2.jpg"><img alt="sim2" src="../../../../_images/sim_2.jpg" style="width: 20%;" /></a></p>
+<blockquote>
+<div></div></blockquote>
+<p>If you cannot see the <code class="docutils literal notranslate"><span class="pre">5G</span></code> option in <code class="docutils literal notranslate"><span class="pre">Preferred</span> <span class="pre">network</span> <span class="pre">type</span></code>, then you may need to activate it. This can be enabled under the Developer Options, if you do not have access to Developer Options see <a class="reference external" href="https://developer.android.com/studio/debug/dev-options">this guide</a>.
+In <code class="docutils literal notranslate"><span class="pre">Developer</span> <span class="pre">Options</span></code> go to <code class="docutils literal notranslate"><span class="pre">Networking</span></code> and enable <code class="docutils literal notranslate"><span class="pre">5G</span></code>, you may also need to set <code class="docutils literal notranslate"><span class="pre">5G</span> <span class="pre">network</span> <span class="pre">mode</span></code> to <code class="docutils literal notranslate"><span class="pre">NSA</span> <span class="pre">+</span> <span class="pre">SA</span> <span class="pre">Mode</span></code></p>
+<p>The final option that needs to be enabled here is <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">roaming</span></code>, this is shown in the second image.</p>
+<p>In some phones there may also be an option to configure <code class="docutils literal notranslate"><span class="pre">VoNR</span></code> and/or <code class="docutils literal notranslate"><span class="pre">VoLTE</span></code>, it is important to make sure that this is <strong>disabled</strong>.</p>
+</section>
+<section id="configure-apn">
+<h4>Configure APN<a class="headerlink" href="index.html#configure-apn" title="Link to this heading"></a></h4>
+<p><a class="reference internal" href="../../../../_images/apn_1.jpg"><img alt="apn1" src="../../../../_images/apn_1.jpg" style="width: 20%;" /></a> <a class="reference internal" href="../../../../_images/apn_2.jpg"><img alt="apn2" src="../../../../_images/apn_2.jpg" style="width: 20%;" /></a></p>
+<blockquote>
+<div></div></blockquote>
+<p>The above images show the APN configuration used in this example. The key points to note are the following:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The APN <code class="docutils literal notranslate"><span class="pre">Name</span></code> is arbitrary, and can have any string value.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">APN</span></code> option needs to be set to the same as the <code class="docutils literal notranslate"><span class="pre">DNN/APN</span></code> option as set in the Open5GS subscriber registration.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">APN</span> <span class="pre">protocol</span></code> and <code class="docutils literal notranslate"><span class="pre">APN</span> <span class="pre">roaming</span> <span class="pre">protocol</span></code> are both set to <strong>IPv4</strong> as in the Open5GS subscriber registration. Setting to IPv6 or IPv4/6 can lead to issues connecting the internet.</p></li>
+<li><p>All other options are left to the default values.</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="force-nr">
+<h4>Force NR<a class="headerlink" href="index.html#force-nr" title="Link to this heading"></a></h4>
+<p>The application <code class="docutils literal notranslate"><span class="pre">5G</span> <span class="pre">Switch</span> <span class="pre">-</span> <span class="pre">Force</span> <span class="pre">5G</span> <span class="pre">Only</span></code> can be used to force your device to only see 5G NR networks. This works with devices that are not rooted, and was used as part of this setup to ensure
+the device could see and attach to the network. Although it was not a requirement to get the phone to connect it made it easier to consistently connect to the network.</p>
+<p>The apps Play Store page looks like the following:</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../../../../_images/app.jpg"><img alt="../../../../_images/app.jpg" src="../../../../_images/app.jpg" style="width: 20%;" />
+</a>
+</div></blockquote>
+<p>When you run the app you can select <code class="docutils literal notranslate"><span class="pre">NR</span> <span class="pre">Only</span></code> from the <code class="docutils literal notranslate"><span class="pre">Set</span> <span class="pre">Preferred</span> <span class="pre">Network</span> <span class="pre">Type</span></code> menu. This looks like the following:</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../../../../_images/force_nr.jpg"><img alt="../../../../_images/force_nr.jpg" src="../../../../_images/force_nr.jpg" style="width: 20%;" />
+</a>
+</div></blockquote>
+<p>When you select this option, you may see the <code class="docutils literal notranslate"><span class="pre">Preferred</span> <span class="pre">Network</span> <span class="pre">Type</span></code> field in the SIM configuration menu change to <code class="docutils literal notranslate"><span class="pre">4G/3G/2G</span> <span class="pre">(Auto)</span></code> as seen in the screenshot in the <a class="hxr-hoverxref hxr-tooltip reference internal" href="index.html#connect"><span class="std std-ref">Connecting to the Network section</span></a>.
+This is fine, and can be ignored. Once NR is selected in the app, you do not have to select 5G from the SIM configuration menu.</p>
+</section>
+</section>
+</section>
+<section id="connecting-the-cots-ue">
+<h2>Connecting the COTS UE<a class="headerlink" href="index.html#connecting-the-cots-ue" title="Link to this heading"></a></h2>
+<p>To connect the COTS UE to the network the following steps must be taken once the phone and network have been correctly configured:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Run the gNB and ensure it is correctly connected to the core</p></li>
+<li><p>Search for the network from the UE</p></li>
+<li><p>Select and connect to the network</p></li>
+<li><p>Verify the attach</p></li>
+<li><p>Stream data</p></li>
+</ol>
+</div></blockquote>
+<section id="setting-up-the-network">
+<h3>Setting-up the Network<a class="headerlink" href="index.html#setting-up-the-network" title="Link to this heading"></a></h3>
+<section id="check-that-the-core-is-running-correctly">
+<h4>Check that the Core is running correctly<a class="headerlink" href="index.html#check-that-the-core-is-running-correctly" title="Link to this heading"></a></h4>
+<p>First it is good to check that Open5GS is running correctly, this can be done with the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ps<span class="w"> </span>aux<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>open5gs
+</pre></div>
+</div>
+<p>If the core is running correctly the following should be given as the output:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>open5gs<span class="w">     </span><span class="m">1601</span><span class="w">  </span><span class="m">0</span>.0<span class="w">  </span><span class="m">0</span>.0<span class="w"> </span><span class="m">141680</span><span class="w"> </span><span class="m">15872</span><span class="w"> </span>?<span class="w">        </span>Ssl<span class="w">  </span><span class="m">10</span>:36<span class="w">   </span><span class="m">0</span>:00<span class="w"> </span>/usr/bin/open5gs-bsfd<span class="w"> </span>-c<span class="w"> </span>/etc/open5gs/bsf.yaml
+open5gs<span class="w">     </span><span class="m">1606</span><span class="w">  </span><span class="m">0</span>.0<span class="w">  </span><span class="m">0</span>.1<span class="w"> </span><span class="m">134452</span><span class="w"> </span><span class="m">24840</span><span class="w"> </span>?<span class="w">        </span>Ssl<span class="w">  </span><span class="m">10</span>:36<span class="w">   </span><span class="m">0</span>:01<span class="w"> </span>/usr/bin/open5gs-nrfd<span class="w"> </span>-c<span class="w"> </span>/etc/open5gs/nrf.yaml
+open5gs<span class="w">     </span><span class="m">1613</span><span class="w">  </span><span class="m">0</span>.0<span class="w">  </span><span class="m">0</span>.2<span class="w"> </span><span class="m">147068</span><span class="w"> </span><span class="m">41720</span><span class="w"> </span>?<span class="w">        </span>Ssl<span class="w">  </span><span class="m">10</span>:36<span class="w">   </span><span class="m">0</span>:02<span class="w"> </span>/usr/bin/open5gs-scpd<span class="w"> </span>-c<span class="w"> </span>/etc/open5gs/scp.yaml
+open5gs<span class="w">     </span><span class="m">2663</span><span class="w">  </span><span class="m">0</span>.0<span class="w">  </span><span class="m">0</span>.1<span class="w"> </span><span class="m">2801740</span><span class="w"> </span><span class="m">16788</span><span class="w"> </span>?<span class="w">       </span>Ssl<span class="w">  </span><span class="m">10</span>:36<span class="w">   </span><span class="m">0</span>:02<span class="w"> </span>/usr/bin/open5gs-hssd<span class="w"> </span>-c<span class="w"> </span>/etc/open5gs/hss.yaml
+open5gs<span class="w">     </span><span class="m">2675</span><span class="w">  </span><span class="m">0</span>.0<span class="w">  </span><span class="m">0</span>.1<span class="w"> </span><span class="m">2800268</span><span class="w"> </span><span class="m">16568</span><span class="w"> </span>?<span class="w">       </span>Ssl<span class="w">  </span><span class="m">10</span>:36<span class="w">   </span><span class="m">0</span>:02<span class="w"> </span>/usr/bin/open5gs-pcrfd<span class="w"> </span>-c<span class="w"> </span>/etc/open5gs/pcrf.yaml
+open5gs<span class="w">     </span><span class="m">2676</span><span class="w">  </span><span class="m">0</span>.0<span class="w">  </span><span class="m">0</span>.1<span class="w"> </span><span class="m">185572</span><span class="w"> </span><span class="m">21584</span><span class="w"> </span>?<span class="w">        </span>Ssl<span class="w">  </span><span class="m">10</span>:36<span class="w">   </span><span class="m">0</span>:00<span class="w"> </span>/usr/bin/open5gs-pcfd<span class="w"> </span>-c<span class="w"> </span>/etc/open5gs/pcf.yaml
+open5gs<span class="w">     </span><span class="m">2690</span><span class="w">  </span><span class="m">0</span>.0<span class="w">  </span><span class="m">0</span>.1<span class="w"> </span><span class="m">169668</span><span class="w"> </span><span class="m">20768</span><span class="w"> </span>?<span class="w">        </span>Ssl<span class="w">  </span><span class="m">10</span>:36<span class="w">   </span><span class="m">0</span>:00<span class="w"> </span>/usr/bin/open5gs-udrd<span class="w"> </span>-c<span class="w"> </span>/etc/open5gs/udr.yaml
+open5gs<span class="w">     </span><span class="m">3065</span><span class="w">  </span><span class="m">0</span>.0<span class="w">  </span><span class="m">0</span>.1<span class="w"> </span><span class="m">155984</span><span class="w"> </span><span class="m">20136</span><span class="w"> </span>?<span class="w">        </span>Ssl<span class="w">  </span><span class="m">10</span>:36<span class="w">   </span><span class="m">0</span>:00<span class="w"> </span>/usr/bin/open5gs-amfd<span class="w"> </span>-c<span class="w"> </span>/etc/open5gs/amf.yaml
+open5gs<span class="w">     </span><span class="m">3067</span><span class="w">  </span><span class="m">0</span>.0<span class="w">  </span><span class="m">0</span>.0<span class="w"> </span><span class="m">136052</span><span class="w"> </span><span class="m">15960</span><span class="w"> </span>?<span class="w">        </span>Ssl<span class="w">  </span><span class="m">10</span>:36<span class="w">   </span><span class="m">0</span>:00<span class="w"> </span>/usr/bin/open5gs-ausfd<span class="w"> </span>-c<span class="w"> </span>/etc/open5gs/ausf.yaml
+open5gs<span class="w">     </span><span class="m">3071</span><span class="w">  </span><span class="m">0</span>.0<span class="w">  </span><span class="m">0</span>.0<span class="w"> </span><span class="m">2778684</span><span class="w"> </span><span class="m">14404</span><span class="w"> </span>?<span class="w">       </span>Ssl<span class="w">  </span><span class="m">10</span>:36<span class="w">   </span><span class="m">0</span>:02<span class="w"> </span>/usr/bin/open5gs-mmed<span class="w"> </span>-c<span class="w"> </span>/etc/open5gs/mme.yaml
+open5gs<span class="w">     </span><span class="m">3074</span><span class="w">  </span><span class="m">0</span>.0<span class="w">  </span><span class="m">0</span>.0<span class="w"> </span><span class="m">134300</span><span class="w"> </span><span class="m">15416</span><span class="w"> </span>?<span class="w">        </span>Ssl<span class="w">  </span><span class="m">10</span>:36<span class="w">   </span><span class="m">0</span>:00<span class="w"> </span>/usr/bin/open5gs-nssfd<span class="w"> </span>-c<span class="w"> </span>/etc/open5gs/nssf.yaml
+open5gs<span class="w">     </span><span class="m">3079</span><span class="w">  </span><span class="m">0</span>.0<span class="w">  </span><span class="m">0</span>.1<span class="w"> </span><span class="m">260852</span><span class="w"> </span><span class="m">19656</span><span class="w"> </span>?<span class="w">        </span>Ssl<span class="w">  </span><span class="m">10</span>:36<span class="w">   </span><span class="m">0</span>:00<span class="w"> </span>/usr/bin/open5gs-sgwcd<span class="w"> </span>-c<span class="w"> </span>/etc/open5gs/sgwc.yaml
+open5gs<span class="w">     </span><span class="m">3081</span><span class="w">  </span><span class="m">0</span>.0<span class="w">  </span><span class="m">0</span>.1<span class="w"> </span><span class="m">249660</span><span class="w"> </span><span class="m">17840</span><span class="w"> </span>?<span class="w">        </span>Ssl<span class="w">  </span><span class="m">10</span>:36<span class="w">   </span><span class="m">0</span>:00<span class="w"> </span>/usr/bin/open5gs-sgwud<span class="w"> </span>-c<span class="w"> </span>/etc/open5gs/sgwu.yaml
+open5gs<span class="w">     </span><span class="m">3084</span><span class="w">  </span><span class="m">0</span>.0<span class="w">  </span><span class="m">0</span>.2<span class="w"> </span><span class="m">3127048</span><span class="w"> </span><span class="m">44456</span><span class="w"> </span>?<span class="w">       </span>Ssl<span class="w">  </span><span class="m">10</span>:36<span class="w">   </span><span class="m">0</span>:02<span class="w"> </span>/usr/bin/open5gs-smfd<span class="w"> </span>-c<span class="w"> </span>/etc/open5gs/smf.yaml
+open5gs<span class="w">     </span><span class="m">3091</span><span class="w">  </span><span class="m">0</span>.0<span class="w">  </span><span class="m">0</span>.1<span class="w"> </span><span class="m">136072</span><span class="w"> </span><span class="m">17136</span><span class="w"> </span>?<span class="w">        </span>Ssl<span class="w">  </span><span class="m">10</span>:36<span class="w">   </span><span class="m">0</span>:00<span class="w"> </span>/usr/bin/open5gs-udmd<span class="w"> </span>-c<span class="w"> </span>/etc/open5gs/udm.yaml
+open5gs<span class="w">     </span><span class="m">3099</span><span class="w">  </span><span class="m">0</span>.0<span class="w">  </span><span class="m">0</span>.1<span class="w"> </span><span class="m">274176</span><span class="w"> </span><span class="m">24588</span><span class="w"> </span>?<span class="w">        </span>Ssl<span class="w">  </span><span class="m">10</span>:36<span class="w">   </span><span class="m">0</span>:00<span class="w"> </span>/usr/bin/open5gs-upfd<span class="w"> </span>-c<span class="w"> </span>/etc/open5gs/upf.yaml
+</pre></div>
+</div>
+<p>In total there should be 16 processes running.</p>
+<p>Once the core is running it is helpful to view the AMF logs for the duration of testing. This makes is clear when the gNB attaches, and when the COTS UE successfully attaches to the network.</p>
+<p>To view this you can run this command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tail<span class="w"> </span>-f<span class="w"> </span>/var/log/open5gs/amf.log
+</pre></div>
+</div>
+<p>You should see an output similar to the following:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="m">04</span>/03<span class="w"> </span><span class="m">10</span>:36:52.012:<span class="w"> </span><span class="o">[</span>sctp<span class="o">]</span><span class="w"> </span>INFO:<span class="w"> </span>AMF<span class="w"> </span>initialize...done<span class="w"> </span><span class="o">(</span>../src/amf/app.c:33<span class="o">)</span>
+<span class="m">04</span>/03<span class="w"> </span><span class="m">10</span>:36:52.049:<span class="w"> </span><span class="o">[</span>sbi<span class="o">]</span><span class="w"> </span>INFO:<span class="w"> </span><span class="o">[</span>aea4db10-d1fa-41ed-916b-e56218b693e5<span class="o">]</span><span class="w"> </span><span class="o">(</span>NRF-notify<span class="o">)</span><span class="w"> </span>NF<span class="w"> </span>registered<span class="w"> </span><span class="o">(</span>../lib/sbi/nnrf-handler.c:632<span class="o">)</span>
+<span class="m">04</span>/03<span class="w"> </span><span class="m">10</span>:36:52.049:<span class="w"> </span><span class="o">[</span>sbi<span class="o">]</span><span class="w"> </span>INFO:<span class="w"> </span><span class="o">[</span>aea4db10-d1fa-41ed-916b-e56218b693e5<span class="o">]</span><span class="w"> </span><span class="o">(</span>NRF-notify<span class="o">)</span><span class="w"> </span>NF<span class="w"> </span>Profile<span class="w"> </span>updated<span class="w"> </span><span class="o">(</span>../lib/sbi/nnrf-handler.c:642<span class="o">)</span>
+<span class="m">04</span>/03<span class="w"> </span><span class="m">10</span>:36:52.049:<span class="w"> </span><span class="o">[</span>sbi<span class="o">]</span><span class="w"> </span>WARNING:<span class="w"> </span><span class="o">[</span>aea4db10-d1fa-41ed-916b-e56218b693e5<span class="o">]</span><span class="w"> </span><span class="o">(</span>NRF-notify<span class="o">)</span><span class="w"> </span>NF<span class="w"> </span>has<span class="w"> </span>already<span class="w"> </span>been<span class="w"> </span>added<span class="w"> </span><span class="o">(</span>../lib/sbi/nnrf-handler.c:636<span class="o">)</span>
+<span class="m">04</span>/03<span class="w"> </span><span class="m">10</span>:36:52.049:<span class="w"> </span><span class="o">[</span>sbi<span class="o">]</span><span class="w"> </span>INFO:<span class="w"> </span><span class="o">[</span>aea4db10-d1fa-41ed-916b-e56218b693e5<span class="o">]</span><span class="w"> </span><span class="o">(</span>NRF-notify<span class="o">)</span><span class="w"> </span>NF<span class="w"> </span>Profile<span class="w"> </span>updated<span class="w"> </span><span class="o">(</span>../lib/sbi/nnrf-handler.c:642<span class="o">)</span>
+<span class="m">04</span>/03<span class="w"> </span><span class="m">10</span>:36:52.049:<span class="w"> </span><span class="o">[</span>sbi<span class="o">]</span><span class="w"> </span>WARNING:<span class="w"> </span>NF<span class="w"> </span>EndPoint<span class="w"> </span>updated<span class="w"> </span><span class="o">[</span><span class="m">127</span>.0.0.12:80<span class="o">]</span><span class="w"> </span><span class="o">(</span>../lib/sbi/context.c:1618<span class="o">)</span>
+<span class="m">04</span>/03<span class="w"> </span><span class="m">10</span>:36:52.049:<span class="w"> </span><span class="o">[</span>sbi<span class="o">]</span><span class="w"> </span>WARNING:<span class="w"> </span>NF<span class="w"> </span>EndPoint<span class="w"> </span>updated<span class="w"> </span><span class="o">[</span><span class="m">127</span>.0.0.12:7777<span class="o">]</span><span class="w"> </span><span class="o">(</span>../lib/sbi/context.c:1527<span class="o">)</span>
+<span class="m">04</span>/03<span class="w"> </span><span class="m">10</span>:36:52.238:<span class="w"> </span><span class="o">[</span>app<span class="o">]</span><span class="w"> </span>INFO:<span class="w"> </span>SIGHUP<span class="w"> </span>received<span class="w"> </span><span class="o">(</span>../src/main.c:58<span class="o">)</span>
+<span class="m">04</span>/03<span class="w"> </span><span class="m">10</span>:36:52.350:<span class="w"> </span><span class="o">[</span>sbi<span class="o">]</span><span class="w"> </span>INFO:<span class="w"> </span><span class="o">[</span>aea6bae8-d1fa-41ed-904f-f78f7a58f5f3<span class="o">]</span><span class="w"> </span><span class="o">(</span>NRF-notify<span class="o">)</span><span class="w"> </span>NF<span class="w"> </span>registered<span class="w"> </span><span class="o">(</span>../lib/sbi/nnrf-handler.c:632<span class="o">)</span>
+<span class="m">04</span>/03<span class="w"> </span><span class="m">10</span>:36:52.350:<span class="w"> </span><span class="o">[</span>sbi<span class="o">]</span><span class="w"> </span>INFO:<span class="w"> </span><span class="o">[</span>aea6bae8-d1fa-41ed-904f-f78f7a58f5f3<span class="o">]</span><span class="w"> </span><span class="o">(</span>NRF-notify<span class="o">)</span><span class="w"> </span>NF<span class="w"> </span>Profile<span class="w"> </span>updated<span class="w"> </span><span class="o">(</span>../lib/sbi/nnrf-handler.c:642<span class="o">)</span>
+</pre></div>
+</div>
+</section>
+<section id="run-the-gnb">
+<h4>Run the gNB<a class="headerlink" href="index.html#run-the-gnb" title="Link to this heading"></a></h4>
+<p>To run the gNB using the configuration file above, navigate to <code class="docutils literal notranslate"><span class="pre">srsRAN_Project/build/apps/gnb</span></code> and use the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>./gnb<span class="w"> </span>-c<span class="w"> </span>gnb_b210_20MHz_oneplus_8t.yml
+</pre></div>
+</div>
+<p>This above command assumes the configuration file is located in the same folder.</p>
+<p>Once the gNB is running you should see the following output:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>--<span class="o">==</span><span class="w"> </span>srsRAN<span class="w"> </span>gNB<span class="w"> </span><span class="o">(</span>commit<span class="w"> </span>fbe73a49c<span class="o">)</span><span class="w"> </span><span class="o">==</span>--
+
+Connecting<span class="w"> </span>to<span class="w"> </span>AMF<span class="w"> </span>on<span class="w"> </span><span class="m">127</span>.0.1.100:38412
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span><span class="o">[</span>UHD<span class="o">]</span><span class="w"> </span>linux<span class="p">;</span><span class="w"> </span>GNU<span class="w"> </span>C++<span class="w"> </span>version<span class="w"> </span><span class="m">9</span>.3.0<span class="p">;</span><span class="w"> </span>Boost_107100<span class="p">;</span><span class="w"> </span>UHD_4.0.0.0-666-g676c3a37
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span><span class="o">[</span>LOGGING<span class="o">]</span><span class="w"> </span>Fastpath<span class="w"> </span>logging<span class="w"> </span>disabled<span class="w"> </span>at<span class="w"> </span>runtime.
+Making<span class="w"> </span>USRP<span class="w"> </span>object<span class="w"> </span>with<span class="w"> </span>args<span class="w"> </span><span class="s1">&#39;type=b200,num_recv_frames=64,num_send_frames=64&#39;</span>
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span><span class="o">[</span>B200<span class="o">]</span><span class="w"> </span>Detected<span class="w"> </span>Device:<span class="w"> </span>B210
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span><span class="o">[</span>B200<span class="o">]</span><span class="w"> </span>Operating<span class="w"> </span>over<span class="w"> </span>USB<span class="w"> </span><span class="m">3</span>.
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span><span class="o">[</span>B200<span class="o">]</span><span class="w"> </span>Initialize<span class="w"> </span>CODEC<span class="w"> </span>control...
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span><span class="o">[</span>B200<span class="o">]</span><span class="w"> </span>Initialize<span class="w"> </span>Radio<span class="w"> </span>control...
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span><span class="o">[</span>B200<span class="o">]</span><span class="w"> </span>Performing<span class="w"> </span>register<span class="w"> </span>loopback<span class="w"> </span>test...
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span><span class="o">[</span>B200<span class="o">]</span><span class="w"> </span>Register<span class="w"> </span>loopback<span class="w"> </span><span class="nb">test</span><span class="w"> </span>passed
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span><span class="o">[</span>B200<span class="o">]</span><span class="w"> </span>Setting<span class="w"> </span>master<span class="w"> </span>clock<span class="w"> </span>rate<span class="w"> </span>selection<span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;automatic&#39;</span>.
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span><span class="o">[</span>B200<span class="o">]</span><span class="w"> </span>Asking<span class="w"> </span><span class="k">for</span><span class="w"> </span>clock<span class="w"> </span>rate<span class="w"> </span><span class="m">16</span>.000000<span class="w"> </span>MHz...
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span><span class="o">[</span>B200<span class="o">]</span><span class="w"> </span>Actually<span class="w"> </span>got<span class="w"> </span>clock<span class="w"> </span>rate<span class="w"> </span><span class="m">16</span>.000000<span class="w"> </span>MHz.
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span><span class="o">[</span>MULTI_USRP<span class="o">]</span><span class="w"> </span>Setting<span class="w"> </span>master<span class="w"> </span>clock<span class="w"> </span>rate<span class="w"> </span>selection<span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;manual&#39;</span>.
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span><span class="o">[</span>B200<span class="o">]</span><span class="w"> </span>Asking<span class="w"> </span><span class="k">for</span><span class="w"> </span>clock<span class="w"> </span>rate<span class="w"> </span><span class="m">23</span>.040000<span class="w"> </span>MHz...
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span><span class="o">[</span>B200<span class="o">]</span><span class="w"> </span>Actually<span class="w"> </span>got<span class="w"> </span>clock<span class="w"> </span>rate<span class="w"> </span><span class="m">23</span>.040000<span class="w"> </span>MHz.
+Cell<span class="w"> </span><span class="nv">pci</span><span class="o">=</span><span class="m">1</span>,<span class="w"> </span><span class="nv">bw</span><span class="o">=</span><span class="m">20</span><span class="w"> </span>MHz,<span class="w"> </span><span class="nv">dl_arfcn</span><span class="o">=</span><span class="m">627340</span><span class="w"> </span><span class="o">(</span>n78<span class="o">)</span>,<span class="w"> </span><span class="nv">dl_freq</span><span class="o">=</span><span class="m">3410</span>.1<span class="w"> </span>MHz,<span class="w"> </span><span class="nv">dl_ssb_arfcn</span><span class="o">=</span><span class="m">627264</span>,<span class="w"> </span><span class="nv">ul_freq</span><span class="o">=</span><span class="m">3410</span>.1<span class="w"> </span><span class="nv">MHz</span>
+
+<span class="o">====</span><span class="w"> </span>gNodeB<span class="w"> </span><span class="nv">started</span><span class="w"> </span><span class="o">===</span>
+Type<span class="w"> </span>&lt;t&gt;<span class="w"> </span>to<span class="w"> </span>view<span class="w"> </span>trace
+</pre></div>
+</div>
+<p>If the connection to the core is successful you should see the following from the AMF log:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="m">04</span>/03<span class="w"> </span><span class="m">13</span>:25:13.469:<span class="w"> </span><span class="o">[</span>amf<span class="o">]</span><span class="w"> </span>INFO:<span class="w"> </span>gNB-N2<span class="w"> </span>accepted<span class="o">[</span><span class="m">127</span>.0.0.1<span class="o">]</span>:47633<span class="w"> </span><span class="k">in</span><span class="w"> </span>ng-path<span class="w"> </span>module<span class="w"> </span><span class="o">(</span>../src/amf/ngap-sctp.c:113<span class="o">)</span>
+<span class="m">04</span>/03<span class="w"> </span><span class="m">13</span>:25:13.469:<span class="w"> </span><span class="o">[</span>amf<span class="o">]</span><span class="w"> </span>INFO:<span class="w"> </span>gNB-N2<span class="w"> </span>accepted<span class="o">[</span><span class="m">127</span>.0.0.1<span class="o">]</span><span class="w"> </span><span class="k">in</span><span class="w"> </span>master_sm<span class="w"> </span>module<span class="w"> </span><span class="o">(</span>../src/amf/amf-sm.c:706<span class="o">)</span>
+<span class="m">04</span>/03<span class="w"> </span><span class="m">13</span>:25:13.469:<span class="w"> </span><span class="o">[</span>amf<span class="o">]</span><span class="w"> </span>INFO:<span class="w"> </span><span class="o">[</span>Added<span class="o">]</span><span class="w"> </span>Number<span class="w"> </span>of<span class="w"> </span>gNBs<span class="w"> </span>is<span class="w"> </span>now<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">(</span>../src/amf/context.c:1034<span class="o">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="connecting-to-the-network">
+<span id="connect"></span><h3>Connecting to the Network<a class="headerlink" href="index.html#connecting-to-the-network" title="Link to this heading"></a></h3>
+<p>The COTS UE can now search for the network. To do this, navigate to <em>Mobile Network &gt; SIM 1 &gt; Carrier</em> and search for the network.</p>
+<p>When you enter the <em>Carrier</em> menu your device may automatically search for available carriers, if not you can manually select the search option from the top right of the screen.</p>
+<p>If the device can successfully receive SIBs (specifically SIB1) and “see” the network it will appear of the list of available carriers. It will be displayed as <code class="docutils literal notranslate"><span class="pre">Open5GS</span> <span class="pre">5G</span></code> or <code class="docutils literal notranslate"><span class="pre">90170</span> <span class="pre">5G</span></code>. If your PLMN is something else it may be displayed as <code class="docutils literal notranslate"><span class="pre">[PLMN]</span> <span class="pre">5G</span></code>.</p>
+<p>The following image shows what this may look like:</p>
+<a class="reference internal image-reference" href="../../../../_images/sim_connect.jpg"><img alt="../../../../_images/sim_connect.jpg" src="../../../../_images/sim_connect.jpg" style="width: 20%;" />
+</a>
+<p>Select the carrier for the network, in this instance <code class="docutils literal notranslate"><span class="pre">Open5GS</span> <span class="pre">5G</span></code>, the UE should then attach to the network.</p>
+<p>To confirm the attach is successful you can monitor both the AMF log and gNB console output.</p>
+<p>The AMF log should look similar to the following:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="m">04</span>/27<span class="w"> </span><span class="m">13</span>:16:31.746:<span class="w"> </span><span class="o">[</span>amf<span class="o">]</span><span class="w"> </span>INFO:<span class="w"> </span>InitialUEMessage<span class="w"> </span><span class="o">(</span>../src/amf/ngap-handler.c:361<span class="o">)</span>
+<span class="m">04</span>/27<span class="w"> </span><span class="m">13</span>:16:31.746:<span class="w"> </span><span class="o">[</span>amf<span class="o">]</span><span class="w"> </span>INFO:<span class="w"> </span><span class="o">[</span>Added<span class="o">]</span><span class="w"> </span>Number<span class="w"> </span>of<span class="w"> </span>gNB-UEs<span class="w"> </span>is<span class="w"> </span>now<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">(</span>../src/amf/context.c:2036<span class="o">)</span>
+<span class="m">04</span>/27<span class="w"> </span><span class="m">13</span>:16:31.746:<span class="w"> </span><span class="o">[</span>amf<span class="o">]</span><span class="w"> </span>INFO:<span class="w">     </span>RAN_UE_NGAP_ID<span class="o">[</span><span class="m">0</span><span class="o">]</span><span class="w"> </span>AMF_UE_NGAP_ID<span class="o">[</span><span class="m">78</span><span class="o">]</span><span class="w"> </span>TAC<span class="o">[</span><span class="m">7</span><span class="o">]</span><span class="w"> </span>CellID<span class="o">[</span>0x0<span class="o">]</span><span class="w"> </span><span class="o">(</span>../src/amf/ngap-handler.c:497<span class="o">)</span>
+<span class="m">04</span>/27<span class="w"> </span><span class="m">13</span>:16:31.746:<span class="w"> </span><span class="o">[</span>amf<span class="o">]</span><span class="w"> </span>INFO:<span class="w"> </span><span class="o">[</span>suci-0-001-01-0-0-0-0000068960<span class="o">]</span><span class="w"> </span>Known<span class="w"> </span>UE<span class="w"> </span>by<span class="w"> </span>5G-S_TMSI<span class="o">[</span>AMF_ID:0x20040,M_TMSI:0xdd00ff1a<span class="o">]</span><span class="w"> </span><span class="o">(</span>../src/amf/context.c:1402<span class="o">)</span>
+<span class="m">04</span>/27<span class="w"> </span><span class="m">13</span>:16:31.746:<span class="w"> </span><span class="o">[</span>gmm<span class="o">]</span><span class="w"> </span>INFO:<span class="w"> </span>Registration<span class="w"> </span>request<span class="w"> </span><span class="o">(</span>../src/amf/gmm-sm.c:134<span class="o">)</span>
+<span class="m">04</span>/27<span class="w"> </span><span class="m">13</span>:16:31.746:<span class="w"> </span><span class="o">[</span>gmm<span class="o">]</span><span class="w"> </span>INFO:<span class="w"> </span><span class="o">[</span>suci-0-001-01-0-0-0-0000068960<span class="o">]</span><span class="w">    </span>5G-S_GUTI<span class="o">[</span>AMF_ID:0x20040,M_TMSI:0xdd00ff1a<span class="o">]</span><span class="w"> </span><span class="o">(</span>../src/amf/gmm-handler.c:169<span class="o">)</span>
+<span class="m">04</span>/27<span class="w"> </span><span class="m">13</span>:16:31.913:<span class="w"> </span><span class="o">[</span>gmm<span class="o">]</span><span class="w"> </span>INFO:<span class="w"> </span><span class="o">[</span>imsi-001010000068960<span class="o">]</span><span class="w"> </span>Registration<span class="w"> </span><span class="nb">complete</span><span class="w"> </span><span class="o">(</span>../src/amf/gmm-sm.c:1063<span class="o">)</span>
+<span class="m">04</span>/27<span class="w"> </span><span class="m">13</span>:16:31.913:<span class="w"> </span><span class="o">[</span>amf<span class="o">]</span><span class="w"> </span>INFO:<span class="w"> </span><span class="o">[</span>imsi-001010000068960<span class="o">]</span><span class="w"> </span>Configuration<span class="w"> </span>update<span class="w"> </span><span class="nb">command</span><span class="w"> </span><span class="o">(</span>../src/amf/nas-path.c:389<span class="o">)</span>
+<span class="m">04</span>/27<span class="w"> </span><span class="m">13</span>:16:31.913:<span class="w"> </span><span class="o">[</span>gmm<span class="o">]</span><span class="w"> </span>INFO:<span class="w">     </span>UTC<span class="w"> </span><span class="o">[</span><span class="m">2023</span>-04-27T13:16:31<span class="o">]</span><span class="w"> </span>Timezone<span class="o">[</span><span class="m">0</span><span class="o">]</span>/DST<span class="o">[</span><span class="m">0</span><span class="o">]</span><span class="w"> </span><span class="o">(</span>../src/amf/gmm-build.c:502<span class="o">)</span>
+<span class="m">04</span>/27<span class="w"> </span><span class="m">13</span>:16:31.913:<span class="w"> </span><span class="o">[</span>gmm<span class="o">]</span><span class="w"> </span>INFO:<span class="w">     </span>LOCAL<span class="w"> </span><span class="o">[</span><span class="m">2023</span>-04-27T13:16:31<span class="o">]</span><span class="w"> </span>Timezone<span class="o">[</span><span class="m">0</span><span class="o">]</span>/DST<span class="o">[</span><span class="m">0</span><span class="o">]</span><span class="w"> </span><span class="o">(</span>../src/amf/gmm-build.c:507<span class="o">)</span>
+<span class="m">04</span>/27<span class="w"> </span><span class="m">13</span>:16:32.105:<span class="w"> </span><span class="o">[</span>gmm<span class="o">]</span><span class="w"> </span>INFO:<span class="w"> </span>UE<span class="w"> </span>SUPI<span class="o">[</span>imsi-001010000068960<span class="o">]</span><span class="w"> </span>DNN<span class="o">[</span>srsapn<span class="o">]</span><span class="w"> </span>S_NSSAI<span class="o">[</span>SST:1<span class="w"> </span>SD:0xffffff<span class="o">]</span><span class="w"> </span><span class="o">(</span>../src/amf/gmm-handler.c:1042<span class="o">)</span>
+</pre></div>
+</div>
+<p>The gNB trace should show the following:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w">          </span>-------------DL----------------<span class="p">|</span>------------------UL--------------------
+pci<span class="w"> </span>rnti<span class="w">  </span>cqi<span class="w">  </span>mcs<span class="w">  </span>brate<span class="w">   </span>ok<span class="w">  </span>nok<span class="w">  </span><span class="o">(</span>%<span class="o">)</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>pusch<span class="w">  </span>mcs<span class="w">  </span>brate<span class="w">   </span>ok<span class="w">  </span>nok<span class="w">  </span><span class="o">(</span>%<span class="o">)</span><span class="w">    </span>bsr
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">   </span><span class="m">15</span><span class="w">   </span><span class="m">4</span>.3k<span class="w">    </span><span class="m">7</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">21</span>.3<span class="w">   </span><span class="m">23</span><span class="w">    </span>17k<span class="w">    </span><span class="m">4</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">    </span><span class="m">0</span>.0
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">   </span><span class="m">27</span><span class="w">   </span>287k<span class="w">   </span><span class="m">84</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">23</span>.1<span class="w">   </span><span class="m">27</span><span class="w">   </span>233k<span class="w">   </span><span class="m">39</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">    </span><span class="m">0</span>.0
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">   </span><span class="m">28</span><span class="w">   </span><span class="m">1</span>.2k<span class="w">    </span><span class="m">1</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">21</span>.8<span class="w">   </span><span class="m">28</span><span class="w">   </span><span class="m">8</span>.7k<span class="w">    </span><span class="m">2</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">    </span><span class="m">0</span>.0
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">    </span><span class="m">0</span><span class="w">      </span><span class="m">0</span><span class="w">    </span><span class="m">0</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">   </span>n/a<span class="w">    </span><span class="m">0</span><span class="w">      </span><span class="m">0</span><span class="w">    </span><span class="m">0</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">    </span><span class="m">0</span>.0
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">    </span><span class="m">0</span><span class="w">      </span><span class="m">0</span><span class="w">    </span><span class="m">0</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">   </span>n/a<span class="w">    </span><span class="m">0</span><span class="w">      </span><span class="m">0</span><span class="w">    </span><span class="m">0</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">    </span><span class="m">0</span>.0
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">    </span><span class="m">0</span><span class="w">      </span><span class="m">0</span><span class="w">    </span><span class="m">0</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">   </span>n/a<span class="w">    </span><span class="m">0</span><span class="w">      </span><span class="m">0</span><span class="w">    </span><span class="m">0</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">    </span><span class="m">0</span>.0
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">12</span><span class="w">    </span><span class="m">0</span><span class="w">      </span><span class="m">0</span><span class="w">    </span><span class="m">0</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">   </span>n/a<span class="w">    </span><span class="m">0</span><span class="w">      </span><span class="m">0</span><span class="w">    </span><span class="m">0</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">    </span><span class="m">0</span>.0
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">    </span><span class="m">0</span><span class="w">      </span><span class="m">0</span><span class="w">    </span><span class="m">0</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">   </span>n/a<span class="w">    </span><span class="m">0</span><span class="w">      </span><span class="m">0</span><span class="w">    </span><span class="m">0</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">    </span><span class="m">0</span>.0
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">   </span><span class="m">28</span><span class="w">    </span>53k<span class="w">   </span><span class="m">10</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">24</span>.6<span class="w">   </span><span class="m">26</span><span class="w">    </span>55k<span class="w">   </span><span class="m">32</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">    </span><span class="m">0</span>.0
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">   </span><span class="m">28</span><span class="w">   </span><span class="m">7</span>.7k<span class="w">    </span><span class="m">4</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">22</span>.7<span class="w">   </span><span class="m">28</span><span class="w">    </span>17k<span class="w">    </span><span class="m">4</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">    </span><span class="m">0</span>.0
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">    </span><span class="m">0</span><span class="w">      </span><span class="m">0</span><span class="w">    </span><span class="m">0</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">   </span>n/a<span class="w">    </span><span class="m">0</span><span class="w">      </span><span class="m">0</span><span class="w">    </span><span class="m">0</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">    </span><span class="m">0</span>.0
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="traffic-and-testing">
+<h2>Traffic and Testing<a class="headerlink" href="index.html#traffic-and-testing" title="Link to this heading"></a></h2>
+<section id="speed-test">
+<h3>Speed Test<a class="headerlink" href="index.html#speed-test" title="Link to this heading"></a></h3>
+<p>Running a speedtest directly from google gives the following results:</p>
+<a class="reference internal image-reference" href="../../../../_images/speedtest.jpg"><img alt="../../../../_images/speedtest.jpg" src="../../../../_images/speedtest.jpg" style="width: 20%;" />
+</a>
+<p>While running this test, the following was observed on the gNB console:</p>
+<p><strong>Uplink Test</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w">          </span>-------------DL----------------<span class="p">|</span>------------------UL--------------------
+pci<span class="w"> </span>rnti<span class="w">  </span>cqi<span class="w">  </span>mcs<span class="w">  </span>brate<span class="w">   </span>ok<span class="w">  </span>nok<span class="w">  </span><span class="o">(</span>%<span class="o">)</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>pusch<span class="w">  </span>mcs<span class="w">  </span>brate<span class="w">   </span>ok<span class="w">  </span>nok<span class="w">  </span><span class="o">(</span>%<span class="o">)</span><span class="w">    </span>bsr
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">   </span><span class="m">28</span><span class="w">    </span>23M<span class="w">  </span><span class="m">820</span><span class="w">    </span><span class="m">8</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">24</span>.3<span class="w">   </span><span class="m">27</span><span class="w">   </span>376k<span class="w">   </span><span class="m">90</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">    </span><span class="m">0</span>.0
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">   </span><span class="m">28</span><span class="w">    </span>31M<span class="w"> </span><span class="m">1070</span><span class="w">    </span><span class="m">6</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">22</span>.4<span class="w">   </span><span class="m">28</span><span class="w">   </span>141k<span class="w">   </span><span class="m">33</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">    </span><span class="m">0</span>.0
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">   </span><span class="m">28</span><span class="w">    </span>31M<span class="w"> </span><span class="m">1068</span><span class="w">    </span><span class="m">8</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">23</span>.7<span class="w">   </span><span class="m">27</span><span class="w">   </span>155k<span class="w">   </span><span class="m">39</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">    </span><span class="m">0</span>.0
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">   </span><span class="m">28</span><span class="w">    </span>31M<span class="w"> </span><span class="m">1064</span><span class="w">    </span><span class="m">6</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">23</span>.3<span class="w">   </span><span class="m">28</span><span class="w">   </span>134k<span class="w">   </span><span class="m">29</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">    </span><span class="m">0</span>.0
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">   </span><span class="m">28</span><span class="w">    </span>31M<span class="w"> </span><span class="m">1060</span><span class="w">    </span><span class="m">9</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">22</span>.5<span class="w">   </span><span class="m">28</span><span class="w">   </span>150k<span class="w">   </span><span class="m">32</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">    </span><span class="m">0</span>.0
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">   </span><span class="m">28</span><span class="w">    </span>31M<span class="w"> </span><span class="m">1071</span><span class="w">    </span><span class="m">6</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">23</span>.1<span class="w">   </span><span class="m">27</span><span class="w">   </span>323k<span class="w">   </span><span class="m">68</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">    </span><span class="m">0</span>.0
+</pre></div>
+</div>
+<p><strong>Downlink Test</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w">          </span>-------------DL----------------<span class="p">|</span>------------------UL--------------------
+pci<span class="w"> </span>rnti<span class="w">  </span>cqi<span class="w">  </span>mcs<span class="w">  </span>brate<span class="w">   </span>ok<span class="w">  </span>nok<span class="w">  </span><span class="o">(</span>%<span class="o">)</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>pusch<span class="w">  </span>mcs<span class="w">  </span>brate<span class="w">   </span>ok<span class="w">  </span>nok<span class="w">  </span><span class="o">(</span>%<span class="o">)</span><span class="w">    </span>bsr
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">   </span><span class="m">27</span><span class="w">   </span>548k<span class="w">  </span><span class="m">447</span><span class="w">    </span><span class="m">3</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">17</span>.1<span class="w">   </span><span class="m">25</span><span class="w">    </span>17M<span class="w">  </span><span class="m">596</span><span class="w">    </span><span class="m">4</span><span class="w">   </span><span class="m">0</span>%<span class="w">   </span>150k
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">   </span><span class="m">27</span><span class="w">   </span>598k<span class="w">  </span><span class="m">456</span><span class="w">    </span><span class="m">6</span><span class="w">   </span><span class="m">1</span>%<span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">17</span>.4<span class="w">   </span><span class="m">25</span><span class="w">    </span>17M<span class="w">  </span><span class="m">596</span><span class="w">    </span><span class="m">4</span><span class="w">   </span><span class="m">0</span>%<span class="w">   </span>150k
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">   </span><span class="m">27</span><span class="w">   </span>502k<span class="w">  </span><span class="m">468</span><span class="w">    </span><span class="m">2</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">17</span>.5<span class="w">   </span><span class="m">25</span><span class="w">    </span>17M<span class="w">  </span><span class="m">600</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">   </span>150k
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">   </span><span class="m">27</span><span class="w">   </span>544k<span class="w">  </span><span class="m">449</span><span class="w">    </span><span class="m">2</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">18</span>.2<span class="w">   </span><span class="m">26</span><span class="w">    </span>18M<span class="w">  </span><span class="m">598</span><span class="w">    </span><span class="m">2</span><span class="w">   </span><span class="m">0</span>%<span class="w">   </span>150k
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">   </span><span class="m">27</span><span class="w">   </span>470k<span class="w">  </span><span class="m">448</span><span class="w">    </span><span class="m">2</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">18</span>.7<span class="w">   </span><span class="m">27</span><span class="w">    </span>19M<span class="w">  </span><span class="m">595</span><span class="w">    </span><span class="m">5</span><span class="w">   </span><span class="m">0</span>%<span class="w">   </span>150k
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">   </span><span class="m">27</span><span class="w">   </span>485k<span class="w">  </span><span class="m">455</span><span class="w">    </span><span class="m">6</span><span class="w">   </span><span class="m">1</span>%<span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">18</span>.6<span class="w">   </span><span class="m">27</span><span class="w">    </span>19M<span class="w">  </span><span class="m">594</span><span class="w">    </span><span class="m">6</span><span class="w">   </span><span class="m">1</span>%<span class="w">   </span>150k
+</pre></div>
+</div>
+</section>
+<section id="video-test">
+<h3>Video Test<a class="headerlink" href="index.html#video-test" title="Link to this heading"></a></h3>
+<p>The following shows an example trace output seen while streaming video from the internet:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w">          </span>-------------DL----------------<span class="p">|</span>------------------UL--------------------
+pci<span class="w"> </span>rnti<span class="w">  </span>cqi<span class="w">  </span>mcs<span class="w">  </span>brate<span class="w">   </span>ok<span class="w">  </span>nok<span class="w">  </span><span class="o">(</span>%<span class="o">)</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>pusch<span class="w">  </span>mcs<span class="w">  </span>brate<span class="w">   </span>ok<span class="w">  </span>nok<span class="w">  </span><span class="o">(</span>%<span class="o">)</span><span class="w">    </span>bsr
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">14</span><span class="w">   </span><span class="m">27</span><span class="w">   </span><span class="m">1</span>.3M<span class="w">  </span><span class="m">111</span><span class="w">   </span><span class="m">15</span><span class="w">  </span><span class="m">11</span>%<span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">22</span>.6<span class="w">   </span><span class="m">28</span><span class="w">   </span>109k<span class="w">   </span><span class="m">25</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">    </span><span class="m">0</span>.0
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">   </span><span class="m">27</span><span class="w">   </span><span class="m">1</span>.9M<span class="w">  </span><span class="m">180</span><span class="w">    </span><span class="m">4</span><span class="w">   </span><span class="m">2</span>%<span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">22</span>.4<span class="w">   </span><span class="m">28</span><span class="w">   </span>109k<span class="w">   </span><span class="m">25</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">    </span><span class="m">0</span>.0
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">   </span><span class="m">28</span><span class="w">   </span><span class="m">3</span>.3M<span class="w">  </span><span class="m">302</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">22</span>.7<span class="w">   </span><span class="m">28</span><span class="w">   </span>109k<span class="w">   </span><span class="m">25</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">    </span><span class="m">0</span>.0
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">   </span><span class="m">28</span><span class="w">   </span><span class="m">5</span>.5M<span class="w">  </span><span class="m">489</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">22</span>.5<span class="w">   </span><span class="m">28</span><span class="w">   </span>109k<span class="w">   </span><span class="m">25</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">    </span><span class="m">0</span>.0
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">   </span><span class="m">28</span><span class="w">   </span><span class="m">7</span>.6M<span class="w">  </span><span class="m">553</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">22</span>.5<span class="w">   </span><span class="m">28</span><span class="w">   </span>109k<span class="w">   </span><span class="m">25</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">    </span><span class="m">0</span>.0
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">   </span><span class="m">28</span><span class="w">   </span><span class="m">9</span>.7M<span class="w">  </span><span class="m">630</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">22</span>.8<span class="w">   </span><span class="m">28</span><span class="w">   </span>109k<span class="w">   </span><span class="m">25</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">    </span><span class="m">0</span>.0
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">   </span><span class="m">28</span><span class="w">    </span>12M<span class="w">  </span><span class="m">651</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">22</span>.7<span class="w">   </span><span class="m">28</span><span class="w">   </span>109k<span class="w">   </span><span class="m">25</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">    </span><span class="m">0</span>.0
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">   </span><span class="m">28</span><span class="w">    </span>12M<span class="w">  </span><span class="m">656</span><span class="w">    </span><span class="m">1</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">22</span>.8<span class="w">   </span><span class="m">28</span><span class="w">   </span>112k<span class="w">   </span><span class="m">27</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">    </span><span class="m">0</span>.0
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">   </span><span class="m">28</span><span class="w">    </span>12M<span class="w">  </span><span class="m">679</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">22</span>.8<span class="w">   </span><span class="m">28</span><span class="w">   </span>109k<span class="w">   </span><span class="m">25</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">    </span><span class="m">0</span>.0
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">   </span><span class="m">28</span><span class="w">    </span>12M<span class="w">  </span><span class="m">634</span><span class="w">    </span><span class="m">1</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">22</span>.6<span class="w">   </span><span class="m">28</span><span class="w">   </span>109k<span class="w">   </span><span class="m">25</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">    </span><span class="m">0</span>.0
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">   </span><span class="m">28</span><span class="w">   </span><span class="m">7</span>.8M<span class="w">  </span><span class="m">464</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">22</span>.3<span class="w">   </span><span class="m">28</span><span class="w">    </span>83k<span class="w">   </span><span class="m">19</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">    </span><span class="m">0</span>.0
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="index.html#troubleshooting" title="Link to this heading"></a></h2>
+<section id="network-not-visible">
+<h3>Network Not Visible<a class="headerlink" href="index.html#network-not-visible" title="Link to this heading"></a></h3>
+<ul>
+<li><p>If you are not using a GPSDO or other external clock, you may need to use one. As explained previously, the onboard clocks within SDRs are not always accurate enough to operate within the limits allowed by the handsets.</p></li>
+<li><p>For this device, the ISIM needed to be in SIM tray 2. If your device is dual SIM capable and you cannot see the network, try placing the ISIM in the other slot.</p></li>
+<li><p>If you were previously able to see the network, but now cannot, you should eject the ISIM and insert it again. The device may be blacklisting the gNB if the device has previously tried to connect and failed.</p></li>
+<li><p>You should check that the gNB is transmitting correctly. This can be done with a spectrum analyzer or tools like <a class="reference external" href="https://kb.ettus.com/Fosphor">gr-fosphor</a> and <a class="reference external" href="https://maia-sdr.org/">Maia SDR</a>. An example of a “healthy” gNB broadcast from Maia SDR can be seen here:</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../../../../_images/maia_sdr.png"><img alt="../../../../_images/maia_sdr.png" src="../../../../_images/maia_sdr.png" style="width: 938.0px; height: 379.0px;" />
+</a>
+</div></blockquote>
+</li>
+</ul>
+</section>
+<section id="unable-to-attach">
+<h3>Unable to Attach<a class="headerlink" href="index.html#unable-to-attach" title="Link to this heading"></a></h3>
+<p>If you can see the network, but cannot attach, here are some things to test:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Check that the subscriber has been added correctly to the Open5GS list of users. If you did not restart the Open5Gs services after making modifications, then do so and retry connecting the UE. Open5GS does not support on-the-fly modifications to subscribers or config files.</p></li>
+<li><p>The device may not be able to PRACH. If you are using NSG, then you will be able to see the control messages being exchanged between the UE and the gNB, check this to see whether or not the PRACH was successful. If not, here are a list of things to check:</p>
+<ul>
+<li><p>The signal quality (use Maia SDR, Fosphor or some other tool); you can adjust the Tx and Rx gains to compensate for this. If there are any commercial cells broadcasting in the same area of spectrum this could also be causing RF issues.</p></li>
+<li><p>Timing issues; if there are discrepencies in timing then the UE will not be able to connect. Use an external clock to overcome this.</p></li>
+</ul>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="no-internet-access">
+<h3>No Internet Access<a class="headerlink" href="index.html#no-internet-access" title="Link to this heading"></a></h3>
+<p>If your device is connected to the network but cannot access the internet it is most likely an issue with the APN configuration. Make sure that the credentials and info are the same across both the UE and the APN configuration in the Core. The main things to check are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The APN should have the same ID in both the phone and core</p></li>
+<li><p>Set the protocol to IPv4</p></li>
+<li><p>Make sure VoNR/ VoLTE is disabled on the UE</p></li>
+<li><p>Restart all Open5GS services and try again</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="ue-disconnects-after-a-few-minutes">
+<h3>UE Disconnects after a few Minutes<a class="headerlink" href="index.html#ue-disconnects-after-a-few-minutes" title="Link to this heading"></a></h3>
+<p>Some Android smartphones silently drop the network connection if IMS is not configured within a couple of minutes after attach. We confirmed this behavior with Google Pixel 6 having a timeout of 180s (3 minutes), but it may apply to other devices and vendors as well.</p>
+<p>A possible solution without the need to configure IMS is to either set an infinite timeout or disable the feature in smartphone. For this purpose, open a hidden IMS settings menu by dialing <code class="docutils literal notranslate"><span class="pre">*#*#0702#*#*</span></code>, then change one of the two following settings:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Infinite timeout: Set <code class="docutils literal notranslate"><span class="pre">NR_TIMER_WAIT_IMS_REGISTRATION</span></code> from default <code class="docutils literal notranslate"><span class="pre">180</span></code> to <code class="docutils literal notranslate"><span class="pre">-1</span></code></p></li>
+<li><p>Disable timeout: Set <code class="docutils literal notranslate"><span class="pre">SUPPORT_IMS_NR_REGISTRATION_TIMER</span></code> from default <code class="docutils literal notranslate"><span class="pre">1</span></code> to <code class="docutils literal notranslate"><span class="pre">0</span></code></p></li>
+</ul>
+</div></blockquote>
+<p>Examples:</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../../../../_images/nr_timer_wait_ims_registration.png"><img alt="../../../../_images/nr_timer_wait_ims_registration.png" src="../../../../_images/nr_timer_wait_ims_registration.png" style="width: 180.0px; height: 400.0px;" />
+</a>
+<a class="reference internal image-reference" href="../../../../_images/support_ims_nr_registration_timer.png"><img alt="../../../../_images/support_ims_nr_registration_timer.png" src="../../../../_images/support_ims_nr_registration_timer.png" style="width: 180.0px; height: 400.0px;" />
+</a>
+</div></blockquote>
+<p>The smartphone stores these setting persistently across reboots on a per-IMSI basis, i.e. if you change the SIM the UE remembers the settings for each SIM separately.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="tested-devices">
+<h2>Tested Devices<a class="headerlink" href="index.html#tested-devices" title="Link to this heading"></a></h2>
+<p>You can find a list of all of the devices that have been tested by the SRS team and reported by the community <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../../knowledge_base/source/cots_ues/source/index.html#cots-ues"><span class="std std-ref">here</span></a>. This list contains information about the devices being used, and the configuration of the network.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../../srsUE/source/index.html" class="btn btn-neutral float-left" title="srsRAN gNB with srsUE" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../amariUE/source/index.html" class="btn btn-neutral float-right" title="srsRAN gNB with Amarisoft UE" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2026, Software Radio Systems..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

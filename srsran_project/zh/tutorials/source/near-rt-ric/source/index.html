@@ -1,0 +1,1603 @@
+<!DOCTYPE html>
+<html class="writer-html5" data-content_root="../../../../" lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+ Google 标签 (gtag.js) 
+
+<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-HVHF6N640X');
+    </script>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>O-RAN NearRT-RIC 和 xApp — srsRAN Project 文档</title>
+<link href="../../../../_static/pygments.css%3Fv=03e43079.css" rel="stylesheet" type="text/css"/>
+<link href="../../../../_static/css/theme.css%3Fv=9edc463e.css" rel="stylesheet" type="text/css"/>
+<link href="../../../../_static/copybutton.css%3Fv=76b2166b.css" rel="stylesheet" type="text/css"/>
+<link href="../../../../_static/css/tooltipster.custom.css" rel="stylesheet" type="text/css"/>
+<link href="../../../../_static/css/tooltipster.bundle.min.css" rel="stylesheet" type="text/css"/>
+<link href="../../../../_static/css/tooltipster-sideTip-shadow.min.css" rel="stylesheet" type="text/css"/>
+<link href="../../../../_static/css/tooltipster-sideTip-punk.min.css" rel="stylesheet" type="text/css"/>
+<link href="../../../../_static/css/tooltipster-sideTip-noir.min.css" rel="stylesheet" type="text/css"/>
+<link href="../../../../_static/css/tooltipster-sideTip-light.min.css" rel="stylesheet" type="text/css"/>
+<link href="../../../../_static/css/tooltipster-sideTip-borderless.min.css" rel="stylesheet" type="text/css"/>
+<link href="../../../../_static/css/micromodal.css" rel="stylesheet" type="text/css"/>
+<link href="../../../../_static/css/sphinx_rtd_theme.css%3Fv=3234e928.css" rel="stylesheet" type="text/css"/>
+<link href="../../../../_static/tabs.css%3Fv=a5c4661c.css" rel="stylesheet" type="text/css"/>
+<link href="../../../../_static/css/custom.css%3Fv=257617e2.css" rel="stylesheet" type="text/css"/>
+<link href="../../../../_static/favicon.png" rel="shortcut icon"/>
+<script src="../../../../_static/jquery.js%3Fv=5d32c60e"></script>
+<script src="../../../../_static/_sphinx_javascript_frameworks_compat.js%3Fv=2cd50e6c"></script>
+<script src="../../../../_static/documentation_options.js%3Fv=5929fcd5"></script>
+<script src="../../../../_static/doctools.js%3Fv=9bcbadda"></script>
+<script src="../../../../_static/sphinx_highlight.js%3Fv=dc90522c"></script>
+<script src="../../../../_static/clipboard.min.js%3Fv=a7894cd8"></script>
+<script src="../../../../_static/copybutton.js%3Fv=f281be69"></script>
+<script src="../../../../_static/js/hoverxref.js"></script>
+<script src="../../../../_static/js/tooltipster.bundle.min.js"></script>
+<script src="../../../../_static/js/micromodal.min.js"></script>
+<script src="../../../../_static/tabs.js%3Fv=3030b3cb"></script>
+<script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="../../../../_static/js/theme.js"></script>
+<script src="../../../../_static/js/versions.js"></script>
+<link href="../../../../genindex.html" rel="index" title="索引"/>
+<link href="../../../../search.html" rel="search" title="搜索"/>
+<link href="../../matlab/source/index.html" rel="next" title="MATLAB 测试工具"/>
+<link href="../../oranRU/source/switches/falcon.html" rel="prev" title="Falcon-RX 交换机"/>
+<meta content="srsran-project-docs" name="readthedocs-project-slug"/><meta content="latest" name="readthedocs-version-slug"/><meta content="/tutorials/source/near-rt-ric/source/index.html" name="readthedocs-resolver-filename"/><meta content="200" name="readthedocs-http-status"/></head>
+<body class="wy-body-for-nav">
+<div class="wy-grid-for-nav">
+<nav class="wy-nav-side" data-toggle="wy-nav-shift">
+<div class="wy-side-scroll">
+<div class="wy-side-nav-search">
+<a class="icon icon-home" href="../../../../index.html">
+            srsRAN Project
+              <img alt="标志" class="logo" src="../../../../_static/logo.png"/>
+</a>
+<div class="switch-menus">
+<div class="version-switch"></div>
+<div class="language-switch"></div>
+</div>
+<div role="search">
+<form action="../../../../search.html" class="wy-form" id="rtd-search-form" method="get">
+<input aria-label="搜索文档" name="q" placeholder="搜索文档" type="text"/>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
+</div>
+</div><div aria-label="导航菜单" class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation">
+<p class="caption" role="heading"><span class="caption-text">一般</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../general/source/2_features_and_roadmap.html">特点和路线图</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/2_features_and_roadmap.html#current-features">目前的特点</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/2_features_and_roadmap.html#coming-soon">即将推出</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../general/source/3_contributions.html">贡献指南</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/3_contributions.html#faq">常见问题解答</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../general/source/3_contributions.html#what-is-a-copyright-license-agreement-cla-and-why-do-i-need-one">1. 什么是版权许可协议 (CLA)？为什么我需要一份？</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../general/source/3_contributions.html#how-do-i-complete-and-submit-the-cla">2. 如何填写并提交 CLA？</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../general/source/3_contributions.html#how-will-my-contributions-to-project-name-be-used">3.我对srsRAN Project的贡献将如何使用？</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../general/source/3_contributions.html#if-i-do-not-own-the-copyright-in-the-entire-work-of-authorship">4. 如果我不拥有整个作者作品的版权？</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../general/source/4_reporting.html">报告问题</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/4_reporting.html#issues">问题</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/4_reporting.html#vulnerabilities">漏洞</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/4_reporting.html#support">支持</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../general/source/5_release_notes.html">发行说明</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/5_release_notes.html#id1">25.04</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/5_release_notes.html#id2">24.10.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/5_release_notes.html#id3">24.10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/5_release_notes.html#id4">24.4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/5_release_notes.html#id5">23.10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/5_release_notes.html#id6">23.5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/5_release_notes.html#initial-public-release">23.3（首次公开发布）</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../general/source/6_dev_status.html">发展现状</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">用户手册</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../user_manuals/source/installation.html">安装指南</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/installation.html#build-tools-and-dependencies">构建工具和依赖项</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/installation.html#rf-drivers">RF-驱动程序</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/installation.html#clone-and-build">克隆和构建</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/installation.html#packages">套餐</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/installation.html#phy-testvectors">PHY 测试向量</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../user_manuals/source/running.html">运行srsRAN Project</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/running.html#baseline-requirements">基线要求</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/running.html#system-preparation">系统准备</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/running.html#id1">运行srsRAN Project</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../user_manuals/source/console_ref.html">控制台参考</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../user_manuals/source/outputs.html">输出</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#logs">日志</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#pcaps">PCAP</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#mac">MAC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#rlc">RLC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#ngap">NGAP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#n3">N3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#e1ap">E1AP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#f1ap">F1AP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#e2ap">E2AP</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#json-metrics">JSON 指标</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#mac-metrics">MAC 指标</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#scheduler-metrics">调度程序指标</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#scheduler-cell-metrics">调度程序单元指标</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#cell-events">细胞事件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#scheduler-ue-metrics">调度程序 UE 指标</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#ofh-metrics">OFH指标</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#ngap-metrics">NGAP 指标</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#rrc-metrics">RRC 指标</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#executors-metrics">执行者指标</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#application-resource-usage-metrics">应用程序资源使用指标</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../user_manuals/source/config_ref.html">配置参考</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/config_ref.html#id1">配置参考</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/config_ref.html#antenna-configuration">天线配置</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../user_manuals/source/grafana_gui.html">Grafana 指标 GUI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/grafana_gui.html#configuration">配置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/grafana_gui.html#id1">Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/grafana_gui.html#project-name">srsRAN Project</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/grafana_gui.html#launching-gui">启动图形用户界面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/grafana_gui.html#gui-output">图形用户界面输出</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../user_manuals/source/troubleshooting.html">故障排除</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/troubleshooting.html#performance-tuning">性能调优</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/troubleshooting.html#cpu-performance-mode">CPU性能模式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/troubleshooting.html#performance-configuration-script">性能配置脚本</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/troubleshooting.html#usrp-configuration">USRP 配置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/troubleshooting.html#usrp-time-calibration">USRP 时间校准</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">开发者指南</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../dev_guide/source/software_arch/source/index.html">软件架构</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/software_arch/source/CU_cp/source/index.html">CU-CP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/software_arch/source/CU_up/source/index.html">CU-UP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/software_arch/source/DU_high/source/index.html">DU-high</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/software_arch/source/DU_high/source/du_manager.html">DU 经理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/software_arch/source/DU_high/source/rlc.html">无线电链路控制 (RLC)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../dev_guide/source/software_arch/source/DU_high/source/rlc_am.html">RLC 确认模式 (AM)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/software_arch/source/DU_high/source/mac.html">MAC</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../dev_guide/source/software_arch/source/DU_high/source/mac.html#implementation">实施</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../dev_guide/source/software_arch/source/DU_high/source/mac.html#ra-procedure">RA程序</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/software_arch/source/DU_low/source/index.html">DU-low</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/index.html">代码风格指南</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/1_language_libraries.html">语言和图书馆</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/1_language_libraries.html#c-c-version">C 和 C++ 版本</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/1_language_libraries.html#use-of-the-c-standard-library">C++标准库的使用</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/2_mechanical_source_aspects.html">机械源方面</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/2_mechanical_source_aspects.html#source-code-formatting">源代码格式化</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/2_mechanical_source_aspects.html#comments">评论</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/2_mechanical_source_aspects.html#comment-guidelines">评论指南</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/2_mechanical_source_aspects.html#file-headers">文件头</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/2_mechanical_source_aspects.html#header-guards">割台护罩</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/2_mechanical_source_aspects.html#include-style">#include 样式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/2_mechanical_source_aspects.html#language-and-compiler-aspects">语言和编译器方面</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/2_mechanical_source_aspects.html#treat-compiler-warnings-as-errors">将编译器警告视为错误</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/2_mechanical_source_aspects.html#code-portability">代码可移植性</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/2_mechanical_source_aspects.html#avoid-rtti-and-exceptions">避免 RTTI 和异常</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/2_mechanical_source_aspects.html#use-of-auto">使用汽车</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/3_style_aspects_high_level.html">风格方面：高级问题</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/3_style_aspects_high_level.html#self-contained-headers">独立的标头</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/3_style_aspects_high_level.html#using-include-sparingly">使用 <code class="docutils literal notranslate"><span class="pre">#包括</span></code> 节俭地</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/3_style_aspects_high_level.html#using-internal-headers">使用“内部”标头</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/3_style_aspects_high_level.html#use-of-namespace">使用 <code class="docutils literal notranslate"><span class="pre">名称空间</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/3_style_aspects_high_level.html#using-early-exits-and-continue">使用“提前退出”和 <code class="docutils literal notranslate"><span class="pre">继续</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/3_style_aspects_high_level.html#avoid-else-after-a-return-statement">避免 <code class="docutils literal notranslate"><span class="pre">否则</span></code> 经过一个 <code class="docutils literal notranslate"><span class="pre">返回</span></code> 声明</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/3_style_aspects_high_level.html#use-of-static-helper-functions">静态辅助函数的使用</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/4_style_aspects_low_level.html">风格方面：低级问题</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/4_style_aspects_low_level.html#naming-conventions">命名约定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/4_style_aspects_low_level.html#assert-and-expect">断言和期望</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/4_style_aspects_low_level.html#do-not-use-using-namespace-std">请勿使用 <code class="docutils literal notranslate"><span class="pre">使用</span> <span class="pre">名称空间</span> <span class="pre">标准</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/4_style_aspects_low_level.html#using-range-for-loops">使用范围循环</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/4_style_aspects_low_level.html#loop-structure">循环结构</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/4_style_aspects_low_level.html#using-pre-increment">使用预自增</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/4_style_aspects_low_level.html#use-of-anonymous-namespaces">匿名命名空间的使用</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/4_style_aspects_low_level.html#using-c-casts">使用 C++ 类型转换</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/5_recommendations.html">建议</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/5_recommendations.html#function-and-class-length">函数和类长度</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/5_recommendations.html#scope">适用范围</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/5_recommendations.html#logical-operators">逻辑运算符</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/5_recommendations.html#using-references-over-pointers">在指针上使用引用(&amp;)(*)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/5_recommendations.html#const-correctness">常量正确性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/5_recommendations.html#avoid-complex-expressions">避免复杂的表达式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/5_recommendations.html#magic-numbers">神奇数字</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/5_recommendations.html#fixed-width-integer-types">固定宽度整数类型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/5_recommendations.html#function-signatures">函数签名</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/5_recommendations.html#class-layout-example">类布局示例</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/6_self_generating_docs.html">自生成文档</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/6_self_generating_docs.html#general-aspects">一般方面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/6_self_generating_docs.html#files">文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/6_self_generating_docs.html#classes-and-structures">类和结构</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/6_self_generating_docs.html#class-methods-and-free-functions">类方法和自由函数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/6_self_generating_docs.html#class-data-members-objects-variables">类数据成员、对象、变量</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/7_commit_formatting.html">提交格式</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../dev_guide/source/testing_policy/source/index.html">测试政策</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/testing_policy/source/index.html#unit-tests">单元测试</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/testing_policy/source/index.html#integration-and-component-tests">集成和组件测试</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/testing_policy/source/index.html#end-to-end-e2e-tests">端到端 (E2E) 测试</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/testing_policy/source/index.html#exploratory-tests">探索性测试</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../dev_guide/source/logging_guide/source/index.html">日志记录风格指南</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/logging_guide/source/index.html#rule-1-lists-of-fields-only-need-to-be-separated-by-a-whitespace">规则1：字段列表只需用空格“”分隔</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/logging_guide/source/index.html#rule-2-maintain-consistent-order-between-classes-of-fields">规则 2：保持字段类别之间的顺序一致</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/logging_guide/source/index.html#rule-3-order-of-contextual-fields">规则 3：上下文字段的顺序</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/logging_guide/source/index.html#rule-4-for-one-time-events-provide-a-cause-whenever-it-s-unclear-what-it-might-be">规则 4：对于一次性事件，只要不清楚可能是什么，就提供原因</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/logging_guide/source/index.html#rule-5-asn-1-messages-should-be-represented-using-the-respective-asn-1-type-name">规则 5：ASN.1 消息应使用相应的 ASN.1 类型名称来表示。</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/logging_guide/source/index.html#rule-6-procedures-should-be-identified-by-the-name-specified-in-the-ts-clauses">规则 6：程序应通过 TS 条款中指定的名称来标识。</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/logging_guide/source/index.html#rule-7-messages-with-a-context-that-is-not-formatted-are-strictly-forbidden">规则 7：严格禁止发送上下文未格式化的消息！</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/logging_guide/source/index.html#general-tips">一般提示</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">知识库</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../knowledge_base/source/oran_gnb/source/index.html">O-RAN gNB 概述</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../knowledge_base/source/oran_gnb/source/index.html#introduction">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../knowledge_base/source/oran_gnb/source/index.html#split-7-2x-architecture">分体式 7.2x 架构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../knowledge_base/source/oran_gnb/source/index.html#project-name">srsRAN Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../knowledge_base/source/oran_gnb/source/index.html#further-reading">进一步阅读</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../knowledge_base/source/gnb_components/source/index.html">O-RAN gNB 组件</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../knowledge_base/source/gnb_components/source/index.html#centralized-unit-cu">集中单元 (CU)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../knowledge_base/source/gnb_components/source/index.html#distributed-unit-du">分布式单元(DU)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../knowledge_base/source/gnb_components/source/index.html#du-high">DU-high</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../knowledge_base/source/gnb_components/source/index.html#du-low">DU-low</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../knowledge_base/source/gnb_interfaces/source/index.html">gNB 接口</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../knowledge_base/source/gnb_interfaces/source/index.html#e1">E1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../knowledge_base/source/gnb_interfaces/source/index.html#e2">E2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../knowledge_base/source/gnb_interfaces/source/index.html#f1">F1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../knowledge_base/source/gnb_interfaces/source/index.html#f1-c">F1-C</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../knowledge_base/source/gnb_interfaces/source/index.html#f1-u">F1-U</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../knowledge_base/source/gnb_interfaces/source/index.html#fapi">金融应用程序接口</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../knowledge_base/source/gnb_interfaces/source/index.html#ng">不合格</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../knowledge_base/source/gnb_interfaces/source/index.html#ng-c">NG-C</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../knowledge_base/source/gnb_interfaces/source/index.html#ng-u">NG-U</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../knowledge_base/source/gnb_interfaces/source/index.html#o1">奥1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../knowledge_base/source/gnb_interfaces/source/index.html#open-fronthaul">开放式前传</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../knowledge_base/source/cots_ues/source/index.html">COTS UE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../knowledge_base/source/cots_ues/source/index.html#tested-cots-ues">经过测试的 COTS UE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../knowledge_base/source/cots_ues/source/index.html#user-reported-working-ues">用户报告的工作 UE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../knowledge_base/source/cots_ues/source/index.html#ue-capability-messages">UE 能力消息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../knowledge_base/source/cots_ues/source/index.html#references">参考文献</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">教程</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../srsUE/source/index.html">srsRAN gNB 与 srsUE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../srsUE/source/index.html#overview">概述</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../srsUE/source/index.html#hardware-and-software-overview">硬件和软件概述</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#id2">srsRAN 4G</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#limitations">局限性</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#open5gs">Open5GS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#id3">零MQ</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../srsUE/source/index.html#over-the-air-setup">无线设置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#configuration">配置</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#gnb">gNB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#srsue">srsUE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#running-the-network">运行网络</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#open5gs-core">Open5GS核心</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#id5">gNB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#id6">srsUE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#testing-the-network">测试网络</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#routing-configuration">路由配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#ping">平</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#iperf3">性能3</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../srsUE/source/index.html#zeromq-based-setup">基于 ZeroMQ 的设置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#id7">配置</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#id8">gNB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#id9">srsUE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#id10">运行网络</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#zmq-testing">测试网络</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#zmq-routing">路由配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#id13">平</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#id17">性能3</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../srsUE/source/index.html#multi-ue-emulation">多 UE 仿真</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#id23">配置</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#gnu-radio-companion">GNU 无线电伴侣</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#id25">Open5GS核心</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#id26">gNB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#id27">srsUE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#id28">运行网络</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#id29">Open5GS核心</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#id30">gNB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#id31">srsUE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#id32">GNU 无线电伴侣</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#path-loss-control">路径损耗控制</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#id33">测试网络</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../srsUE/source/index.html#troubleshooting">故障排除</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#performance-issues">性能问题</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#reference-clock">参考时钟</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#g-qos-identifier">5G QoS 标识符</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#ue-does-not-get-ip-address">UE 未获取 IP 地址</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#ue-ip-forwarding">UE IP转发</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#nd-open5gs-instance-installed-manually">第二个 Open5GS 实例（手动安装）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#run-zmq-based-setup-on-two-host-machines">在两台主机上运行基于 ZMQ 的设置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#multiple-gnbs-connected-to-a-single-docker-based-open5gs">多个 gNB 连接到单个基于 Docker 的 Open5gs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#usrp-x300-x310">USRP X300/X310</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../srsUE/source/index.html#id34">局限性</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#id35">srsUE</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../cotsUE/source/index.html">带 COTS UE 的 srsRAN gNB</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../cotsUE/source/index.html#overview">概述</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cotsUE/source/index.html#setup-considerations">设置注意事项</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../cotsUE/source/index.html#open5gs">Open5GS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../cotsUE/source/index.html#cots-ue">现货 UE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../cotsUE/source/index.html#external-clock">外部时钟</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../cotsUE/source/index.html#configuration">配置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../cotsUE/source/index.html#gnb">gNB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../cotsUE/source/index.html#isim">伊西姆</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../cotsUE/source/index.html#sim-programming">SIM编程</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../cotsUE/source/index.html#suci-configuration">SUCI配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../cotsUE/source/index.html#adding-user-controlled-plmns">添加用户控制的 PLMN</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../cotsUE/source/index.html#id1">Open5GS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../cotsUE/source/index.html#amf-yml">amf.yml</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../cotsUE/source/index.html#upf-yml">upf.yml</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../cotsUE/source/index.html#nrf-yml">nrf.yml</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../cotsUE/source/index.html#user-database">用户数据库</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../cotsUE/source/index.html#id4">现货 UE</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../cotsUE/source/index.html#enable-isim-5g-and-data-roaming">启用 ISIM、5G 和数据漫游</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../cotsUE/source/index.html#configure-apn">配置接入点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../cotsUE/source/index.html#force-nr">力降噪</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../cotsUE/source/index.html#connecting-the-cots-ue">连接 COTS UE</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../cotsUE/source/index.html#setting-up-the-network">设置网络</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../cotsUE/source/index.html#check-that-the-core-is-running-correctly">检查Core是否正常运行</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../cotsUE/source/index.html#run-the-gnb">运行gNB</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../cotsUE/source/index.html#connecting-to-the-network">连接到网络</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../cotsUE/source/index.html#traffic-and-testing">流量与测试</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../cotsUE/source/index.html#speed-test">速度测试</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../cotsUE/source/index.html#video-test">视频测试</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../cotsUE/source/index.html#troubleshooting">故障排除</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../cotsUE/source/index.html#network-not-visible">网络不可见</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../cotsUE/source/index.html#unable-to-attach">无法附加</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../cotsUE/source/index.html#no-internet-access">无法访问互联网</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../cotsUE/source/index.html#ue-disconnects-after-a-few-minutes">UE 几分钟后断开连接</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../cotsUE/source/index.html#tested-devices">测试设备</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../amariUE/source/index.html">srsRAN gNB 与 Amarisoft UE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../amariUE/source/index.html#overview">概述</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../amariUE/source/index.html#hardware-and-software-overview">硬件和软件概述</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../amariUE/source/index.html#id1">Amarisoft UE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../amariUE/source/index.html#open5gs">Open5GS</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../amariUE/source/index.html#installation">安装</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../amariUE/source/index.html#id2">零MQ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../amariUE/source/index.html#id3">Amarisoft UE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../amariUE/source/index.html#zeromq-driver-for-amarisoft-ue">适用于 Amarisoft UE 的 ZeroMQ 驱动程序</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../amariUE/source/index.html#zeromq-based-setup">基于 ZeroMQ 的设置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../amariUE/source/index.html#configuration">配置</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#project-name">srsRAN Project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#id4">Amarisoft UE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#id5">Open5GS 5G 核心</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../amariUE/source/index.html#running-the-5g-network">运行 5G 网络</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#id7">Open5gs 5G 核心</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#id8">srsRAN Project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#id9">Amarisoft UE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../amariUE/source/index.html#testing-the-network">测试网络</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#ping">平</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#iperf">性能</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#iperf-output">iPerf 输出</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#gnb-console-output">gNB 控制台输出</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#packet-capture">数据包捕获</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../amariUE/source/index.html#configuring-amarisoft-for-multiple-ues">为多个 UE 配置 Amarisoft</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../amariUE/source/index.html#over-the-air-setup">无线设置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../amariUE/source/index.html#id10">配置</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#id11">srsRAN Project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#id12">Amarisoft UE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../amariUE/source/index.html#id13">运行 5G 网络</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#id14">Open5gs 5G 核心</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#id15">srsRAN Project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#id16">Amarisoft UE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../amariUE/source/index.html#amariue-radios-test">测试网络</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#id18">平</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#id19">性能</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#id20">iPerf 输出</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#id21">gNB 控制台输出</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#id22">数据包捕获</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../amariUE/source/index.html#troubleshooting">故障排除</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../amariUE/source/index.html#zmq-setup">ZMQ设置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../amariUE/source/index.html#reference-clock-for-over-the-air">无线参考时钟</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../amariUE/source/index.html#g-qos-identifier">5G QoS 标识符</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../dpdk/source/index.html">srsRAN gNB 与 DPDK</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../dpdk/source/index.html#introduction">简介</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../dpdk/source/index.html#further-reading">进一步阅读</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../dpdk/source/index.html#installing-dpdk">安装DPDK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dpdk/source/index.html#configuring-dpdk">配置DPDK</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../dpdk/source/index.html#configure-hugepages">配置大页</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dpdk/source/index.html#binding-to-dpdk">绑定到DPDK</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dpdk/source/index.html#id1">EAL参数</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../dpdk/source/index.html#running-srsran-with-dpdk">与 DPDK 一起运行 srsRAN</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../k8s/source/index.html">Kubernetes 上的 srsRAN gNB</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../k8s/source/index.html#introduction">简介</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../k8s/source/index.html#further-reading">进一步阅读</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../k8s/source/index.html#setup-considerations">设置注意事项</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../k8s/source/index.html#cu-du">CU/DU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../k8s/source/index.html#ru">鲁</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../k8s/source/index.html#g-core">5G核心</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../k8s/source/index.html#clocking-synchronization">时钟与同步</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../k8s/source/index.html#set-up-a-k8s-k3s-bare-metal-cluster">设置 K8s/K3s 裸机集群</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../k8s/source/index.html#deploy-a-kubernetes-cluster">1. 部署Kubernetes集群</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../k8s/source/index.html#install-realtime-kernel">2.安装实时内核</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../k8s/source/index.html#install-tuned">3.安装TuneD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../k8s/source/index.html#install-dpdk">4.安装DPDK</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../k8s/source/index.html#set-up-ptp-synchronization">设置 PTP 同步</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../k8s/source/index.html#set-up-core-network-open5gs">设置核心网络：Open5GS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../k8s/source/index.html#set-up-gnb">设置 gNB</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../k8s/source/index.html#connecting-to-internal-core-networks-within-the-cluster">1. 连接集群内部核心网络</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../k8s/source/index.html#assign-dpdk-devices-without-the-sr-iov-plugin">2. 在不使用 SR-IOV 插件的情况下分配 DPDK 设备</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../k8s/source/index.html#load-testing">负载测试</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../k8s/source/index.html#srsran-ru-emulator">1.srsRAN RU模拟器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../k8s/source/index.html#assess-maximum-latency-using-cyclictest">2. 使用循环测试评估最大延迟</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../k8s/source/index.html#visualizing-kpis-via-grafana">通过 Grafana 可视化 KPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../k8s/source/index.html#clean-up-deployments">清理部署</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../handover/source/index.html">srsRAN gNB 移交</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../handover/source/index.html#overview">概述</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../handover/source/index.html#hardware-and-software-overview">硬件和软件概述</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../handover/source/index.html#project-name">srsRAN Project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../handover/source/index.html#x310-usrp">X310 USRP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../handover/source/index.html#open5gs">Open5GS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../handover/source/index.html#cots-ue">现货 UE</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../handover/source/index.html#configuration">配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../handover/source/index.html#connecting-the-cots-ue">连接 COTS UE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../handover/source/index.html#triggering-handover">触发切换</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../handover/source/index.html#from-console">从控制台</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../handover/source/index.html#physically">身体上</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../handover/source/index.html#grafana-output">Grafana 输出</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../handover/source/index.html#limitations">局限性</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../ntn/source/index.html">srsRAN gNB 适用于 5G NTN</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ntn/source/index.html#overview">概述</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#limitations">局限性</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../ntn/source/index.html#hardware-and-software-overview">硬件和软件概述</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#amarisoft-ue">Amarisoft UE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#open5gs">Open5GS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#id1">GNU 无线电伴侣</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../ntn/source/index.html#installation">安装</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#id2">零MQ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#project-name">srsRAN Project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#id3">Amarisoft UE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#zeromq-driver-for-amarisoft-ue">适用于 Amarisoft UE 的 ZeroMQ 驱动程序</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#id4">GNU 无线电伴侣</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../ntn/source/index.html#configuration">配置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#gnb">gNB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#amarisoftue">Amari软件UE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#ntn-channel-emulator">NTN通道模拟器</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../ntn/source/index.html#running-the-network">运行网络</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#open5gs-core">Open5GS核心</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#geo-ntn-channel-emulator">GEO NTN 通道模拟器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#id5">gNB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#id6">Amari软件UE</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../ntn/source/index.html#testing-the-network">测试网络</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#routing-configuration">路由配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#ping">平</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#iperf">伊珀夫</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../ntn/source/index.html#troubleshooting">故障排除</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#running-gnb-and-amarisoftue-on-separate-machines">在不同的机器上运行 gNB 和 AmarisoftUE</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../cu_du_split/source/index.html">O-RAN CU-DU 分体式</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../cu_du_split/source/index.html#overview">概述</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cu_du_split/source/index.html#hardware-and-software-overview">硬件和软件概述</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../cu_du_split/source/index.html#project-name">srsRAN Project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../cu_du_split/source/index.html#b210">B210</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../cu_du_split/source/index.html#open5gs">Open5GS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../cu_du_split/source/index.html#cots-ue">现货 UE</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../cu_du_split/source/index.html#configuration">配置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../cu_du_split/source/index.html#core">核心</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../cu_du_split/source/index.html#srscu">srsCU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../cu_du_split/source/index.html#srsdu">srsDU</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../cu_du_split/source/index.html#running-the-network">运行网络</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../cu_du_split/source/index.html#id1">核心</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../cu_du_split/source/index.html#id2">srsCU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../cu_du_split/source/index.html#id3">srsDU</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../cu_du_split/source/index.html#connecting-to-the-network">连接到网络</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../cu_du_split/source/index.html#console-outputs">控制台输出</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../oranRU/source/index.html">O-RAN 7.2 RU 指南</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../oranRU/source/index.html#overview">概述</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oranRU/source/index.html#setup-considerations">设置注意事项</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../oranRU/source/index.html#cu-du">CU/DU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../oranRU/source/index.html#ru">鲁</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../oranRU/source/index.html#g-core">5G核心</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../oranRU/source/index.html#synchronization">同步</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../oranRU/source/index.html#switch">开关</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../oranRU/source/index.html#configuration">配置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../oranRU/source/index.html#id1">开关</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../oranRU/source/index.html#id2">CU/DU</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../oranRU/source/index.html#nic-configuration">网卡配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../oranRU/source/index.html#ptp-configuration">点对点配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../oranRU/source/index.html#enabling-ptp-with-dpdk">使用 DPDK 启用 PTP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../oranRU/source/index.html#srsran-configuration">srsRAN配置</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../oranRU/source/index.html#id4">鲁</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../oranRU/source/index.html#core">核心</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../oranRU/source/index.html#initializing-the-network">初始化网络</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../oranRU/source/index.html#id5">鲁</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../oranRU/source/index.html#id6">CU/DU</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../oranRU/source/index.html#connecting-to-the-network">连接到网络</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../oranRU/source/index.html#cots-ue">现货 UE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../oranRU/source/index.html#amariue">阿玛瑞UE</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../oranRU/source/index.html#sending-traffic">发送流量</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../oranRU/source/index.html#integration-guide">集成指南</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../oranRU/source/hw_integration.html">RU</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../oranRU/source/rus/foxconn.html">富士康 RPQN-(48/78)00(E/I)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../oranRU/source/rus/picocom.html">皮科康</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../oranRU/source/rus/liteon.html">建兴FlexFi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../oranRU/source/rus/vvdn.html">越南VVDN</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../oranRU/source/rus/r550.html">贝尼特 RAN550/RAN650</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../oranRU/source/hw_integration.html#switches">开关</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../oranRU/source/switches/falcon.html">Falcon-RX 交换机</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="index.html#">O-RAN NearRT-RIC 和 xApp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#overview">概述</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#setup-overview">设置概述</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#hardware-and-software-overview">硬件和软件概述</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="index.html#limitations">局限性</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#installation">安装</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="index.html#open5gs">Open5GS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id5">零MQ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#project-name">srsRAN Project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#srsue">srsUE</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#configuration">配置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="index.html#gnb">gNB</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#running-the-network">运行网络</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="index.html#open5gs-core">Open5GS核心</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#nearrt-ric">近RT-RIC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id6">gNB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id7">srsUE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#ip-traffic-with-ping">IP 流量与 ping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#xapps">xApps</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#e2ap-packet-analyzer">E2AP数据包分析仪</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="index.html#enable-e2ap-pcap">启用 E2AP PCAP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#live-capture">实时捕捉</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#troubleshooting">故障排除</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="index.html#pcap">PCAP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#core-network-not-running">核心网未运行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#ue-issues">UE问题</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#ue-ip-forwarding">UE IP转发</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#nd-open5gs-instance-installed-manually">第二个 Open5GS 实例（手动安装）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#ric-running-on-a-different-machine">RIC在不同的机器上运行</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../matlab/source/index.html">MATLAB 测试工具</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../matlab/source/index.html#overview">概述</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../matlab/source/index.html#test-vector-generation">测试向量生成</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../matlab/source/index.html#signal-analyzers">信号分析仪</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../matlab/source/index.html#simulators">模拟器</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../matlab/source/index.html#set-up-considerations">设置注意事项</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../matlab/source/index.html#installation">安装</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tuning/source/index.html">srsRAN gNB 性能调整</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tuning/source/index.html#introduction">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tuning/source/index.html#tuned">调音</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tuning/source/index.html#installation">安装</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tuning/source/index.html#srsran-tuning-profile">srsRAN 调音配置文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tuning/source/index.html#further-reading">进一步阅读</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../testmode/source/index.html">srsRAN gNB(-DU) 负载测试</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../testmode/source/index.html#introduction">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../testmode/source/index.html#using-ru-dummy">使用 <code class="docutils literal notranslate"><span class="pre">ru_虚拟</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../testmode/source/index.html#using-ru-emu">使用 <code class="docutils literal notranslate"><span class="pre">鸸鹋</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../testmode/source/index.html#using-no-core">使用 <code class="docutils literal notranslate"><span class="pre">无核心</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../testmode/source/index.html#using-testmode">使用 <code class="docutils literal notranslate"><span class="pre">测试模式</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../hw_kit/source/index.html">E2E O-RAN 与 srsRAN 的测试床</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../hw_kit/source/index.html#introduction">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../hw_kit/source/index.html#testbed-setup">测试台设置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../hw_kit/source/index.html#hardware-components">硬件组件</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../hw_kit/source/index.html#workstation-pc">工作站电脑</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../hw_kit/source/index.html#o-ru">奥鲁</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../hw_kit/source/index.html#g-ue">5G UE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../hw_kit/source/index.html#auxiliary-elements">辅助元件</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../hw_kit/source/index.html#software">软件</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../hw_kit/source/index.html#configuration">配置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../hw_kit/source/index.html#ptp-grandmaster">PTP大师</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../hw_kit/source/index.html#demanding-dl-requirements">苛刻的 DL 要求</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../hw_kit/source/index.html#demanding-ul-requirements">严格的 UL 要求</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../hw_kit/source/index.html#low-latency-with-demanding-ul-requirements">低延迟且符合严格的 UL 要求</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption">
+<span class="caption-text">
+            
+                友情链接
+            
+            </span>
+</p>
+<ul>
+<li class="toctree-l1"><a href="https://www.srsran.com"><i class="web-icon"></i> 网站</a></li>
+<li class="toctree-l1"><a href="https://github.com/srsran/srsran_project"><i class="fa fa-github fa-fw"></i> 源代码</a></li>
+<li class="toctree-l1"><a href="https://github.com/srsran/srsran_project/issues"><i class="fa fa-bug fa-fw"></i> 报告问题</a></li>
+<li class="toctree-l1"><a href="https://github.com/srsran/srsran_project/discussions"><i class="fa fa-envelope fa-fw"></i> 讨论区</a></li>
+<li class="toctree-l1"><a href="https://twitter.com/srsRANProject"><i class="fa fa-twitter fa-fw"></i> 推特</a></li>
+</ul>
+</div>
+</div>
+</nav>
+<section class="wy-nav-content-wrap" data-toggle="wy-nav-shift"><nav aria-label="手机导航菜单" class="wy-nav-top">
+<i class="fa fa-bars" data-toggle="wy-nav-top"></i>
+<a href="../../../../index.html">srsRAN Project</a>
+</nav>
+<div class="wy-nav-content">
+<div class="rst-content">
+<div aria-label="页面导航" role="navigation">
+<ul class="wy-breadcrumbs">
+<li><a aria-label="首页" class="icon icon-home" href="../../../../index.html"></a></li>
+<li class="breadcrumb-item active">O-RAN NearRT-RIC 和 xApp</li>
+<li class="wy-breadcrumbs-aside">
+<a href="../../../../_sources/tutorials/source/near-rt-ric/source/index.rst.txt" rel="nofollow"> 查看页面源码</a>
+</li>
+</ul><div aria-label="顺序页面导航" class="rst-breadcrumbs-buttons" role="navigation">
+<a accesskey="p" class="btn btn-neutral float-left" href="../../oranRU/source/switches/falcon.html" title="Falcon-RX 交换机"><span aria-hidden="true" class="fa fa-arrow-circle-left"></span> 上一页</a>
+<a accesskey="n" class="btn btn-neutral float-right" href="../../matlab/source/index.html" title="MATLAB 测试工具">下一步 <span aria-hidden="true" class="fa fa-arrow-circle-right"></span></a>
+</div>
+<hr/>
+</div>
+<div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
+<div itemprop="articleBody">
+<section id="o-ran-nearrt-ric-and-xapp">
+<span id="near-rt-ric-appnote"></span><h1>O-RAN NearRT-RIC 和 xApp<a class="headerlink" href="index.html#o-ran-nearrt-ric-and-xapp" title="链接到此标题"></a></h1>
+<section id="overview">
+<h2>概述<a class="headerlink" href="index.html#overview" title="链接到此标题"></a></h2>
+<p>本应用笔记展示了如何使用 srsRAN Project gNodeB 公开的 E2 接口，并展示其与第三方 RIC 框架的互操作性。
+为此，我们使用 <a class="reference external" href="https://www.o-ran.org/">O-RAN联盟</a> 中提供的兼容的 NearRT-RIC 和 xApp <a class="reference external" href="https://docs.o-ran-sc.org/en/latest/projects.html#near-realtime-ran-intelligent-controller-ric">奥兰SCRIC</a> 和 <a class="reference external" href="https://gitlab.eurecom.fr/mosaic5g/flexric">柔性RIC</a> 项目。</p>
+<p>我们的 E2 接口实现基于以下 O-RAN 技术规范：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>O-RAN.WG3.E2AP-R003-v03.00</p></li>
+<li><p>O-RAN.WG3.E2SM-R003-v03.00</p></li>
+<li><p>O-RAN.WG3.E2SM-KPM-R003-v03.00</p></li>
+<li><p>O-RAN.WG3.E2SM-RC-R003-v03.00</p></li>
+</ul>
+</div></blockquote>
+</section>
+<hr class="docutils"/>
+<section id="setup-overview">
+<h2>设置概述<a class="headerlink" href="index.html#setup-overview" title="链接到此标题"></a></h2>
+<p>下图展示了本应用笔记中使用的设置架构：</p>
+<figure class="align-center">
+<img alt="../../../../_images/gNB_srsUE_zmq_near_rt_RIC.png" src="../../../../_images/gNB_srsUE_zmq_near_rt_RIC.png"/>
+</figure>
+</section>
+<section id="hardware-and-software-overview">
+<h2>硬件和软件概述<a class="headerlink" href="index.html#hardware-and-software-overview" title="链接到此标题"></a></h2>
+<p>本应用笔记使用以下硬件和软件：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>装有 Ubuntu 22.04.1 LTS 的电脑</p></li>
+<li><p><a class="reference external" href="https://github.com/srsran/srsRAN_project">srsRAN Project</a></p></li>
+<li><p><a class="reference external" href="https://github.com/srsran/srsRAN_4G">srsRAN UE</a> （srsRAN 4G 23.04 或更高版本）</p></li>
+<li><p><a class="reference external" href="https://zeromq.org/">零MQ</a></p></li>
+<li><p><a class="reference external" href="https://docs.o-ran-sc.org/en/latest/projects.html#near-realtime-ran-intelligent-controller-ric">奥兰SCRIC</a> <strong>或</strong> <a class="reference external" href="https://gitlab.eurecom.fr/mosaic5g/flexric">柔性RIC</a></p></li>
+<li><p><a class="reference external" href="https://open5gs.org/">Open5GS 5G 核心</a></p></li>
+<li><p>Wireshark（版本4.0.7或更高版本）</p></li>
+</ul>
+</div></blockquote>
+<section id="limitations">
+<h3>局限性<a class="headerlink" href="index.html#limitations" title="链接到此标题"></a></h3>
+<p>虽然我们的最终目标是完全支持 E2 接口，但它仍在开发中，当前版本的功能和操作受到限制。
+具体来说，当前的E2接口实现仅支持E2SM_KPM和E2SM_RC服务模型，具有以下限制：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>E2SM_RC服务模型：</p>
+<ul>
+<li><p>仅支持控制服务样式 2</p></li>
+</ul>
+</li>
+<li><p>E2SM_KPM服务模型：</p>
+<ul>
+<li><p>支持所有报表服务样式 (1 - 5)</p></li>
+<li><p>监控周期限制为1s</p></li>
+<li><p>以下 3 个“虚拟”DU 指标已公开（它们将在未来版本中删除）：</p>
+<ul>
+<li><p>消费者质量指数</p></li>
+<li><p>RSRP</p></li>
+<li><p>RSRQ</p></li>
+</ul>
+</li>
+<li><p>公开了以下 6 个 ORAN 定义的指标：</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">DRB.UEThpDl</span></code> - 深度学习吞吐量</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DRB.UEThul</span></code> - 上行吞吐量</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DRB.Rlc数据包丢弃率Dl</span></code> - UL数据包成功率</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DRB.数据包成功率UlgNBUu</span></code> - RLC DL丢包率</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DRB.RlcSdu传输量DL</span></code> - RLC DL 传输的 SDU 音量</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DRB.RlcSdu 传输量 UL</span></code> - RLC UL 传输的 SDU 音量</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+<hr class="docutils"/>
+<section id="installation">
+<h2>安装<a class="headerlink" href="index.html#installation" title="链接到此标题"></a></h2>
+<p>为了展示 srsRAN Project gNodeB 公开的 E2 接口的用法，我们使用 NearRT-RIC 以及来自 ORAN SC RIC 和 FlexRIC 框架的示例 KPM 监控 xApp。</p>
+<div class="admonition note">
+<p class="admonition-title">注意事项</p>
+<p>根据您使用的 RIC，您应该从下面的选项卡中选择适当的说明。整个教程中的选项卡都是分组的，因此您只需在本节中选择适当的说明即可。</p>
+</div>
+<div class="sphinx-tabs docutils container">
+<div aria-label="选项卡内容" class="closeable" role="tablist"><button aria-controls="panel-0-T1JBTiBTQyBSSUM=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-T1JBTiBTQyBSSUM=" name="T1JBTiBTQyBSSUM=" role="tab" tabindex="0">奥兰SCRIC</button><button aria-controls="panel-0-RmxleFJJQw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-RmxleFJJQw==" name="RmxleFJJQw==" role="tab" tabindex="-1">柔性RIC</button></div><div aria-labelledby="tab-0-T1JBTiBTQyBSSUM=" class="sphinx-tabs-panel group-tab" id="panel-0-T1JBTiBTQyBSSUM=" name="T1JBTiBTQyBSSUM=" role="tabpanel" tabindex="0"><p><a class="reference external" href="https://docs.o-ran-sc.org/en/latest/">O-RAN 软件社区 (SC) 近实时 RIC</a> 是一个参考平台，符合 O-RAN 联盟工作组创建的架构和规范。</p>
+<p>ORAN SC RIC平台是一个先进的软件框架，其功能包括平台健康监控、警报等。
+由于它依赖于 Kubernetes 和 Helm 来实现部署、可靠性和可扩展性，因此其普通安装相当复杂，涉及许多步骤，并且需要对这些框架有高水平的知识和专业知识。</p>
+<p>在本应用笔记中，我们使用 O-RAN SC 近 RT RIC 的最小版本（<code class="docutils literal notranslate"><span class="pre">我发布</span></code>），可以使用单个 Docker 命令轻松部署为多容器应用程序，从而无需使用 Kubernetes 或 Helm。
+具体来说，我们将使用 Docker 和本文档中提供的配置文件来部署 ORAN SC RIC <a class="reference external" href="https://github.com/srsran/oran-sc-ric">存储库</a>.</p>
+<p>ORAN SC RIC部署执行如下：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/srsran/oran-sc-ric
+<span class="nb">光盘</span><span class="w"> </span>./oran-sc-ric
+docker<span class="w"> </span>compose<span class="w"> </span>up
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-0-RmxleFJJQw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-RmxleFJJQw==" name="RmxleFJJQw==" role="tabpanel" tabindex="0"><p>的 <a class="reference external" href="https://gitlab.eurecom.fr/mosaic5g/flexric">柔性RIC</a> 框架提供 <a class="reference external" href="https://www.o-ran.org/">O-RAN联盟</a> 兼容的 E2 节点代理模拟器、NearRT-RIC 和用 C/C++ 和 Python 编写的 xApp。</p>
+<p>O-RAN 规范正在不断发展，FlexRIC 正在开发多个轨道（即 git 分支）。
+在本教程中，我们使用 <code class="docutils literal notranslate"><span class="pre">br-flexric</span></code> 分支（提交： <code class="docutils literal notranslate"><span class="pre">1a3903a7</span></code>).</p>
+<p>FlexRIC 需要安装以下依赖项（请参阅 <a class="reference external" href="https://gitlab.eurecom.fr/mosaic5g/flexric/-/tree/br-flexric">FlexRIC 安装指南</a> 详情）：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
+sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>swig<span class="w"> </span>libsctp-dev<span class="w"> </span>python3<span class="w"> </span>cmake-curses-gui<span class="w"> </span>python3-dev<span class="w"> </span>pkg-config<span class="w"> </span>libconfig-dev<span class="w"> </span>libconfig++-dev
+</pre></div>
+</div>
+<p>FlexRIC安装执行如下：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://gitlab.eurecom.fr/mosaic5g/flexric.git
+<span class="nb">光盘</span><span class="w"> </span>flexric
+git<span class="w"> </span>checkout<span class="w"> </span>br-flexric
+mkdir<span class="w"> </span>build
+<span class="nb">光盘</span><span class="w"> </span>build
+cmake<span class="w"> </span>-DKPM_VERSION<span class="o">=</span>KPM_V3_00<span class="w"> </span>-DXAPP_DB<span class="o">=</span>NONE_XAPP<span class="w"> </span>../
+make
+sudo<span class="w"> </span>make<span class="w"> </span>install
+</pre></div>
+</div>
+<p>请注意，虽然默认情况下 Ubuntu 22.04.1 使用 <cite>海湾合作委员会-11</cite>，所使用的 FlexRIC 版本只能使用 <cite>海湾合作委员会-10</cite>。一种可能的切换方式 <cite>海湾合作委员会</cite> 版本是使用 <cite>更新替代方案</cite> 工具，例如：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>update-alternatives<span class="w"> </span>--config<span class="w"> </span>gcc
+
+There<span class="w"> </span>are<span class="w"> </span><span class="m">3</span><span class="w"> </span>choices<span class="w"> </span><span class="k">为了</span><span class="w"> </span>the<span class="w"> </span>alternative<span class="w"> </span>gcc<span class="w"> </span><span class="o">(</span>providing<span class="w"> </span>/usr/bin/gcc<span class="o">)</span>.
+
+<span class="w">  </span>Selection<span class="w">    </span>Path<span class="w">             </span>Priority<span class="w">   </span>Status
+------------------------------------------------------------
+<span class="w">  </span><span class="m">0</span><span class="w">            </span>/usr/bin/gcc-11<span class="w">   </span><span class="m">11</span><span class="w">        </span>auto<span class="w"> </span>mode
+*<span class="w"> </span><span class="m">1</span><span class="w">            </span>/usr/bin/gcc-10<span class="w">   </span><span class="m">10</span><span class="w">        </span>manual<span class="w"> </span>mode
+<span class="w">  </span><span class="m">2</span><span class="w">            </span>/usr/bin/gcc-11<span class="w">   </span><span class="m">11</span><span class="w">        </span>manual<span class="w"> </span>mode
+<span class="w">  </span><span class="m">3</span><span class="w">            </span>/usr/bin/gcc-9<span class="w">    </span><span class="m">9</span><span class="w">         </span>manual<span class="w"> </span>mode
+
+Press<span class="w"> </span>&lt;enter&gt;<span class="w"> </span>to<span class="w"> </span>keep<span class="w"> </span>the<span class="w"> </span>current<span class="w"> </span>choice<span class="o">[</span>*<span class="o">]</span>,<span class="w"> </span>or<span class="w"> </span><span class="nb">类型</span><span class="w"> </span>selection<span class="w"> </span>number:
+</pre></div>
+</div>
+</div></div>
+<section id="open5gs">
+<h3>Open5GS<a class="headerlink" href="index.html#open5gs" title="链接到此标题"></a></h3>
+<p>在本示例中，我们使用 Open5GS 作为 5G 内核。</p>
+<p>Open5GS 是 5G 核心和 EPC 的 C 语言开源实现。以下链接将为您提供
+包含下载和设置 Open5GS 所需的信息，以便可以与 srsRAN 一起使用：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://github.com/open5gs/open5gs">GitHub</a></p></li>
+<li><p><a class="reference external" href="https://open5gs.org/open5gs/docs/guide/01-quickstart/">快速入门指南</a></p></li>
+</ul>
+</div></blockquote>
+<p>出于本应用说明的目的，我们将使用 srsRAN Project 中提供的 Docker 化 Open5GS 版本，网址为 <code class="docutils literal notranslate"><span class="pre">srsgnb/docker</span></code>.</p>
+</section>
+<section id="id5">
+<h3>零MQ<a class="headerlink" href="index.html#id5" title="链接到此标题"></a></h3>
+<p>在 Ubuntu 上，ZeroMQ 开发库可以通过以下方式安装：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>libzmq3-dev
+</pre></div>
+</div>
+<p>另外，ZeroMQ 也可以从源代码构建。</p>
+<p>首先，需要安装 libzmq：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/zeromq/libzmq.git
+<span class="nb">光盘</span><span class="w"> </span>libzmq
+./autogen.sh
+./configure
+make
+sudo<span class="w"> </span>make<span class="w"> </span>install
+sudo<span class="w"> </span>ldconfig
+</pre></div>
+</div>
+<p>二、安装czmq：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/zeromq/czmq.git
+<span class="nb">光盘</span><span class="w"> </span>czmq
+./autogen.sh
+./configure
+make
+sudo<span class="w"> </span>make<span class="w"> </span>install
+sudo<span class="w"> </span>ldconfig
+</pre></div>
+</div>
+<p>最后，您需要编译srsRAN Project和srsRAN 4G（假设您已经安装了所有必需的依赖项）。</p>
+<div class="admonition note">
+<p class="admonition-title">注意事项</p>
+<p>如果您在安装 ZMQ 和其他依赖项之前已经构建并安装了 srsRAN 4G 和 srsRAN Project，则必须重新构建两者以确保正确识别 ZMQ 驱动程序。</p>
+</div>
+</section>
+<section id="project-name">
+<h3>srsRAN Project<a class="headerlink" href="index.html#project-name" title="链接到此标题"></a></h3>
+<p>对于 srsRAN Project，可以使用以下命令从源代码下载和构建：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/srsran/srsRAN_Project.git
+<span class="nb">光盘</span><span class="w"> </span>srsRAN_Project
+mkdir<span class="w"> </span>build
+<span class="nb">光盘</span><span class="w"> </span>build
+cmake<span class="w"> </span>../<span class="w"> </span>-DENABLE_EXPORT<span class="o">=</span>ON<span class="w"> </span>-DENABLE_ZEROMQ<span class="o">=</span>ON
+make<span class="w"> </span>-j<span class="sb">`</span>nproc<span class="sb">`</span>
+</pre></div>
+</div>
+<p>ZeroMQ 默认禁用，运行时启用 <code class="docutils literal notranslate"><span class="pre">cmake</span></code> 通过包括 <code class="docutils literal notranslate"><span class="pre">-DENABLE_EXPORT=开</span> <span class="pre">-DENABLE_ZEROMQ=ON</span></code>.</p>
+<p>特别注意 cmake 控制台输出。确保您阅读以下行：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>...
+--<span class="w"> </span>FINDING<span class="w"> </span>ZEROMQ.
+--<span class="w"> </span>Checking<span class="w"> </span><span class="k">为了</span><span class="w"> </span>module<span class="w"> </span><span class="s1">'ZeroMQ'</span>
+--<span class="w">   </span>No<span class="w"> </span>package<span class="w"> </span><span class="s1">'ZeroMQ'</span><span class="w"> </span>found
+--<span class="w"> </span>Found<span class="w"> </span>libZEROMQ:<span class="w"> </span>/usr/local/include,<span class="w"> </span>/usr/local/lib/libzmq.so
+...
+</pre></div>
+</div>
+</section>
+<section id="srsue">
+<h3>srsUE<a class="headerlink" href="index.html#srsue" title="链接到此标题"></a></h3>
+<p>如果您尚未这样做，请安装最新版本的 srsRAN 4G 及其所有依赖项。这在 <a class="reference external" href="https://docs.srsran.com/projects/4g/en/latest/general/source/1_installation.html">安装指南</a>.</p>
+<p>请查看我们的srsRAN 4G <a class="reference external" href="https://docs.srsran.com/projects/4g/en/latest/app_notes/source/zeromq/source/index.html">ZeroMQ 应用说明</a> 有关安装 ZMQ 并将其与 srsRAN 4G/srsUE 一起使用的信息。</p>
+</section>
+</section>
+<hr class="docutils"/>
+<section id="configuration">
+<h2>配置<a class="headerlink" href="index.html#configuration" title="链接到此标题"></a></h2>
+<p>这里，我们使用基于 ZMQ 的设置，因此配置文件基于中介绍的那些 <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../srsUE/source/index.html#srsue-appnote"><span class="std std-ref">srsRAN gNB 与 srsUE</span></a> 应用笔记。</p>
+<p>以下配置文件已修改为使用基于 ZMQ 的 RF 驱动程序并在 srsRAN Project gNodeB 中启用 E2 接口：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference download internal" download="" href="../../../../_downloads/cd7bc1de5ec01c261b2b112e21700e77/gnb_zmq.yaml"><code class="xref download docutils literal notranslate"><span class="pre">gNB</span> <span class="pre">配置</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../../_downloads/fada80ca15bd69b34a0ad8425bbc6560/ue_zmq.conf"><code class="xref download docutils literal notranslate"><span class="pre">UE</span> <span class="pre">配置</span></code></a></p></li>
+</ul>
+</div></blockquote>
+<p>以下各节概述了所做修改的详细信息。其余配置参数的描述可在 <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../srsUE/source/index.html#srsue-appnote"><span class="std std-ref">srsRAN gNB 与 srsUE</span></a> 应用笔记。</p>
+<p>建议您使用这些文件以避免手动更改配置时出现错误。此处未包含的任何配置文件都不需要修改默认设置。</p>
+<section id="gnb">
+<h3>gNB<a class="headerlink" href="index.html#gnb" title="链接到此标题"></a></h3>
+<p>这里，我们描述与E2代理相关的gNB配置参数。</p>
+<p>在所有DU中启用E2代理并启用E2SM_KPM服务模块：</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">e2</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">启用_du_e2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">真实</span><span class="w">                </span><span class="c1"># 启用 DU E2 代理（每个 DU 实例一个）</span>
+<span class="w">  </span><span class="nt">e2sm_kpm_启用</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">真实</span><span class="w">            </span><span class="c1"># 启用KPM服务模块</span>
+<span class="w">  </span><span class="nt">e2sm_rc_启用</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">真实</span><span class="w">             </span><span class="c1"># 启用RC服务模块</span>
+<span class="w">  </span><span class="nt">地址</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">127.0.0.1</span><span class="w">                   </span><span class="c1">#RIC IP 地址</span>
+<span class="w">  </span><span class="nt">港口</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">36421</span><span class="w">                       </span><span class="c1"># RIC端口</span>
+</pre></div>
+</div>
+<p>启用 E2AP 数据包捕获并设置输出 pcap 文件的名称：</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">聚氯乙烯</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">e2ap_启用</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">真实</span><span class="w">                              </span><span class="c1"># 设置为 true 以启用 E2AP PCAP。</span>
+<span class="w">  </span><span class="nt">e2ap_du_文件名</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/tmp/gnb_du_e2ap.pcap</span><span class="w">        </span><span class="c1"># DU E2AP PCAP 的存储路径。</span>
+<span class="w">  </span><span class="nt">e2ap_cu_cp_文件名</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/tmp/gnb_cu_cp_e2ap.pcap</span><span class="w">  </span><span class="c1"># CU-CP E2AP PCAP 的存储路径。</span>
+<span class="w">  </span><span class="nt">e2ap_cu_up_文件名</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/tmp/gnb_cu_up_e2ap.pcap</span><span class="w">  </span><span class="c1"># CU-UP E2AP PCAP 的存储路径。</span>
+</pre></div>
+</div>
+<p>启用 启用 RLC 和 DU 调度程序指标报告，该报告将为 E2SM_KPM 服务模型提供测量数据：</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">指标</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">层数</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">启用RLC</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">真实</span><span class="w">                </span><span class="c1"># 启用 RLC 指标</span>
+<span class="w">    </span><span class="nt">启用_计划</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">真实</span><span class="w">              </span><span class="c1"># 启用 DU 调度程序指标</span>
+<span class="w">  </span><span class="nt">周期性</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">du_report_period</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span><span class="w">          </span><span class="c1"># 设置DU统计报告周期为1s</span>
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils"/>
+<section id="running-the-network">
+<h2>运行网络<a class="headerlink" href="index.html#running-the-network" title="链接到此标题"></a></h2>
+<p>运行网络时应使用以下顺序：</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Open5GS</p></li>
+<li><p>近RT-RIC</p></li>
+<li><p>gNB</p></li>
+<li><p>UE</p></li>
+<li><p>启动 IP 流量（例如 ping）</p></li>
+<li><p>x应用程序</p></li>
+</ol>
+</div></blockquote>
+<section id="open5gs-core">
+<h3>Open5GS核心<a class="headerlink" href="index.html#open5gs-core" title="链接到此标题"></a></h3>
+<p>srsRAN Project 提供 Open5GS 的 docker 化版本。是一种方便快捷的核心网启动方式。您可以按如下方式运行它：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">光盘</span><span class="w"> </span>./srsRAN_Project/docker
+docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>5gc
+</pre></div>
+</div>
+<p>请注意，我们已经配置了 Open5GS 以便与 srsRAN Project 正确运行。此外，UE 数据库中填充了我们的 srsUE 使用的凭据。</p>
+</section>
+<section id="nearrt-ric">
+<h3>近RT-RIC<a class="headerlink" href="index.html#nearrt-ric" title="链接到此标题"></a></h3>
+<div class="sphinx-tabs docutils container">
+<div aria-label="选项卡内容" class="closeable" role="tablist"><button aria-controls="panel-1-T1JBTiBTQyBSSUM=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-1-T1JBTiBTQyBSSUM=" name="T1JBTiBTQyBSSUM=" role="tab" tabindex="0">奥兰SCRIC</button><button aria-controls="panel-1-RmxleFJJQw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-RmxleFJJQw==" name="RmxleFJJQw==" role="tab" tabindex="-1">柔性RIC</button></div><div aria-labelledby="tab-1-T1JBTiBTQyBSSUM=" class="sphinx-tabs-panel group-tab" id="panel-1-T1JBTiBTQyBSSUM=" name="T1JBTiBTQyBSSUM=" role="tabpanel" tabindex="0"><p>要将 ORAN SC RIC 平台作为多容器应用程序启动，请从 <code class="docutils literal notranslate"><span class="pre">奥兰斯克里克</span></code> 目录：</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">光盘</span><span class="w"> </span>./oran-sc-ric
+docker<span class="w"> </span>compose<span class="w"> </span>up
+</pre></div>
+</div>
+<p>Docker 应该下载并构建（第一次运行时）七个容器。成功部署所有容器后，NearRT-RIC 控制台输出上应显示以下消息：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ric_submgr<span class="w">          </span><span class="p">|</span><span class="w"> </span>RMR<span class="w"> </span>is<span class="w"> </span>ready<span class="w"> </span>now<span class="w"> </span>...
+</pre></div>
+</div>
+</div></blockquote>
+</div><div aria-labelledby="tab-1-RmxleFJJQw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-1-RmxleFJJQw==" name="RmxleFJJQw==" role="tabpanel" tabindex="0"><p>启动FlexRIC框架中提供的NearRT-RIC示例：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./flexric/build/examples/ric/nearRT-RIC
+</pre></div>
+</div>
+<p>NearRT-RIC 控制台输出应类似于：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Setting<span class="w"> </span>the<span class="w"> </span>config<span class="w"> </span>-c<span class="w"> </span>file<span class="w"> </span>to<span class="w"> </span>/usr/local/etc/flexric/ric.conf
+<span class="o">[</span>LibConf<span class="o">]</span>:<span class="w"> </span>loading<span class="w"> </span>service<span class="w"> </span>models<span class="w"> </span>from<span class="w"> </span>SM_DIR:<span class="w"> </span>/usr/local/lib/flexric/
+<span class="o">[</span>LibConf<span class="o">]</span>:<span class="w"> </span>reading<span class="w"> </span>configuration<span class="w"> </span><span class="k">为了</span><span class="w"> </span>NearRT_RIC
+<span class="o">[</span>LibConf<span class="o">]</span>:<span class="w"> </span>NearRT_RIC<span class="w"> </span>IP:<span class="w"> </span><span class="m">127</span>.0.0.1
+<span class="o">[</span>LibConf<span class="o">]</span>:<span class="w"> </span>E2_Port<span class="w"> </span>Port:<span class="w"> </span><span class="m">36421</span>
+<span class="o">[</span>LibConf<span class="o">]</span>:<span class="w"> </span>E42_Port<span class="w"> </span>Port:<span class="w"> </span><span class="m">36422</span>
+<span class="o">[</span>NEAR-RIC<span class="o">]</span>:<span class="w"> </span>nearRT-RIC<span class="w"> </span>IP<span class="w"> </span><span class="nv">地址</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">127</span>.0.0.1,<span class="w"> </span><span class="nv">端口</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">36421</span>
+<span class="o">[</span>NEAR-RIC<span class="o">]</span>:<span class="w"> </span>Initializing
+<span class="o">[</span>NEAR-RIC<span class="o">]</span>:<span class="w"> </span>Loading<span class="w"> </span>SM<span class="w"> </span><span class="nv">身份证号</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="w"> </span>with<span class="w"> </span><span class="nv">定义</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>ORAN-E2SM-RC
+<span class="o">[</span>NEAR-RIC<span class="o">]</span>:<span class="w"> </span>Loading<span class="w"> </span>SM<span class="w"> </span><span class="nv">身份证号</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">142</span><span class="w"> </span>with<span class="w"> </span><span class="nv">定义</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>MAC_STATS_V0
+<span class="o">[</span>NEAR-RIC<span class="o">]</span>:<span class="w"> </span>Loading<span class="w"> </span>SM<span class="w"> </span><span class="nv">身份证号</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">148</span><span class="w"> </span>with<span class="w"> </span><span class="nv">定义</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>GTP_STATS_V0
+<span class="o">[</span>NEAR-RIC<span class="o">]</span>:<span class="w"> </span>Loading<span class="w"> </span>SM<span class="w"> </span><span class="nv">身份证号</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">146</span><span class="w"> </span>with<span class="w"> </span><span class="nv">定义</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>TC_STATS_V0
+<span class="o">[</span>NEAR-RIC<span class="o">]</span>:<span class="w"> </span>Loading<span class="w"> </span>SM<span class="w"> </span><span class="nv">身份证号</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">145</span><span class="w"> </span>with<span class="w"> </span><span class="nv">定义</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>SLICE_STATS_V0
+<span class="o">[</span>NEAR-RIC<span class="o">]</span>:<span class="w"> </span>Loading<span class="w"> </span>SM<span class="w"> </span><span class="nv">身份证号</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">143</span><span class="w"> </span>with<span class="w"> </span><span class="nv">定义</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>RLC_STATS_V0
+<span class="o">[</span>NEAR-RIC<span class="o">]</span>:<span class="w"> </span>Loading<span class="w"> </span>SM<span class="w"> </span><span class="nv">身份证号</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="w"> </span>with<span class="w"> </span><span class="nv">定义</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>ORAN-E2SM-KPM
+<span class="o">[</span>NEAR-RIC<span class="o">]</span>:<span class="w"> </span>Loading<span class="w"> </span>SM<span class="w"> </span><span class="nv">身份证号</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">144</span><span class="w"> </span>with<span class="w"> </span><span class="nv">定义</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>PDCP_STATS_V0
+<span class="o">[</span>iApp<span class="o">]</span>:<span class="w"> </span>Initializing<span class="w"> </span>...
+<span class="o">[</span>iApp<span class="o">]</span>:<span class="w"> </span>nearRT-RIC<span class="w"> </span>IP<span class="w"> </span><span class="nv">地址</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">127</span>.0.0.1,<span class="w"> </span><span class="nv">端口</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">36422</span>
+fd<span class="w"> </span>created<span class="w"> </span>with<span class="w"> </span><span class="m">6</span>
+<span class="o">[</span>NEAR-RIC<span class="o">]</span>:<span class="w"> </span>Initializing<span class="w"> </span>Task<span class="w"> </span>Manager<span class="w"> </span>with<span class="w"> </span><span class="m">2</span><span class="w"> </span>threads
+</pre></div>
+</div>
+</div></div>
+</section>
+<section id="id6">
+<h3>gNB<a class="headerlink" href="index.html#id6" title="链接到此标题"></a></h3>
+<p>我们直接从构建文件夹运行 gNB，即 <code class="docutils literal notranslate"><span class="pre">./srsRAN_Project/build/apps/gnb/</span></code>，（配置文件也位于此处）使用以下命令：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 使用 ORAN SC RIC 运行时</span>
+sudo<span class="w"> </span>./gnb<span class="w"> </span>-c<span class="w"> </span>gnb_zmq.yaml<span class="w"> </span>e2<span class="w"> </span>--addr<span class="o">=</span><span class="s2">"10.0.2.10"</span><span class="w"> </span>--bind_addr<span class="o">=</span><span class="s2">"10.0.2.1"</span>
+
+<span class="c1"># 使用 FlexRIC 运行时</span>
+sudo<span class="w"> </span>./gnb<span class="w"> </span>-c<span class="w"> </span>gnb_zmq.yaml<span class="w"> </span>e2<span class="w"> </span>--addr<span class="o">=</span><span class="s2">"127.0.0.1"</span><span class="w"> </span>--bind_addr<span class="o">=</span><span class="s2">"127.0.0.1"</span>
+</pre></div>
+</div>
+<p>gNB 控制台输出应类似于：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>--<span class="o">==</span><span class="w"> </span>srsRAN<span class="w"> </span>gNB<span class="w"> </span><span class="o">(</span>commit<span class="w"> </span>0b2702cca<span class="o">)</span><span class="w"> </span><span class="o">==</span>--
+
+Connecting<span class="w"> </span>to<span class="w"> </span>AMF<span class="w"> </span>on<span class="w"> </span><span class="m">10</span>.53.1.2:38412
+Available<span class="w"> </span>radio<span class="w"> </span>types:<span class="w"> </span>zmq.
+Connecting<span class="w"> </span>to<span class="w"> </span>NearRT-RIC<span class="w"> </span>on<span class="w"> </span><span class="m">127</span>.0.0.1:36421
+Cell<span class="w"> </span><span class="nv">PCI</span><span class="o">=</span><span class="m">1</span>,<span class="w"> </span><span class="nv">体重</span><span class="o">=</span><span class="m">10</span><span class="w"> </span>MHz,<span class="w"> </span><span class="nv">dl_arfcn</span><span class="o">=</span><span class="m">368500</span><span class="w"> </span><span class="o">(</span>n3<span class="o">)</span>,<span class="w"> </span><span class="nv">dl_频率</span><span class="o">=</span><span class="m">1842</span>.5<span class="w"> </span>MHz,<span class="w"> </span><span class="nv">dl_ssb_arfcn</span><span class="o">=</span><span class="m">368410</span>,<span class="w"> </span><span class="nv">ul_频率</span><span class="o">=</span><span class="m">1747</span>.5<span class="w"> </span><span class="nv">兆赫兹</span>
+
+<span class="o">====</span><span class="w"> </span>gNodeB<span class="w"> </span><span class="nv">开始了</span><span class="w"> </span><span class="o">===</span>
+Type<span class="w"> </span>&lt;t&gt;<span class="w"> </span>to<span class="w"> </span>view<span class="w"> </span>trace
+</pre></div>
+</div>
+<p>的 <code class="docutils literal notranslate"><span class="pre">正在连接</span> <span class="pre">到</span> <span class="pre">AMF</span> <span class="pre">上</span> <span class="pre">10.53.1.2:38412</span></code> 消息表明 gNB 发起了与核心的连接。同时， <code class="docutils literal notranslate"><span class="pre">正在连接</span> <span class="pre">到</span> <span class="pre">近RT-RIC</span> <span class="pre">上</span> <span class="pre">127.0.0.1:36421</span></code> 消息表明 gNB 发起了与 NearRT-RIC 的连接。</p>
+<p>如果连接尝试成功，NearRT-RIC 控制台上将显示以下（或类似内容）：</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="选项卡内容" class="closeable" role="tablist"><button aria-controls="panel-2-T1JBTiBTQyBSSUM=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-2-T1JBTiBTQyBSSUM=" name="T1JBTiBTQyBSSUM=" role="tab" tabindex="0">奥兰SCRIC</button><button aria-controls="panel-2-RmxleFJJQw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-2-RmxleFJJQw==" name="RmxleFJJQw==" role="tab" tabindex="-1">柔性RIC</button></div><div aria-labelledby="tab-2-T1JBTiBTQyBSSUM=" class="sphinx-tabs-panel group-tab" id="panel-2-T1JBTiBTQyBSSUM=" name="T1JBTiBTQyBSSUM=" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ric_rtmgr_sim<span class="w">       </span><span class="p">|</span><span class="w"> </span><span class="m">2024</span>/04/02<span class="w"> </span><span class="m">11</span>:07:39<span class="w"> </span>POST<span class="w"> </span>/ric/v1/handles/associate-ran-to-e2t<span class="w">  </span>body:<span class="w"> </span><span class="o">[{</span><span class="s2">“E2T地址”</span>:<span class="s2">"10.0.2.10:38000"</span>,<span class="s2">“跑名单”</span>:<span class="o">[</span><span class="s2">“gnb_001_001_00019b”</span><span class="o">]}]</span><span class="w"> </span>elapsed:<span class="w"> </span><span class="m">10</span>.77µs
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-2-RmxleFJJQw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-2-RmxleFJJQw==" name="RmxleFJJQw==" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Received<span class="w"> </span>message<span class="w"> </span>with<span class="w"> </span><span class="nv">编号</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">411</span>,<span class="w"> </span><span class="nv">港口</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1715</span>
+<span class="o">[</span>E2AP<span class="o">]</span><span class="w"> </span>Received<span class="w"> </span>SETUP-REQUEST<span class="w"> </span>from<span class="w"> </span>PLMN<span class="w">   </span><span class="m">1</span>.<span class="w"> </span><span class="m">1</span><span class="w"> </span>Node<span class="w"> </span>ID<span class="w"> </span><span class="m">411</span><span class="w"> </span>RAN<span class="w"> </span><span class="nb">类型</span><span class="w"> </span>ngran_gNB_DU
+<span class="o">[</span>NEAR-RIC<span class="o">]</span>:<span class="w"> </span>Accepting<span class="w"> </span>RAN<span class="w"> </span><span class="k">功能</span><span class="w"> </span>ID<span class="w"> </span><span class="m">2</span><span class="w"> </span>with<span class="w"> </span><span class="nv">定义</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>ORAN-E2SM-KPM
+<span class="o">[</span>iApp<span class="o">]</span>:<span class="w"> </span>no<span class="w"> </span>xApp<span class="w"> </span>connected,<span class="w"> </span>no<span class="w"> </span>need<span class="w"> </span>to<span class="w"> </span>generate<span class="w"> </span>E42<span class="w"> </span>UPDATE-E2-NODE
+</pre></div>
+</div>
+</div></div>
+</section>
+<section id="id7">
+<h3>srsUE<a class="headerlink" href="index.html#id7" title="链接到此标题"></a></h3>
+<p>首先，必须为 UE 创建正确的网络命名空间：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>ip<span class="w"> </span>netns<span class="w"> </span>add<span class="w"> </span>ue1
+</pre></div>
+</div>
+<p>接下来，我们启动 srsUE。这也可以直接从构建文件夹中完成（即 <code class="docutils literal notranslate"><span class="pre">/srsRAN_4G/构建/srsue/</span></code>），配置文件位于同一位置：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>./srsue<span class="w"> </span>ue_zmq.conf
+</pre></div>
+</div>
+<p>如果 srsUE 成功连接到网络，控制台上应显示以下（或类似内容）：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Built<span class="w"> </span><span class="k">在</span><span class="w"> </span>Release<span class="w"> </span>mode<span class="w"> </span>using<span class="w"> </span>commit<span class="w"> </span>fa56836b1<span class="w"> </span>on<span class="w"> </span>branch<span class="w"> </span>master.
+
+Opening<span class="w"> </span><span class="m">1</span><span class="w"> </span>channels<span class="w"> </span><span class="k">在</span><span class="w"> </span>RF<span class="w"> </span><span class="nv">装置</span><span class="o">=</span>zmq<span class="w"> </span>with<span class="w"> </span><span class="nv">参数</span><span class="o">=</span><span class="nv">发送端口</span><span class="o">=</span>tcp://127.0.0.1:2001,rx_port<span class="o">=</span>tcp://127.0.0.1:2000,base_srate<span class="o">=</span><span class="m">11</span>.52e6
+Supported<span class="w"> </span>RF<span class="w"> </span>device<span class="w"> </span>list:<span class="w"> </span>UHD<span class="w"> </span>zmq<span class="w"> </span>file
+CHx<span class="w"> </span><span class="nv">基本速率</span><span class="o">=</span><span class="m">11</span>.52e6
+Current<span class="w"> </span>sample<span class="w"> </span>rate<span class="w"> </span>is<span class="w"> </span><span class="m">1</span>.92<span class="w"> </span>MHz<span class="w"> </span>with<span class="w"> </span>a<span class="w"> </span>base<span class="w"> </span>rate<span class="w"> </span>of<span class="w"> </span><span class="m">11</span>.52<span class="w"> </span>MHz<span class="w"> </span><span class="o">(</span>x6<span class="w"> </span>decimation<span class="o">)</span>
+CH0<span class="w"> </span><span class="nv">接收端口</span><span class="o">=</span>tcp://127.0.0.1:2000
+CH0<span class="w"> </span><span class="nv">发送端口</span><span class="o">=</span>tcp://127.0.0.1:2001
+Current<span class="w"> </span>sample<span class="w"> </span>rate<span class="w"> </span>is<span class="w"> </span><span class="m">11</span>.52<span class="w"> </span>MHz<span class="w"> </span>with<span class="w"> </span>a<span class="w"> </span>base<span class="w"> </span>rate<span class="w"> </span>of<span class="w"> </span><span class="m">11</span>.52<span class="w"> </span>MHz<span class="w"> </span><span class="o">(</span>x1<span class="w"> </span>decimation<span class="o">)</span>
+Current<span class="w"> </span>sample<span class="w"> </span>rate<span class="w"> </span>is<span class="w"> </span><span class="m">11</span>.52<span class="w"> </span>MHz<span class="w"> </span>with<span class="w"> </span>a<span class="w"> </span>base<span class="w"> </span>rate<span class="w"> </span>of<span class="w"> </span><span class="m">11</span>.52<span class="w"> </span>MHz<span class="w"> </span><span class="o">(</span>x1<span class="w"> </span>decimation<span class="o">)</span>
+Waiting<span class="w"> </span>PHY<span class="w"> </span>to<span class="w"> </span>initialize<span class="w"> </span>...<span class="w"> </span><span class="k">完成</span>!
+Attaching<span class="w"> </span>UE...
+Random<span class="w"> </span>Access<span class="w"> </span>Transmission:<span class="w"> </span><span class="nv">普拉赫_场合</span><span class="o">=</span><span class="m">0</span>,<span class="w"> </span><span class="nv">前导码索引</span><span class="o">=</span><span class="m">0</span>,<span class="w"> </span>ra-rnti<span class="o">=</span>0x39,<span class="w"> </span><span class="nv">蒂</span><span class="o">=</span><span class="m">334</span>
+Random<span class="w"> </span>Access<span class="w"> </span>Complete.<span class="w">     </span>c-rnti<span class="o">=</span>0x4601,<span class="w"> </span><span class="nv">塔</span><span class="o">=</span><span class="m">0</span>
+RRC<span class="w"> </span>Connected
+PDU<span class="w"> </span>Session<span class="w"> </span>Establishment<span class="w"> </span>successful.<span class="w"> </span>IP:<span class="w"> </span><span class="m">10</span>.45.1.2
+RRC<span class="w"> </span>NR<span class="w"> </span>reconfiguration<span class="w"> </span>successful.
+</pre></div>
+</div>
+<p>很明显，一旦为 UE 分配了 IP，连接就已成功，这可以在 <code class="docutils literal notranslate"><span class="pre">配电单元</span> <span class="pre">会议</span> <span class="pre">设立</span> <span class="pre">成功了。</span> <span class="pre">IP:</span> <span class="pre">10.45.1.2</span></code>。
+然后用以下命令确认 NR 连接<code class="docutils literal notranslate"><span class="pre">RRC</span> <span class="pre">NR</span> <span class="pre">重新配置</span> <span class="pre">成功了。</span></code> 消息。</p>
+</section>
+<section id="ip-traffic-with-ping">
+<h3>IP 流量与 ping<a class="headerlink" href="index.html#ip-traffic-with-ping" title="链接到此标题"></a></h3>
+<p>Ping是测试网络端到端连通性最简单的工具，即测试UE和核心是否可以通信。在这里，我们使用它从 UE 生成流量，因此 gNB 可以测量与数据传输相关的指标（例如吞吐量）。</p>
+<p>要从 UE 运行 ping 到核心，请使用：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>ip<span class="w"> </span>netns<span class="w"> </span><span class="nb">执行</span><span class="w"> </span>ue1<span class="w"> </span>ping<span class="w"> </span>-i<span class="w"> </span><span class="m">0</span>.1<span class="w"> </span><span class="m">10</span>.45.1.1
+</pre></div>
+</div>
+<p>注意，我们将 ping 间隔设置为 0.1 秒，以增加流量。</p>
+<p>示例 <strong>平</strong> 输出：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>PING<span class="w"> </span><span class="m">10</span>.45.1.1<span class="w"> </span><span class="o">(</span><span class="m">10</span>.45.1.1<span class="o">)</span><span class="w"> </span><span class="m">56</span><span class="o">(</span><span class="m">84</span><span class="o">)</span><span class="w"> </span>bytes<span class="w"> </span>of<span class="w"> </span>data.
+<span class="m">64</span><span class="w"> </span>bytes<span class="w"> </span>from<span class="w"> </span><span class="m">10</span>.45.1.1:<span class="w"> </span><span class="nv">icmp_seq</span><span class="o">=</span><span class="m">1</span><span class="w"> </span><span class="nv">TTL</span><span class="o">=</span><span class="m">64</span><span class="w"> </span><span class="nv">时间</span><span class="o">=</span><span class="m">32</span>.2<span class="w"> </span>ms
+<span class="m">64</span><span class="w"> </span>bytes<span class="w"> </span>from<span class="w"> </span><span class="m">10</span>.45.1.1:<span class="w"> </span><span class="nv">icmp_seq</span><span class="o">=</span><span class="m">2</span><span class="w"> </span><span class="nv">TTL</span><span class="o">=</span><span class="m">64</span><span class="w"> </span><span class="nv">时间</span><span class="o">=</span><span class="m">35</span>.3<span class="w"> </span>ms
+<span class="m">64</span><span class="w"> </span>bytes<span class="w"> </span>from<span class="w"> </span><span class="m">10</span>.45.1.1:<span class="w"> </span><span class="nv">icmp_seq</span><span class="o">=</span><span class="m">3</span><span class="w"> </span><span class="nv">TTL</span><span class="o">=</span><span class="m">64</span><span class="w"> </span><span class="nv">时间</span><span class="o">=</span><span class="m">38</span>.2<span class="w"> </span>ms
+<span class="m">64</span><span class="w"> </span>bytes<span class="w"> </span>from<span class="w"> </span><span class="m">10</span>.45.1.1:<span class="w"> </span><span class="nv">icmp_seq</span><span class="o">=</span><span class="m">4</span><span class="w"> </span><span class="nv">TTL</span><span class="o">=</span><span class="m">64</span><span class="w"> </span><span class="nv">时间</span><span class="o">=</span><span class="m">71</span>.5<span class="w"> </span>ms
+<span class="m">64</span><span class="w"> </span>bytes<span class="w"> </span>from<span class="w"> </span><span class="m">10</span>.45.1.1:<span class="w"> </span><span class="nv">icmp_seq</span><span class="o">=</span><span class="m">5</span><span class="w"> </span><span class="nv">TTL</span><span class="o">=</span><span class="m">64</span><span class="w"> </span><span class="nv">时间</span><span class="o">=</span><span class="m">32</span>.9<span class="w"> </span>ms
+</pre></div>
+</div>
+<p>您还可以从核心 ping 到 UE。首先添加一条到UE的路由 <strong>主机</strong> （即运行 Open5GS docker 容器的容器）：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>ip<span class="w"> </span>ro<span class="w"> </span>add<span class="w"> </span><span class="m">10</span>.45.0.0/16<span class="w"> </span>via<span class="w"> </span><span class="m">10</span>.53.1.2
+</pre></div>
+</div>
+<p>检查主机路由表：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>route<span class="w"> </span>-n
+</pre></div>
+</div>
+<p>它应包含以下条目（请注意，Iface 名称可能不同）：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Kernel<span class="w"> </span>IP<span class="w"> </span>routing<span class="w"> </span>table
+Destination<span class="w">     </span>Gateway<span class="w">         </span>Genmask<span class="w">         </span>Flags<span class="w"> </span>Metric<span class="w"> </span>Ref<span class="w">    </span>Use<span class="w"> </span>Iface
+<span class="m">0</span>.0.0.0<span class="w">         </span><span class="m">192</span>.168.0.1<span class="w">     </span><span class="m">0</span>.0.0.0<span class="w">         </span>UG<span class="w">    </span><span class="m">100</span><span class="w">    </span><span class="m">0</span><span class="w">        </span><span class="m">0</span><span class="w"> </span>eno1
+<span class="m">10</span>.45.0.0<span class="w">       </span><span class="m">10</span>.53.1.2<span class="w">       </span><span class="m">255</span>.255.0.0<span class="w">     </span>UG<span class="w">    </span><span class="m">0</span><span class="w">      </span><span class="m">0</span><span class="w">        </span><span class="m">0</span><span class="w"> </span>br-dfa5521eb807
+<span class="m">10</span>.53.1.0<span class="w">       </span><span class="m">0</span>.0.0.0<span class="w">         </span><span class="m">255</span>.255.255.0<span class="w">   </span>U<span class="w">     </span><span class="m">0</span><span class="w">      </span><span class="m">0</span><span class="w">        </span><span class="m">0</span><span class="w"> </span>br-dfa5521eb807
+...
+</pre></div>
+</div>
+<p>接下来，为UE添加默认路由，如下所示：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>ip<span class="w"> </span>netns<span class="w"> </span><span class="nb">执行</span><span class="w"> </span>ue1<span class="w"> </span>ip<span class="w"> </span>route<span class="w"> </span>add<span class="w"> </span>default<span class="w"> </span>via<span class="w"> </span><span class="m">10</span>.45.1.1<span class="w"> </span>dev<span class="w"> </span>tun_srsue
+</pre></div>
+</div>
+<p>查看ue1的路由表：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>ip<span class="w"> </span>netns<span class="w"> </span><span class="nb">执行</span><span class="w"> </span>ue1<span class="w"> </span>route<span class="w"> </span>-n
+</pre></div>
+</div>
+<p>输出应如下所示：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Kernel<span class="w"> </span>IP<span class="w"> </span>routing<span class="w"> </span>table
+Destination<span class="w">     </span>Gateway<span class="w">         </span>Genmask<span class="w">         </span>Flags<span class="w"> </span>Metric<span class="w"> </span>Ref<span class="w">    </span>Use<span class="w"> </span>Iface
+<span class="m">0</span>.0.0.0<span class="w">         </span><span class="m">10</span>.45.1.1<span class="w">       </span><span class="m">0</span>.0.0.0<span class="w">         </span>UG<span class="w">    </span><span class="m">0</span><span class="w">      </span><span class="m">0</span><span class="w">        </span><span class="m">0</span><span class="w"> </span>tun_srsue
+<span class="m">10</span>.45.1.0<span class="w">       </span><span class="m">0</span>.0.0.0<span class="w">         </span><span class="m">255</span>.255.255.0<span class="w">   </span>U<span class="w">     </span><span class="m">0</span><span class="w">      </span><span class="m">0</span><span class="w">        </span><span class="m">0</span><span class="w"> </span>tun_srsue
+</pre></div>
+</div>
+<p>现在 ping UE：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ping<span class="w"> </span>-i<span class="w"> </span><span class="m">0</span>.1<span class="w"> </span><span class="m">10</span>.45.1.2
+</pre></div>
+</div>
+<p>此外， <cite>iperf</cite> 该工具可用于以比 ping 更高的数据速率生成流量。例如，要从 UE 发送 UL 流量，需要运行以下命令：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>ip<span class="w"> </span>netns<span class="w"> </span><span class="nb">执行</span><span class="w"> </span>ue1<span class="w"> </span>iperf<span class="w"> </span>-c<span class="w"> </span><span class="m">10</span>.45.1.1<span class="w"> </span>-u<span class="w"> </span>-b<span class="w"> </span>10M<span class="w"> </span>-i<span class="w"> </span><span class="m">1</span><span class="w"> </span>-t<span class="w"> </span><span class="m">60</span>
+</pre></div>
+</div>
+</section>
+<section id="xapps">
+<h3>xApps<a class="headerlink" href="index.html#xapps" title="链接到此标题"></a></h3>
+<div class="sphinx-tabs docutils container">
+<div aria-label="选项卡内容" class="closeable" role="tablist"><button aria-controls="panel-3-T1JBTiBTQyBSSUM=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-3-T1JBTiBTQyBSSUM=" name="T1JBTiBTQyBSSUM=" role="tab" tabindex="0">奥兰SCRIC</button><button aria-controls="panel-3-RmxleFJJQw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-3-RmxleFJJQw==" name="RmxleFJJQw==" role="tab" tabindex="-1">柔性RIC</button></div><div aria-labelledby="tab-3-T1JBTiBTQyBSSUM=" class="sphinx-tabs-panel group-tab" id="panel-3-T1JBTiBTQyBSSUM=" name="T1JBTiBTQyBSSUM=" role="tabpanel" tabindex="0"><p>启动提供的示例 <code class="docutils literal notranslate"><span class="pre">kpm_mon_xapp.py</span></code>，从运行以下命令 <code class="docutils literal notranslate"><span class="pre">奥兰斯克里克</span></code> 目录：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>compose<span class="w"> </span><span class="nb">执行</span><span class="w"> </span>python_xapp_runner<span class="w"> </span>./kpm_mon_xapp.py<span class="w"> </span>--metrics<span class="o">=</span>DRB.UEThpDl,DRB.UEThpUl<span class="w"> </span>--kpm_report_style<span class="o">=</span><span class="m">5</span>
+</pre></div>
+</div>
+<p>xApp 允许订阅所有 E2SM-KPM 报告样式（即 1-5）并设置指标名称。
+使用上述参数，xApp 应该订阅 <cite>DRB.UEThul</cite> 和 <cite>DRB.UEThul</cite> 测量，并显示接收到的内容 <cite>RIC_指示</cite> 消息。 xApp 控制台输出应类似于：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>RIC<span class="w"> </span>Indication<span class="w"> </span>Received<span class="w"> </span>from<span class="w"> </span>gnb_001_001_00019b<span class="w"> </span><span class="k">为了</span><span class="w"> </span>Subscription<span class="w"> </span>ID:<span class="w"> </span><span class="m">5</span>,<span class="w"> </span>KPM<span class="w"> </span>Report<span class="w"> </span>Style:<span class="w"> </span><span class="m">5</span>
+E2SM_KPM<span class="w"> </span>RIC<span class="w"> </span>Indication<span class="w"> </span>Content:
+-ColletStartTime:<span class="w">  </span><span class="m">2024</span>-04-02<span class="w"> </span><span class="m">13</span>:24:56
+-Measurements<span class="w"> </span>Data:
+--UE_id:<span class="w"> </span><span class="m">0</span>
+---granulPeriod:<span class="w"> </span><span class="m">1000</span>
+---Metric:<span class="w"> </span>DRB.UEThpDl,<span class="w"> </span>Value:<span class="w"> </span><span class="o">[</span><span class="m">7</span><span class="o">]</span>
+---Metric:<span class="w"> </span>DRB.UEThpUl,<span class="w"> </span>Value:<span class="w"> </span><span class="o">[</span><span class="m">7</span><span class="o">]</span>
+</pre></div>
+</div>
+<p>启动时，xApp 向 NearRT-RIC 发送订阅请求，因此，NearRT-RIC 控制台上应显示以下内容（或类似内容）：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ric_rtmgr_sim<span class="w">       </span><span class="p">|</span><span class="w"> </span><span class="m">2024</span>/04/02<span class="w"> </span><span class="m">13</span>:35:33<span class="w"> </span>POST<span class="w"> </span>/ric/v1/handles/xapp-subscription-handle<span class="w">  </span>body:<span class="w"> </span><span class="o">{</span><span class="s2">“地址”</span>:<span class="s2">"10.0.2.20"</span>,<span class="s2">“港口”</span>:4560,<span class="s2">“订阅 ID”</span>:1<span class="o">}</span><span class="w"> </span>elapsed:<span class="w"> </span><span class="m">13</span>.263µs
+</pre></div>
+</div>
+<p>退出时，xApp 向 NearRT-RIC 发送订阅删除请求，NearRT-RIC 控制台上应显示以下内容（或类似内容）：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ric_rtmgr_sim<span class="w">       </span><span class="p">|</span><span class="w"> </span><span class="m">2024</span>/04/02<span class="w"> </span><span class="m">13</span>:35:40<span class="w"> </span>DELETE<span class="w"> </span>/ric/v1/handles/xapp-subscription-handle<span class="w">  </span>body:<span class="w"> </span><span class="o">{</span><span class="s2">“地址”</span>:<span class="s2">"10.0.2.20"</span>,<span class="s2">“港口”</span>:4560,<span class="s2">“订阅 ID”</span>:1<span class="o">}</span><span class="w"> </span>elapsed:<span class="w"> </span><span class="m">27</span>.513µs
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-3-RmxleFJJQw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-3-RmxleFJJQw==" name="RmxleFJJQw==" role="tabpanel" tabindex="0"><p>我们用一个例子 <code class="docutils literal notranslate"><span class="pre">xapp_oran_moni</span></code> 来自 FlexRIC 框架的 xApp。应用程序连接到 NearRT-RIC 并使用 E2SM_KPM 服务模块来订阅使用报告服务样式 1 的测量数据。指标名称列在必须传递给 xApp 的配置文件中：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference download internal" download="" href="../../../../_downloads/4ccd6e2de75dd980b296b6849d93d1fd/xapp_mon_e2sm_kpm.conf"><code class="xref download docutils literal notranslate"><span class="pre">xapp_mon_e2sm_kpm.conf</span></code></a></p></li>
+</ul>
+</div></blockquote>
+<p>具体来说，通过提供的配置文件，xApp 订阅两个指标，即 <code class="docutils literal notranslate"><span class="pre">DRB.UEThpDl</span></code> 和 <code class="docutils literal notranslate"><span class="pre">DRB.UEThul</span></code>.</p>
+<p>使用以下命令启动 xApp：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./flexric/build/examples/xApp/c/monitor/xapp_oran_moni<span class="w"> </span>-c<span class="w"> </span>./xapp_mon_e2sm_kpm.conf
+</pre></div>
+</div>
+<p>如果 xApp 成功连接到 NearRT-RIC，则 xApp 控制台上应显示以下（或类似内容）：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Setting<span class="w"> </span>the<span class="w"> </span>config<span class="w"> </span>-c<span class="w"> </span>file<span class="w"> </span>to<span class="w"> </span>./config/xapp_mon_e2sm_kpm.conf
+<span class="o">[</span>LibConf<span class="o">]</span>:<span class="w"> </span>loading<span class="w"> </span>service<span class="w"> </span>models<span class="w"> </span>from<span class="w"> </span>SM_DIR:<span class="w"> </span>/usr/local/lib/flexric/
+<span class="o">[</span>LibConf<span class="o">]</span>:<span class="w"> </span>reading<span class="w"> </span>configuration<span class="w"> </span><span class="k">为了</span><span class="w"> </span>xApp
+<span class="o">[</span>LibConf<span class="o">]</span>:<span class="w"> </span>NearRT_RIC<span class="w"> </span>IP:<span class="w"> </span><span class="m">127</span>.0.0.1
+<span class="o">[</span>LibConf<span class="o">]</span>:<span class="w"> </span>E42_Port<span class="w"> </span>Port:<span class="w"> </span><span class="m">36422</span>
+<span class="o">[</span>LibConf<span class="o">]</span>:<span class="w"> </span>Sub_ORAN_SM<span class="w"> </span>Name:<span class="w"> </span>KPM,<span class="w"> </span>Time:<span class="w"> </span><span class="m">1000</span>
+<span class="o">[</span>LibConf<span class="o">]</span>:<span class="w"> </span>format<span class="w"> </span><span class="m">1</span>,<span class="w"> </span>RAN<span class="w"> </span><span class="nb">类型</span><span class="w"> </span>ngran_gNB_DU,<span class="w"> </span><span class="nv">行动</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>DRB.UEThpDl<span class="w"> </span>DRB.UEThpUl
+<span class="o">[</span>LibConf<span class="o">]</span>:<span class="w"> </span>xApp_DB<span class="w"> </span>enable:<span class="w"> </span><span class="m">0</span>
+<span class="o">[</span>LibConf<span class="o">]</span>:<span class="w"> </span>xApp_DB<span class="w"> </span>user:<span class="w"> </span><span class="o">(</span>null<span class="o">)</span>,<span class="w"> </span>pass:<span class="w"> </span><span class="o">(</span>null<span class="o">)</span>
+<span class="o">[</span>xAap<span class="o">]</span>:<span class="w"> </span>Initializing<span class="w"> </span>...
+<span class="o">[</span>xApp<span class="o">]</span>:<span class="w"> </span>nearRT-RIC<span class="w"> </span>IP<span class="w"> </span><span class="nv">地址</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">127</span>.0.0.1,<span class="w"> </span><span class="nv">端口</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">36422</span>
+<span class="o">[</span>E2-AGENT<span class="o">]</span>:<span class="w"> </span>Opening<span class="w"> </span>plugin<span class="w"> </span>from<span class="w"> </span><span class="nv">路径</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>/usr/local/lib/flexric/librc_sm.so
+<span class="o">[</span>E2-AGENT<span class="o">]</span>:<span class="w"> </span>Opening<span class="w"> </span>plugin<span class="w"> </span>from<span class="w"> </span><span class="nv">路径</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>/usr/local/lib/flexric/libmac_sm.so
+<span class="o">[</span>E2-AGENT<span class="o">]</span>:<span class="w"> </span>Opening<span class="w"> </span>plugin<span class="w"> </span>from<span class="w"> </span><span class="nv">路径</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>/usr/local/lib/flexric/libgtp_sm.so
+<span class="o">[</span>E2-AGENT<span class="o">]</span>:<span class="w"> </span>Opening<span class="w"> </span>plugin<span class="w"> </span>from<span class="w"> </span><span class="nv">路径</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>/usr/local/lib/flexric/libtc_sm.so
+<span class="o">[</span>E2-AGENT<span class="o">]</span>:<span class="w"> </span>Opening<span class="w"> </span>plugin<span class="w"> </span>from<span class="w"> </span><span class="nv">路径</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>/usr/local/lib/flexric/libslice_sm.so
+<span class="o">[</span>E2-AGENT<span class="o">]</span>:<span class="w"> </span>Opening<span class="w"> </span>plugin<span class="w"> </span>from<span class="w"> </span><span class="nv">路径</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>/usr/local/lib/flexric/librlc_sm.so
+<span class="o">[</span>E2-AGENT<span class="o">]</span>:<span class="w"> </span>Opening<span class="w"> </span>plugin<span class="w"> </span>from<span class="w"> </span><span class="nv">路径</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>/usr/local/lib/flexric/libkpm_sm.so
+<span class="o">[</span>E2-AGENT<span class="o">]</span>:<span class="w"> </span>Opening<span class="w"> </span>plugin<span class="w"> </span>from<span class="w"> </span><span class="nv">路径</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>/usr/local/lib/flexric/libpdcp_sm.so
+<span class="o">[</span>NEAR-RIC<span class="o">]</span>:<span class="w"> </span>Loading<span class="w"> </span>SM<span class="w"> </span><span class="nv">身份证号</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="w"> </span>with<span class="w"> </span><span class="nv">定义</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>ORAN-E2SM-RC
+<span class="o">[</span>NEAR-RIC<span class="o">]</span>:<span class="w"> </span>Loading<span class="w"> </span>SM<span class="w"> </span><span class="nv">身份证号</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">142</span><span class="w"> </span>with<span class="w"> </span><span class="nv">定义</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>MAC_STATS_V0
+<span class="o">[</span>NEAR-RIC<span class="o">]</span>:<span class="w"> </span>Loading<span class="w"> </span>SM<span class="w"> </span><span class="nv">身份证号</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">148</span><span class="w"> </span>with<span class="w"> </span><span class="nv">定义</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>GTP_STATS_V0
+<span class="o">[</span>NEAR-RIC<span class="o">]</span>:<span class="w"> </span>Loading<span class="w"> </span>SM<span class="w"> </span><span class="nv">身份证号</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">146</span><span class="w"> </span>with<span class="w"> </span><span class="nv">定义</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>TC_STATS_V0
+<span class="o">[</span>NEAR-RIC<span class="o">]</span>:<span class="w"> </span>Loading<span class="w"> </span>SM<span class="w"> </span><span class="nv">身份证号</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">145</span><span class="w"> </span>with<span class="w"> </span><span class="nv">定义</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>SLICE_STATS_V0
+<span class="o">[</span>NEAR-RIC<span class="o">]</span>:<span class="w"> </span>Loading<span class="w"> </span>SM<span class="w"> </span><span class="nv">身份证号</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">143</span><span class="w"> </span>with<span class="w"> </span><span class="nv">定义</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>RLC_STATS_V0
+<span class="o">[</span>NEAR-RIC<span class="o">]</span>:<span class="w"> </span>Loading<span class="w"> </span>SM<span class="w"> </span><span class="nv">身份证号</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="w"> </span>with<span class="w"> </span><span class="nv">定义</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>ORAN-E2SM-KPM
+<span class="o">[</span>NEAR-RIC<span class="o">]</span>:<span class="w"> </span>Loading<span class="w"> </span>SM<span class="w"> </span><span class="nv">身份证号</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">144</span><span class="w"> </span>with<span class="w"> </span><span class="nv">定义</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>PDCP_STATS_V0
+<span class="o">[</span>xApp<span class="o">]</span>:<span class="w"> </span><span class="nv">数据库启用</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>FALSE
+<span class="o">[</span>xApp<span class="o">]</span>:<span class="w"> </span><span class="k">做</span><span class="w"> </span>not<span class="w"> </span>initial<span class="w"> </span>database
+<span class="o">[</span>xApp<span class="o">]</span>:<span class="w"> </span>E42<span class="w"> </span>SETUP-REQUEST<span class="w"> </span>sent
+adding<span class="w"> </span>event<span class="w"> </span><span class="nv">FD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="w"> </span>ev-&gt;<span class="w"> </span><span class="m">5</span>
+<span class="o">[</span>xApp<span class="o">]</span>:<span class="w"> </span>E42<span class="w"> </span>SETUP-RESPONSE<span class="w"> </span>received
+<span class="o">[</span>xApp<span class="o">]</span>:<span class="w"> </span>xApp<span class="w"> </span><span class="nv">身份证号</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">7</span>
+Registered<span class="w"> </span>E2<span class="w"> </span><span class="nv">节点</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>
+Pending<span class="w"> </span>event<span class="w"> </span>size<span class="w"> </span>before<span class="w"> </span><span class="nv">删除</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>
+Registered<span class="w"> </span>node<span class="w"> </span><span class="m">0</span><span class="w"> </span>ran<span class="w"> </span>func<span class="w"> </span><span class="nv">编号</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span>
+<span class="w"> </span><span class="o">[</span>xApp<span class="o">]</span>:<span class="w"> </span>reporting<span class="w"> </span><span class="nv">时期</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1000</span><span class="w"> </span><span class="o">[</span>ms<span class="o">]</span>
+</pre></div>
+</div>
+<p>NearRT-RIC 控制台上将显示以下内容（或类似内容）：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>iApp<span class="o">]</span>:<span class="w"> </span>E42<span class="w"> </span>SETUP-REQUEST<span class="w"> </span>received
+<span class="o">[</span>iApp<span class="o">]</span>:<span class="w"> </span>E42<span class="w"> </span>SETUP-RESPONSE<span class="w"> </span>sent
+</pre></div>
+</div>
+<p>接下来，xApp 发送 <code class="docutils literal notranslate"><span class="pre">RIC</span> <span class="pre">订阅</span> <span class="pre">请求</span></code> 消息，订阅成功后，会定期收到 <code class="docutils literal notranslate"><span class="pre">RIC</span> <span class="pre">指示</span> <span class="pre">消息</span></code> 以及所请求指标的最新测量结果。 xApp 控制台上应显示以下内容（或类似内容）：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Generated<span class="w"> </span>of<span class="w"> </span><span class="nv">请求编号</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>
+E42_RIC_SUBSCRIPTION_REQUEST<span class="w"> </span><span class="m">31</span>
+adding<span class="w"> </span>event<span class="w"> </span><span class="nv">FD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="w"> </span>ev-&gt;<span class="w"> </span><span class="m">6</span>
+<span class="o">[</span>xApp<span class="o">]</span>:<span class="w"> </span>RIC<span class="w"> </span>SUBSCRIPTION<span class="w"> </span>REQUEST<span class="w"> </span>sent
+<span class="o">[</span>xApp<span class="o">]</span>:<span class="w"> </span>SUBSCRIPTION<span class="w"> </span>RESPONSE<span class="w"> </span>received
+Pending<span class="w"> </span>event<span class="w"> </span>size<span class="w"> </span>before<span class="w"> </span><span class="nv">删除</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>
+<span class="o">[</span>xApp<span class="o">]</span>:<span class="w"> </span>Successfully<span class="w"> </span>SUBSCRIBED<span class="w"> </span>to<span class="w"> </span>ran<span class="w"> </span><span class="k">功能</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span>
+<span class="w">      </span><span class="m">1</span>,<span class="w"> </span>KPM<span class="w"> </span>v2<span class="w"> </span>ind_msg<span class="w"> </span>latency<span class="w"> </span>&gt;<span class="w"> </span><span class="m">943897800</span><span class="w"> </span>s<span class="w"> </span><span class="o">(</span>minimum<span class="w"> </span><span class="nb">时间</span><span class="w"> </span>unit<span class="w"> </span>is<span class="w"> </span><span class="k">在</span><span class="w"> </span>second<span class="o">)</span><span class="w"> </span>from<span class="w"> </span>E2-node<span class="w"> </span><span class="nb">类型</span><span class="w"> </span><span class="m">2</span><span class="w"> </span>ID<span class="w"> </span><span class="m">411</span>
+meas<span class="w"> </span>record<span class="w"> </span>INTEGER_MEAS_VALUE<span class="w"> </span>value<span class="w"> </span><span class="m">28</span>
+meas<span class="w"> </span>record<span class="w"> </span>INTEGER_MEAS_VALUE<span class="w"> </span>value<span class="w"> </span><span class="m">8312</span>
+<span class="w">      </span><span class="m">2</span>,<span class="w"> </span>KPM<span class="w"> </span>v2<span class="w"> </span>ind_msg<span class="w"> </span>latency<span class="w"> </span>&gt;<span class="w"> </span><span class="m">927120585</span><span class="w"> </span>s<span class="w"> </span><span class="o">(</span>minimum<span class="w"> </span><span class="nb">时间</span><span class="w"> </span>unit<span class="w"> </span>is<span class="w"> </span><span class="k">在</span><span class="w"> </span>second<span class="o">)</span><span class="w"> </span>from<span class="w"> </span>E2-node<span class="w"> </span><span class="nb">类型</span><span class="w"> </span><span class="m">2</span><span class="w"> </span>ID<span class="w"> </span><span class="m">411</span>
+meas<span class="w"> </span>record<span class="w"> </span>INTEGER_MEAS_VALUE<span class="w"> </span>value<span class="w"> </span><span class="m">4</span>
+meas<span class="w"> </span>record<span class="w"> </span>INTEGER_MEAS_VALUE<span class="w"> </span>value<span class="w"> </span><span class="m">11544</span>
+<span class="w">      </span><span class="m">3</span>,<span class="w"> </span>KPM<span class="w"> </span>v2<span class="w"> </span>ind_msg<span class="w"> </span>latency<span class="w"> </span>&gt;<span class="w"> </span><span class="m">910343370</span><span class="w"> </span>s<span class="w"> </span><span class="o">(</span>minimum<span class="w"> </span><span class="nb">时间</span><span class="w"> </span>unit<span class="w"> </span>is<span class="w"> </span><span class="k">在</span><span class="w"> </span>second<span class="o">)</span><span class="w"> </span>from<span class="w"> </span>E2-node<span class="w"> </span><span class="nb">类型</span><span class="w"> </span><span class="m">2</span><span class="w"> </span>ID<span class="w"> </span><span class="m">411</span>
+meas<span class="w"> </span>record<span class="w"> </span>INTEGER_MEAS_VALUE<span class="w"> </span>value<span class="w"> </span><span class="m">4</span>
+meas<span class="w"> </span>record<span class="w"> </span>INTEGER_MEAS_VALUE<span class="w"> </span>value<span class="w"> </span><span class="m">11411</span>
+<span class="w">      </span><span class="m">4</span>,<span class="w"> </span>KPM<span class="w"> </span>v2<span class="w"> </span>ind_msg<span class="w"> </span>latency<span class="w"> </span>&gt;<span class="w"> </span><span class="m">893566155</span><span class="w"> </span>s<span class="w"> </span><span class="o">(</span>minimum<span class="w"> </span><span class="nb">时间</span><span class="w"> </span>unit<span class="w"> </span>is<span class="w"> </span><span class="k">在</span><span class="w"> </span>second<span class="o">)</span><span class="w"> </span>from<span class="w"> </span>E2-node<span class="w"> </span><span class="nb">类型</span><span class="w"> </span><span class="m">2</span><span class="w"> </span>ID<span class="w"> </span><span class="m">411</span>
+meas<span class="w"> </span>record<span class="w"> </span>INTEGER_MEAS_VALUE<span class="w"> </span>value<span class="w"> </span><span class="m">4</span>
+meas<span class="w"> </span>record<span class="w"> </span>INTEGER_MEAS_VALUE<span class="w"> </span>value<span class="w"> </span><span class="m">11746</span>
+...
+</pre></div>
+</div>
+<p>请注意，该 xApp 中未显示指标名称，但它们的顺序应与在<cite>xapp_mon_e2sm_kpm.conf</cite> 配置文件（即“DRB.UEThpDl”和“DRB.UEThpUl”）。</p>
+<p>xApp 可以停止： <cite>CTRL+C</cite> 信号。在这种情况下，xApp 控制台上应显示以下内容（或类似内容）：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>^Csignal<span class="w"> </span><span class="m">2</span><span class="w"> </span>received<span class="w"> </span>!
+CTRL+C<span class="w"> </span>detect
+Remove<span class="w"> </span>handle<span class="w"> </span><span class="nv">数量</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>
+E42<span class="w"> </span>RIC_SUBSCRIPTION_DELETE_REQUEST<span class="w">  </span>sdr-&gt;ric_id.ran_func_id<span class="w"> </span><span class="m">2</span><span class="w">  </span>sdr-&gt;ric_id.ric_req_id<span class="w"> </span><span class="m">1</span>
+<span class="o">[</span>xApp<span class="o">]</span>:<span class="w"> </span>E42<span class="w"> </span>SUBSCRIPTION-DELETE<span class="w"> </span>sent
+adding<span class="w"> </span>event<span class="w"> </span><span class="nv">FD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="w"> </span>ev-&gt;<span class="w"> </span><span class="m">8</span>
+<span class="w">      </span><span class="m">9</span>,<span class="w"> </span>KPM<span class="w"> </span>v2<span class="w"> </span>ind_msg<span class="w"> </span>latency<span class="w"> </span>&gt;<span class="w"> </span><span class="m">809680080</span><span class="w"> </span>s<span class="w"> </span><span class="o">(</span>minimum<span class="w"> </span><span class="nb">时间</span><span class="w"> </span>unit<span class="w"> </span>is<span class="w"> </span><span class="k">在</span><span class="w"> </span>second<span class="o">)</span><span class="w"> </span>from<span class="w"> </span>E2-node<span class="w"> </span><span class="nb">类型</span><span class="w"> </span><span class="m">2</span><span class="w"> </span>ID<span class="w"> </span><span class="m">411</span>
+meas<span class="w"> </span>record<span class="w"> </span>INTEGER_MEAS_VALUE<span class="w"> </span>value<span class="w"> </span><span class="m">0</span>
+meas<span class="w"> </span>record<span class="w"> </span>INTEGER_MEAS_VALUE<span class="w"> </span>value<span class="w"> </span><span class="m">0</span>
+<span class="o">[</span>xApp<span class="o">]</span>:<span class="w"> </span>E42<span class="w"> </span>SUBSCRIPTION<span class="w"> </span>DELETE<span class="w"> </span>RESPONSE<span class="w"> </span>received
+Pending<span class="w"> </span>event<span class="w"> </span>size<span class="w"> </span>before<span class="w"> </span><span class="nv">删除</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>
+<span class="o">[</span>xApp<span class="o">]</span>:<span class="w"> </span>Successfully<span class="w"> </span>received<span class="w"> </span>SUBSCRIPTION-DELETE-RESPONSE
+Closing<span class="w"> </span>the<span class="w"> </span>agent<span class="w"> </span>socket:<span class="w"> </span>Socket<span class="w"> </span>operation<span class="w"> </span>on<span class="w"> </span>non-socket
+<span class="o">[</span>xApp<span class="o">]</span>:<span class="w"> </span>Sucessfully<span class="w"> </span>stopped
+Test<span class="w"> </span>xApp<span class="w"> </span>run<span class="w"> </span>SUCCESSFULLY
+</pre></div>
+</div>
+<p>NearRT-RIC 控制台上将显示以下内容（或类似内容）：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>iApp<span class="o">]</span>:<span class="w"> </span>SUBSCRIPTION-REQUEST<span class="w"> </span>xapp_ric_id-&gt;ric_id.ran_func_id<span class="w"> </span><span class="m">2</span>
+<span class="o">[</span>E2AP<span class="o">]</span><span class="w"> </span>SUBSCRIPTION<span class="w"> </span>REQUEST<span class="w"> </span>generated
+<span class="o">[</span>NEAR-RIC<span class="o">]</span>:<span class="w"> </span>nb_id<span class="w"> </span><span class="m">411</span><span class="w"> </span><span class="nv">港口</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1715</span>
+<span class="o">[</span>NEAR-RIC<span class="o">]</span>:<span class="w"> </span>nb_id<span class="w"> </span><span class="m">411</span><span class="w"> </span><span class="nv">港口</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1715</span>
+<span class="o">[</span>NEAR-RIC<span class="o">]</span>:<span class="w"> </span>SUBSCRIPTION<span class="w"> </span>DELETE<span class="w"> </span>REQUEST<span class="w"> </span>tx
+
+<span class="o">[</span>iApp<span class="o">]</span>:<span class="w"> </span>RIC_SUBSCRIPTION_DELETE_REQUEST<span class="w"> </span>sent
+<span class="o">[</span>iApp<span class="o">]</span>:<span class="w"> </span>RIC_SUBSCRIPTION_DELETE_RESPONSE<span class="w"> </span>sent
+</pre></div>
+</div>
+</div></div>
+</section>
+</section>
+<hr class="docutils"/>
+<section id="e2ap-packet-analyzer">
+<h2>E2AP数据包分析仪<a class="headerlink" href="index.html#e2ap-packet-analyzer" title="链接到此标题"></a></h2>
+<section id="enable-e2ap-pcap">
+<h3>启用 E2AP PCAP<a class="headerlink" href="index.html#enable-e2ap-pcap" title="链接到此标题"></a></h3>
+<p>您可以通过以下方式启用 E2AP PCAP <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../../user_manuals/source/outputs.html#e2ap-pcap"><span class="std std-ref">本指南</span></a>.</p>
+</section>
+<section id="live-capture">
+<h3>实时捕捉<a class="headerlink" href="index.html#live-capture" title="链接到此标题"></a></h3>
+<p>Wireshark可用于收集运行时E2代理（位于srsRAN gNB）和NearRT-RIC之间交换的E2AP数据包。这需要执行以下步骤：</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>开始在环回接口上嗅探。</p></li>
+<li><p>将过滤器设置为 <cite>sctp.端口 == 36421</cite>.</p></li>
+<li><p>右键单击任何数据包 -&gt; 解码为.. -&gt; 将当前设置为 E2AP</p></li>
+<li><p>现在过滤器可以设置为 <cite>电子2AP</cite> 仅显示 E2AP 消息。</p></li>
+</ol>
+</div></blockquote>
+<p>请注意，至少需要 Wireshark 版本 4.0.7 才能正确解码和显示 E2AP 数据包（即，早期的 Wireshark 版本不支持 E2APv3 协议，因此将显示有关格式错误的数据包的信息）。</p>
+<p>下图显示了 E2AP 数据包的跟踪示例。</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../../_images/e2ap_live_capture.png"><img alt="../../../../_images/e2ap_live_capture.png" src="../../../../_images/e2ap_live_capture.png" style="width: 1570.0px; height: 1133.2px;"/>
+</a>
+</figure>
+</section>
+</section>
+<hr class="docutils"/>
+<section id="troubleshooting">
+<h2>故障排除<a class="headerlink" href="index.html#troubleshooting" title="链接到此标题"></a></h2>
+<section id="pcap">
+<h3>PCAP<a class="headerlink" href="index.html#pcap" title="链接到此标题"></a></h3>
+<p>E2AP 解剖器仍在 Wireshark 中开发。因此，在 Wireshark 版本 4.0.7 中，某些字段无法正确解码。目前，最好的选择是从源代码编译Wireshark。本教程中提供的屏幕截图是使用 Wireshark 版本 4.1.0 (v4.1.0rc0-3390-g4f4a54e6d3f9) 获得的。</p>
+</section>
+<section id="core-network-not-running">
+<h3>核心网未运行<a class="headerlink" href="index.html#core-network-not-running" title="链接到此标题"></a></h3>
+<p>如果 Open5Gs 的 dockerized 版本无法运行，可能是由于在 <em>docker-compose.yml</em> 已在您的 PC 上使用。例如，您可能会看到如下错误：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ERROR:<span class="w"> </span><span class="k">为了</span><span class="w"> </span>bdfcb7644f79_open5gs_5gc<span class="w">  </span>Cannot<span class="w"> </span>start<span class="w"> </span>service<span class="w"> </span>5gc:<span class="w"> </span>driver<span class="w"> </span>failed<span class="w"> </span>programming<span class="w"> </span>external<span class="w"> </span>connectivity<span class="w"> </span>on<span class="w"> </span>endpoint<span class="w"> </span>open5gs_5gc<span class="w"> </span><span class="o">(</span>2919e37332feb0a3001c44985b7e3d310ae82b7adb0e2cb1d9c214ed29ff39fa<span class="o">)</span>:<span class="w"> </span>Error<span class="w"> </span>starting<span class="w"> </span>userland<span class="w"> </span>proxy:<span class="w"> </span>listen<span class="w"> </span>tcp4<span class="w"> </span><span class="m">0</span>.0.0.0:3000:<span class="w"> </span>bind:<span class="w"> </span>address<span class="w"> </span>already<span class="w"> </span><span class="k">在</span><span class="w"> </span>use
+
+ERROR:<span class="w"> </span><span class="k">为了</span><span class="w"> </span>5gc<span class="w">  </span>Cannot<span class="w"> </span>start<span class="w"> </span>service<span class="w"> </span>5gc:<span class="w"> </span>driver<span class="w"> </span>failed<span class="w"> </span>programming<span class="w"> </span>external<span class="w"> </span>connectivity<span class="w"> </span>on<span class="w"> </span>endpoint<span class="w"> </span>open5gs_5gc<span class="w"> </span><span class="o">(</span>2919e37332feb0a3001c44985b7e3d310ae82b7adb0e2cb1d9c214ed29ff39fa<span class="o">)</span>:<span class="w"> </span>Error<span class="w"> </span>starting<span class="w"> </span>userland<span class="w"> </span>proxy:<span class="w"> </span>listen<span class="w"> </span>tcp4<span class="w"> </span><span class="m">0</span>.0.0.0:3000:<span class="w"> </span>bind:<span class="w"> </span>address<span class="w"> </span>already<span class="w"> </span><span class="k">在</span><span class="w"> </span>use
+ERROR:<span class="w"> </span>Encountered<span class="w"> </span>errors<span class="w"> </span><span class="k">同时</span><span class="w"> </span>bringing<span class="w"> </span>up<span class="w"> </span>the<span class="w"> </span>project
+</pre></div>
+</div>
+<p>在这种情况下，可以修改 docker-compose 文件，以便使用不同的主机端口作为 <code class="docutils literal notranslate"><span class="pre">3000</span></code> 已在使用中。为此，请执行以下操作的第 40 行： <em>docker-compose.yml</em> 文件可以更新使用 <code class="docutils literal notranslate"><span class="pre">3001</span></code> 作为主机端口：</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="w"> </span> services:
+<span class="w"> </span>   5gc:
+<span class="w"> </span>     container_name: open5gs_5gc
+<span class="w"> </span>     build:
+<span class="w"> </span>       context: open5gs
+<span class="w"> </span>       target: open5gs
+<span class="w"> </span>       args:
+<span class="w"> </span>         OS_VERSION: "22.04"
+<span class="w"> </span>         OPEN5GS_VERSION: "v2.6.1"
+<span class="w"> </span>     environment:
+<span class="w"> </span>       MONGODB_IP: ${MONGODB_IP:-127.0.0.1}
+<span class="w"> </span>       SUBSCRIBER_DB: ${SUBSCRIBER_DB:-001010123456780,00112233445566778899aabbccddeeff,opc,63bfa50ee6523365ff14c1f45f88737d,8000,9,10.45.1.2}
+<span class="w"> </span>       OPEN5GS_IP: ${OPEN5GS_IP:-10.53.1.2}
+<span class="w"> </span>       UE_IP_BASE: ${UE_IP_BASE:-10.45.0}
+<span class="w"> </span>       DEBUG: ${DEBUG:-false}
+<span class="w"> </span>     privileged: true
+<span class="w"> </span>     ports:
+<span class="gd">- - “3000:3000/tcp”</span>
+<span class="gi">+ - “3001:3000/tcp”</span>
+<span class="w"> </span>     # Uncomment port to use the 5gc from outside the docker network
+<span class="w"> </span>       #- "38412:38412/sctp"
+<span class="w"> </span>     command: 5gc -c open5gs-5gc.yml
+<span class="w"> </span>     healthcheck:
+<span class="w"> </span>       test: [ "CMD-SHELL", "nc -z 127.0.0.20 7777" ]
+<span class="w"> </span>       interval: 3s
+<span class="w"> </span>       timeout: 1s
+<span class="w"> </span>       retries: 60
+<span class="w"> </span>     networks:
+<span class="w"> </span>       ran:
+<span class="w"> </span>         ipv4_address: ${OPEN5GS_IP:-10.53.1.2}
+</pre></div>
+</div>
+</section>
+<section id="ue-issues">
+<h3>UE问题<a class="headerlink" href="index.html#ue-issues" title="链接到此标题"></a></h3>
+<p>如果UE无法连接网络，请确保正确 <code class="docutils literal notranslate"><span class="pre">单元格配置</span></code> 参数在gNB中设置。</p>
+<p>如果 UE 正在连接，但没有建立 PDU 会话，您应该检查以下内容：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>UE 和 Core 的 APN 配置相同</p></li>
+<li><p>您正在使用最新版本的 srsUE</p></li>
+<li><p>核心的 IP 转发已启用，您可以通过以下方式执行此操作 <a class="reference external" href="https://open5gs.org/open5gs/docs/guide/01-quickstart/#:~:text=Adding%20a%20route%20for%20the%20UE%20to%20have%20WAN%20connectivity">本指南</a>.</p></li>
+<li><p>UE 的 IP 转发已启用，请参阅以下部分</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="ue-ip-forwarding">
+<h3>UE IP转发<a class="headerlink" href="index.html#ue-ip-forwarding" title="链接到此标题"></a></h3>
+<p>为了确保 UE 流量正确发送到互联网，必须启用正确的 IP 转发。应启用 IP 转发 <strong>主机</strong>，即运行 Open5GS docker 容器的容器。
+这可以通过以下命令来完成：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>sysctl<span class="w"> </span>-w<span class="w"> </span>net.ipv4.ip_forward<span class="o">=</span><span class="m">1</span>
+sudo<span class="w"> </span>iptables<span class="w"> </span>-t<span class="w"> </span>nat<span class="w"> </span>-A<span class="w"> </span>POSTROUTING<span class="w"> </span>-o<span class="w"> </span>&lt;IFNAME&gt;<span class="w"> </span>-j<span class="w"> </span>MASQUERADE
+</pre></div>
+</div>
+<p>哪里 <code class="docutils literal notranslate"><span class="pre">&lt;IFNAME&gt;</span></code> 是连接到互联网的接口的名称。</p>
+<p>要检查配置是否正确，请运行以下命令：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>ip<span class="w"> </span>netns<span class="w"> </span><span class="nb">执行</span><span class="w"> </span>ue1<span class="w"> </span>ping<span class="w"> </span>-i<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">8</span>.8.8.8
+</pre></div>
+</div>
+<p>如果UE能够ping通Google DNS，则可以成功访问互联网。</p>
+</section>
+<section id="nd-open5gs-instance-installed-manually">
+<h3>第二个 Open5GS 实例（手动安装）<a class="headerlink" href="index.html#nd-open5gs-instance-installed-manually" title="链接到此标题"></a></h3>
+<p>主机 PC 上的 IP 路由条目： <cite>10.45.0.0</cite> 和 <cite>10.53.1.0</cite> 应该使用相同的接口，例如：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>route<span class="w"> </span>-n
+
+Kernel<span class="w"> </span>IP<span class="w"> </span>routing<span class="w"> </span>table
+Destination<span class="w">     </span>Gateway<span class="w">         </span>Genmask<span class="w">         </span>Flags<span class="w"> </span>Metric<span class="w"> </span>Ref<span class="w">    </span>Use<span class="w"> </span>Iface
+<span class="m">0</span>.0.0.0<span class="w">         </span><span class="m">192</span>.168.0.1<span class="w">     </span><span class="m">0</span>.0.0.0<span class="w">         </span>UG<span class="w">    </span><span class="m">100</span><span class="w">    </span><span class="m">0</span><span class="w">        </span><span class="m">0</span><span class="w"> </span>eno1
+<span class="m">10</span>.45.0.0<span class="w">       </span><span class="m">10</span>.53.1.2<span class="w">       </span><span class="m">255</span>.255.0.0<span class="w">     </span>UG<span class="w">    </span><span class="m">0</span><span class="w">      </span><span class="m">0</span><span class="w">        </span><span class="m">0</span><span class="w"> </span>br-dfa5521eb807
+<span class="m">10</span>.53.1.0<span class="w">       </span><span class="m">0</span>.0.0.0<span class="w">         </span><span class="m">255</span>.255.255.0<span class="w">   </span>U<span class="w">     </span><span class="m">0</span><span class="w">      </span><span class="m">0</span><span class="w">        </span><span class="m">0</span><span class="w"> </span>br-dfa5521eb807
+...
+</pre></div>
+</div>
+<p>但是，如果 Open5GS 的第二个实例（手动安装）正在主机 PC 上运行，则路由到 <cite>10.45.0.0</cite> 去 <cite>奥格斯顿</cite> 界面。因此，UE 无法访问互联网，因为主机将向手动安装的 Open5GS 版本发送数据包。
+要解决此路由问题，您可以禁用（甚至删除）手动安装的 Open5GS – 请检查第 6 和/或 7 节 <a class="reference external" href="https://open5gs.org/open5gs/docs/guide/01-quickstart/">Open5GS教程</a>。
+此外，您可能需要禁用 <cite>奥格斯顿</cite> 使用以下命令进行界面：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>ifconfig<span class="w"> </span>ogstun<span class="w"> </span><span class="m">0</span>.0.0.0<span class="w"> </span>down
+</pre></div>
+</div>
+</section>
+<section id="ric-running-on-a-different-machine">
+<h3>RIC在不同的机器上运行<a class="headerlink" href="index.html#ric-running-on-a-different-machine" title="链接到此标题"></a></h3>
+<p>如果您在另一台机器上运行 RIC，则需要正确配置 E2<code class="docutils literal notranslate"><span class="pre">绑定地址</span></code> gNB 配置文件中的参数。这显示在示例配置中，并注释掉了该行。如果您在单独的计算机上运行 RIC，只需取消注释此选项即可。</p>
+</section>
+</section>
+</section>
+</div>
+</div>
+<footer><div aria-label="页脚" class="rst-footer-buttons" role="navigation">
+<a accesskey="p" class="btn btn-neutral float-left" href="../../oranRU/source/switches/falcon.html" rel="prev" title="Falcon-RX 交换机"><span aria-hidden="true" class="fa fa-arrow-circle-left"></span> 上一页</a>
+<a accesskey="n" class="btn btn-neutral float-right" href="../../matlab/source/index.html" rel="next" title="MATLAB 测试工具">下一步 <span aria-hidden="true" class="fa fa-arrow-circle-right"></span></a>
+</div>
+<hr/>
+<div role="contentinfo">
+<p>© 版权所有 2023-2026，软件无线电系统..</p>
+</div>内置 <a href="https://www.sphinx-doc.org/">狮身人面像</a> 使用
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由提供 <a href="https://readthedocs.org">阅读文档</a>.
+   
+
+</footer>
+</div>
+</div>
+</section>
+</div>
+<script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script>
+</body>
+</html>

@@ -1,0 +1,1577 @@
+<!DOCTYPE html>
+<html class="writer-html5" data-content_root="../../../../" lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+ Google 标签 (gtag.js) 
+
+<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-HVHF6N640X');
+    </script>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>带 COTS UE 的 srsRAN gNB — srsRAN Project 文档</title>
+<link href="../../../../_static/pygments.css%3Fv=03e43079.css" rel="stylesheet" type="text/css"/>
+<link href="../../../../_static/css/theme.css%3Fv=9edc463e.css" rel="stylesheet" type="text/css"/>
+<link href="../../../../_static/copybutton.css%3Fv=76b2166b.css" rel="stylesheet" type="text/css"/>
+<link href="../../../../_static/css/tooltipster.custom.css" rel="stylesheet" type="text/css"/>
+<link href="../../../../_static/css/tooltipster.bundle.min.css" rel="stylesheet" type="text/css"/>
+<link href="../../../../_static/css/tooltipster-sideTip-shadow.min.css" rel="stylesheet" type="text/css"/>
+<link href="../../../../_static/css/tooltipster-sideTip-punk.min.css" rel="stylesheet" type="text/css"/>
+<link href="../../../../_static/css/tooltipster-sideTip-noir.min.css" rel="stylesheet" type="text/css"/>
+<link href="../../../../_static/css/tooltipster-sideTip-light.min.css" rel="stylesheet" type="text/css"/>
+<link href="../../../../_static/css/tooltipster-sideTip-borderless.min.css" rel="stylesheet" type="text/css"/>
+<link href="../../../../_static/css/micromodal.css" rel="stylesheet" type="text/css"/>
+<link href="../../../../_static/css/sphinx_rtd_theme.css%3Fv=3234e928.css" rel="stylesheet" type="text/css"/>
+<link href="../../../../_static/tabs.css%3Fv=a5c4661c.css" rel="stylesheet" type="text/css"/>
+<link href="../../../../_static/css/custom.css%3Fv=257617e2.css" rel="stylesheet" type="text/css"/>
+<link href="../../../../_static/favicon.png" rel="shortcut icon"/>
+<script src="../../../../_static/jquery.js%3Fv=5d32c60e"></script>
+<script src="../../../../_static/_sphinx_javascript_frameworks_compat.js%3Fv=2cd50e6c"></script>
+<script src="../../../../_static/documentation_options.js%3Fv=5929fcd5"></script>
+<script src="../../../../_static/doctools.js%3Fv=9bcbadda"></script>
+<script src="../../../../_static/sphinx_highlight.js%3Fv=dc90522c"></script>
+<script src="../../../../_static/clipboard.min.js%3Fv=a7894cd8"></script>
+<script src="../../../../_static/copybutton.js%3Fv=f281be69"></script>
+<script src="../../../../_static/js/hoverxref.js"></script>
+<script src="../../../../_static/js/tooltipster.bundle.min.js"></script>
+<script src="../../../../_static/js/micromodal.min.js"></script>
+<script src="../../../../_static/tabs.js%3Fv=3030b3cb"></script>
+<script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="../../../../_static/js/theme.js"></script>
+<script src="../../../../_static/js/versions.js"></script>
+<link href="../../../../genindex.html" rel="index" title="索引"/>
+<link href="../../../../search.html" rel="search" title="搜索"/>
+<link href="../../amariUE/source/index.html" rel="next" title="srsRAN gNB 与 Amarisoft UE"/>
+<link href="../../srsUE/source/index.html" rel="prev" title="srsRAN gNB 与 srsUE"/>
+<meta content="srsran-project-docs" name="readthedocs-project-slug"/><meta content="latest" name="readthedocs-version-slug"/><meta content="/tutorials/source/cotsUE/source/index.html" name="readthedocs-resolver-filename"/><meta content="200" name="readthedocs-http-status"/></head>
+<body class="wy-body-for-nav">
+<div class="wy-grid-for-nav">
+<nav class="wy-nav-side" data-toggle="wy-nav-shift">
+<div class="wy-side-scroll">
+<div class="wy-side-nav-search">
+<a class="icon icon-home" href="../../../../index.html">
+            srsRAN Project
+              <img alt="标志" class="logo" src="../../../../_static/logo.png"/>
+</a>
+<div class="switch-menus">
+<div class="version-switch"></div>
+<div class="language-switch"></div>
+</div>
+<div role="search">
+<form action="../../../../search.html" class="wy-form" id="rtd-search-form" method="get">
+<input aria-label="搜索文档" name="q" placeholder="搜索文档" type="text"/>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
+</div>
+</div><div aria-label="导航菜单" class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation">
+<p class="caption" role="heading"><span class="caption-text">一般</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../general/source/2_features_and_roadmap.html">特点和路线图</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/2_features_and_roadmap.html#current-features">目前的特点</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/2_features_and_roadmap.html#coming-soon">即将推出</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../general/source/3_contributions.html">贡献指南</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/3_contributions.html#faq">常见问题解答</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../general/source/3_contributions.html#what-is-a-copyright-license-agreement-cla-and-why-do-i-need-one">1. 什么是版权许可协议 (CLA)？为什么我需要一份？</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../general/source/3_contributions.html#how-do-i-complete-and-submit-the-cla">2. 如何填写并提交 CLA？</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../general/source/3_contributions.html#how-will-my-contributions-to-project-name-be-used">3.我对srsRAN Project的贡献将如何使用？</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../general/source/3_contributions.html#if-i-do-not-own-the-copyright-in-the-entire-work-of-authorship">4. 如果我不拥有整个作者作品的版权？</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../general/source/4_reporting.html">报告问题</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/4_reporting.html#issues">问题</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/4_reporting.html#vulnerabilities">漏洞</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/4_reporting.html#support">支持</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../general/source/5_release_notes.html">发行说明</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/5_release_notes.html#id1">25.04</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/5_release_notes.html#id2">24.10.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/5_release_notes.html#id3">24.10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/5_release_notes.html#id4">24.4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/5_release_notes.html#id5">23.10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/5_release_notes.html#id6">23.5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../general/source/5_release_notes.html#initial-public-release">23.3（首次公开发布）</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../general/source/6_dev_status.html">发展现状</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">用户手册</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../user_manuals/source/installation.html">安装指南</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/installation.html#build-tools-and-dependencies">构建工具和依赖项</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/installation.html#rf-drivers">RF-驱动程序</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/installation.html#clone-and-build">克隆和构建</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/installation.html#packages">套餐</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/installation.html#phy-testvectors">PHY 测试向量</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../user_manuals/source/running.html">运行srsRAN Project</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/running.html#baseline-requirements">基线要求</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/running.html#system-preparation">系统准备</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/running.html#id1">运行srsRAN Project</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../user_manuals/source/console_ref.html">控制台参考</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../user_manuals/source/outputs.html">输出</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#logs">日志</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#pcaps">PCAP</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#mac">MAC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#rlc">RLC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#ngap">NGAP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#n3">N3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#e1ap">E1AP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#f1ap">F1AP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#e2ap">E2AP</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#json-metrics">JSON 指标</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#mac-metrics">MAC 指标</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#scheduler-metrics">调度程序指标</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#scheduler-cell-metrics">调度程序单元指标</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#cell-events">细胞事件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#scheduler-ue-metrics">调度程序 UE 指标</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#ofh-metrics">OFH指标</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#ngap-metrics">NGAP 指标</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#rrc-metrics">RRC 指标</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#executors-metrics">执行者指标</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/outputs.html#application-resource-usage-metrics">应用程序资源使用指标</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../user_manuals/source/config_ref.html">配置参考</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/config_ref.html#id1">配置参考</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/config_ref.html#antenna-configuration">天线配置</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../user_manuals/source/grafana_gui.html">Grafana 指标 GUI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/grafana_gui.html#configuration">配置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/grafana_gui.html#id1">Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/grafana_gui.html#project-name">srsRAN Project</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/grafana_gui.html#launching-gui">启动图形用户界面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/grafana_gui.html#gui-output">图形用户界面输出</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../user_manuals/source/troubleshooting.html">故障排除</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/troubleshooting.html#performance-tuning">性能调优</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/troubleshooting.html#cpu-performance-mode">CPU性能模式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/troubleshooting.html#performance-configuration-script">性能配置脚本</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../user_manuals/source/troubleshooting.html#usrp-configuration">USRP 配置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../user_manuals/source/troubleshooting.html#usrp-time-calibration">USRP 时间校准</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">开发者指南</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../dev_guide/source/software_arch/source/index.html">软件架构</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/software_arch/source/CU_cp/source/index.html">CU-CP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/software_arch/source/CU_up/source/index.html">CU-UP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/software_arch/source/DU_high/source/index.html">DU-high</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/software_arch/source/DU_high/source/du_manager.html">DU 经理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/software_arch/source/DU_high/source/rlc.html">无线电链路控制 (RLC)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../dev_guide/source/software_arch/source/DU_high/source/rlc_am.html">RLC 确认模式 (AM)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/software_arch/source/DU_high/source/mac.html">MAC</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../dev_guide/source/software_arch/source/DU_high/source/mac.html#implementation">实施</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../dev_guide/source/software_arch/source/DU_high/source/mac.html#ra-procedure">RA程序</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/software_arch/source/DU_low/source/index.html">DU-low</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/index.html">代码风格指南</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/1_language_libraries.html">语言和图书馆</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/1_language_libraries.html#c-c-version">C 和 C++ 版本</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/1_language_libraries.html#use-of-the-c-standard-library">C++标准库的使用</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/2_mechanical_source_aspects.html">机械源方面</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/2_mechanical_source_aspects.html#source-code-formatting">源代码格式化</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/2_mechanical_source_aspects.html#comments">评论</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/2_mechanical_source_aspects.html#comment-guidelines">评论指南</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/2_mechanical_source_aspects.html#file-headers">文件头</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/2_mechanical_source_aspects.html#header-guards">割台护罩</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/2_mechanical_source_aspects.html#include-style">#include 样式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/2_mechanical_source_aspects.html#language-and-compiler-aspects">语言和编译器方面</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/2_mechanical_source_aspects.html#treat-compiler-warnings-as-errors">将编译器警告视为错误</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/2_mechanical_source_aspects.html#code-portability">代码可移植性</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/2_mechanical_source_aspects.html#avoid-rtti-and-exceptions">避免 RTTI 和异常</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/2_mechanical_source_aspects.html#use-of-auto">使用汽车</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/3_style_aspects_high_level.html">风格方面：高级问题</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/3_style_aspects_high_level.html#self-contained-headers">独立的标头</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/3_style_aspects_high_level.html#using-include-sparingly">使用 <code class="docutils literal notranslate"><span class="pre">#包括</span></code> 节俭地</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/3_style_aspects_high_level.html#using-internal-headers">使用“内部”标头</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/3_style_aspects_high_level.html#use-of-namespace">使用 <code class="docutils literal notranslate"><span class="pre">名称空间</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/3_style_aspects_high_level.html#using-early-exits-and-continue">使用“提前退出”和 <code class="docutils literal notranslate"><span class="pre">继续</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/3_style_aspects_high_level.html#avoid-else-after-a-return-statement">避免 <code class="docutils literal notranslate"><span class="pre">否则</span></code> 经过一个 <code class="docutils literal notranslate"><span class="pre">返回</span></code> 声明</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/3_style_aspects_high_level.html#use-of-static-helper-functions">静态辅助函数的使用</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/4_style_aspects_low_level.html">风格方面：低级问题</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/4_style_aspects_low_level.html#naming-conventions">命名约定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/4_style_aspects_low_level.html#assert-and-expect">断言和期望</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/4_style_aspects_low_level.html#do-not-use-using-namespace-std">请勿使用 <code class="docutils literal notranslate"><span class="pre">使用</span> <span class="pre">名称空间</span> <span class="pre">标准</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/4_style_aspects_low_level.html#using-range-for-loops">使用范围循环</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/4_style_aspects_low_level.html#loop-structure">循环结构</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/4_style_aspects_low_level.html#using-pre-increment">使用预自增</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/4_style_aspects_low_level.html#use-of-anonymous-namespaces">匿名命名空间的使用</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/4_style_aspects_low_level.html#using-c-casts">使用 C++ 类型转换</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/5_recommendations.html">建议</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/5_recommendations.html#function-and-class-length">函数和类长度</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/5_recommendations.html#scope">适用范围</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/5_recommendations.html#logical-operators">逻辑运算符</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/5_recommendations.html#using-references-over-pointers">在指针上使用引用(&amp;)(*)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/5_recommendations.html#const-correctness">常量正确性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/5_recommendations.html#avoid-complex-expressions">避免复杂的表达式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/5_recommendations.html#magic-numbers">神奇数字</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/5_recommendations.html#fixed-width-integer-types">固定宽度整数类型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/5_recommendations.html#function-signatures">函数签名</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/5_recommendations.html#class-layout-example">类布局示例</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/6_self_generating_docs.html">自生成文档</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/6_self_generating_docs.html#general-aspects">一般方面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/6_self_generating_docs.html#files">文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/6_self_generating_docs.html#classes-and-structures">类和结构</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/6_self_generating_docs.html#class-methods-and-free-functions">类方法和自由函数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/6_self_generating_docs.html#class-data-members-objects-variables">类数据成员、对象、变量</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/code_guide/source/7_commit_formatting.html">提交格式</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../dev_guide/source/testing_policy/source/index.html">测试政策</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/testing_policy/source/index.html#unit-tests">单元测试</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/testing_policy/source/index.html#integration-and-component-tests">集成和组件测试</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/testing_policy/source/index.html#end-to-end-e2e-tests">端到端 (E2E) 测试</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/testing_policy/source/index.html#exploratory-tests">探索性测试</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../dev_guide/source/logging_guide/source/index.html">日志记录风格指南</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/logging_guide/source/index.html#rule-1-lists-of-fields-only-need-to-be-separated-by-a-whitespace">规则1：字段列表只需用空格“”分隔</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/logging_guide/source/index.html#rule-2-maintain-consistent-order-between-classes-of-fields">规则 2：保持字段类别之间的顺序一致</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/logging_guide/source/index.html#rule-3-order-of-contextual-fields">规则 3：上下文字段的顺序</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/logging_guide/source/index.html#rule-4-for-one-time-events-provide-a-cause-whenever-it-s-unclear-what-it-might-be">规则 4：对于一次性事件，只要不清楚可能是什么，就提供原因</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/logging_guide/source/index.html#rule-5-asn-1-messages-should-be-represented-using-the-respective-asn-1-type-name">规则 5：ASN.1 消息应使用相应的 ASN.1 类型名称来表示。</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/logging_guide/source/index.html#rule-6-procedures-should-be-identified-by-the-name-specified-in-the-ts-clauses">规则 6：程序应通过 TS 条款中指定的名称来标识。</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/logging_guide/source/index.html#rule-7-messages-with-a-context-that-is-not-formatted-are-strictly-forbidden">规则 7：严格禁止发送上下文未格式化的消息！</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dev_guide/source/logging_guide/source/index.html#general-tips">一般提示</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">知识库</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../knowledge_base/source/oran_gnb/source/index.html">O-RAN gNB 概述</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../knowledge_base/source/oran_gnb/source/index.html#introduction">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../knowledge_base/source/oran_gnb/source/index.html#split-7-2x-architecture">分体式 7.2x 架构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../knowledge_base/source/oran_gnb/source/index.html#project-name">srsRAN Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../knowledge_base/source/oran_gnb/source/index.html#further-reading">进一步阅读</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../knowledge_base/source/gnb_components/source/index.html">O-RAN gNB 组件</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../knowledge_base/source/gnb_components/source/index.html#centralized-unit-cu">集中单元 (CU)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../knowledge_base/source/gnb_components/source/index.html#distributed-unit-du">分布式单元(DU)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../knowledge_base/source/gnb_components/source/index.html#du-high">DU-high</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../knowledge_base/source/gnb_components/source/index.html#du-low">DU-low</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../knowledge_base/source/gnb_interfaces/source/index.html">gNB 接口</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../knowledge_base/source/gnb_interfaces/source/index.html#e1">E1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../knowledge_base/source/gnb_interfaces/source/index.html#e2">E2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../knowledge_base/source/gnb_interfaces/source/index.html#f1">F1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../knowledge_base/source/gnb_interfaces/source/index.html#f1-c">F1-C</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../knowledge_base/source/gnb_interfaces/source/index.html#f1-u">F1-U</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../knowledge_base/source/gnb_interfaces/source/index.html#fapi">金融应用程序接口</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../knowledge_base/source/gnb_interfaces/source/index.html#ng">不合格</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../knowledge_base/source/gnb_interfaces/source/index.html#ng-c">NG-C</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../knowledge_base/source/gnb_interfaces/source/index.html#ng-u">NG-U</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../knowledge_base/source/gnb_interfaces/source/index.html#o1">奥1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../knowledge_base/source/gnb_interfaces/source/index.html#open-fronthaul">开放式前传</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../knowledge_base/source/cots_ues/source/index.html">COTS UE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../knowledge_base/source/cots_ues/source/index.html#tested-cots-ues">经过测试的 COTS UE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../knowledge_base/source/cots_ues/source/index.html#user-reported-working-ues">用户报告的工作 UE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../knowledge_base/source/cots_ues/source/index.html#ue-capability-messages">UE 能力消息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../knowledge_base/source/cots_ues/source/index.html#references">参考文献</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">教程</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../srsUE/source/index.html">srsRAN gNB 与 srsUE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../srsUE/source/index.html#overview">概述</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../srsUE/source/index.html#hardware-and-software-overview">硬件和软件概述</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#id2">srsRAN 4G</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#limitations">局限性</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#open5gs">Open5GS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#id3">零MQ</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../srsUE/source/index.html#over-the-air-setup">无线设置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#configuration">配置</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#gnb">gNB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#srsue">srsUE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#running-the-network">运行网络</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#open5gs-core">Open5GS核心</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#id5">gNB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#id6">srsUE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#testing-the-network">测试网络</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#routing-configuration">路由配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#ping">平</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#iperf3">性能3</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../srsUE/source/index.html#zeromq-based-setup">基于 ZeroMQ 的设置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#id7">配置</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#id8">gNB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#id9">srsUE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#id10">运行网络</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#zmq-testing">测试网络</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#zmq-routing">路由配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#id13">平</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#id17">性能3</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../srsUE/source/index.html#multi-ue-emulation">多 UE 仿真</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#id23">配置</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#gnu-radio-companion">GNU 无线电伴侣</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#id25">Open5GS核心</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#id26">gNB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#id27">srsUE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#id28">运行网络</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#id29">Open5GS核心</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#id30">gNB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#id31">srsUE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#id32">GNU 无线电伴侣</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../srsUE/source/index.html#path-loss-control">路径损耗控制</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#id33">测试网络</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../srsUE/source/index.html#troubleshooting">故障排除</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#performance-issues">性能问题</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#reference-clock">参考时钟</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#g-qos-identifier">5G QoS 标识符</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#ue-does-not-get-ip-address">UE 未获取 IP 地址</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#ue-ip-forwarding">UE IP转发</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#nd-open5gs-instance-installed-manually">第二个 Open5GS 实例（手动安装）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#run-zmq-based-setup-on-two-host-machines">在两台主机上运行基于 ZMQ 的设置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#multiple-gnbs-connected-to-a-single-docker-based-open5gs">多个 gNB 连接到单个基于 Docker 的 Open5gs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#usrp-x300-x310">USRP X300/X310</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../srsUE/source/index.html#id34">局限性</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../srsUE/source/index.html#id35">srsUE</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="index.html#">带 COTS UE 的 srsRAN gNB</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#overview">概述</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#setup-considerations">设置注意事项</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="index.html#open5gs">Open5GS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#cots-ue">现货 UE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#external-clock">外部时钟</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#configuration">配置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="index.html#gnb">gNB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#isim">伊西姆</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="index.html#sim-programming">SIM编程</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#suci-configuration">SUCI配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#adding-user-controlled-plmns">添加用户控制的 PLMN</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id1">Open5GS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="index.html#amf-yml">amf.yml</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#upf-yml">upf.yml</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#nrf-yml">nrf.yml</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#user-database">用户数据库</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id4">现货 UE</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="index.html#enable-isim-5g-and-data-roaming">启用 ISIM、5G 和数据漫游</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#configure-apn">配置接入点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#force-nr">力降噪</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#connecting-the-cots-ue">连接 COTS UE</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="index.html#setting-up-the-network">设置网络</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="index.html#check-that-the-core-is-running-correctly">检查Core是否正常运行</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#run-the-gnb">运行gNB</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#connecting-to-the-network">连接到网络</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#traffic-and-testing">流量与测试</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="index.html#speed-test">速度测试</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#video-test">视频测试</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#troubleshooting">故障排除</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="index.html#network-not-visible">网络不可见</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#unable-to-attach">无法附加</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#no-internet-access">无法访问互联网</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#ue-disconnects-after-a-few-minutes">UE 几分钟后断开连接</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#tested-devices">测试设备</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../amariUE/source/index.html">srsRAN gNB 与 Amarisoft UE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../amariUE/source/index.html#overview">概述</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../amariUE/source/index.html#hardware-and-software-overview">硬件和软件概述</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../amariUE/source/index.html#id1">Amarisoft UE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../amariUE/source/index.html#open5gs">Open5GS</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../amariUE/source/index.html#installation">安装</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../amariUE/source/index.html#id2">零MQ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../amariUE/source/index.html#id3">Amarisoft UE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../amariUE/source/index.html#zeromq-driver-for-amarisoft-ue">适用于 Amarisoft UE 的 ZeroMQ 驱动程序</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../amariUE/source/index.html#zeromq-based-setup">基于 ZeroMQ 的设置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../amariUE/source/index.html#configuration">配置</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#project-name">srsRAN Project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#id4">Amarisoft UE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#id5">Open5GS 5G 核心</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../amariUE/source/index.html#running-the-5g-network">运行 5G 网络</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#id7">Open5gs 5G 核心</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#id8">srsRAN Project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#id9">Amarisoft UE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../amariUE/source/index.html#testing-the-network">测试网络</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#ping">平</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#iperf">性能</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#iperf-output">iPerf 输出</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#gnb-console-output">gNB 控制台输出</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#packet-capture">数据包捕获</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../amariUE/source/index.html#configuring-amarisoft-for-multiple-ues">为多个 UE 配置 Amarisoft</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../amariUE/source/index.html#over-the-air-setup">无线设置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../amariUE/source/index.html#id10">配置</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#id11">srsRAN Project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#id12">Amarisoft UE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../amariUE/source/index.html#id13">运行 5G 网络</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#id14">Open5gs 5G 核心</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#id15">srsRAN Project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#id16">Amarisoft UE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../amariUE/source/index.html#amariue-radios-test">测试网络</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#id18">平</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#id19">性能</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#id20">iPerf 输出</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#id21">gNB 控制台输出</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../amariUE/source/index.html#id22">数据包捕获</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../amariUE/source/index.html#troubleshooting">故障排除</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../amariUE/source/index.html#zmq-setup">ZMQ设置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../amariUE/source/index.html#reference-clock-for-over-the-air">无线参考时钟</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../amariUE/source/index.html#g-qos-identifier">5G QoS 标识符</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../dpdk/source/index.html">srsRAN gNB 与 DPDK</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../dpdk/source/index.html#introduction">简介</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../dpdk/source/index.html#further-reading">进一步阅读</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../dpdk/source/index.html#installing-dpdk">安装DPDK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dpdk/source/index.html#configuring-dpdk">配置DPDK</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../dpdk/source/index.html#configure-hugepages">配置大页</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dpdk/source/index.html#binding-to-dpdk">绑定到DPDK</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dpdk/source/index.html#id1">EAL参数</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../dpdk/source/index.html#running-srsran-with-dpdk">与 DPDK 一起运行 srsRAN</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../k8s/source/index.html">Kubernetes 上的 srsRAN gNB</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../k8s/source/index.html#introduction">简介</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../k8s/source/index.html#further-reading">进一步阅读</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../k8s/source/index.html#setup-considerations">设置注意事项</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../k8s/source/index.html#cu-du">CU/DU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../k8s/source/index.html#ru">鲁</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../k8s/source/index.html#g-core">5G核心</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../k8s/source/index.html#clocking-synchronization">时钟与同步</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../k8s/source/index.html#set-up-a-k8s-k3s-bare-metal-cluster">设置 K8s/K3s 裸机集群</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../k8s/source/index.html#deploy-a-kubernetes-cluster">1. 部署Kubernetes集群</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../k8s/source/index.html#install-realtime-kernel">2.安装实时内核</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../k8s/source/index.html#install-tuned">3.安装TuneD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../k8s/source/index.html#install-dpdk">4.安装DPDK</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../k8s/source/index.html#set-up-ptp-synchronization">设置 PTP 同步</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../k8s/source/index.html#set-up-core-network-open5gs">设置核心网络：Open5GS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../k8s/source/index.html#set-up-gnb">设置 gNB</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../k8s/source/index.html#connecting-to-internal-core-networks-within-the-cluster">1. 连接集群内部核心网络</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../k8s/source/index.html#assign-dpdk-devices-without-the-sr-iov-plugin">2. 在不使用 SR-IOV 插件的情况下分配 DPDK 设备</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../k8s/source/index.html#load-testing">负载测试</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../k8s/source/index.html#srsran-ru-emulator">1.srsRAN RU模拟器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../k8s/source/index.html#assess-maximum-latency-using-cyclictest">2. 使用循环测试评估最大延迟</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../k8s/source/index.html#visualizing-kpis-via-grafana">通过 Grafana 可视化 KPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../k8s/source/index.html#clean-up-deployments">清理部署</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../handover/source/index.html">srsRAN gNB 移交</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../handover/source/index.html#overview">概述</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../handover/source/index.html#hardware-and-software-overview">硬件和软件概述</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../handover/source/index.html#project-name">srsRAN Project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../handover/source/index.html#x310-usrp">X310 USRP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../handover/source/index.html#open5gs">Open5GS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../handover/source/index.html#cots-ue">现货 UE</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../handover/source/index.html#configuration">配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../handover/source/index.html#connecting-the-cots-ue">连接 COTS UE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../handover/source/index.html#triggering-handover">触发切换</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../handover/source/index.html#from-console">从控制台</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../handover/source/index.html#physically">身体上</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../handover/source/index.html#grafana-output">Grafana 输出</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../handover/source/index.html#limitations">局限性</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../ntn/source/index.html">srsRAN gNB 适用于 5G NTN</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ntn/source/index.html#overview">概述</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#limitations">局限性</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../ntn/source/index.html#hardware-and-software-overview">硬件和软件概述</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#amarisoft-ue">Amarisoft UE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#open5gs">Open5GS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#id1">GNU 无线电伴侣</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../ntn/source/index.html#installation">安装</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#id2">零MQ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#project-name">srsRAN Project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#id3">Amarisoft UE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#zeromq-driver-for-amarisoft-ue">适用于 Amarisoft UE 的 ZeroMQ 驱动程序</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#id4">GNU 无线电伴侣</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../ntn/source/index.html#configuration">配置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#gnb">gNB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#amarisoftue">Amari软件UE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#ntn-channel-emulator">NTN通道模拟器</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../ntn/source/index.html#running-the-network">运行网络</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#open5gs-core">Open5GS核心</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#geo-ntn-channel-emulator">GEO NTN 通道模拟器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#id5">gNB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#id6">Amari软件UE</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../ntn/source/index.html#testing-the-network">测试网络</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#routing-configuration">路由配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#ping">平</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#iperf">伊珀夫</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../ntn/source/index.html#troubleshooting">故障排除</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ntn/source/index.html#running-gnb-and-amarisoftue-on-separate-machines">在不同的机器上运行 gNB 和 AmarisoftUE</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../cu_du_split/source/index.html">O-RAN CU-DU 分体式</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../cu_du_split/source/index.html#overview">概述</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cu_du_split/source/index.html#hardware-and-software-overview">硬件和软件概述</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../cu_du_split/source/index.html#project-name">srsRAN Project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../cu_du_split/source/index.html#b210">B210</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../cu_du_split/source/index.html#open5gs">Open5GS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../cu_du_split/source/index.html#cots-ue">现货 UE</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../cu_du_split/source/index.html#configuration">配置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../cu_du_split/source/index.html#core">核心</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../cu_du_split/source/index.html#srscu">srsCU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../cu_du_split/source/index.html#srsdu">srsDU</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../cu_du_split/source/index.html#running-the-network">运行网络</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../cu_du_split/source/index.html#id1">核心</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../cu_du_split/source/index.html#id2">srsCU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../cu_du_split/source/index.html#id3">srsDU</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../cu_du_split/source/index.html#connecting-to-the-network">连接到网络</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../cu_du_split/source/index.html#console-outputs">控制台输出</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../oranRU/source/index.html">O-RAN 7.2 RU 指南</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../oranRU/source/index.html#overview">概述</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oranRU/source/index.html#setup-considerations">设置注意事项</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../oranRU/source/index.html#cu-du">CU/DU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../oranRU/source/index.html#ru">鲁</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../oranRU/source/index.html#g-core">5G核心</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../oranRU/source/index.html#synchronization">同步</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../oranRU/source/index.html#switch">开关</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../oranRU/source/index.html#configuration">配置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../oranRU/source/index.html#id1">开关</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../oranRU/source/index.html#id2">CU/DU</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../oranRU/source/index.html#nic-configuration">网卡配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../oranRU/source/index.html#ptp-configuration">点对点配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../oranRU/source/index.html#enabling-ptp-with-dpdk">使用 DPDK 启用 PTP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../oranRU/source/index.html#srsran-configuration">srsRAN配置</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../oranRU/source/index.html#id4">鲁</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../oranRU/source/index.html#core">核心</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../oranRU/source/index.html#initializing-the-network">初始化网络</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../oranRU/source/index.html#id5">鲁</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../oranRU/source/index.html#id6">CU/DU</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../oranRU/source/index.html#connecting-to-the-network">连接到网络</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../oranRU/source/index.html#cots-ue">现货 UE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../oranRU/source/index.html#amariue">阿玛瑞UE</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../oranRU/source/index.html#sending-traffic">发送流量</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../oranRU/source/index.html#integration-guide">集成指南</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../oranRU/source/hw_integration.html">RU</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../oranRU/source/rus/foxconn.html">富士康 RPQN-(48/78)00(E/I)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../oranRU/source/rus/picocom.html">皮科康</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../oranRU/source/rus/liteon.html">建兴FlexFi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../oranRU/source/rus/vvdn.html">越南VVDN</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../oranRU/source/rus/r550.html">贝尼特 RAN550/RAN650</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../oranRU/source/hw_integration.html#switches">开关</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../oranRU/source/switches/falcon.html">Falcon-RX 交换机</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../near-rt-ric/source/index.html">O-RAN NearRT-RIC 和 xApp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../near-rt-ric/source/index.html#overview">概述</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../near-rt-ric/source/index.html#setup-overview">设置概述</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../near-rt-ric/source/index.html#hardware-and-software-overview">硬件和软件概述</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../near-rt-ric/source/index.html#limitations">局限性</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../near-rt-ric/source/index.html#installation">安装</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../near-rt-ric/source/index.html#open5gs">Open5GS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../near-rt-ric/source/index.html#id5">零MQ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../near-rt-ric/source/index.html#project-name">srsRAN Project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../near-rt-ric/source/index.html#srsue">srsUE</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../near-rt-ric/source/index.html#configuration">配置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../near-rt-ric/source/index.html#gnb">gNB</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../near-rt-ric/source/index.html#running-the-network">运行网络</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../near-rt-ric/source/index.html#open5gs-core">Open5GS核心</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../near-rt-ric/source/index.html#nearrt-ric">近RT-RIC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../near-rt-ric/source/index.html#id6">gNB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../near-rt-ric/source/index.html#id7">srsUE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../near-rt-ric/source/index.html#ip-traffic-with-ping">IP 流量与 ping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../near-rt-ric/source/index.html#xapps">xApps</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../near-rt-ric/source/index.html#e2ap-packet-analyzer">E2AP数据包分析仪</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../near-rt-ric/source/index.html#enable-e2ap-pcap">启用 E2AP PCAP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../near-rt-ric/source/index.html#live-capture">实时捕捉</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../near-rt-ric/source/index.html#troubleshooting">故障排除</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../near-rt-ric/source/index.html#pcap">PCAP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../near-rt-ric/source/index.html#core-network-not-running">核心网未运行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../near-rt-ric/source/index.html#ue-issues">UE问题</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../near-rt-ric/source/index.html#ue-ip-forwarding">UE IP转发</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../near-rt-ric/source/index.html#nd-open5gs-instance-installed-manually">第二个 Open5GS 实例（手动安装）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../near-rt-ric/source/index.html#ric-running-on-a-different-machine">RIC在不同的机器上运行</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../matlab/source/index.html">MATLAB 测试工具</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../matlab/source/index.html#overview">概述</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../matlab/source/index.html#test-vector-generation">测试向量生成</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../matlab/source/index.html#signal-analyzers">信号分析仪</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../matlab/source/index.html#simulators">模拟器</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../matlab/source/index.html#set-up-considerations">设置注意事项</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../matlab/source/index.html#installation">安装</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tuning/source/index.html">srsRAN gNB 性能调整</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tuning/source/index.html#introduction">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tuning/source/index.html#tuned">调音</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tuning/source/index.html#installation">安装</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tuning/source/index.html#srsran-tuning-profile">srsRAN 调音配置文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tuning/source/index.html#further-reading">进一步阅读</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../testmode/source/index.html">srsRAN gNB(-DU) 负载测试</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../testmode/source/index.html#introduction">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../testmode/source/index.html#using-ru-dummy">使用 <code class="docutils literal notranslate"><span class="pre">ru_虚拟</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../testmode/source/index.html#using-ru-emu">使用 <code class="docutils literal notranslate"><span class="pre">鸸鹋</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../testmode/source/index.html#using-no-core">使用 <code class="docutils literal notranslate"><span class="pre">无核心</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../testmode/source/index.html#using-testmode">使用 <code class="docutils literal notranslate"><span class="pre">测试模式</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../hw_kit/source/index.html">E2E O-RAN 与 srsRAN 的测试床</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../hw_kit/source/index.html#introduction">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../hw_kit/source/index.html#testbed-setup">测试台设置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../hw_kit/source/index.html#hardware-components">硬件组件</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../hw_kit/source/index.html#workstation-pc">工作站电脑</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../hw_kit/source/index.html#o-ru">奥鲁</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../hw_kit/source/index.html#g-ue">5G UE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../hw_kit/source/index.html#auxiliary-elements">辅助元件</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../hw_kit/source/index.html#software">软件</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../hw_kit/source/index.html#configuration">配置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../hw_kit/source/index.html#ptp-grandmaster">PTP大师</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../hw_kit/source/index.html#demanding-dl-requirements">苛刻的 DL 要求</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../hw_kit/source/index.html#demanding-ul-requirements">严格的 UL 要求</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../hw_kit/source/index.html#low-latency-with-demanding-ul-requirements">低延迟且符合严格的 UL 要求</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption">
+<span class="caption-text">
+            
+                友情链接
+            
+            </span>
+</p>
+<ul>
+<li class="toctree-l1"><a href="https://www.srsran.com"><i class="web-icon"></i> 网站</a></li>
+<li class="toctree-l1"><a href="https://github.com/srsran/srsran_project"><i class="fa fa-github fa-fw"></i> 源代码</a></li>
+<li class="toctree-l1"><a href="https://github.com/srsran/srsran_project/issues"><i class="fa fa-bug fa-fw"></i> 报告问题</a></li>
+<li class="toctree-l1"><a href="https://github.com/srsran/srsran_project/discussions"><i class="fa fa-envelope fa-fw"></i> 讨论区</a></li>
+<li class="toctree-l1"><a href="https://twitter.com/srsRANProject"><i class="fa fa-twitter fa-fw"></i> 推特</a></li>
+</ul>
+</div>
+</div>
+</nav>
+<section class="wy-nav-content-wrap" data-toggle="wy-nav-shift"><nav aria-label="手机导航菜单" class="wy-nav-top">
+<i class="fa fa-bars" data-toggle="wy-nav-top"></i>
+<a href="../../../../index.html">srsRAN Project</a>
+</nav>
+<div class="wy-nav-content">
+<div class="rst-content">
+<div aria-label="页面导航" role="navigation">
+<ul class="wy-breadcrumbs">
+<li><a aria-label="首页" class="icon icon-home" href="../../../../index.html"></a></li>
+<li class="breadcrumb-item active">带 COTS UE 的 srsRAN gNB</li>
+<li class="wy-breadcrumbs-aside">
+<a href="../../../../_sources/tutorials/source/cotsUE/source/index.rst.txt" rel="nofollow"> 查看页面源码</a>
+</li>
+</ul><div aria-label="顺序页面导航" class="rst-breadcrumbs-buttons" role="navigation">
+<a accesskey="p" class="btn btn-neutral float-left" href="../../srsUE/source/index.html" title="srsRAN gNB 与 srsUE"><span aria-hidden="true" class="fa fa-arrow-circle-left"></span> 上一页</a>
+<a accesskey="n" class="btn btn-neutral float-right" href="../../amariUE/source/index.html" title="srsRAN gNB 与 Amarisoft UE">下一步 <span aria-hidden="true" class="fa fa-arrow-circle-right"></span></a>
+</div>
+<hr/>
+</div>
+<div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
+<div itemprop="articleBody">
+<section id="srsran-gnb-with-cots-ues">
+<span id="cots-ue-tutorial"></span><h1>带 COTS UE 的 srsRAN gNB<a class="headerlink" href="index.html#srsran-gnb-with-cots-ues" title="链接到此标题"></a></h1>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>在蜂窝频段上运行专用 5G SA 网络可能会受到您所在辖区的严格监管。在此之前，请先寻求电信监管机构的批准。</p>
+</div>
+<section id="overview">
+<h2>概述<a class="headerlink" href="index.html#overview" title="链接到此标题"></a></h2>
+<p>本教程演示如何使用 srsRAN Project 和第 3 方 5G 内核（本例中为 Open5GS）配置支持 5G 的 COTS UE 并将其连接到 5G SA 网络。</p>
+<p>要使用 srsRAN Project 将 COTS UE 连接到 5G 网络，用户需要满足以下要求：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>一台装有 Linux 操作系统的 PC</p></li>
+<li><p>srsRAN Project CU/DU</p></li>
+<li><p>RF-前端兼容srsRAN Project</p></li>
+<li><p>第三方 5G 核心</p></li>
+<li><p>支持 5G SA 的 COTS UE</p></li>
+<li><p>测试 USIM/ISIM/SIM 卡（必须是测试 SIM 或具有已知密钥的可编程卡）</p></li>
+<li><p>我们还建议使用外部时钟源，例如 octoclock 或 GPSDO</p></li>
+</ul>
+</div></blockquote>
+<p>该具体实现使用以下内容：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>戴尔 XPS-13（英特尔 i7-10510U CPU），带 Ubuntu 20.04</p></li>
+<li><p>srsRAN Project CU/DU</p></li>
+<li><p>B210 USRP</p></li>
+<li><p>Open5GS 5G 核心</p></li>
+<li><p>一加8T</p></li>
+<li><p>带有重新编程凭证的 SysmoISIM-SJA2</p></li>
+<li><p>Leo Bodnar GPS 参考时钟</p></li>
+</ul>
+</div></blockquote>
+</section>
+<hr class="docutils"/>
+<section id="setup-considerations">
+<h2>设置注意事项<a class="headerlink" href="index.html#setup-considerations" title="链接到此标题"></a></h2>
+<section id="open5gs">
+<h3>Open5GS<a class="headerlink" href="index.html#open5gs" title="链接到此标题"></a></h3>
+<p>在本示例中，我们使用 Open5GS 作为 5G 内核。</p>
+<p>Open5GS 是 5G 核心和 EPC 的 C 语言开源实现。以下链接将为您提供
+包含下载和设置 Open5GS 所需的信息，以便可以与 srsRAN Project 一起使用：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://github.com/open5gs/open5gs">GitHub</a></p></li>
+<li><p><a class="reference external" href="https://open5gs.org/open5gs/docs/guide/01-quickstart/">快速入门指南</a></p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="cots-ue">
+<h3>现货 UE<a class="headerlink" href="index.html#cots-ue" title="链接到此标题"></a></h3>
+<p>您应该确保您的设备能够在 5G SA 模式下运行，并且在 srsRAN Project 支持的频段中运行。</p>
+</section>
+<section id="external-clock">
+<h3>外部时钟<a class="headerlink" href="index.html#external-clock" title="链接到此标题"></a></h3>
+<p>一个 <a class="reference external" href="http://www.leobodnar.com/shop/index.php?main_page=product_info&amp;cPath=107&amp;products_id=234">Leo Bodnar GPS 参考时钟</a> 用作此设置的 USRP 时钟源。</p>
+<p>外部时钟的使用不是必需的，但它可以减少由于所使用的 RF 前端的内部时钟不准确而可能发生的错误。问题来了
+来自 CFO 和 5G 手机所容忍的计时 - SDR 内的板载时钟并不总是足够准确，无法在手机允许的限制内运行。使用
+外部时钟比 SDR 板载时钟精确得多，可降低 COTS UE 由于同步问题而无法查看/连接到网络的可能性。</p>
+</section>
+</section>
+<hr class="docutils"/>
+<section id="configuration">
+<h2>配置<a class="headerlink" href="index.html#configuration" title="链接到此标题"></a></h2>
+<p>为此设置修改了以下 srsRAN 配置文件：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference download internal" download="" href="../../../../_downloads/cc142413003e87e53c16e0b63203ac57/gnb_b210_20MHz_oneplus_8t.yml"><code class="xref download docutils literal notranslate"><span class="pre">gnb_b210_20MHz_oneplus_8t.yml</span></code></a></p></li>
+</ul>
+</div></blockquote>
+<p>为此设置修改了以下 Open5GS 配置文件：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference download internal" download="" href="../../../../_downloads/d190d4445cf9bdc54802e8c115f07124/amf.yaml"><code class="xref download docutils literal notranslate"><span class="pre">amf.yaml</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../../_downloads/5d0ab839492b615de92127433e86c391/upf.yaml"><code class="xref download docutils literal notranslate"><span class="pre">upf.yaml</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../../_downloads/93443a03898ffbcc106663a0c655e1e4/nrf.yaml"><code class="xref download docutils literal notranslate"><span class="pre">nrf.yaml</span></code></a></p></li>
+</ul>
+</div></blockquote>
+<p>网络的各个方面应按以下顺序配置：</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>gNB</p></li>
+<li><p>伊西姆</p></li>
+<li><p>核心</p></li>
+<li><p>现货 UE</p></li>
+</ol>
+</div></blockquote>
+<section id="gnb">
+<h3>gNB<a class="headerlink" href="index.html#gnb" title="链接到此标题"></a></h3>
+<p>gNB 使用找到的基本配置示例进行配置 <a class="reference external" href="https://github.com/srsran/srsRAN_Project/blob/main/configs/gnb_rf_b200_tdd_n78_20mhz.yml">这里</a>，进行一些细微的修改。</p>
+<p>该配置较原始示例有以下修改：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>设置USRP的时钟源为 <code class="docutils literal notranslate"><span class="pre">内部</span></code>。如果您使用外部时钟源（例如 Leo Bodnar GPSDO），请将其设置为 <code class="docutils literal notranslate"><span class="pre">外部的</span></code>.</p></li>
+<li><p>将小区的ARFCN设置为 <code class="docutils literal notranslate"><span class="pre">627340</span></code>。这确保了 gNB 在我们所在地的带宽为 20 MHz 的自由频谱区域中进行广播。</p></li>
+<li><p>PLMN 更改为 <code class="docutils literal notranslate"><span class="pre">90170</span></code>。使用 OnePlus 8t，我们发现通过强制漫游场景，手机可以更可靠地识别网络并连接。通过在小区中设置不同的PLMN和在电话中设置ISIM来强制漫游场景。</p></li>
+</ul>
+</div></blockquote>
+<p>上述修改特定于此处使用的设置。建议将 ARFCN 调整为您的本地设置，以便您在空闲频谱区域中进行传输。</p>
+<p>要配置内核和gNB之间的连接，需要设置AMF <code class="docutils literal notranslate"><span class="pre">地址</span></code> 至 AMF 的地址。本例中，gNB配置文件中使用默认值，Open5GS配置文件中进行相关更改。</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>   cu_cp:
+<span class="w"> </span>     amf:
+<span class="w"> </span>       addr: 127.0.1.100                                            # The address or hostname of the AMF.
+<span class="w"> </span>       bind_addr: 127.0.0.1                                        # A local IP that the gNB binds to for traffic from the AMF.
+<span class="w"> </span>       supported_tracking_areas:                                   # Configure the TA associated with the CU-CP
+<span class="w"> </span>       - tac: 7
+<span class="w"> </span>           plmn_list:
+<span class="w"> </span>           - plmn: "90170"
+<span class="w"> </span>               tai_slice_support_list:
+<span class="w"> </span>               - sst: 1
+
+<span class="w"> </span>   ru_sdr:
+<span class="w"> </span>     device_driver: uhd                                            # The RF driver name.
+<span class="w"> </span>     device_args: type=b200,num_recv_frames=64,num_send_frames=64  # Optionally pass arguments to the selected RF driver.
+<span class="gd">-clock: # 指定RF使用的时钟源。</span>
+<span class="gi">+ 时钟：内部 # 仅当使用 Leo Bodnar GPSDO 作为 10 MHz 参考时才设置为外部。</span>
+<span class="w"> </span>     srate: 23.04                                                  # RF sample rate might need to be adjusted according to selected bandwidth.
+<span class="w"> </span>     otw_format: sc12
+<span class="w"> </span>     tx_gain: 50                                                   # Transmit gain of the RF might need to adjusted to the given situation.
+<span class="w"> </span>     rx_gain: 60                                                   # Receive gain of the RF might need to adjusted to the given situation.
+
+<span class="w"> </span>   cell_cfg:
+<span class="gd">- dl_arfcn: 632628 # 下行载波的ARFCN（中心频率）。</span>
+<span class="gi">+ dl_arfcn：627340</span>
+<span class="w"> </span>     band: 78                                                      # The NR band.
+<span class="w"> </span>     channel_bandwidth_MHz: 20                                     # Bandwith in MHz. Number of PRBs will be automatically derived.
+<span class="w"> </span>     common_scs: 30                                                # Subcarrier spacing in kHz used for data.
+<span class="gd">- plmn: "00101" # gNB 广播的 PLMN。</span>
+<span class="gi">+ plmn：“90170”</span>
+<span class="w"> </span>     tac: 7                                                        # Tracking area code (needs to match the core configuration).
+<span class="w"> </span>     pci: 1                                                        # Physical cell ID.
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注意事项</p>
+<p>srsRAN Project 支持直至 Rel. 的所有 NR 频段。 17. 并非所有频段都支持所有 BW，为了确认您的配置正确，您应该
+参考 <em>表5.3.5-1</em> 在 <a class="reference external" href="https://www.etsi.org/deliver/etsi_ts/138100_138199/138104/16.06.00_60/ts_138104v160600p.pdf">TS 38.104</a>.</p>
+</div>
+</section>
+<section id="isim">
+<h3>伊西姆<a class="headerlink" href="index.html#isim" title="链接到此标题"></a></h3>
+<section id="sim-programming">
+<h4>SIM编程<a class="headerlink" href="index.html#sim-programming" title="链接到此标题"></a></h4>
+<p>如前所述，此设置使用 OnePlus 8t，在内部测试期间发现这款手机（和其他 OnePlus 设备）有时在漫游情况下更容易连接到网络。这是通过为小区和手机中的 ISIM 设置不同的 PLMN 来实现的。</p>
+<p>ISIM中的MCC、MNC、IMSI和其他凭证可以通过重新编程来设置。我们使用以下步骤对 SysmoISIM-SJA2 进行了重新编程。</p>
+<p>下载 <a class="reference external" href="https://github.com/osmocom/pysim">模拟仿真</a> :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/osmocom/pysim
+<span class="nb">光盘</span><span class="w"> </span>pysim
+sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>--no-install-recommends<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>pcscd<span class="w"> </span>libpcsclite-dev<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>python3<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>python3-setuptools<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>python3-pyscard<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>python3-pip
+pip3<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</pre></div>
+</div>
+<p>然后您可以从以下命令中运行 <code class="docutils literal notranslate"><span class="pre">皮西姆</span></code> 目录。</p>
+<p>检查当前 ISIM 配置：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./pySim-read.py<span class="w"> </span>-p0
+</pre></div>
+</div>
+<p>重新配置 ISIM：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./pySim-prog.py<span class="w"> </span>-p0<span class="w"> </span>-s<span class="w"> </span>&lt;ICCID&gt;<span class="w"> </span>--mcc<span class="o">=</span>&lt;MCC&gt;<span class="w"> </span>--mnc<span class="o">=</span>&lt;MNC&gt;<span class="w"> </span>-a<span class="w"> </span>&lt;ADM-KEY&gt;<span class="w"> </span>--imsi<span class="o">=</span>&lt;IMSI&gt;<span class="w"> </span>-k<span class="w"> </span>&lt;KI&gt;<span class="w"> </span>--opc<span class="o">=</span>&lt;OPC&gt;
+</pre></div>
+</div>
+<p>您至少需要将 PLMN 设置为 00101，也可以选择重新配置 ISIM 的其他方面。对于此设置，使用了以下命令：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./pySim-prog.py<span class="w"> </span>-p0<span class="w"> </span>-s<span class="w"> </span><span class="m">8988211000000689615</span><span class="w"> </span>--mcc<span class="o">=</span><span class="m">001</span><span class="w"> </span>--mnc<span class="o">=</span><span class="m">01</span><span class="w"> </span>-a<span class="w"> </span><span class="m">77190612</span><span class="w"> </span>--imsi<span class="o">=</span><span class="m">001010123456789</span><span class="w">  </span>-k<span class="w"> </span>41B7157E3337F0ADD8DA89210D89E17F<span class="w"> </span>--opc<span class="o">=</span>1CD638FC96E02EBD35AA0D41EB6F812F
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注意事项</p>
+<p>您需要从 SIM 提供商处获取 ICCID、ADM-KEY 和其他安全信息。</p>
+</div>
+</section>
+<section id="suci-configuration">
+<h4>SUCI配置<a class="headerlink" href="index.html#suci-configuration" title="链接到此标题"></a></h4>
+<p>如果您使用 sysmoISIM-SJA2 ISIM（启用 5G）（如本例所示），则需要修改 SIM 卡的 5G 相关字段。特别是，您需要配置或禁用 SUPI 隐藏 (SUCI)。</p>
+<p>可以使用以下命令禁用 SUPI 隐藏。你应该更换 <code class="docutils literal notranslate"><span class="pre">&lt;ADM-密钥&gt;</span></code> 使用相应 SIM 卡的 ADM 密钥。</p>
+<div class="admonition note">
+<p class="admonition-title">注意事项</p>
+<p><code class="docutils literal notranslate"><span class="pre">验证_adm</span></code> 成功时不打印任何输出。如果你看到类似的东西 <cite>“SW 不匹配：预期为 9000，结果为 6982”</cite> ADM 密钥不正确。请记住，之后
+由于 ADM 密钥错误，3 次写入尝试失败，SIM 卡被阻止且无法再次重写。</p>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pySIM-shell<span class="w"> </span><span class="o">(</span>MF<span class="o">)</span>&gt;<span class="w"> </span><span class="k">选择</span><span class="w"> </span>MF
+pySIM-shell<span class="w"> </span><span class="o">(</span>MF<span class="o">)</span>&gt;<span class="w"> </span><span class="k">选择</span><span class="w"> </span>ADF.USIM
+pySIM-shell<span class="w"> </span><span class="o">(</span>MF/ADF.USIM<span class="o">)</span>&gt;<span class="w"> </span><span class="k">选择</span><span class="w"> </span>EF.UST
+pySIM-shell<span class="w"> </span><span class="o">(</span>MF<span class="o">)</span>&gt;<span class="w"> </span>verify_adm<span class="w"> </span>&lt;ADM-KEY&gt;
+pySIM-shell<span class="w"> </span><span class="o">(</span>MF/ADF.USIM/EF.UST<span class="o">)</span>&gt;<span class="w"> </span>ust_service_deactivate<span class="w"> </span><span class="m">124</span>
+pySIM-shell<span class="w"> </span><span class="o">(</span>MF/ADF.USIM/EF.UST<span class="o">)</span>&gt;<span class="w"> </span>ust_service_deactivate<span class="w"> </span><span class="m">125</span>
+</pre></div>
+</div>
+<p>完成这些步骤后 <strong>UST服务124</strong> 和 <strong>125</strong> 应该被禁用。您可以使用以下命令验证 ISIM 配置：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./pySim-read.py<span class="w"> </span>-p0
+</pre></div>
+</div>
+<p>有关 pySim 和 SUCI 配置的更多信息，请参阅 <a class="reference external" href="https://downloads.osmocom.org/docs/pysim/master/html/suci-tutorial.html">本指南</a> 在 pySim 文档中。</p>
+</section>
+<section id="adding-user-controlled-plmns">
+<h4>添加用户控制的 PLMN<a class="headerlink" href="index.html#adding-user-controlled-plmns" title="链接到此标题"></a></h4>
+<p>如果要将用户控制的 PLMN 添加到 USIM，可以通过扩展 EF_PLMNwACT EF 来实现。
+以下命令将添加 PLMN <code class="docutils literal notranslate"><span class="pre">90170</span></code> 到 USIM。首先验证当前的 PLMN 列表应该
+包括您的家庭 PLMN，例如 <code class="docutils literal notranslate"><span class="pre">00101</span></code>。然后与  <cite>编辑二进制解码</cite> 您可以添加新的 PLMN。</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pySIM-shell<span class="w"> </span><span class="o">(</span>MF<span class="o">)</span>&gt;<span class="w"> </span><span class="k">选择</span><span class="w"> </span>MF
+pySIM-shell<span class="w"> </span><span class="o">(</span>MF<span class="o">)</span>&gt;<span class="w"> </span><span class="k">选择</span><span class="w"> </span>ADF.USIM
+pySIM-shell<span class="w"> </span><span class="o">(</span>MF/ADF.USIM<span class="o">)</span>&gt;<span class="w"> </span><span class="k">选择</span><span class="w"> </span>EF.PLMNwAcT
+pySIM-shell<span class="w"> </span><span class="o">(</span><span class="m">00</span>:MF/ADF.USIM/EF.PLMNwAcT<span class="o">)</span>&gt;<span class="w"> </span>read_binary_decoded
+<span class="o">[</span>
+<span class="o">{</span>
+<span class="w">    </span><span class="s2">“MCC”</span>:<span class="w"> </span><span class="s2">"001"</span>,
+<span class="w">    </span><span class="s2">“跨国公司”</span>:<span class="w"> </span><span class="s2">"01"</span>,
+<span class="w">    </span><span class="s2">“行动”</span>:<span class="w"> </span><span class="o">[</span>
+<span class="w">        </span><span class="s2">“E-UTRAN NB-S1”</span>,
+<span class="w">        </span><span class="s2">“E-UTRAN WB-S1”</span>,
+<span class="w">        </span><span class="s2">“EC-GSM-物联网”</span>,
+<span class="w">        </span><span class="s2">“全球移动通信系统”</span>,
+<span class="w">        </span><span class="s2">“GSM 紧凑型”</span>,
+<span class="w">        </span><span class="s2">“NG-RAN”</span>,
+<span class="w">        </span><span class="s2">“UTRAN”</span>,
+<span class="w">        </span><span class="s2">“cdma2000 1xRTT”</span>,
+<span class="w">        </span><span class="s2">“cdma2000 HRPD”</span>
+<span class="w">    </span><span class="o">]</span>
+<span class="o">}</span>
+..
+pySIM-shell<span class="w"> </span><span class="o">(</span><span class="m">00</span>:MF/ADF.USIM/EF.PLMNwAcT<span class="o">)</span>&gt;<span class="w"> </span>edit_binary_decoded
+<span class="o">{</span>
+<span class="w">    </span><span class="s2">“MCC”</span>:<span class="w"> </span><span class="s2">"901"</span>,
+<span class="w">    </span><span class="s2">“跨国公司”</span>:<span class="w"> </span><span class="s2">"70"</span>,
+<span class="w">    </span><span class="s2">“行动”</span>:<span class="w"> </span><span class="o">[</span>
+<span class="w">        </span><span class="s2">“E-UTRAN NB-S1”</span>,
+<span class="w">        </span><span class="s2">“E-UTRAN WB-S1”</span>,
+<span class="w">        </span><span class="s2">“EC-GSM-物联网”</span>,
+<span class="w">        </span><span class="s2">“全球移动通信系统”</span>,
+<span class="w">        </span><span class="s2">“GSM 紧凑型”</span>,
+<span class="w">        </span><span class="s2">“NG-RAN”</span>,
+<span class="w">        </span><span class="s2">“UTRAN”</span>,
+<span class="w">        </span><span class="s2">“cdma2000 1xRTT”</span>,
+<span class="w">        </span><span class="s2">“cdma2000 HRPD”</span>
+<span class="w">    </span><span class="o">]</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="id1">
+<span id="id2"></span><h3>Open5GS<a class="headerlink" href="index.html#id1" title="链接到此标题"></a></h3>
+<p>对于此设置，Open5GS 作为机器上的服务运行，这是运行 Open5GS 的“默认”方式，如其文档中所述。如果您在 docker 容器或其他环境中运行 open5GS，您的配置会略有不同。</p>
+<p>Open5GS <a class="reference external" href="https://open5gs.org/open5gs/docs/guide/01-quickstart/#:~:text=restart%20open5gs%2Dsgwud-,Setup%20a%205G%20Core,-You%20will%20need">5G 核心快速入门指南</a> 全面概述了如何配置 Open5GS 以作为 5G 内核运行。</p>
+<p>要正确配置核心，需要执行以下步骤：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>配置核心以连接到 gNB。</p></li>
+<li><p>配置 PLMN 和 TAC 值，使其与 gNB 配置中的值相同。</p></li>
+<li><p>通过 Open5GS WebUI 将 ISIM 凭据注册到订阅者列表。</p></li>
+</ul>
+</div></blockquote>
+<section id="amf-yml">
+<h4>amf.yml<a class="headerlink" href="index.html#amf-yml" title="链接到此标题"></a></h4>
+<p>在AMF配置文件中需要进行以下修改：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>设置 NGAP 地址，这应该与 gNB 配置文件中看到的 AMF 地址相同</p></li>
+<li><p>设置MCC、MNC和TAC值，使其与gNB配置文件中使用的PLMN和TAC相同，但与ISIM的不同</p></li>
+</ul>
+</div></blockquote>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>   ngap:
+<span class="gd">- - 地址：127.0.0.5</span>
+<span class="gi">+ - 地址：127.0.1.100</span>
+<span class="w"> </span>    metrics:
+<span class="w"> </span>        addr: 127.0.0.5
+<span class="w"> </span>        port: 9090
+<span class="w"> </span>    guami:
+<span class="w"> </span>      - plmn_id:
+<span class="gd">- MCC：999</span>
+<span class="gd">- 跨国公司：70</span>
+<span class="gi">+ MCCC：901</span>
+<span class="gi">+ 跨国公司：70</span>
+<span class="w"> </span>        amf_id:
+<span class="w"> </span>          region: 2
+<span class="w"> </span>          set: 1
+<span class="w"> </span>    tai:
+<span class="w"> </span>      - plmn_id:
+<span class="gd">- MCC：999</span>
+<span class="gd">- 跨国公司：70</span>
+<span class="gi">+ MCCC：901</span>
+<span class="gi">+ 跨国公司：70</span>
+<span class="gd">- 塔克：1</span>
+<span class="gi">+ 塔克：7</span>
+<span class="w"> </span>    plmn_support:
+<span class="w"> </span>      - plmn_id:
+<span class="gd">- MCC：999</span>
+<span class="gd">- 跨国公司：70</span>
+<span class="gi">+ MCCC：901</span>
+<span class="gi">+ 跨国公司：70</span>
+</pre></div>
+</div>
+</section>
+<section id="upf-yml">
+<h4>upf.yml<a class="headerlink" href="index.html#upf-yml" title="链接到此标题"></a></h4>
+<p>在UPF配置文件中需要进行以下修改：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>设置 GTPU 地址，这应该与 gNB 配置文件中看到的 AMF 地址相同</p></li>
+</ul>
+</div></blockquote>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>   upf:
+<span class="w"> </span>    pfcp:
+<span class="w"> </span>      - addr: 127.0.0.7
+<span class="w"> </span>    gtpu:
+<span class="gd">- - 地址：127.0.0.7</span>
+<span class="gi">+ - 地址：127.0.1.100</span>
+<span class="w"> </span>    subnet:
+<span class="w"> </span>      - addr: 10.45.0.1/16
+<span class="w"> </span>      - addr: 2001:db8:cafe::1/48
+<span class="w"> </span>    metrics:
+<span class="w"> </span>      - addr: 127.0.0.7
+<span class="w"> </span>        port: 9090
+</pre></div>
+</div>
+</section>
+<section id="nrf-yml">
+<h4>nrf.yml<a class="headerlink" href="index.html#nrf-yml" title="链接到此标题"></a></h4>
+<p>在NRF配置中，需要进行以下修改：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>设置 PLMN 以匹配 gNB 和 AMF 配置文件的 PLMN</p></li>
+<li><p>检查AMF的地址是否与gNB配置文件的地址匹配</p></li>
+</ul>
+</div></blockquote>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>   logger:
+<span class="w"> </span>     file:
+<span class="w"> </span>       path: /var/log/open5gs/nrf.log
+<span class="w"> </span>   #  level: info   # fatal|error|warn|info(default)|debug|trace
+
+<span class="w"> </span>   global:
+<span class="w"> </span>     max:
+<span class="w"> </span>       ue: 1024  # The number of UE can be increased depending on memory size.
+<span class="w"> </span>   #    peer: 64
+
+<span class="w"> </span>   nrf:
+<span class="w"> </span>     serving:  # 5G roaming requires PLMN in NRF
+<span class="w"> </span>       - plmn_id:
+<span class="gd">- MCC：999</span>
+<span class="gd">- 跨国公司：70</span>
+<span class="gi">+ MCCC：901</span>
+<span class="gi">+ 跨国公司：70</span>
+<span class="w"> </span>   sbi:
+<span class="w"> </span>     server:
+<span class="w"> </span>       - addr: 127.0.0.10
+<span class="w"> </span>         port: 7777
+</pre></div>
+</div>
+</section>
+<section id="user-database">
+<h4>用户数据库<a class="headerlink" href="index.html#user-database" title="链接到此标题"></a></h4>
+<p>您可以看到如何向核心注册订户信息 <a class="reference external" href="https://open5gs.org/open5gs/docs/guide/01-quickstart/#:~:text=Register%20Subscriber%20Information">这里</a>.</p>
+<p>您至少需要填写与订阅者相关的 IMSI、AMF、K 和 OPc，以及 APN。</p>
+<div class="admonition note">
+<p class="admonition-title">注意事项</p>
+<p>将 APN 设置为 IPv4，而不是 IPv4/6 或 IPv6。</p>
+</div>
+</section>
+</section>
+<section id="id4">
+<h3>现货 UE<a class="headerlink" href="index.html#id4" title="链接到此标题"></a></h3>
+<p>要配置 OnePlus 8t 连接到网络，必须执行以下步骤：</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>启用 ISIM</p></li>
+<li><p>启用 5G SA 模式</p></li>
+<li><p>启用数据漫游</p></li>
+<li><p>禁用 VoLTE 和/或 VoNR</p></li>
+<li><p>配置接入点</p></li>
+<li><p>仅强制 NR</p></li>
+</ol>
+</div></blockquote>
+<section id="enable-isim-5g-and-data-roaming">
+<h4>启用 ISIM、5G 和数据漫游<a class="headerlink" href="index.html#enable-isim-5g-and-data-roaming" title="链接到此标题"></a></h4>
+<p>配置 UE 的第一步是确保启用 SIM 和 5G NR 运营商的使用。在此示例中，ISIM 放置在 SIM 卡托盘 1 中，并且不存在其他 SIM 卡。</p>
+<p>在第一张图中，您可以看到 ISIM 已正确找到，并且移动数据已启用。在第二张图中，您可以看到 ISIM 已启用，数据漫游已启用，并且 5G 已设置为首选网络类型。</p>
+<p><a class="reference internal" href="../../../../_images/sim_1.jpg"><img alt="模拟1" src="../../../../_images/sim_1.jpg" style="width: 20%;"/></a> <a class="reference internal" href="../../../../_images/sim_2.jpg"><img alt="模拟2" src="../../../../_images/sim_2.jpg" style="width: 20%;"/></a></p>
+<blockquote>
+<div></div></blockquote>
+<p>如果您看不到 <code class="docutils literal notranslate"><span class="pre">5G</span></code> 选项中 <code class="docutils literal notranslate"><span class="pre">首选</span> <span class="pre">网络</span> <span class="pre">类型</span></code>，那么您可能需要激活它。这可以在开发者选项下启用，如果您无权访问开发者选项，请参阅 <a class="reference external" href="https://developer.android.com/studio/debug/dev-options">本指南</a>。
+在 <code class="docutils literal notranslate"><span class="pre">开发商</span> <span class="pre">选项</span></code> 去 <code class="docutils literal notranslate"><span class="pre">网络</span></code> 并启用 <code class="docutils literal notranslate"><span class="pre">5G</span></code>，您可能还需要设置 <code class="docutils literal notranslate"><span class="pre">5G</span> <span class="pre">网络</span> <span class="pre">模式</span></code> 到 <code class="docutils literal notranslate"><span class="pre">NSA</span> <span class="pre">+</span> <span class="pre">SA</span> <span class="pre">模式</span></code></p>
+<p>这里需要启用的最后一个选项是 <code class="docutils literal notranslate"><span class="pre">数据</span> <span class="pre">漫游</span></code>，如第二张图片所示。</p>
+<p>在某些手机中，还可能有一个配置选项 <code class="docutils literal notranslate"><span class="pre">语音信噪比</span></code> 和/或 <code class="docutils literal notranslate"><span class="pre">语音通话</span></code>，重要的是要确保这是 <strong>残疾人</strong>.</p>
+</section>
+<section id="configure-apn">
+<h4>配置接入点<a class="headerlink" href="index.html#configure-apn" title="链接到此标题"></a></h4>
+<p><a class="reference internal" href="../../../../_images/apn_1.jpg"><img alt="APN1" src="../../../../_images/apn_1.jpg" style="width: 20%;"/></a> <a class="reference internal" href="../../../../_images/apn_2.jpg"><img alt="APN2" src="../../../../_images/apn_2.jpg" style="width: 20%;"/></a></p>
+<blockquote>
+<div></div></blockquote>
+<p>上图显示了本示例中使用的 APN 配置。需要注意的要点如下：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>接入点网络 <code class="docutils literal notranslate"><span class="pre">名称</span></code> 是任意的，并且可以具有任何字符串值。</p></li>
+<li><p>的 <code class="docutils literal notranslate"><span class="pre">接入点网络</span></code> 选项需要设置为与 <code class="docutils literal notranslate"><span class="pre">深度神经网络/APN</span></code> Open5GS 用户注册中设置的选项。</p></li>
+<li><p>的 <code class="docutils literal notranslate"><span class="pre">接入点网络</span> <span class="pre">协议</span></code> 和 <code class="docutils literal notranslate"><span class="pre">接入点网络</span> <span class="pre">漫游</span> <span class="pre">协议</span></code> 都设置为 <strong>IPv4</strong> 如 Open5GS 用户注册中所示。设置为 IPv6 或 IPv4/6 可能会导致互联网连接问题。</p></li>
+<li><p>所有其他选项均保留默认值。</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="force-nr">
+<h4>力降噪<a class="headerlink" href="index.html#force-nr" title="链接到此标题"></a></h4>
+<p>应用 <code class="docutils literal notranslate"><span class="pre">5G</span> <span class="pre">开关</span> <span class="pre">-</span> <span class="pre">力</span> <span class="pre">5G</span> <span class="pre">仅</span></code> 可用于强制您的设备仅看到 5G NR 网络。这适用于未 root 的设备，并用作此设置的一部分以确保
+该设备可以看到并连接到网络。尽管不需要手机连接，但它可以更轻松地始终连接到网络。</p>
+<p>应用程序的 Play 商店页面如下所示：</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../../../../_images/app.jpg"><img alt="../../../../_images/app.jpg" src="../../../../_images/app.jpg" style="width: 20%;"/>
+</a>
+</div></blockquote>
+<p>当您运行该应用程序时，您可以选择 <code class="docutils literal notranslate"><span class="pre">NR</span> <span class="pre">仅</span></code> 从 <code class="docutils literal notranslate"><span class="pre">套装</span> <span class="pre">首选</span> <span class="pre">网络</span> <span class="pre">类型</span></code> 菜单。这看起来像下面这样：</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../../../../_images/force_nr.jpg"><img alt="../../../../_images/force_nr.jpg" src="../../../../_images/force_nr.jpg" style="width: 20%;"/>
+</a>
+</div></blockquote>
+<p>当您选择此选项时，您可能会看到 <code class="docutils literal notranslate"><span class="pre">首选</span> <span class="pre">网络</span> <span class="pre">类型</span></code> SIM 配置菜单中的字段更改为 <code class="docutils literal notranslate"><span class="pre">4G/3G/2G</span> <span class="pre">（自动）</span></code> 如屏幕截图中所示 <a class="hxr-hoverxref hxr-tooltip reference internal" href="index.html#connect"><span class="std std-ref">连接到网络部分</span></a>。
+这很好，可以忽略。在应用程序中选择 NR 后，您无需从 SIM 配置菜单中选择 5G。</p>
+</section>
+</section>
+</section>
+<section id="connecting-the-cots-ue">
+<h2>连接 COTS UE<a class="headerlink" href="index.html#connecting-the-cots-ue" title="链接到此标题"></a></h2>
+<p>要将 COTS UE 连接到网络，必须在正确配置电话和网络后执行以下步骤：</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>运行gNB并确保其正确连接到核心</p></li>
+<li><p>从 UE 搜索网络</p></li>
+<li><p>选择并连接到网络</p></li>
+<li><p>验证附加</p></li>
+<li><p>流数据</p></li>
+</ol>
+</div></blockquote>
+<section id="setting-up-the-network">
+<h3>设置网络<a class="headerlink" href="index.html#setting-up-the-network" title="链接到此标题"></a></h3>
+<section id="check-that-the-core-is-running-correctly">
+<h4>检查Core是否正常运行<a class="headerlink" href="index.html#check-that-the-core-is-running-correctly" title="链接到此标题"></a></h4>
+<p>首先，最好检查 Open5GS 是否正确运行，这可以通过以下命令完成：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ps<span class="w"> </span>aux<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>open5gs
+</pre></div>
+</div>
+<p>如果核心运行正确，则应给出以下输出：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>open5gs<span class="w">     </span><span class="m">1601</span><span class="w">  </span><span class="m">0</span>.0<span class="w">  </span><span class="m">0</span>.0<span class="w"> </span><span class="m">141680</span><span class="w"> </span><span class="m">15872</span><span class="w"> </span>?<span class="w">        </span>Ssl<span class="w">  </span><span class="m">10</span>:36<span class="w">   </span><span class="m">0</span>:00<span class="w"> </span>/usr/bin/open5gs-bsfd<span class="w"> </span>-c<span class="w"> </span>/etc/open5gs/bsf.yaml
+open5gs<span class="w">     </span><span class="m">1606</span><span class="w">  </span><span class="m">0</span>.0<span class="w">  </span><span class="m">0</span>.1<span class="w"> </span><span class="m">134452</span><span class="w"> </span><span class="m">24840</span><span class="w"> </span>?<span class="w">        </span>Ssl<span class="w">  </span><span class="m">10</span>:36<span class="w">   </span><span class="m">0</span>:01<span class="w"> </span>/usr/bin/open5gs-nrfd<span class="w"> </span>-c<span class="w"> </span>/etc/open5gs/nrf.yaml
+open5gs<span class="w">     </span><span class="m">1613</span><span class="w">  </span><span class="m">0</span>.0<span class="w">  </span><span class="m">0</span>.2<span class="w"> </span><span class="m">147068</span><span class="w"> </span><span class="m">41720</span><span class="w"> </span>?<span class="w">        </span>Ssl<span class="w">  </span><span class="m">10</span>:36<span class="w">   </span><span class="m">0</span>:02<span class="w"> </span>/usr/bin/open5gs-scpd<span class="w"> </span>-c<span class="w"> </span>/etc/open5gs/scp.yaml
+open5gs<span class="w">     </span><span class="m">2663</span><span class="w">  </span><span class="m">0</span>.0<span class="w">  </span><span class="m">0</span>.1<span class="w"> </span><span class="m">2801740</span><span class="w"> </span><span class="m">16788</span><span class="w"> </span>?<span class="w">       </span>Ssl<span class="w">  </span><span class="m">10</span>:36<span class="w">   </span><span class="m">0</span>:02<span class="w"> </span>/usr/bin/open5gs-hssd<span class="w"> </span>-c<span class="w"> </span>/etc/open5gs/hss.yaml
+open5gs<span class="w">     </span><span class="m">2675</span><span class="w">  </span><span class="m">0</span>.0<span class="w">  </span><span class="m">0</span>.1<span class="w"> </span><span class="m">2800268</span><span class="w"> </span><span class="m">16568</span><span class="w"> </span>?<span class="w">       </span>Ssl<span class="w">  </span><span class="m">10</span>:36<span class="w">   </span><span class="m">0</span>:02<span class="w"> </span>/usr/bin/open5gs-pcrfd<span class="w"> </span>-c<span class="w"> </span>/etc/open5gs/pcrf.yaml
+open5gs<span class="w">     </span><span class="m">2676</span><span class="w">  </span><span class="m">0</span>.0<span class="w">  </span><span class="m">0</span>.1<span class="w"> </span><span class="m">185572</span><span class="w"> </span><span class="m">21584</span><span class="w"> </span>?<span class="w">        </span>Ssl<span class="w">  </span><span class="m">10</span>:36<span class="w">   </span><span class="m">0</span>:00<span class="w"> </span>/usr/bin/open5gs-pcfd<span class="w"> </span>-c<span class="w"> </span>/etc/open5gs/pcf.yaml
+open5gs<span class="w">     </span><span class="m">2690</span><span class="w">  </span><span class="m">0</span>.0<span class="w">  </span><span class="m">0</span>.1<span class="w"> </span><span class="m">169668</span><span class="w"> </span><span class="m">20768</span><span class="w"> </span>?<span class="w">        </span>Ssl<span class="w">  </span><span class="m">10</span>:36<span class="w">   </span><span class="m">0</span>:00<span class="w"> </span>/usr/bin/open5gs-udrd<span class="w"> </span>-c<span class="w"> </span>/etc/open5gs/udr.yaml
+open5gs<span class="w">     </span><span class="m">3065</span><span class="w">  </span><span class="m">0</span>.0<span class="w">  </span><span class="m">0</span>.1<span class="w"> </span><span class="m">155984</span><span class="w"> </span><span class="m">20136</span><span class="w"> </span>?<span class="w">        </span>Ssl<span class="w">  </span><span class="m">10</span>:36<span class="w">   </span><span class="m">0</span>:00<span class="w"> </span>/usr/bin/open5gs-amfd<span class="w"> </span>-c<span class="w"> </span>/etc/open5gs/amf.yaml
+open5gs<span class="w">     </span><span class="m">3067</span><span class="w">  </span><span class="m">0</span>.0<span class="w">  </span><span class="m">0</span>.0<span class="w"> </span><span class="m">136052</span><span class="w"> </span><span class="m">15960</span><span class="w"> </span>?<span class="w">        </span>Ssl<span class="w">  </span><span class="m">10</span>:36<span class="w">   </span><span class="m">0</span>:00<span class="w"> </span>/usr/bin/open5gs-ausfd<span class="w"> </span>-c<span class="w"> </span>/etc/open5gs/ausf.yaml
+open5gs<span class="w">     </span><span class="m">3071</span><span class="w">  </span><span class="m">0</span>.0<span class="w">  </span><span class="m">0</span>.0<span class="w"> </span><span class="m">2778684</span><span class="w"> </span><span class="m">14404</span><span class="w"> </span>?<span class="w">       </span>Ssl<span class="w">  </span><span class="m">10</span>:36<span class="w">   </span><span class="m">0</span>:02<span class="w"> </span>/usr/bin/open5gs-mmed<span class="w"> </span>-c<span class="w"> </span>/etc/open5gs/mme.yaml
+open5gs<span class="w">     </span><span class="m">3074</span><span class="w">  </span><span class="m">0</span>.0<span class="w">  </span><span class="m">0</span>.0<span class="w"> </span><span class="m">134300</span><span class="w"> </span><span class="m">15416</span><span class="w"> </span>?<span class="w">        </span>Ssl<span class="w">  </span><span class="m">10</span>:36<span class="w">   </span><span class="m">0</span>:00<span class="w"> </span>/usr/bin/open5gs-nssfd<span class="w"> </span>-c<span class="w"> </span>/etc/open5gs/nssf.yaml
+open5gs<span class="w">     </span><span class="m">3079</span><span class="w">  </span><span class="m">0</span>.0<span class="w">  </span><span class="m">0</span>.1<span class="w"> </span><span class="m">260852</span><span class="w"> </span><span class="m">19656</span><span class="w"> </span>?<span class="w">        </span>Ssl<span class="w">  </span><span class="m">10</span>:36<span class="w">   </span><span class="m">0</span>:00<span class="w"> </span>/usr/bin/open5gs-sgwcd<span class="w"> </span>-c<span class="w"> </span>/etc/open5gs/sgwc.yaml
+open5gs<span class="w">     </span><span class="m">3081</span><span class="w">  </span><span class="m">0</span>.0<span class="w">  </span><span class="m">0</span>.1<span class="w"> </span><span class="m">249660</span><span class="w"> </span><span class="m">17840</span><span class="w"> </span>?<span class="w">        </span>Ssl<span class="w">  </span><span class="m">10</span>:36<span class="w">   </span><span class="m">0</span>:00<span class="w"> </span>/usr/bin/open5gs-sgwud<span class="w"> </span>-c<span class="w"> </span>/etc/open5gs/sgwu.yaml
+open5gs<span class="w">     </span><span class="m">3084</span><span class="w">  </span><span class="m">0</span>.0<span class="w">  </span><span class="m">0</span>.2<span class="w"> </span><span class="m">3127048</span><span class="w"> </span><span class="m">44456</span><span class="w"> </span>?<span class="w">       </span>Ssl<span class="w">  </span><span class="m">10</span>:36<span class="w">   </span><span class="m">0</span>:02<span class="w"> </span>/usr/bin/open5gs-smfd<span class="w"> </span>-c<span class="w"> </span>/etc/open5gs/smf.yaml
+open5gs<span class="w">     </span><span class="m">3091</span><span class="w">  </span><span class="m">0</span>.0<span class="w">  </span><span class="m">0</span>.1<span class="w"> </span><span class="m">136072</span><span class="w"> </span><span class="m">17136</span><span class="w"> </span>?<span class="w">        </span>Ssl<span class="w">  </span><span class="m">10</span>:36<span class="w">   </span><span class="m">0</span>:00<span class="w"> </span>/usr/bin/open5gs-udmd<span class="w"> </span>-c<span class="w"> </span>/etc/open5gs/udm.yaml
+open5gs<span class="w">     </span><span class="m">3099</span><span class="w">  </span><span class="m">0</span>.0<span class="w">  </span><span class="m">0</span>.1<span class="w"> </span><span class="m">274176</span><span class="w"> </span><span class="m">24588</span><span class="w"> </span>?<span class="w">        </span>Ssl<span class="w">  </span><span class="m">10</span>:36<span class="w">   </span><span class="m">0</span>:00<span class="w"> </span>/usr/bin/open5gs-upfd<span class="w"> </span>-c<span class="w"> </span>/etc/open5gs/upf.yaml
+</pre></div>
+</div>
+<p>总共应该有 16 个进程在运行。</p>
+<p>核心运行后，在测试期间查看 AMF 日志会很有帮助。这使得 gNB 何时连接以及 COTS UE 何时成功连接到网络变得清晰。</p>
+<p>要查看它，您可以运行以下命令：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tail<span class="w"> </span>-f<span class="w"> </span>/var/log/open5gs/amf.log
+</pre></div>
+</div>
+<p>您应该看到类似于以下内容的输出：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="m">04</span>/03<span class="w"> </span><span class="m">10</span>:36:52.012:<span class="w"> </span><span class="o">[</span>sctp<span class="o">]</span><span class="w"> </span>INFO:<span class="w"> </span>AMF<span class="w"> </span>initialize...done<span class="w"> </span><span class="o">(</span>../src/amf/app.c:33<span class="o">)</span>
+<span class="m">04</span>/03<span class="w"> </span><span class="m">10</span>:36:52.049:<span class="w"> </span><span class="o">[</span>sbi<span class="o">]</span><span class="w"> </span>INFO:<span class="w"> </span><span class="o">[</span>aea4db10-d1fa-41ed-916b-e56218b693e5<span class="o">]</span><span class="w"> </span><span class="o">(</span>NRF-notify<span class="o">)</span><span class="w"> </span>NF<span class="w"> </span>registered<span class="w"> </span><span class="o">(</span>../lib/sbi/nnrf-handler.c:632<span class="o">)</span>
+<span class="m">04</span>/03<span class="w"> </span><span class="m">10</span>:36:52.049:<span class="w"> </span><span class="o">[</span>sbi<span class="o">]</span><span class="w"> </span>INFO:<span class="w"> </span><span class="o">[</span>aea4db10-d1fa-41ed-916b-e56218b693e5<span class="o">]</span><span class="w"> </span><span class="o">(</span>NRF-notify<span class="o">)</span><span class="w"> </span>NF<span class="w"> </span>Profile<span class="w"> </span>updated<span class="w"> </span><span class="o">(</span>../lib/sbi/nnrf-handler.c:642<span class="o">)</span>
+<span class="m">04</span>/03<span class="w"> </span><span class="m">10</span>:36:52.049:<span class="w"> </span><span class="o">[</span>sbi<span class="o">]</span><span class="w"> </span>WARNING:<span class="w"> </span><span class="o">[</span>aea4db10-d1fa-41ed-916b-e56218b693e5<span class="o">]</span><span class="w"> </span><span class="o">(</span>NRF-notify<span class="o">)</span><span class="w"> </span>NF<span class="w"> </span>has<span class="w"> </span>already<span class="w"> </span>been<span class="w"> </span>added<span class="w"> </span><span class="o">(</span>../lib/sbi/nnrf-handler.c:636<span class="o">)</span>
+<span class="m">04</span>/03<span class="w"> </span><span class="m">10</span>:36:52.049:<span class="w"> </span><span class="o">[</span>sbi<span class="o">]</span><span class="w"> </span>INFO:<span class="w"> </span><span class="o">[</span>aea4db10-d1fa-41ed-916b-e56218b693e5<span class="o">]</span><span class="w"> </span><span class="o">(</span>NRF-notify<span class="o">)</span><span class="w"> </span>NF<span class="w"> </span>Profile<span class="w"> </span>updated<span class="w"> </span><span class="o">(</span>../lib/sbi/nnrf-handler.c:642<span class="o">)</span>
+<span class="m">04</span>/03<span class="w"> </span><span class="m">10</span>:36:52.049:<span class="w"> </span><span class="o">[</span>sbi<span class="o">]</span><span class="w"> </span>WARNING:<span class="w"> </span>NF<span class="w"> </span>EndPoint<span class="w"> </span>updated<span class="w"> </span><span class="o">[</span><span class="m">127</span>.0.0.12:80<span class="o">]</span><span class="w"> </span><span class="o">(</span>../lib/sbi/context.c:1618<span class="o">)</span>
+<span class="m">04</span>/03<span class="w"> </span><span class="m">10</span>:36:52.049:<span class="w"> </span><span class="o">[</span>sbi<span class="o">]</span><span class="w"> </span>WARNING:<span class="w"> </span>NF<span class="w"> </span>EndPoint<span class="w"> </span>updated<span class="w"> </span><span class="o">[</span><span class="m">127</span>.0.0.12:7777<span class="o">]</span><span class="w"> </span><span class="o">(</span>../lib/sbi/context.c:1527<span class="o">)</span>
+<span class="m">04</span>/03<span class="w"> </span><span class="m">10</span>:36:52.238:<span class="w"> </span><span class="o">[</span>app<span class="o">]</span><span class="w"> </span>INFO:<span class="w"> </span>SIGHUP<span class="w"> </span>received<span class="w"> </span><span class="o">(</span>../src/main.c:58<span class="o">)</span>
+<span class="m">04</span>/03<span class="w"> </span><span class="m">10</span>:36:52.350:<span class="w"> </span><span class="o">[</span>sbi<span class="o">]</span><span class="w"> </span>INFO:<span class="w"> </span><span class="o">[</span>aea6bae8-d1fa-41ed-904f-f78f7a58f5f3<span class="o">]</span><span class="w"> </span><span class="o">(</span>NRF-notify<span class="o">)</span><span class="w"> </span>NF<span class="w"> </span>registered<span class="w"> </span><span class="o">(</span>../lib/sbi/nnrf-handler.c:632<span class="o">)</span>
+<span class="m">04</span>/03<span class="w"> </span><span class="m">10</span>:36:52.350:<span class="w"> </span><span class="o">[</span>sbi<span class="o">]</span><span class="w"> </span>INFO:<span class="w"> </span><span class="o">[</span>aea6bae8-d1fa-41ed-904f-f78f7a58f5f3<span class="o">]</span><span class="w"> </span><span class="o">(</span>NRF-notify<span class="o">)</span><span class="w"> </span>NF<span class="w"> </span>Profile<span class="w"> </span>updated<span class="w"> </span><span class="o">(</span>../lib/sbi/nnrf-handler.c:642<span class="o">)</span>
+</pre></div>
+</div>
+</section>
+<section id="run-the-gnb">
+<h4>运行gNB<a class="headerlink" href="index.html#run-the-gnb" title="链接到此标题"></a></h4>
+<p>要使用上面的配置文件运行 gNB，请导航至 <code class="docutils literal notranslate"><span class="pre">srsRAN_Project/build/apps/gnb</span></code> 并使用以下命令：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>./gnb<span class="w"> </span>-c<span class="w"> </span>gnb_b210_20MHz_oneplus_8t.yml
+</pre></div>
+</div>
+<p>上述命令假设配置文件位于同一文件夹中。</p>
+<p>gNB 运行后，您应该看到以下输出：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>--<span class="o">==</span><span class="w"> </span>srsRAN<span class="w"> </span>gNB<span class="w"> </span><span class="o">(</span>commit<span class="w"> </span>fbe73a49c<span class="o">)</span><span class="w"> </span><span class="o">==</span>--
+
+Connecting<span class="w"> </span>to<span class="w"> </span>AMF<span class="w"> </span>on<span class="w"> </span><span class="m">127</span>.0.1.100:38412
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span><span class="o">[</span>UHD<span class="o">]</span><span class="w"> </span>linux<span class="p">;</span><span class="w"> </span>GNU<span class="w"> </span>C++<span class="w"> </span>version<span class="w"> </span><span class="m">9</span>.3.0<span class="p">;</span><span class="w"> </span>Boost_107100<span class="p">;</span><span class="w"> </span>UHD_4.0.0.0-666-g676c3a37
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span><span class="o">[</span>LOGGING<span class="o">]</span><span class="w"> </span>Fastpath<span class="w"> </span>logging<span class="w"> </span>disabled<span class="w"> </span>at<span class="w"> </span>runtime.
+Making<span class="w"> </span>USRP<span class="w"> </span>object<span class="w"> </span>with<span class="w"> </span>args<span class="w"> </span><span class="s1">'类型=b200，num_recv_frames=64，num_send_frames=64'</span>
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span><span class="o">[</span>B200<span class="o">]</span><span class="w"> </span>Detected<span class="w"> </span>Device:<span class="w"> </span>B210
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span><span class="o">[</span>B200<span class="o">]</span><span class="w"> </span>Operating<span class="w"> </span>over<span class="w"> </span>USB<span class="w"> </span><span class="m">3</span>.
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span><span class="o">[</span>B200<span class="o">]</span><span class="w"> </span>Initialize<span class="w"> </span>CODEC<span class="w"> </span>control...
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span><span class="o">[</span>B200<span class="o">]</span><span class="w"> </span>Initialize<span class="w"> </span>Radio<span class="w"> </span>control...
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span><span class="o">[</span>B200<span class="o">]</span><span class="w"> </span>Performing<span class="w"> </span>register<span class="w"> </span>loopback<span class="w"> </span>test...
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span><span class="o">[</span>B200<span class="o">]</span><span class="w"> </span>Register<span class="w"> </span>loopback<span class="w"> </span><span class="nb">测试</span><span class="w"> </span>passed
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span><span class="o">[</span>B200<span class="o">]</span><span class="w"> </span>Setting<span class="w"> </span>master<span class="w"> </span>clock<span class="w"> </span>rate<span class="w"> </span>selection<span class="w"> </span>to<span class="w"> </span><span class="s1">“自动”</span>.
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span><span class="o">[</span>B200<span class="o">]</span><span class="w"> </span>Asking<span class="w"> </span><span class="k">为了</span><span class="w"> </span>clock<span class="w"> </span>rate<span class="w"> </span><span class="m">16</span>.000000<span class="w"> </span>MHz...
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span><span class="o">[</span>B200<span class="o">]</span><span class="w"> </span>Actually<span class="w"> </span>got<span class="w"> </span>clock<span class="w"> </span>rate<span class="w"> </span><span class="m">16</span>.000000<span class="w"> </span>MHz.
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span><span class="o">[</span>MULTI_USRP<span class="o">]</span><span class="w"> </span>Setting<span class="w"> </span>master<span class="w"> </span>clock<span class="w"> </span>rate<span class="w"> </span>selection<span class="w"> </span>to<span class="w"> </span><span class="s1">“手册”</span>.
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span><span class="o">[</span>B200<span class="o">]</span><span class="w"> </span>Asking<span class="w"> </span><span class="k">为了</span><span class="w"> </span>clock<span class="w"> </span>rate<span class="w"> </span><span class="m">23</span>.040000<span class="w"> </span>MHz...
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span><span class="o">[</span>B200<span class="o">]</span><span class="w"> </span>Actually<span class="w"> </span>got<span class="w"> </span>clock<span class="w"> </span>rate<span class="w"> </span><span class="m">23</span>.040000<span class="w"> </span>MHz.
+Cell<span class="w"> </span><span class="nv">PCI</span><span class="o">=</span><span class="m">1</span>,<span class="w"> </span><span class="nv">体重</span><span class="o">=</span><span class="m">20</span><span class="w"> </span>MHz,<span class="w"> </span><span class="nv">dl_arfcn</span><span class="o">=</span><span class="m">627340</span><span class="w"> </span><span class="o">(</span>n78<span class="o">)</span>,<span class="w"> </span><span class="nv">dl_频率</span><span class="o">=</span><span class="m">3410</span>.1<span class="w"> </span>MHz,<span class="w"> </span><span class="nv">dl_ssb_arfcn</span><span class="o">=</span><span class="m">627264</span>,<span class="w"> </span><span class="nv">ul_频率</span><span class="o">=</span><span class="m">3410</span>.1<span class="w"> </span><span class="nv">兆赫兹</span>
+
+<span class="o">====</span><span class="w"> </span>gNodeB<span class="w"> </span><span class="nv">开始了</span><span class="w"> </span><span class="o">===</span>
+Type<span class="w"> </span>&lt;t&gt;<span class="w"> </span>to<span class="w"> </span>view<span class="w"> </span>trace
+</pre></div>
+</div>
+<p>如果与核心的连接成功，您应该从 AMF 日志中看到以下内容：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="m">04</span>/03<span class="w"> </span><span class="m">13</span>:25:13.469:<span class="w"> </span><span class="o">[</span>amf<span class="o">]</span><span class="w"> </span>INFO:<span class="w"> </span>gNB-N2<span class="w"> </span>accepted<span class="o">[</span><span class="m">127</span>.0.0.1<span class="o">]</span>:47633<span class="w"> </span><span class="k">在</span><span class="w"> </span>ng-path<span class="w"> </span>module<span class="w"> </span><span class="o">(</span>../src/amf/ngap-sctp.c:113<span class="o">)</span>
+<span class="m">04</span>/03<span class="w"> </span><span class="m">13</span>:25:13.469:<span class="w"> </span><span class="o">[</span>amf<span class="o">]</span><span class="w"> </span>INFO:<span class="w"> </span>gNB-N2<span class="w"> </span>accepted<span class="o">[</span><span class="m">127</span>.0.0.1<span class="o">]</span><span class="w"> </span><span class="k">在</span><span class="w"> </span>master_sm<span class="w"> </span>module<span class="w"> </span><span class="o">(</span>../src/amf/amf-sm.c:706<span class="o">)</span>
+<span class="m">04</span>/03<span class="w"> </span><span class="m">13</span>:25:13.469:<span class="w"> </span><span class="o">[</span>amf<span class="o">]</span><span class="w"> </span>INFO:<span class="w"> </span><span class="o">[</span>Added<span class="o">]</span><span class="w"> </span>Number<span class="w"> </span>of<span class="w"> </span>gNBs<span class="w"> </span>is<span class="w"> </span>now<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">(</span>../src/amf/context.c:1034<span class="o">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="connecting-to-the-network">
+<span id="connect"></span><h3>连接到网络<a class="headerlink" href="index.html#connecting-to-the-network" title="链接到此标题"></a></h3>
+<p>COTS UE 现在可以搜索网络。为此，请导航至 <em>移动网络 &gt; SIM 1 &gt; 运营商</em> 并搜索网络。</p>
+<p>当您输入 <em>承运人</em> 您的设备可能会自动搜索可用的运营商菜单，如果没有，您可以从屏幕右上角手动选择搜索选项。</p>
+<p>如果设备可以成功接收 SIB（特别是 SIB1）并“查看”网络，则会出现可用运营商列表。它将显示为 <code class="docutils literal notranslate"><span class="pre">Open5GS</span> <span class="pre">5G</span></code> 或 <code class="docutils literal notranslate"><span class="pre">90170</span> <span class="pre">5G</span></code>。如果您的 PLMN 是其他内容，它可能会显示为 <code class="docutils literal notranslate"><span class="pre">[PLMN]</span> <span class="pre">5G</span></code>.</p>
+<p>下图显示了它的样子：</p>
+<a class="reference internal image-reference" href="../../../../_images/sim_connect.jpg"><img alt="../../../../_images/sim_connect.jpg" src="../../../../_images/sim_connect.jpg" style="width: 20%;"/>
+</a>
+<p>选择网络运营商，在本例中 <code class="docutils literal notranslate"><span class="pre">Open5GS</span> <span class="pre">5G</span></code>，然后 UE 应连接到网络。</p>
+<p>要确认连接是否成功，您可以监视 AMF 日志和 gNB 控制台输出。</p>
+<p>AMF 日志应类似于以下内容：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="m">04</span>/27<span class="w"> </span><span class="m">13</span>:16:31.746:<span class="w"> </span><span class="o">[</span>amf<span class="o">]</span><span class="w"> </span>INFO:<span class="w"> </span>InitialUEMessage<span class="w"> </span><span class="o">(</span>../src/amf/ngap-handler.c:361<span class="o">)</span>
+<span class="m">04</span>/27<span class="w"> </span><span class="m">13</span>:16:31.746:<span class="w"> </span><span class="o">[</span>amf<span class="o">]</span><span class="w"> </span>INFO:<span class="w"> </span><span class="o">[</span>Added<span class="o">]</span><span class="w"> </span>Number<span class="w"> </span>of<span class="w"> </span>gNB-UEs<span class="w"> </span>is<span class="w"> </span>now<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">(</span>../src/amf/context.c:2036<span class="o">)</span>
+<span class="m">04</span>/27<span class="w"> </span><span class="m">13</span>:16:31.746:<span class="w"> </span><span class="o">[</span>amf<span class="o">]</span><span class="w"> </span>INFO:<span class="w">     </span>RAN_UE_NGAP_ID<span class="o">[</span><span class="m">0</span><span class="o">]</span><span class="w"> </span>AMF_UE_NGAP_ID<span class="o">[</span><span class="m">78</span><span class="o">]</span><span class="w"> </span>TAC<span class="o">[</span><span class="m">7</span><span class="o">]</span><span class="w"> </span>CellID<span class="o">[</span>0x0<span class="o">]</span><span class="w"> </span><span class="o">(</span>../src/amf/ngap-handler.c:497<span class="o">)</span>
+<span class="m">04</span>/27<span class="w"> </span><span class="m">13</span>:16:31.746:<span class="w"> </span><span class="o">[</span>amf<span class="o">]</span><span class="w"> </span>INFO:<span class="w"> </span><span class="o">[</span>suci-0-001-01-0-0-0-0000068960<span class="o">]</span><span class="w"> </span>Known<span class="w"> </span>UE<span class="w"> </span>by<span class="w"> </span>5G-S_TMSI<span class="o">[</span>AMF_ID:0x20040,M_TMSI:0xdd00ff1a<span class="o">]</span><span class="w"> </span><span class="o">(</span>../src/amf/context.c:1402<span class="o">)</span>
+<span class="m">04</span>/27<span class="w"> </span><span class="m">13</span>:16:31.746:<span class="w"> </span><span class="o">[</span>gmm<span class="o">]</span><span class="w"> </span>INFO:<span class="w"> </span>Registration<span class="w"> </span>request<span class="w"> </span><span class="o">(</span>../src/amf/gmm-sm.c:134<span class="o">)</span>
+<span class="m">04</span>/27<span class="w"> </span><span class="m">13</span>:16:31.746:<span class="w"> </span><span class="o">[</span>gmm<span class="o">]</span><span class="w"> </span>INFO:<span class="w"> </span><span class="o">[</span>suci-0-001-01-0-0-0-0000068960<span class="o">]</span><span class="w">    </span>5G-S_GUTI<span class="o">[</span>AMF_ID:0x20040,M_TMSI:0xdd00ff1a<span class="o">]</span><span class="w"> </span><span class="o">(</span>../src/amf/gmm-handler.c:169<span class="o">)</span>
+<span class="m">04</span>/27<span class="w"> </span><span class="m">13</span>:16:31.913:<span class="w"> </span><span class="o">[</span>gmm<span class="o">]</span><span class="w"> </span>INFO:<span class="w"> </span><span class="o">[</span>imsi-001010000068960<span class="o">]</span><span class="w"> </span>Registration<span class="w"> </span><span class="nb">完成</span><span class="w"> </span><span class="o">(</span>../src/amf/gmm-sm.c:1063<span class="o">)</span>
+<span class="m">04</span>/27<span class="w"> </span><span class="m">13</span>:16:31.913:<span class="w"> </span><span class="o">[</span>amf<span class="o">]</span><span class="w"> </span>INFO:<span class="w"> </span><span class="o">[</span>imsi-001010000068960<span class="o">]</span><span class="w"> </span>Configuration<span class="w"> </span>update<span class="w"> </span><span class="nb">命令</span><span class="w"> </span><span class="o">(</span>../src/amf/nas-path.c:389<span class="o">)</span>
+<span class="m">04</span>/27<span class="w"> </span><span class="m">13</span>:16:31.913:<span class="w"> </span><span class="o">[</span>gmm<span class="o">]</span><span class="w"> </span>INFO:<span class="w">     </span>UTC<span class="w"> </span><span class="o">[</span><span class="m">2023</span>-04-27T13:16:31<span class="o">]</span><span class="w"> </span>Timezone<span class="o">[</span><span class="m">0</span><span class="o">]</span>/DST<span class="o">[</span><span class="m">0</span><span class="o">]</span><span class="w"> </span><span class="o">(</span>../src/amf/gmm-build.c:502<span class="o">)</span>
+<span class="m">04</span>/27<span class="w"> </span><span class="m">13</span>:16:31.913:<span class="w"> </span><span class="o">[</span>gmm<span class="o">]</span><span class="w"> </span>INFO:<span class="w">     </span>LOCAL<span class="w"> </span><span class="o">[</span><span class="m">2023</span>-04-27T13:16:31<span class="o">]</span><span class="w"> </span>Timezone<span class="o">[</span><span class="m">0</span><span class="o">]</span>/DST<span class="o">[</span><span class="m">0</span><span class="o">]</span><span class="w"> </span><span class="o">(</span>../src/amf/gmm-build.c:507<span class="o">)</span>
+<span class="m">04</span>/27<span class="w"> </span><span class="m">13</span>:16:32.105:<span class="w"> </span><span class="o">[</span>gmm<span class="o">]</span><span class="w"> </span>INFO:<span class="w"> </span>UE<span class="w"> </span>SUPI<span class="o">[</span>imsi-001010000068960<span class="o">]</span><span class="w"> </span>DNN<span class="o">[</span>srsapn<span class="o">]</span><span class="w"> </span>S_NSSAI<span class="o">[</span>SST:1<span class="w"> </span>SD:0xffffff<span class="o">]</span><span class="w"> </span><span class="o">(</span>../src/amf/gmm-handler.c:1042<span class="o">)</span>
+</pre></div>
+</div>
+<p>gNB 跟踪应显示以下内容：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w">          </span>-------------DL----------------<span class="p">|</span>------------------UL--------------------
+pci<span class="w"> </span>rnti<span class="w">  </span>cqi<span class="w">  </span>mcs<span class="w">  </span>brate<span class="w">   </span>ok<span class="w">  </span>nok<span class="w">  </span><span class="o">(</span>%<span class="o">)</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>pusch<span class="w">  </span>mcs<span class="w">  </span>brate<span class="w">   </span>ok<span class="w">  </span>nok<span class="w">  </span><span class="o">(</span>%<span class="o">)</span><span class="w">    </span>bsr
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">   </span><span class="m">15</span><span class="w">   </span><span class="m">4</span>.3k<span class="w">    </span><span class="m">7</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">21</span>.3<span class="w">   </span><span class="m">23</span><span class="w">    </span>17k<span class="w">    </span><span class="m">4</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">    </span><span class="m">0</span>.0
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">   </span><span class="m">27</span><span class="w">   </span>287k<span class="w">   </span><span class="m">84</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">23</span>.1<span class="w">   </span><span class="m">27</span><span class="w">   </span>233k<span class="w">   </span><span class="m">39</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">    </span><span class="m">0</span>.0
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">   </span><span class="m">28</span><span class="w">   </span><span class="m">1</span>.2k<span class="w">    </span><span class="m">1</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">21</span>.8<span class="w">   </span><span class="m">28</span><span class="w">   </span><span class="m">8</span>.7k<span class="w">    </span><span class="m">2</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">    </span><span class="m">0</span>.0
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">    </span><span class="m">0</span><span class="w">      </span><span class="m">0</span><span class="w">    </span><span class="m">0</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">   </span>n/a<span class="w">    </span><span class="m">0</span><span class="w">      </span><span class="m">0</span><span class="w">    </span><span class="m">0</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">    </span><span class="m">0</span>.0
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">    </span><span class="m">0</span><span class="w">      </span><span class="m">0</span><span class="w">    </span><span class="m">0</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">   </span>n/a<span class="w">    </span><span class="m">0</span><span class="w">      </span><span class="m">0</span><span class="w">    </span><span class="m">0</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">    </span><span class="m">0</span>.0
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">    </span><span class="m">0</span><span class="w">      </span><span class="m">0</span><span class="w">    </span><span class="m">0</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">   </span>n/a<span class="w">    </span><span class="m">0</span><span class="w">      </span><span class="m">0</span><span class="w">    </span><span class="m">0</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">    </span><span class="m">0</span>.0
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">12</span><span class="w">    </span><span class="m">0</span><span class="w">      </span><span class="m">0</span><span class="w">    </span><span class="m">0</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">   </span>n/a<span class="w">    </span><span class="m">0</span><span class="w">      </span><span class="m">0</span><span class="w">    </span><span class="m">0</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">    </span><span class="m">0</span>.0
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">    </span><span class="m">0</span><span class="w">      </span><span class="m">0</span><span class="w">    </span><span class="m">0</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">   </span>n/a<span class="w">    </span><span class="m">0</span><span class="w">      </span><span class="m">0</span><span class="w">    </span><span class="m">0</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">    </span><span class="m">0</span>.0
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">   </span><span class="m">28</span><span class="w">    </span>53k<span class="w">   </span><span class="m">10</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">24</span>.6<span class="w">   </span><span class="m">26</span><span class="w">    </span>55k<span class="w">   </span><span class="m">32</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">    </span><span class="m">0</span>.0
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">   </span><span class="m">28</span><span class="w">   </span><span class="m">7</span>.7k<span class="w">    </span><span class="m">4</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">22</span>.7<span class="w">   </span><span class="m">28</span><span class="w">    </span>17k<span class="w">    </span><span class="m">4</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">    </span><span class="m">0</span>.0
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">    </span><span class="m">0</span><span class="w">      </span><span class="m">0</span><span class="w">    </span><span class="m">0</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">   </span>n/a<span class="w">    </span><span class="m">0</span><span class="w">      </span><span class="m">0</span><span class="w">    </span><span class="m">0</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">    </span><span class="m">0</span>.0
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils"/>
+<section id="traffic-and-testing">
+<h2>流量与测试<a class="headerlink" href="index.html#traffic-and-testing" title="链接到此标题"></a></h2>
+<section id="speed-test">
+<h3>速度测试<a class="headerlink" href="index.html#speed-test" title="链接到此标题"></a></h3>
+<p>直接从谷歌运行速度测试给出以下结果：</p>
+<a class="reference internal image-reference" href="../../../../_images/speedtest.jpg"><img alt="../../../../_images/speedtest.jpg" src="../../../../_images/speedtest.jpg" style="width: 20%;"/>
+</a>
+<p>运行此测试时，在 gNB 控制台上观察到以下情况：</p>
+<p><strong>上行测试</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w">          </span>-------------DL----------------<span class="p">|</span>------------------UL--------------------
+pci<span class="w"> </span>rnti<span class="w">  </span>cqi<span class="w">  </span>mcs<span class="w">  </span>brate<span class="w">   </span>ok<span class="w">  </span>nok<span class="w">  </span><span class="o">(</span>%<span class="o">)</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>pusch<span class="w">  </span>mcs<span class="w">  </span>brate<span class="w">   </span>ok<span class="w">  </span>nok<span class="w">  </span><span class="o">(</span>%<span class="o">)</span><span class="w">    </span>bsr
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">   </span><span class="m">28</span><span class="w">    </span>23M<span class="w">  </span><span class="m">820</span><span class="w">    </span><span class="m">8</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">24</span>.3<span class="w">   </span><span class="m">27</span><span class="w">   </span>376k<span class="w">   </span><span class="m">90</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">    </span><span class="m">0</span>.0
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">   </span><span class="m">28</span><span class="w">    </span>31M<span class="w"> </span><span class="m">1070</span><span class="w">    </span><span class="m">6</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">22</span>.4<span class="w">   </span><span class="m">28</span><span class="w">   </span>141k<span class="w">   </span><span class="m">33</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">    </span><span class="m">0</span>.0
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">   </span><span class="m">28</span><span class="w">    </span>31M<span class="w"> </span><span class="m">1068</span><span class="w">    </span><span class="m">8</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">23</span>.7<span class="w">   </span><span class="m">27</span><span class="w">   </span>155k<span class="w">   </span><span class="m">39</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">    </span><span class="m">0</span>.0
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">   </span><span class="m">28</span><span class="w">    </span>31M<span class="w"> </span><span class="m">1064</span><span class="w">    </span><span class="m">6</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">23</span>.3<span class="w">   </span><span class="m">28</span><span class="w">   </span>134k<span class="w">   </span><span class="m">29</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">    </span><span class="m">0</span>.0
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">   </span><span class="m">28</span><span class="w">    </span>31M<span class="w"> </span><span class="m">1060</span><span class="w">    </span><span class="m">9</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">22</span>.5<span class="w">   </span><span class="m">28</span><span class="w">   </span>150k<span class="w">   </span><span class="m">32</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">    </span><span class="m">0</span>.0
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">   </span><span class="m">28</span><span class="w">    </span>31M<span class="w"> </span><span class="m">1071</span><span class="w">    </span><span class="m">6</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">23</span>.1<span class="w">   </span><span class="m">27</span><span class="w">   </span>323k<span class="w">   </span><span class="m">68</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">    </span><span class="m">0</span>.0
+</pre></div>
+</div>
+<p><strong>下行测试</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w">          </span>-------------DL----------------<span class="p">|</span>------------------UL--------------------
+pci<span class="w"> </span>rnti<span class="w">  </span>cqi<span class="w">  </span>mcs<span class="w">  </span>brate<span class="w">   </span>ok<span class="w">  </span>nok<span class="w">  </span><span class="o">(</span>%<span class="o">)</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>pusch<span class="w">  </span>mcs<span class="w">  </span>brate<span class="w">   </span>ok<span class="w">  </span>nok<span class="w">  </span><span class="o">(</span>%<span class="o">)</span><span class="w">    </span>bsr
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">   </span><span class="m">27</span><span class="w">   </span>548k<span class="w">  </span><span class="m">447</span><span class="w">    </span><span class="m">3</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">17</span>.1<span class="w">   </span><span class="m">25</span><span class="w">    </span>17M<span class="w">  </span><span class="m">596</span><span class="w">    </span><span class="m">4</span><span class="w">   </span><span class="m">0</span>%<span class="w">   </span>150k
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">   </span><span class="m">27</span><span class="w">   </span>598k<span class="w">  </span><span class="m">456</span><span class="w">    </span><span class="m">6</span><span class="w">   </span><span class="m">1</span>%<span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">17</span>.4<span class="w">   </span><span class="m">25</span><span class="w">    </span>17M<span class="w">  </span><span class="m">596</span><span class="w">    </span><span class="m">4</span><span class="w">   </span><span class="m">0</span>%<span class="w">   </span>150k
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">   </span><span class="m">27</span><span class="w">   </span>502k<span class="w">  </span><span class="m">468</span><span class="w">    </span><span class="m">2</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">17</span>.5<span class="w">   </span><span class="m">25</span><span class="w">    </span>17M<span class="w">  </span><span class="m">600</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">   </span>150k
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">   </span><span class="m">27</span><span class="w">   </span>544k<span class="w">  </span><span class="m">449</span><span class="w">    </span><span class="m">2</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">18</span>.2<span class="w">   </span><span class="m">26</span><span class="w">    </span>18M<span class="w">  </span><span class="m">598</span><span class="w">    </span><span class="m">2</span><span class="w">   </span><span class="m">0</span>%<span class="w">   </span>150k
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">   </span><span class="m">27</span><span class="w">   </span>470k<span class="w">  </span><span class="m">448</span><span class="w">    </span><span class="m">2</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">18</span>.7<span class="w">   </span><span class="m">27</span><span class="w">    </span>19M<span class="w">  </span><span class="m">595</span><span class="w">    </span><span class="m">5</span><span class="w">   </span><span class="m">0</span>%<span class="w">   </span>150k
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">   </span><span class="m">27</span><span class="w">   </span>485k<span class="w">  </span><span class="m">455</span><span class="w">    </span><span class="m">6</span><span class="w">   </span><span class="m">1</span>%<span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">18</span>.6<span class="w">   </span><span class="m">27</span><span class="w">    </span>19M<span class="w">  </span><span class="m">594</span><span class="w">    </span><span class="m">6</span><span class="w">   </span><span class="m">1</span>%<span class="w">   </span>150k
+</pre></div>
+</div>
+</section>
+<section id="video-test">
+<h3>视频测试<a class="headerlink" href="index.html#video-test" title="链接到此标题"></a></h3>
+<p>下面显示了从互联网传输视频时看到的示例跟踪输出：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w">          </span>-------------DL----------------<span class="p">|</span>------------------UL--------------------
+pci<span class="w"> </span>rnti<span class="w">  </span>cqi<span class="w">  </span>mcs<span class="w">  </span>brate<span class="w">   </span>ok<span class="w">  </span>nok<span class="w">  </span><span class="o">(</span>%<span class="o">)</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>pusch<span class="w">  </span>mcs<span class="w">  </span>brate<span class="w">   </span>ok<span class="w">  </span>nok<span class="w">  </span><span class="o">(</span>%<span class="o">)</span><span class="w">    </span>bsr
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">14</span><span class="w">   </span><span class="m">27</span><span class="w">   </span><span class="m">1</span>.3M<span class="w">  </span><span class="m">111</span><span class="w">   </span><span class="m">15</span><span class="w">  </span><span class="m">11</span>%<span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">22</span>.6<span class="w">   </span><span class="m">28</span><span class="w">   </span>109k<span class="w">   </span><span class="m">25</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">    </span><span class="m">0</span>.0
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">   </span><span class="m">27</span><span class="w">   </span><span class="m">1</span>.9M<span class="w">  </span><span class="m">180</span><span class="w">    </span><span class="m">4</span><span class="w">   </span><span class="m">2</span>%<span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">22</span>.4<span class="w">   </span><span class="m">28</span><span class="w">   </span>109k<span class="w">   </span><span class="m">25</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">    </span><span class="m">0</span>.0
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">   </span><span class="m">28</span><span class="w">   </span><span class="m">3</span>.3M<span class="w">  </span><span class="m">302</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">22</span>.7<span class="w">   </span><span class="m">28</span><span class="w">   </span>109k<span class="w">   </span><span class="m">25</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">    </span><span class="m">0</span>.0
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">   </span><span class="m">28</span><span class="w">   </span><span class="m">5</span>.5M<span class="w">  </span><span class="m">489</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">22</span>.5<span class="w">   </span><span class="m">28</span><span class="w">   </span>109k<span class="w">   </span><span class="m">25</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">    </span><span class="m">0</span>.0
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">   </span><span class="m">28</span><span class="w">   </span><span class="m">7</span>.6M<span class="w">  </span><span class="m">553</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">22</span>.5<span class="w">   </span><span class="m">28</span><span class="w">   </span>109k<span class="w">   </span><span class="m">25</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">    </span><span class="m">0</span>.0
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">   </span><span class="m">28</span><span class="w">   </span><span class="m">9</span>.7M<span class="w">  </span><span class="m">630</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">22</span>.8<span class="w">   </span><span class="m">28</span><span class="w">   </span>109k<span class="w">   </span><span class="m">25</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">    </span><span class="m">0</span>.0
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">   </span><span class="m">28</span><span class="w">    </span>12M<span class="w">  </span><span class="m">651</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">22</span>.7<span class="w">   </span><span class="m">28</span><span class="w">   </span>109k<span class="w">   </span><span class="m">25</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">    </span><span class="m">0</span>.0
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">   </span><span class="m">28</span><span class="w">    </span>12M<span class="w">  </span><span class="m">656</span><span class="w">    </span><span class="m">1</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">22</span>.8<span class="w">   </span><span class="m">28</span><span class="w">   </span>112k<span class="w">   </span><span class="m">27</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">    </span><span class="m">0</span>.0
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">   </span><span class="m">28</span><span class="w">    </span>12M<span class="w">  </span><span class="m">679</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">22</span>.8<span class="w">   </span><span class="m">28</span><span class="w">   </span>109k<span class="w">   </span><span class="m">25</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">    </span><span class="m">0</span>.0
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">   </span><span class="m">28</span><span class="w">    </span>12M<span class="w">  </span><span class="m">634</span><span class="w">    </span><span class="m">1</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">22</span>.6<span class="w">   </span><span class="m">28</span><span class="w">   </span>109k<span class="w">   </span><span class="m">25</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">    </span><span class="m">0</span>.0
+<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">4601</span><span class="w">   </span><span class="m">15</span><span class="w">   </span><span class="m">28</span><span class="w">   </span><span class="m">7</span>.8M<span class="w">  </span><span class="m">464</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w"> </span><span class="p">|</span><span class="w">  </span><span class="m">22</span>.3<span class="w">   </span><span class="m">28</span><span class="w">    </span>83k<span class="w">   </span><span class="m">19</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>%<span class="w">    </span><span class="m">0</span>.0
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils"/>
+<section id="troubleshooting">
+<h2>故障排除<a class="headerlink" href="index.html#troubleshooting" title="链接到此标题"></a></h2>
+<section id="network-not-visible">
+<h3>网络不可见<a class="headerlink" href="index.html#network-not-visible" title="链接到此标题"></a></h3>
+<ul>
+<li><p>如果您没有使用 GPSDO 或其他外部时钟，则可能需要使用一个。如前所述，SDR 内的板载时钟并不总是足够准确，无法在手机允许的限制内运行。</p></li>
+<li><p>对于此设备，ISIM 需要位于 SIM 卡托盘 2 中。如果您的设备支持双 SIM 卡且看不到网络，请尝试将 ISIM 放入另一个插槽中。</p></li>
+<li><p>如果您之前可以看到网络，但现在看不到，则应弹出 ISIM 并重新插入。如果设备之前尝试连接但失败，则设备可能会将 gNB 列入黑名单。</p></li>
+<li><p>您应该检查 gNB 是否正确传输。这可以使用频谱分析仪或类似工具来完成 <a class="reference external" href="https://kb.ettus.com/Fosphor">磷光体</a> 和 <a class="reference external" href="https://maia-sdr.org/">玛雅特别提款权</a>。来自 Maia SDR 的“健康”gNB 广播示例如下：</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../../../../_images/maia_sdr.png"><img alt="../../../../_images/maia_sdr.png" src="../../../../_images/maia_sdr.png" style="width: 938.0px; height: 379.0px;"/>
+</a>
+</div></blockquote>
+</li>
+</ul>
+</section>
+<section id="unable-to-attach">
+<h3>无法附加<a class="headerlink" href="index.html#unable-to-attach" title="链接到此标题"></a></h3>
+<p>如果您可以看到网络，但无法连接，请测试以下内容：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>检查订阅者是否已正确添加到 Open5GS 用户列表中。如果修改后没有重新启动 Open5Gs 服务，请重新启动并重试连接 UE。 Open5GS 不支持对订阅者或配置文件进行即时修改。</p></li>
+<li><p>设备可能无法 PRACH。如果您使用 NSG，那么您将能够看到 UE 和 gNB 之间正在交换的控制消息，检查此项以查看 PRACH 是否成功。如果没有，请检查以下事项：</p>
+<ul>
+<li><p>信号质量（使用 Maia SDR、Fosphor 或其他工具）；您可以调整 Tx 和 Rx 增益来补偿这一点。如果有任何商业小区在同一频谱区域内进行广播，也可能会导致 RF 问题。</p></li>
+<li><p>时间安排问题；如果时序存在差异，则 UE 将无法连接。使用外部时钟来克服这个问题。</p></li>
+</ul>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="no-internet-access">
+<h3>无法访问互联网<a class="headerlink" href="index.html#no-internet-access" title="链接到此标题"></a></h3>
+<p>如果您的设备已连接到网络但无法访问互联网，则很可能是 APN 配置存在问题。确保 UE 和 Core 中的 APN 配置的凭据和信息相同。主要检查的事项有：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>APN 在电话和核心中应具有相同的 ID</p></li>
+<li><p>将协议设置为 IPv4</p></li>
+<li><p>确保 UE 上禁用 VoNR/ VoLTE</p></li>
+<li><p>重启所有Open5GS服务并重试</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="ue-disconnects-after-a-few-minutes">
+<h3>UE 几分钟后断开连接<a class="headerlink" href="index.html#ue-disconnects-after-a-few-minutes" title="链接到此标题"></a></h3>
+<p>如果在连接后几分钟内未配置 IMS，某些 Android 智能手机会默默地断开网络连接。我们通过 Google Pixel 6 确认了此行为，超时时间为 180 秒（3 分钟），但它也可能适用于其他设备和供应商。</p>
+<p>无需配置 IMS 的可能解决方案是设置无限超时或禁用智能手机中的该功能。为此，请通过拨打电话打开隐藏的 IMS 设置菜单 <code class="docutils literal notranslate"><span class="pre">*#*#0702#*#*</span></code>，然后更改以下两个设置之一：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>无限超时：设置 <code class="docutils literal notranslate"><span class="pre">NR_TIMER_WAIT_IMS_REGISTRATION</span></code> 从默认 <code class="docutils literal notranslate"><span class="pre">180</span></code> 到 <code class="docutils literal notranslate"><span class="pre">-1</span></code></p></li>
+<li><p>禁用超时：设置 <code class="docutils literal notranslate"><span class="pre">SUPPORT_IMS_NR_REGISTRATION_TIMER</span></code> 从默认 <code class="docutils literal notranslate"><span class="pre">1</span></code> 到 <code class="docutils literal notranslate"><span class="pre">0</span></code></p></li>
+</ul>
+</div></blockquote>
+<p>示例：</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../../../../_images/nr_timer_wait_ims_registration.png"><img alt="../../../../_images/nr_timer_wait_ims_registration.png" src="../../../../_images/nr_timer_wait_ims_registration.png" style="width: 180.0px; height: 400.0px;"/>
+</a>
+<a class="reference internal image-reference" href="../../../../_images/support_ims_nr_registration_timer.png"><img alt="../../../../_images/support_ims_nr_registration_timer.png" src="../../../../_images/support_ims_nr_registration_timer.png" style="width: 180.0px; height: 400.0px;"/>
+</a>
+</div></blockquote>
+<p>智能手机会根据每个 IMSI 在重新启动后永久存储这些设置，即，如果您更改 SIM 卡，UE 会分别记住每个 SIM 卡的设置。</p>
+</section>
+</section>
+<hr class="docutils"/>
+<section id="tested-devices">
+<h2>测试设备<a class="headerlink" href="index.html#tested-devices" title="链接到此标题"></a></h2>
+<p>您可以找到经过 SRS 团队测试并由社区报告的所有设备的列表 <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../../knowledge_base/source/cots_ues/source/index.html#cots-ues"><span class="std std-ref">这里</span></a>。此列表包含有关正在使用的设备和网络配置的信息。</p>
+</section>
+</section>
+</div>
+</div>
+<footer><div aria-label="页脚" class="rst-footer-buttons" role="navigation">
+<a accesskey="p" class="btn btn-neutral float-left" href="../../srsUE/source/index.html" rel="prev" title="srsRAN gNB 与 srsUE"><span aria-hidden="true" class="fa fa-arrow-circle-left"></span> 上一页</a>
+<a accesskey="n" class="btn btn-neutral float-right" href="../../amariUE/source/index.html" rel="next" title="srsRAN gNB 与 Amarisoft UE">下一步 <span aria-hidden="true" class="fa fa-arrow-circle-right"></span></a>
+</div>
+<hr/>
+<div role="contentinfo">
+<p>© 版权所有 2023-2026，软件无线电系统..</p>
+</div>内置 <a href="https://www.sphinx-doc.org/">狮身人面像</a> 使用
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由提供 <a href="https://readthedocs.org">阅读文档</a>.
+   
+
+</footer>
+</div>
+</div>
+</section>
+</div>
+<script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script>
+</body>
+</html>

@@ -1,0 +1,969 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="readthedocs-addons-api-version" content="1"><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HVHF6N640X"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-HVHF6N640X');
+    </script>
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Features and Roadmap &mdash; srsRAN Project  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css%3Fv=03e43079.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css%3Fv=9edc463e.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css%3Fv=76b2166b.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.bundle.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-shadow.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-punk.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-noir.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-light.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-borderless.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/micromodal.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/sphinx_rtd_theme.css%3Fv=3234e928.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/tabs.css%3Fv=a5c4661c.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css%3Fv=257617e2.css" />
+
+  
+    <link rel="shortcut icon" href="../../_static/favicon.png"/>
+      <script src="../../_static/jquery.js%3Fv=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js%3Fv=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js%3Fv=5929fcd5"></script>
+      <script src="../../_static/doctools.js%3Fv=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js%3Fv=dc90522c"></script>
+      <script src="../../_static/clipboard.min.js%3Fv=a7894cd8"></script>
+      <script src="../../_static/copybutton.js%3Fv=f281be69"></script>
+      <script src="../../_static/js/hoverxref.js"></script>
+      <script src="../../_static/js/tooltipster.bundle.min.js"></script>
+      <script src="../../_static/js/micromodal.min.js"></script>
+      <script src="../../_static/tabs.js%3Fv=3030b3cb"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <script src="../../_static/js/versions.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Contribution Guidelines" href="3_contributions.html" />
+    <link rel="prev" title="srsRAN Project Documentation" href="../../index.html" /> 
+<script async type="text/javascript" src="../../../../../../_/static/javascript/readthedocs-addons.js"></script><meta name="readthedocs-project-slug" content="srsran-project-docs" /><meta name="readthedocs-version-slug" content="latest" /><meta name="readthedocs-resolver-filename" content="/general/source/2_features_and_roadmap.html" /><meta name="readthedocs-http-status" content="200" /></head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            srsRAN Project
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="switch-menus">
+                <div class="version-switch"></div>
+                <div class="language-switch"></div>
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+    
+              <p class="caption" role="heading"><span class="caption-text">General</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="2_features_and_roadmap.html#">Features and Roadmap</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="2_features_and_roadmap.html#current-features">Current Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_features_and_roadmap.html#coming-soon">Coming Soon</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="3_contributions.html">Contribution Guidelines</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="3_contributions.html#faq">FAQ</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="3_contributions.html#what-is-a-copyright-license-agreement-cla-and-why-do-i-need-one">1. What is a Copyright License Agreement (CLA) and why do I need one?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_contributions.html#how-do-i-complete-and-submit-the-cla">2. How do I complete and submit the CLA?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_contributions.html#how-will-my-contributions-to-project-name-be-used">3. How will my contributions to srsRAN Project be used?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_contributions.html#if-i-do-not-own-the-copyright-in-the-entire-work-of-authorship">4. If I do not own the copyright in the entire work of authorship?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="4_reporting.html">Reporting Issues</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="4_reporting.html#issues">Issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_reporting.html#vulnerabilities">Vulnerabilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_reporting.html#support">Support</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="5_release_notes.html">Release Notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="5_release_notes.html#id1">25.04</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_release_notes.html#id2">24.10.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_release_notes.html#id3">24.10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_release_notes.html#id4">24.4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_release_notes.html#id5">23.10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_release_notes.html#id6">23.5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_release_notes.html#initial-public-release">23.3 (initial public release)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="6_dev_status.html">Development Status</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Manual</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../user_manuals/source/installation.html">Installation Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../user_manuals/source/installation.html#build-tools-and-dependencies">Build Tools and Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_manuals/source/installation.html#rf-drivers">RF-drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_manuals/source/installation.html#clone-and-build">Clone and Build</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_manuals/source/installation.html#packages">Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_manuals/source/installation.html#phy-testvectors">PHY testvectors</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_manuals/source/running.html">Running srsRAN Project</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../user_manuals/source/running.html#baseline-requirements">Baseline Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_manuals/source/running.html#system-preparation">System Preparation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_manuals/source/running.html#id1">Running srsRAN Project</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_manuals/source/console_ref.html">Console Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_manuals/source/outputs.html">Outputs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../user_manuals/source/outputs.html#logs">Logs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_manuals/source/outputs.html#pcaps">PCAPs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../user_manuals/source/outputs.html#mac">MAC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../user_manuals/source/outputs.html#rlc">RLC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../user_manuals/source/outputs.html#ngap">NGAP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../user_manuals/source/outputs.html#n3">N3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../user_manuals/source/outputs.html#e1ap">E1AP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../user_manuals/source/outputs.html#f1ap">F1AP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../user_manuals/source/outputs.html#e2ap">E2AP</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_manuals/source/outputs.html#json-metrics">JSON Metrics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../user_manuals/source/outputs.html#mac-metrics">MAC metrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../user_manuals/source/outputs.html#scheduler-metrics">Scheduler metrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../user_manuals/source/outputs.html#scheduler-cell-metrics">Scheduler cell metrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../user_manuals/source/outputs.html#cell-events">Cell events</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../user_manuals/source/outputs.html#scheduler-ue-metrics">Scheduler UE metrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../user_manuals/source/outputs.html#ofh-metrics">OFH metrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../user_manuals/source/outputs.html#ngap-metrics">NGAP metrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../user_manuals/source/outputs.html#rrc-metrics">RRC metrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../user_manuals/source/outputs.html#executors-metrics">Executors metrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../user_manuals/source/outputs.html#application-resource-usage-metrics">Application resource usage metrics</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_manuals/source/config_ref.html">Configuration Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../user_manuals/source/config_ref.html#id1">Configuration Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_manuals/source/config_ref.html#antenna-configuration">Antenna Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_manuals/source/grafana_gui.html">Grafana Metrics GUI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../user_manuals/source/grafana_gui.html#configuration">Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../user_manuals/source/grafana_gui.html#id1">Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../user_manuals/source/grafana_gui.html#project-name">srsRAN Project</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_manuals/source/grafana_gui.html#launching-gui">Launching GUI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_manuals/source/grafana_gui.html#gui-output">GUI Output</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_manuals/source/troubleshooting.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../user_manuals/source/troubleshooting.html#performance-tuning">Performance Tuning</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../user_manuals/source/troubleshooting.html#cpu-performance-mode">CPU Performance Mode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../user_manuals/source/troubleshooting.html#performance-configuration-script">Performance Configuration Script</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_manuals/source/troubleshooting.html#usrp-configuration">USRP Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../user_manuals/source/troubleshooting.html#usrp-time-calibration">USRP Time Calibration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developers Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../dev_guide/source/software_arch/source/index.html">Software Architecture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../dev_guide/source/software_arch/source/CU_cp/source/index.html">CU-CP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dev_guide/source/software_arch/source/CU_up/source/index.html">CU-UP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dev_guide/source/software_arch/source/DU_high/source/index.html">DU-high</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../dev_guide/source/software_arch/source/DU_high/source/du_manager.html">DU Manager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dev_guide/source/software_arch/source/DU_high/source/rlc.html">Radio Link Control (RLC)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../dev_guide/source/software_arch/source/DU_high/source/rlc_am.html">RLC Acknowledged Mode (AM)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../dev_guide/source/software_arch/source/DU_high/source/mac.html">MAC</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../dev_guide/source/software_arch/source/DU_high/source/mac.html#implementation">Implementation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../dev_guide/source/software_arch/source/DU_high/source/mac.html#ra-procedure">RA Procedure</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../dev_guide/source/software_arch/source/DU_low/source/index.html">DU-low</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../dev_guide/source/code_guide/source/index.html">Code Style Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../dev_guide/source/code_guide/source/1_language_libraries.html">Language and libraries</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../dev_guide/source/code_guide/source/1_language_libraries.html#c-c-version">C &amp; C++ version</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dev_guide/source/code_guide/source/1_language_libraries.html#use-of-the-c-standard-library">Use of the C++ standard library</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../dev_guide/source/code_guide/source/2_mechanical_source_aspects.html">Mechanical source aspects</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../dev_guide/source/code_guide/source/2_mechanical_source_aspects.html#source-code-formatting">Source Code Formatting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dev_guide/source/code_guide/source/2_mechanical_source_aspects.html#comments">Comments</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../dev_guide/source/code_guide/source/2_mechanical_source_aspects.html#comment-guidelines">Comment Guidelines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../dev_guide/source/code_guide/source/2_mechanical_source_aspects.html#file-headers">File Headers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../dev_guide/source/code_guide/source/2_mechanical_source_aspects.html#header-guards">Header Guards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dev_guide/source/code_guide/source/2_mechanical_source_aspects.html#include-style">#include Style</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dev_guide/source/code_guide/source/2_mechanical_source_aspects.html#language-and-compiler-aspects">Language and compiler aspects</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../dev_guide/source/code_guide/source/2_mechanical_source_aspects.html#treat-compiler-warnings-as-errors">Treat compiler warnings as errors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../dev_guide/source/code_guide/source/2_mechanical_source_aspects.html#code-portability">Code Portability</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../dev_guide/source/code_guide/source/2_mechanical_source_aspects.html#avoid-rtti-and-exceptions">Avoid RTTI and Exceptions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../dev_guide/source/code_guide/source/2_mechanical_source_aspects.html#use-of-auto">Use of auto</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../dev_guide/source/code_guide/source/3_style_aspects_high_level.html">Style Aspects: High Level Issues</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../dev_guide/source/code_guide/source/3_style_aspects_high_level.html#self-contained-headers">Self-contained Headers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dev_guide/source/code_guide/source/3_style_aspects_high_level.html#using-include-sparingly">Using <code class="docutils literal notranslate"><span class="pre">#include</span></code> Sparingly</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dev_guide/source/code_guide/source/3_style_aspects_high_level.html#using-internal-headers">Using “Internal” Headers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dev_guide/source/code_guide/source/3_style_aspects_high_level.html#use-of-namespace">Use of <code class="docutils literal notranslate"><span class="pre">namespace</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dev_guide/source/code_guide/source/3_style_aspects_high_level.html#using-early-exits-and-continue">Using “early exits” and <code class="docutils literal notranslate"><span class="pre">continue</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dev_guide/source/code_guide/source/3_style_aspects_high_level.html#avoid-else-after-a-return-statement">Avoid <code class="docutils literal notranslate"><span class="pre">else</span></code> after a <code class="docutils literal notranslate"><span class="pre">return</span></code> statement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dev_guide/source/code_guide/source/3_style_aspects_high_level.html#use-of-static-helper-functions">Use of Static Helper Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../dev_guide/source/code_guide/source/4_style_aspects_low_level.html">Style Aspects: Low Level Issues</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../dev_guide/source/code_guide/source/4_style_aspects_low_level.html#naming-conventions">Naming Conventions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dev_guide/source/code_guide/source/4_style_aspects_low_level.html#assert-and-expect">Assert and expect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dev_guide/source/code_guide/source/4_style_aspects_low_level.html#do-not-use-using-namespace-std">Do not use <code class="docutils literal notranslate"><span class="pre">using</span> <span class="pre">namespace</span> <span class="pre">std</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dev_guide/source/code_guide/source/4_style_aspects_low_level.html#using-range-for-loops">Using Range for Loops</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dev_guide/source/code_guide/source/4_style_aspects_low_level.html#loop-structure">Loop Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dev_guide/source/code_guide/source/4_style_aspects_low_level.html#using-pre-increment">Using Pre-increment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dev_guide/source/code_guide/source/4_style_aspects_low_level.html#use-of-anonymous-namespaces">Use of Anonymous Namespaces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dev_guide/source/code_guide/source/4_style_aspects_low_level.html#using-c-casts">Using C++ Casts</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../dev_guide/source/code_guide/source/5_recommendations.html">Recommendations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../dev_guide/source/code_guide/source/5_recommendations.html#function-and-class-length">Function and Class Length</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dev_guide/source/code_guide/source/5_recommendations.html#scope">Scope</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dev_guide/source/code_guide/source/5_recommendations.html#logical-operators">Logical Operators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dev_guide/source/code_guide/source/5_recommendations.html#using-references-over-pointers">Using References(&amp;) Over Pointers(*)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dev_guide/source/code_guide/source/5_recommendations.html#const-correctness">Const Correctness</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dev_guide/source/code_guide/source/5_recommendations.html#avoid-complex-expressions">Avoid Complex Expressions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dev_guide/source/code_guide/source/5_recommendations.html#magic-numbers">Magic numbers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dev_guide/source/code_guide/source/5_recommendations.html#fixed-width-integer-types">Fixed Width Integer Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dev_guide/source/code_guide/source/5_recommendations.html#function-signatures">Function signatures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dev_guide/source/code_guide/source/5_recommendations.html#class-layout-example">Class Layout Example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../dev_guide/source/code_guide/source/6_self_generating_docs.html">Self Generating Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../dev_guide/source/code_guide/source/6_self_generating_docs.html#general-aspects">General Aspects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dev_guide/source/code_guide/source/6_self_generating_docs.html#files">Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dev_guide/source/code_guide/source/6_self_generating_docs.html#classes-and-structures">Classes and Structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dev_guide/source/code_guide/source/6_self_generating_docs.html#class-methods-and-free-functions">Class Methods and Free Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dev_guide/source/code_guide/source/6_self_generating_docs.html#class-data-members-objects-variables">Class Data Members, Objects, Variables</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../dev_guide/source/code_guide/source/7_commit_formatting.html">Commit Formatting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../dev_guide/source/testing_policy/source/index.html">Testing Policy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../dev_guide/source/testing_policy/source/index.html#unit-tests">Unit Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dev_guide/source/testing_policy/source/index.html#integration-and-component-tests">Integration and Component Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dev_guide/source/testing_policy/source/index.html#end-to-end-e2e-tests">End-to-End (E2E) Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dev_guide/source/testing_policy/source/index.html#exploratory-tests">Exploratory Tests</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../dev_guide/source/logging_guide/source/index.html">Logging Style Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../dev_guide/source/logging_guide/source/index.html#rule-1-lists-of-fields-only-need-to-be-separated-by-a-whitespace">Rule 1: Lists of fields only need to be separated by a whitespace “   “</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dev_guide/source/logging_guide/source/index.html#rule-2-maintain-consistent-order-between-classes-of-fields">Rule 2: Maintain consistent order between classes of fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dev_guide/source/logging_guide/source/index.html#rule-3-order-of-contextual-fields">Rule 3: Order of contextual fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dev_guide/source/logging_guide/source/index.html#rule-4-for-one-time-events-provide-a-cause-whenever-it-s-unclear-what-it-might-be">Rule 4: For one time events, provide a cause whenever it’s unclear what it might be</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dev_guide/source/logging_guide/source/index.html#rule-5-asn-1-messages-should-be-represented-using-the-respective-asn-1-type-name">Rule 5: ASN.1 Messages should be represented using the respective ASN.1 type name.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dev_guide/source/logging_guide/source/index.html#rule-6-procedures-should-be-identified-by-the-name-specified-in-the-ts-clauses">Rule 6: Procedures should be identified by the name specified in the TS clauses.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dev_guide/source/logging_guide/source/index.html#rule-7-messages-with-a-context-that-is-not-formatted-are-strictly-forbidden">Rule 7: Messages with a context that is not formatted are strictly forbidden!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dev_guide/source/logging_guide/source/index.html#general-tips">General Tips</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Knowledge Base</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../knowledge_base/source/oran_gnb/source/index.html">O-RAN gNB Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../knowledge_base/source/oran_gnb/source/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../knowledge_base/source/oran_gnb/source/index.html#split-7-2x-architecture">Split 7.2x Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../knowledge_base/source/oran_gnb/source/index.html#project-name">srsRAN Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../knowledge_base/source/oran_gnb/source/index.html#further-reading">Further Reading</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../knowledge_base/source/gnb_components/source/index.html">O-RAN gNB Components</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../knowledge_base/source/gnb_components/source/index.html#centralized-unit-cu">Centralized Unit (CU)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../knowledge_base/source/gnb_components/source/index.html#distributed-unit-du">Distributed Unit (DU)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../knowledge_base/source/gnb_components/source/index.html#du-high">DU-high</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../knowledge_base/source/gnb_components/source/index.html#du-low">DU-low</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../knowledge_base/source/gnb_interfaces/source/index.html">gNB Interfaces</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../knowledge_base/source/gnb_interfaces/source/index.html#e1">E1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../knowledge_base/source/gnb_interfaces/source/index.html#e2">E2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../knowledge_base/source/gnb_interfaces/source/index.html#f1">F1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../knowledge_base/source/gnb_interfaces/source/index.html#f1-c">F1-C</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../knowledge_base/source/gnb_interfaces/source/index.html#f1-u">F1-U</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../knowledge_base/source/gnb_interfaces/source/index.html#fapi">FAPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../knowledge_base/source/gnb_interfaces/source/index.html#ng">NG</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../knowledge_base/source/gnb_interfaces/source/index.html#ng-c">NG-C</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../knowledge_base/source/gnb_interfaces/source/index.html#ng-u">NG-U</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../knowledge_base/source/gnb_interfaces/source/index.html#o1">O1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../knowledge_base/source/gnb_interfaces/source/index.html#open-fronthaul">Open FrontHaul</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../knowledge_base/source/cots_ues/source/index.html">COTS UEs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../knowledge_base/source/cots_ues/source/index.html#tested-cots-ues">Tested COTS UEs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../knowledge_base/source/cots_ues/source/index.html#user-reported-working-ues">User reported working UEs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../knowledge_base/source/cots_ues/source/index.html#ue-capability-messages">UE Capability Messages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../knowledge_base/source/cots_ues/source/index.html#references">References</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/source/srsUE/source/index.html">srsRAN gNB with srsUE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/srsUE/source/index.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/srsUE/source/index.html#hardware-and-software-overview">Hardware and Software Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/srsUE/source/index.html#id2">srsRAN 4G</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/srsUE/source/index.html#limitations">Limitations</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/srsUE/source/index.html#open5gs">Open5GS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/srsUE/source/index.html#id3">ZeroMQ</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/srsUE/source/index.html#over-the-air-setup">Over-the-air Setup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/srsUE/source/index.html#configuration">Configuration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/srsUE/source/index.html#gnb">gNB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/srsUE/source/index.html#srsue">srsUE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/srsUE/source/index.html#running-the-network">Running the Network</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/srsUE/source/index.html#open5gs-core">Open5GS Core</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/srsUE/source/index.html#id5">gNB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/srsUE/source/index.html#id6">srsUE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/srsUE/source/index.html#testing-the-network">Testing the Network</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/srsUE/source/index.html#routing-configuration">Routing Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/srsUE/source/index.html#ping">Ping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/srsUE/source/index.html#iperf3">iPerf3</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/srsUE/source/index.html#zeromq-based-setup">ZeroMQ-based Setup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/srsUE/source/index.html#id7">Configuration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/srsUE/source/index.html#id8">gNB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/srsUE/source/index.html#id9">srsUE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/srsUE/source/index.html#id10">Running the Network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/srsUE/source/index.html#zmq-testing">Testing the Network</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/srsUE/source/index.html#zmq-routing">Routing Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/srsUE/source/index.html#id13">Ping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/srsUE/source/index.html#id17">iPerf3</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/srsUE/source/index.html#multi-ue-emulation">Multi-UE Emulation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/srsUE/source/index.html#id23">Configuration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/srsUE/source/index.html#gnu-radio-companion">GNU-Radio Companion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/srsUE/source/index.html#id25">Open5GS Core</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/srsUE/source/index.html#id26">gNB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/srsUE/source/index.html#id27">srsUE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/srsUE/source/index.html#id28">Running the Network</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/srsUE/source/index.html#id29">Open5GS Core</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/srsUE/source/index.html#id30">gNB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/srsUE/source/index.html#id31">srsUE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/srsUE/source/index.html#id32">GNU-Radio Companion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/srsUE/source/index.html#path-loss-control">Path-loss Control</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/srsUE/source/index.html#id33">Testing the Network</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/srsUE/source/index.html#troubleshooting">Troubleshooting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/srsUE/source/index.html#performance-issues">Performance Issues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/srsUE/source/index.html#reference-clock">Reference clock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/srsUE/source/index.html#g-qos-identifier">5G QoS Identifier</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/srsUE/source/index.html#ue-does-not-get-ip-address">UE does not get IP address</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/srsUE/source/index.html#ue-ip-forwarding">UE IP Forwarding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/srsUE/source/index.html#nd-open5gs-instance-installed-manually">2nd Open5GS instance (installed manually)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/srsUE/source/index.html#run-zmq-based-setup-on-two-host-machines">Run ZMQ-based setup on two host machines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/srsUE/source/index.html#multiple-gnbs-connected-to-a-single-docker-based-open5gs">Multiple gNBs connected to a single Docker-based Open5gs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/srsUE/source/index.html#usrp-x300-x310">USRP X300/X310</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/srsUE/source/index.html#id34">Limitations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/srsUE/source/index.html#id35">srsUE</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/source/cotsUE/source/index.html">srsRAN gNB with COTS UEs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/cotsUE/source/index.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/cotsUE/source/index.html#setup-considerations">Setup Considerations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/cotsUE/source/index.html#open5gs">Open5GS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/cotsUE/source/index.html#cots-ue">COTS UE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/cotsUE/source/index.html#external-clock">External Clock</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/cotsUE/source/index.html#configuration">Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/cotsUE/source/index.html#gnb">gNB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/cotsUE/source/index.html#isim">ISIM</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/cotsUE/source/index.html#sim-programming">SIM Programming</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/cotsUE/source/index.html#suci-configuration">SUCI Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/cotsUE/source/index.html#adding-user-controlled-plmns">Adding user-controlled PLMNs</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/cotsUE/source/index.html#id1">Open5GS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/cotsUE/source/index.html#amf-yml">amf.yml</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/cotsUE/source/index.html#upf-yml">upf.yml</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/cotsUE/source/index.html#nrf-yml">nrf.yml</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/cotsUE/source/index.html#user-database">User Database</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/cotsUE/source/index.html#id4">COTS UE</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/cotsUE/source/index.html#enable-isim-5g-and-data-roaming">Enable ISIM, 5G and data roaming</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/cotsUE/source/index.html#configure-apn">Configure APN</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/cotsUE/source/index.html#force-nr">Force NR</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/cotsUE/source/index.html#connecting-the-cots-ue">Connecting the COTS UE</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/cotsUE/source/index.html#setting-up-the-network">Setting-up the Network</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/cotsUE/source/index.html#check-that-the-core-is-running-correctly">Check that the Core is running correctly</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/cotsUE/source/index.html#run-the-gnb">Run the gNB</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/cotsUE/source/index.html#connecting-to-the-network">Connecting to the Network</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/cotsUE/source/index.html#traffic-and-testing">Traffic and Testing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/cotsUE/source/index.html#speed-test">Speed Test</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/cotsUE/source/index.html#video-test">Video Test</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/cotsUE/source/index.html#troubleshooting">Troubleshooting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/cotsUE/source/index.html#network-not-visible">Network Not Visible</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/cotsUE/source/index.html#unable-to-attach">Unable to Attach</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/cotsUE/source/index.html#no-internet-access">No Internet Access</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/cotsUE/source/index.html#ue-disconnects-after-a-few-minutes">UE Disconnects after a few Minutes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/cotsUE/source/index.html#tested-devices">Tested Devices</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/source/amariUE/source/index.html">srsRAN gNB with Amarisoft UE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/amariUE/source/index.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/amariUE/source/index.html#hardware-and-software-overview">Hardware and Software Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/amariUE/source/index.html#id1">Amarisoft UE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/amariUE/source/index.html#open5gs">Open5GS</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/amariUE/source/index.html#installation">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/amariUE/source/index.html#id2">ZeroMQ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/amariUE/source/index.html#id3">Amarisoft UE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/amariUE/source/index.html#zeromq-driver-for-amarisoft-ue">ZeroMQ driver for Amarisoft UE</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/amariUE/source/index.html#zeromq-based-setup">ZeroMQ-based Setup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/amariUE/source/index.html#configuration">Configuration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/amariUE/source/index.html#project-name">srsRAN Project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/amariUE/source/index.html#id4">Amarisoft UE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/amariUE/source/index.html#id5">Open5GS 5G Core</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/amariUE/source/index.html#running-the-5g-network">Running the 5G Network</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/amariUE/source/index.html#id7">Open5gs 5G Core</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/amariUE/source/index.html#id8">srsRAN Project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/amariUE/source/index.html#id9">Amarisoft UE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/amariUE/source/index.html#testing-the-network">Testing the Network</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/amariUE/source/index.html#ping">Ping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/amariUE/source/index.html#iperf">iPerf</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/amariUE/source/index.html#iperf-output">iPerf Output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/amariUE/source/index.html#gnb-console-output">gNB Console Output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/amariUE/source/index.html#packet-capture">Packet Capture</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/amariUE/source/index.html#configuring-amarisoft-for-multiple-ues">Configuring Amarisoft for multiple UEs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/amariUE/source/index.html#over-the-air-setup">Over-the-air Setup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/amariUE/source/index.html#id10">Configuration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/amariUE/source/index.html#id11">srsRAN Project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/amariUE/source/index.html#id12">Amarisoft UE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/amariUE/source/index.html#id13">Running the 5G Network</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/amariUE/source/index.html#id14">Open5gs 5G Core</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/amariUE/source/index.html#id15">srsRAN Project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/amariUE/source/index.html#id16">Amarisoft UE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/amariUE/source/index.html#amariue-radios-test">Testing the Network</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/amariUE/source/index.html#id18">Ping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/amariUE/source/index.html#id19">iPerf</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/amariUE/source/index.html#id20">iPerf Output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/amariUE/source/index.html#id21">gNB Console Output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/amariUE/source/index.html#id22">Packet Capture</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/amariUE/source/index.html#troubleshooting">Troubleshooting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/amariUE/source/index.html#zmq-setup">ZMQ setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/amariUE/source/index.html#reference-clock-for-over-the-air">Reference clock for over-the-air</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/amariUE/source/index.html#g-qos-identifier">5G QoS Identifier</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/source/dpdk/source/index.html">srsRAN gNB with DPDK</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/dpdk/source/index.html#introduction">Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/dpdk/source/index.html#further-reading">Further Reading</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/dpdk/source/index.html#installing-dpdk">Installing DPDK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/dpdk/source/index.html#configuring-dpdk">Configuring DPDK</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/dpdk/source/index.html#configure-hugepages">Configure Hugepages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/dpdk/source/index.html#binding-to-dpdk">Binding to DPDK</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/dpdk/source/index.html#id1">EAL Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/dpdk/source/index.html#running-srsran-with-dpdk">Running srsRAN with DPDK</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/source/k8s/source/index.html">srsRAN gNB on Kubernetes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/k8s/source/index.html#introduction">Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/k8s/source/index.html#further-reading">Further Reading</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/k8s/source/index.html#setup-considerations">Setup Considerations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/k8s/source/index.html#cu-du">CU/DU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/k8s/source/index.html#ru">RU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/k8s/source/index.html#g-core">5G Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/k8s/source/index.html#clocking-synchronization">Clocking &amp; Synchronization</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/k8s/source/index.html#set-up-a-k8s-k3s-bare-metal-cluster">Set up a K8s/K3s Bare Metal Cluster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/k8s/source/index.html#deploy-a-kubernetes-cluster">1. Deploy a Kubernetes Cluster</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/k8s/source/index.html#install-realtime-kernel">2. Install Realtime Kernel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/k8s/source/index.html#install-tuned">3. Install TuneD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/k8s/source/index.html#install-dpdk">4. Install DPDK</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/k8s/source/index.html#set-up-ptp-synchronization">Set Up PTP Synchronization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/k8s/source/index.html#set-up-core-network-open5gs">Set Up Core Network: Open5GS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/k8s/source/index.html#set-up-gnb">Set Up gNB</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/k8s/source/index.html#connecting-to-internal-core-networks-within-the-cluster">1. Connecting to Internal Core Networks Within the Cluster</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/k8s/source/index.html#assign-dpdk-devices-without-the-sr-iov-plugin">2. Assign DPDK Devices Without the SR-IOV Plugin</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/k8s/source/index.html#load-testing">Load Testing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/k8s/source/index.html#srsran-ru-emulator">1. srsRAN RU Emulator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/k8s/source/index.html#assess-maximum-latency-using-cyclictest">2. Assess Maximum Latency Using cyclictest</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/k8s/source/index.html#visualizing-kpis-via-grafana">Visualizing KPIs via Grafana</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/k8s/source/index.html#clean-up-deployments">Clean Up Deployments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/source/handover/source/index.html">srsRAN gNB Handover</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/handover/source/index.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/handover/source/index.html#hardware-and-software-overview">Hardware and Software Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/handover/source/index.html#project-name">srsRAN Project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/handover/source/index.html#x310-usrp">X310 USRP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/handover/source/index.html#open5gs">Open5GS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/handover/source/index.html#cots-ue">COTS UE</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/handover/source/index.html#configuration">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/handover/source/index.html#connecting-the-cots-ue">Connecting the COTS UE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/handover/source/index.html#triggering-handover">Triggering Handover</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/handover/source/index.html#from-console">From Console</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/handover/source/index.html#physically">Physically</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/handover/source/index.html#grafana-output">Grafana Output</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/handover/source/index.html#limitations">Limitations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/source/ntn/source/index.html">srsRAN gNB for 5G NTN</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/ntn/source/index.html#overview">Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/ntn/source/index.html#limitations">Limitations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/ntn/source/index.html#hardware-and-software-overview">Hardware and Software Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/ntn/source/index.html#amarisoft-ue">Amarisoft UE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/ntn/source/index.html#open5gs">Open5GS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/ntn/source/index.html#id1">GNU-Radio Companion</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/ntn/source/index.html#installation">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/ntn/source/index.html#id2">ZeroMQ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/ntn/source/index.html#project-name">srsRAN Project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/ntn/source/index.html#id3">Amarisoft UE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/ntn/source/index.html#zeromq-driver-for-amarisoft-ue">ZeroMQ driver for Amarisoft UE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/ntn/source/index.html#id4">GNU-Radio Companion</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/ntn/source/index.html#configuration">Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/ntn/source/index.html#gnb">gNB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/ntn/source/index.html#amarisoftue">AmarisoftUE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/ntn/source/index.html#ntn-channel-emulator">NTN Channel Emulator</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/ntn/source/index.html#running-the-network">Running the Network</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/ntn/source/index.html#open5gs-core">Open5GS Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/ntn/source/index.html#geo-ntn-channel-emulator">GEO NTN Channel Emulator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/ntn/source/index.html#id5">gNB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/ntn/source/index.html#id6">AmarisoftUE</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/ntn/source/index.html#testing-the-network">Testing the Network</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/ntn/source/index.html#routing-configuration">Routing Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/ntn/source/index.html#ping">Ping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/ntn/source/index.html#iperf">Iperf</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/ntn/source/index.html#troubleshooting">Troubleshooting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/ntn/source/index.html#running-gnb-and-amarisoftue-on-separate-machines">Running gNB and AmarisoftUE on separate machines</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/source/cu_du_split/source/index.html">O-RAN CU-DU Split</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/cu_du_split/source/index.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/cu_du_split/source/index.html#hardware-and-software-overview">Hardware and Software Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/cu_du_split/source/index.html#project-name">srsRAN Project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/cu_du_split/source/index.html#b210">B210</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/cu_du_split/source/index.html#open5gs">Open5GS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/cu_du_split/source/index.html#cots-ue">COTS UE</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/cu_du_split/source/index.html#configuration">Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/cu_du_split/source/index.html#core">Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/cu_du_split/source/index.html#srscu">srsCU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/cu_du_split/source/index.html#srsdu">srsDU</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/cu_du_split/source/index.html#running-the-network">Running the Network</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/cu_du_split/source/index.html#id1">Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/cu_du_split/source/index.html#id2">srsCU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/cu_du_split/source/index.html#id3">srsDU</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/cu_du_split/source/index.html#connecting-to-the-network">Connecting to the Network</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/cu_du_split/source/index.html#console-outputs">Console Outputs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/source/oranRU/source/index.html">O-RAN 7.2 RU Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/oranRU/source/index.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/oranRU/source/index.html#setup-considerations">Setup Considerations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/oranRU/source/index.html#cu-du">CU/DU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/oranRU/source/index.html#ru">RU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/oranRU/source/index.html#g-core">5G Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/oranRU/source/index.html#synchronization">Synchronization</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/oranRU/source/index.html#switch">Switch</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/oranRU/source/index.html#configuration">Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/oranRU/source/index.html#id1">Switch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/oranRU/source/index.html#id2">CU/DU</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/oranRU/source/index.html#nic-configuration">NIC configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/oranRU/source/index.html#ptp-configuration">PTP configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/oranRU/source/index.html#enabling-ptp-with-dpdk">Enabling PTP with DPDK</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/oranRU/source/index.html#srsran-configuration">srsRAN configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/oranRU/source/index.html#id4">RU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/oranRU/source/index.html#core">Core</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/oranRU/source/index.html#initializing-the-network">Initializing the Network</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/oranRU/source/index.html#id5">RU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/oranRU/source/index.html#id6">CU/DU</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/oranRU/source/index.html#connecting-to-the-network">Connecting to the Network</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/oranRU/source/index.html#cots-ue">COTS UE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/oranRU/source/index.html#amariue">AmariUE</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/oranRU/source/index.html#sending-traffic">Sending Traffic</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/oranRU/source/index.html#integration-guide">Integration Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/oranRU/source/hw_integration.html">RUs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/oranRU/source/rus/foxconn.html">Foxconn RPQN-(48/78)00(E/I)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/oranRU/source/rus/picocom.html">Picocom</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/oranRU/source/rus/liteon.html">LITEON FlexFi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/oranRU/source/rus/vvdn.html">VVDN</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/oranRU/source/rus/r550.html">Benetel RAN550/RAN650</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/oranRU/source/hw_integration.html#switches">Switches</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/oranRU/source/switches/falcon.html">Falcon-RX Switch</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/source/near-rt-ric/source/index.html">O-RAN NearRT-RIC and xApp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/near-rt-ric/source/index.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/near-rt-ric/source/index.html#setup-overview">Setup Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/near-rt-ric/source/index.html#hardware-and-software-overview">Hardware and Software Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/near-rt-ric/source/index.html#limitations">Limitations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/near-rt-ric/source/index.html#installation">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/near-rt-ric/source/index.html#open5gs">Open5GS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/near-rt-ric/source/index.html#id5">ZeroMQ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/near-rt-ric/source/index.html#project-name">srsRAN Project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/near-rt-ric/source/index.html#srsue">srsUE</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/near-rt-ric/source/index.html#configuration">Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/near-rt-ric/source/index.html#gnb">gNB</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/near-rt-ric/source/index.html#running-the-network">Running the Network</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/near-rt-ric/source/index.html#open5gs-core">Open5GS Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/near-rt-ric/source/index.html#nearrt-ric">NearRT-RIC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/near-rt-ric/source/index.html#id6">gNB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/near-rt-ric/source/index.html#id7">srsUE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/near-rt-ric/source/index.html#ip-traffic-with-ping">IP Traffic with ping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/near-rt-ric/source/index.html#xapps">xApps</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/near-rt-ric/source/index.html#e2ap-packet-analyzer">E2AP packet analyzer</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/near-rt-ric/source/index.html#enable-e2ap-pcap">Enable E2AP PCAP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/near-rt-ric/source/index.html#live-capture">Live capture</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/near-rt-ric/source/index.html#troubleshooting">Troubleshooting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/near-rt-ric/source/index.html#pcap">PCAP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/near-rt-ric/source/index.html#core-network-not-running">Core Network not running</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/near-rt-ric/source/index.html#ue-issues">UE issues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/near-rt-ric/source/index.html#ue-ip-forwarding">UE IP Forwarding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/near-rt-ric/source/index.html#nd-open5gs-instance-installed-manually">2nd Open5GS instance (installed manually)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/near-rt-ric/source/index.html#ric-running-on-a-different-machine">RIC running on a different machine</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/source/matlab/source/index.html">MATLAB Testing Tools</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/matlab/source/index.html#overview">Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/matlab/source/index.html#test-vector-generation">Test Vector Generation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/matlab/source/index.html#signal-analyzers">Signal Analyzers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/matlab/source/index.html#simulators">Simulators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/matlab/source/index.html#set-up-considerations">Set-Up Considerations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/matlab/source/index.html#installation">Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/source/tuning/source/index.html">srsRAN gNB Performance Tuning</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/tuning/source/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/tuning/source/index.html#tuned">TuneD</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/tuning/source/index.html#installation">Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/tuning/source/index.html#srsran-tuning-profile">srsRAN tuning profile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/tuning/source/index.html#further-reading">Further Reading</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/source/testmode/source/index.html">srsRAN gNB(-DU) Load Testing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/testmode/source/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/testmode/source/index.html#using-ru-dummy">Using <code class="docutils literal notranslate"><span class="pre">ru_dummy</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/testmode/source/index.html#using-ru-emu">Using <code class="docutils literal notranslate"><span class="pre">ru_emu</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/testmode/source/index.html#using-no-core">Using <code class="docutils literal notranslate"><span class="pre">no_core</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/testmode/source/index.html#using-testmode">Using <code class="docutils literal notranslate"><span class="pre">testmode</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/source/hw_kit/source/index.html">E2E O-RAN Tesbed with srsRAN</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/hw_kit/source/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/hw_kit/source/index.html#testbed-setup">Testbed setup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/hw_kit/source/index.html#hardware-components">Hardware components</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/hw_kit/source/index.html#workstation-pc">Workstation PC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/hw_kit/source/index.html#o-ru">O-RU</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/hw_kit/source/index.html#g-ue">5G UE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/source/hw_kit/source/index.html#auxiliary-elements">Auxiliary elements</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/hw_kit/source/index.html#software">Software</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/source/hw_kit/source/index.html#configuration">Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/hw_kit/source/index.html#ptp-grandmaster">PTP Grandmaster</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/hw_kit/source/index.html#demanding-dl-requirements">Demanding DL requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/hw_kit/source/index.html#demanding-ul-requirements">Demanding UL requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/source/hw_kit/source/index.html#low-latency-with-demanding-ul-requirements">Low-latency with demanding UL requirements</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+    
+        <p class="caption">
+            <span class="caption-text">
+            
+                Links
+            
+            </span>
+        </p>
+        <ul>
+            
+                
+                    <li class="toctree-l1"><a href="https://www.srsran.com"><i class="web-icon"></i> Website</a></li>
+                
+            
+                
+                    <li class="toctree-l1"><a href="https://github.com/srsran/srsran_project"><i class="fa fa-github fa-fw"></i> Source code</a></li>
+                
+            
+                
+                    <li class="toctree-l1"><a href="https://github.com/srsran/srsran_project/issues"><i class="fa fa-bug fa-fw"></i> Report an issue</a></li>
+                
+            
+                
+                    <li class="toctree-l1"><a href="https://github.com/srsran/srsran_project/discussions"><i class="fa fa-envelope fa-fw"></i> Discussions Board</a></li>
+                
+            
+                
+                    <li class="toctree-l1"><a href="https://twitter.com/srsRANProject"><i class="fa fa-twitter fa-fw"></i> Twitter</a></li>
+                
+            
+        </ul>
+    
+
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">srsRAN Project</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Features and Roadmap</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/general/source/2_features_and_roadmap.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="../../index.html" class="btn btn-neutral float-left" title="srsRAN Project Documentation" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="3_contributions.html" class="btn btn-neutral float-right" title="Contribution Guidelines" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="features-and-roadmap">
+<span id="general-feature-list"></span><h1>Features and Roadmap<a class="headerlink" href="2_features_and_roadmap.html#features-and-roadmap" title="Link to this heading"></a></h1>
+<section id="current-features">
+<h2>Current Features<a class="headerlink" href="2_features_and_roadmap.html#current-features" title="Link to this heading"></a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>3GPP release 17 aligned</p></li>
+<li><p>FDD/TDD supported, all FR1 bands</p></li>
+<li><p>All bandwidths (e.g. 100 MHz TDD, 50 MHz FDD)</p></li>
+<li><p>15/30 kHz subcarrier spacing</p></li>
+<li><p>All physical channels</p></li>
+<li><p>Highly optimized LDPC and Polar encoder/decoder for ARM Neon and x86 AVX2/AVX512</p></li>
+<li><p>All RRC procedures</p></li>
+<li><p>All MAC procedures</p></li>
+<li><p>Split 7.2 support using in-house OFH library</p></li>
+<li><p>Support for QAM-256</p></li>
+<li><p>4x4 MIMO</p></li>
+<li><p>Slicing</p></li>
+<li><p>NTN GEO support</p></li>
+<li><p>CU-DU Split</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="coming-soon">
+<h2>Coming Soon<a class="headerlink" href="2_features_and_roadmap.html#coming-soon" title="Link to this heading"></a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>CU-CP/CU-CP separation</p></li>
+<li><p>FR2, 120 kHz</p></li>
+<li><p>Higher order MIMO</p></li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../../index.html" class="btn btn-neutral float-left" title="srsRAN Project Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="3_contributions.html" class="btn btn-neutral float-right" title="Contribution Guidelines" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2026, Software Radio Systems..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>
